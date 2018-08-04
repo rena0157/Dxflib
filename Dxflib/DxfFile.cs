@@ -16,19 +16,44 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
+using Dxflib.Parser;
 
 namespace Dxflib
 {
     public class DxfFile
     {
+        #region Constructors
+
+        /// <summary>
+        /// Constructor that requires a path to a file.
+        /// This constructor will read the file and set up all of the required
+        /// tools for the DxfFile class
+        /// </summary>
+        /// <param name="pathToFile">An absolute or relative path to a dxf file</param>
         public DxfFile(string pathToFile)
         {
+            // Initalize
             _fileReader = new DxfReader(pathToFile);
+            Layers = new Dictionary<string, Layer>();
+
+            // Setup file
             PathToFile = _fileReader.PathToFile;
             FileName = Path.GetFileName(PathToFile);
+            
+            // Read and parse the file
             ContentStrings = _fileReader.ReadFile();
+            var mainParser = new DxfFileMainParser(this);
         }
+        #endregion
+
+        #region DxfFileContents
+        
+        public List<string> ContentStrings { get; }
+        public Dictionary<string, Layer> Layers { get; set; }
+
+        #endregion
 
         #region FileProperties
 
@@ -41,9 +66,16 @@ namespace Dxflib
         /// The filename and the extension
         /// </summary>
         public string FileName { get; }
+
         #endregion
 
-        public List<string> ContentStrings { get; }
+        #region HeaderProperties
+
+        public AutoCADVersions AutoCADVersion { get; set; }
+        public Layer CurrentLayer { get; set; }
+        public string LastSavedBy { get; set; }
+
+        #endregion
 
         private DxfReader _fileReader;
 
