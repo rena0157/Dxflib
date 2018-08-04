@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Dxflib;
+using Dxflib.AcadEntities;
+using Dxflib.Entities;
 
 namespace Dxflib.Tests
 {
@@ -33,6 +36,32 @@ namespace Dxflib.Tests
 
             // Assert that the filename is PrintFileContents
             Assert.IsTrue(testFile.FileName == "PrintFileContents.dxf");
+        }
+
+        [TestMethod]
+        public void Layers_AddingOneLayer_LayerDoesNotExist()
+        {
+            var testDictionary = new LayerDictionary();
+            testDictionary.NewLayer("HelloLayer");
+
+            // Assert there is only one layer
+            Assert.IsTrue(testDictionary.Count == 1);
+        }
+
+        [TestMethod]
+        public void Layers_AddingAnotherLayer_LayerAlreadyExists()
+        {
+            var testDictionary = new LayerDictionary();
+            testDictionary.NewLayer("HelloLayer");
+            try
+            {
+                testDictionary.NewLayer("HelloLayer");
+            }
+            catch (LayerDictionaryException e)
+            {
+                Debug.WriteLine(e.Message);
+                Assert.IsTrue(true);
+            }
         }
     }
 }

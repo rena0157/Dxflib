@@ -1,9 +1,21 @@
-﻿using System;
+﻿// Dxflib.Tests
+// ParserTests.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-04
+// Last Updated: 2018-08-04-5:15 PM
+// By: Adam Renaud
+// 
+// ============================================================
+// 
+// Purpose:
+
 using System.Diagnostics;
-using Dxflib.AcadEntities;
+using Dxflib.Entities;
 using Dxflib.Parser;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Dxflib.Tools;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests
 {
@@ -45,5 +57,23 @@ namespace Dxflib.Tests
             Assert.IsTrue(testFile.CurrentLayer.Name == "0");
         }
 
+        [TestMethod]
+        public void LastSavedByTest_ShouldBeadamf()
+        {
+            var testFile =
+                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
+            Debug.WriteLine($"The file was last saved by: {testFile.LastSavedBy}");
+            Assert.IsTrue(testFile.LastSavedBy == "adamf");
+        }
+
+        [TestMethod]
+        public void EntityCountTest_ThereShouldBe2EntitesThatAreLines()
+        {
+            var testFile =
+                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LinesParseTest.dxf");
+
+            Assert.IsTrue(testFile.Entities.Count == 2);
+            Assert.IsTrue(((Line) testFile.Entities[0]).EntityType == EntityTypes.Line);
+        }
     }
 }

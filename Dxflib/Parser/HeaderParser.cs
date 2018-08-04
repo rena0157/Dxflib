@@ -1,6 +1,4 @@
-﻿
-
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Dxflib.AcadEntities;
 
 namespace Dxflib.Parser
@@ -19,14 +17,20 @@ namespace Dxflib.Parser
         {
             switch (args.NewCurrentLine)
             {
+                // AutoCAD Version
                 case HeaderStrings.AutoCadVersion:
-                    mainParser.ThisFile.AutoCADVersion = ParseAutoCADVersion(args.NewNextLine);
+                    mainParser.ThisFile.AutoCADVersion = ParseAutoCADVersion(
+                        mainParser.ThisFile.ContentStrings[args.LineIndex + 2]);
                     break;
+                // Current Layer
                 case HeaderStrings.CurrentLayer:
-                    mainParser.ThisFile.CurrentLayer = new Layer(args.NewNextLine);
+                    mainParser.ThisFile.CurrentLayer =
+                        new Layer(mainParser.ThisFile.ContentStrings[args.LineIndex + 2]);
                      break;
+                // Last Saved By
                 case HeaderStrings.LastSavedBy:
-                     mainParser.ThisFile.LastSavedBy = args.NewNextLine;
+                     mainParser.ThisFile.LastSavedBy =
+                         mainParser.ThisFile.ContentStrings[args.LineIndex + 2];
                     break;
                 default:
                    break;
@@ -76,33 +80,23 @@ namespace Dxflib.Parser
     {
         [Description("R10")]
         AC1006,
-
         [Description("R11 and R12")]
         AC1009,
-
         [Description("R13")]
         AC1012,
-
         [Description("R14")]
         AC1014,
-
         [Description("AutoCAD 2000")]
         AC1015,
-
         [Description("AutoCAD 2004")]
         AC1018,
-
         [Description("AutoCAD 2007")]
         AC1021,
-
         [Description("AutoCAD 2010")]
         AC1024,
-
         [Description("AutoCAD 2013")]
         AC1027,
-
         [Description("Unknown")]
         Unknown
     }
-
 }

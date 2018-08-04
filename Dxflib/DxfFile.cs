@@ -19,6 +19,7 @@ using System.IO;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Parser;
+using Dxflib.Entities;
 
 namespace Dxflib
 {
@@ -36,7 +37,7 @@ namespace Dxflib
         {
             // Initalize
             _fileReader = new DxfReader(pathToFile);
-            Layers = new Dictionary<string, Layer>();
+            Layers = new LayerDictionary();
 
             // Setup file
             PathToFile = _fileReader.PathToFile;
@@ -44,14 +45,16 @@ namespace Dxflib
             
             // Read and parse the file
             ContentStrings = _fileReader.ReadFile();
+            Entities = new List<Entity>();
             var mainParser = new DxfFileMainParser(this);
         }
         #endregion
 
         #region DxfFileContents
         
-        public List<string> ContentStrings { get; }
-        public Dictionary<string, Layer> Layers { get; set; }
+        public string[] ContentStrings { get; }
+        public LayerDictionary Layers { get; set; }
+        public List<Entity> Entities;
 
         #endregion
 

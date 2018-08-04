@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
+using Dxflib.Entities;
 
 namespace Dxflib.Parser
 {
@@ -12,15 +10,27 @@ namespace Dxflib.Parser
         /// </summary>
         public event LineChangeHandler LineChanged;
 
-        // The dxf file that was passed by the constructor
+        /// <summary>
+        /// This is the Dxf file that was passed by the main constructor
+        /// </summary>
         public DxfFile ThisFile;
 
-        // The current file section
-        public FileSection CurrentFileSection
-        {
-            get;
-            set;
-        }
+        /// <summary>
+        /// The Current File section
+        /// Ex: Header, Entities, Objects
+        /// </summary>
+        public FileSection CurrentFileSection { get; set;}
+
+        /// <summary>
+        /// The Current Entity that is being extracted
+        /// </summary>
+        public EntityTypes CurrentEntityForExtraction { get; set;}
+
+        /// <summary>
+        /// The Line Buffer where all information is to be stored until the
+        /// Line Entity can be created
+        /// </summary>
+        public LineBuffer LineBuf { get; set; }
 
         /// <summary>
         /// Constructor that sets the dxf file and creates and manages all of the other parsers
@@ -30,6 +40,11 @@ namespace Dxflib.Parser
         {
             ThisFile = dxfFile;
             Controller controller = new Controller(this);
+
+            // Default Values
+            CurrentEntityForExtraction = EntityTypes.None;
+            LineBuf = new LineBuffer();
+
             IterateThroughFile();
         }
 
@@ -42,10 +57,13 @@ namespace Dxflib.Parser
             LineChanged?.Invoke(this, args);
         }
 
-        // Iterate through the file
+        /// <summary>
+        /// Function that will iterate through the string[] that is in the
+        /// dxf file and broadcast the event <see cref="LineChanged"/> whenever the line does change
+        /// </summary>
         private void IterateThroughFile()
         {
-            for (int lineIndex = 0; lineIndex < ThisFile.ContentStrings.Count - 1; ++lineIndex)
+            for (int lineIndex = 0; lineIndex < ThisFile.ContentStrings.Length - 1; ++lineIndex)
             {
                 // updating the current and next lines
                 var currentLine = ThisFile.ContentStrings[lineIndex];
@@ -56,8 +74,6 @@ namespace Dxflib.Parser
             }
         }
     }
-
-
 
     /// <summary>
     /// The Delegate for the Line changed
@@ -71,6 +87,12 @@ namespace Dxflib.Parser
     /// </summary>
     public class LineChangeHandlerArgs
     {
+        /// <summary>
+        /// Main Constructor for the LineChangeHandlerArgs class
+        /// </summary>
+        /// <param name="newCurrentLine">The Current line that the iteration is at</param>
+        /// <param name="newNextLine">The next line in the list that the iteration is at</param>
+        /// <param name="lineIndex">The current line index</param>
         public LineChangeHandlerArgs(string newCurrentLine, string newNextLine, int lineIndex)
         {
             NewCurrentLine = newCurrentLine;
@@ -78,11 +100,26 @@ namespace Dxflib.Parser
             LineIndex = lineIndex;
         }
 
+        /// <summary>
+        /// The New Current Line
+        /// </summary>
         public string NewCurrentLine { get; }
+
+        /// <summary>
+        /// The New Next Line
+        /// </summary>
         public string NewNextLine { get; }
+
+        /// <summary>
+        /// The Line Index
+        /// </summary>
         public int LineIndex { get; }
     }
 
+    /// <summary>
+    /// The File Section Enumeration that holds Enumerations for
+    /// the different section of a dxf file
+    /// </summary>
     public enum FileSection
     {
         [Description("Header")]
@@ -116,7 +153,7 @@ namespace Dxflib.Parser
         public const string Classes = "CLASSES";
         public const string Tables = "TABLES";
         public const string Blocks = "BLOCKS";
-        public const string Entities = "Entities";
+        public const string Entities = "ENTITIES";
         public const string Objects = "OBJECTS";
     }
 }

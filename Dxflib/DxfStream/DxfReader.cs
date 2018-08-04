@@ -11,6 +11,7 @@
 // 
 // Purpose:
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -37,7 +38,7 @@ namespace Dxflib.DxfStream
         ///     Reads all of the contents of the dxf file into a list of strings
         /// </summary>
         /// <returns>A List of strings</returns>
-        public List<string> ReadFile()
+        public string[] ReadFile()
         {
             // Check if the file exists
             if (!File.Exists(PathToFile))
@@ -47,21 +48,18 @@ namespace Dxflib.DxfStream
             if (Path.GetExtension(PathToFile) != ".dxf")
                 throw new DxfStream.DxfStreamException("The file extension must be .dxf");
             
-            // Buffer location for all of the strings
-            var fileLines = new List<string>();
-
             // The file stream and streamreader that is used to acces the file system
             var fs = new FileStream(PathToFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var sr = new StreamReader(fs);
 
-            while (sr.ReadLine() != null)
-                fileLines.Add(sr.ReadLine());
+            string[] allText = sr.ReadToEnd().Split(new []{Environment.NewLine}, StringSplitOptions.None);
+
 
             // Closing the stream instances
             sr.Close();
             fs.Close();
 
-            return fileLines;
+            return allText;
         }
     }
 }

@@ -52,6 +52,7 @@ namespace Dxflib.Parser
                 case FileSection.Blocks:
                     break;
                 case FileSection.Entities:
+                    EntityParser.Parse(_thisParser, args);
                     break;
                 case FileSection.Objects:
                     break;
