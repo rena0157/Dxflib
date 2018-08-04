@@ -25,10 +25,24 @@ namespace Dxflib
         public DxfFile(string pathToFile)
         {
             _fileReader = new DxfReader(pathToFile);
+            PathToFile = _fileReader.PathToFile;
+            FileName = Path.GetFileName(PathToFile);
             ContentStrings = _fileReader.ReadFile();
         }
 
+        #region FileProperties
+
+        /// <summary>
+        /// The absolute path to the file
+        /// </summary>
         public string PathToFile { get; set; }
+
+        /// <summary>
+        /// The filename and the extension
+        /// </summary>
+        public string FileName { get; }
+        #endregion
+
         public List<string> ContentStrings { get; }
 
         private DxfReader _fileReader;

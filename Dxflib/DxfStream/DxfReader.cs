@@ -18,7 +18,11 @@ namespace Dxflib.DxfStream
 {
     public class DxfReader
     {
-        // Constructor
+        /// <summary>
+        /// Creates an istance of the DxfReader class. Takes a file path as input and reads the file
+        /// The file contents can be read using the readfile method
+        /// </summary>
+        /// <param name="pathToFile"></param>
         public DxfReader(string pathToFile)
         {
             PathToFile = pathToFile;
@@ -43,16 +47,17 @@ namespace Dxflib.DxfStream
             if (Path.GetExtension(PathToFile) != ".dxf")
                 throw new DxfStream.DxfStreamException("The file extension must be .dxf");
             
-            // Holding location for all of the strings
+            // Buffer location for all of the strings
             var fileLines = new List<string>();
 
-            // The file stream that is used to acces the file system
+            // The file stream and streamreader that is used to acces the file system
             var fs = new FileStream(PathToFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var sr = new StreamReader(fs);
 
             while (sr.ReadLine() != null)
                 fileLines.Add(sr.ReadLine());
 
+            // Closing the stream instances
             sr.Close();
             fs.Close();
 

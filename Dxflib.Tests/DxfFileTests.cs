@@ -21,5 +21,18 @@ namespace Dxflib.Tests
                 Debug.WriteLine(line);
             }
         }
+
+        [TestMethod]
+        public void PathToFile_Testing()
+        {
+            // open the file
+            var testFile = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
+
+            // Printout the filename
+            Debug.WriteLine(testFile.FileName);
+
+            // Assert that the filename is PrintFileContents
+            Assert.IsTrue(testFile.FileName == "PrintFileContents.dxf");
+        }
     }
 }
