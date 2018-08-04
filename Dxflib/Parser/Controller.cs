@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Text;
 
 namespace Dxflib.Parser
 {
     public class Controller
     {
-        private DxfFileMainParser _thisParser;
+        private readonly DxfFileMainParser _thisParser;
 
         public Controller(DxfFileMainParser thisParser)
         {

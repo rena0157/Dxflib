@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Dxflib.DxfStream
 {
@@ -8,7 +6,6 @@ namespace Dxflib.DxfStream
     {
         public DxfStreamException()
         {
-            
         }
 
         public DxfStreamException(string message)

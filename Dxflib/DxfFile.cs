@@ -13,24 +13,26 @@
 // Purpose: To Hold the functionality of the DxfFile Class
 
 // CLR References
-using System;
+
 using System.Collections.Generic;
 using System.IO;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
-using Dxflib.Parser;
 using Dxflib.Entities;
+using Dxflib.Parser;
 
 namespace Dxflib
 {
     public class DxfFile
     {
+        private readonly DxfReader _fileReader;
+
         #region Constructors
 
         /// <summary>
-        /// Constructor that requires a path to a file.
-        /// This constructor will read the file and set up all of the required
-        /// tools for the DxfFile class
+        ///     Constructor that requires a path to a file.
+        ///     This constructor will read the file and set up all of the required
+        ///     tools for the DxfFile class
         /// </summary>
         /// <param name="pathToFile">An absolute or relative path to a dxf file</param>
         public DxfFile(string pathToFile)
@@ -42,16 +44,17 @@ namespace Dxflib
             // Setup file
             PathToFile = _fileReader.PathToFile;
             FileName = Path.GetFileName(PathToFile);
-            
+
             // Read and parse the file
             ContentStrings = _fileReader.ReadFile();
             Entities = new List<Entity>();
             var mainParser = new DxfFileMainParser(this);
         }
+
         #endregion
 
         #region DxfFileContents
-        
+
         public string[] ContentStrings { get; }
         public LayerDictionary Layers { get; set; }
         public List<Entity> Entities;
@@ -61,12 +64,12 @@ namespace Dxflib
         #region FileProperties
 
         /// <summary>
-        /// The absolute path to the file
+        ///     The absolute path to the file
         /// </summary>
         public string PathToFile { get; set; }
 
         /// <summary>
-        /// The filename and the extension
+        ///     The filename and the extension
         /// </summary>
         public string FileName { get; }
 
@@ -79,8 +82,5 @@ namespace Dxflib
         public string LastSavedBy { get; set; }
 
         #endregion
-
-        private DxfReader _fileReader;
-
     }
 }

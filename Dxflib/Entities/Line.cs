@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using Dxflib.Parser;
+﻿using Dxflib.Parser;
 
 namespace Dxflib.Entities
 {
@@ -16,12 +12,6 @@ namespace Dxflib.Entities
 
     public class LineBuffer : EntityBuffer
     {
-        public double Thickness { get; set; }
-        public double x0 { get; set; }
-        public double x1 { get; set; }
-        public double y0 { get; set; }
-        public double y1 { get; set; }
-
         public LineBuffer()
         {
             Thickness = 0;
@@ -30,6 +20,12 @@ namespace Dxflib.Entities
             y0 = 0;
             y1 = 0;
         }
+
+        public double Thickness { get; set; }
+        public double x0 { get; set; }
+        public double x1 { get; set; }
+        public double y0 { get; set; }
+        public double y1 { get; set; }
 
         public override bool Parse(LineChangeHandlerArgs args)
         {
@@ -60,7 +56,6 @@ namespace Dxflib.Entities
         }
 
         // Group Codes
-
     }
 
     public static class LineGroupCodes

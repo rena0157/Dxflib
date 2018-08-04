@@ -20,12 +20,13 @@ namespace Dxflib.Parser
     {
         // Extracton Properties
         private const string EndMarker = "  0";
+
         //Line
         private const string LineStartMarker = "LINE";
 
         /// <summary>
-        /// Entity Parse Function that takes the mainParser and linechanged Args and
-        /// goes through the decision tree of what to parse and what to extract.
+        ///     Entity Parse Function that takes the mainParser and linechanged Args and
+        ///     goes through the decision tree of what to parse and what to extract.
         /// </summary>
         /// <param name="mainParser">The main parser class</param>
         /// <param name="args">LineChangedHandlerArgs class</param>

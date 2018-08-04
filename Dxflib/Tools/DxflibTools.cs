@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Reflection;
-using System.Text;
 
 namespace Dxflib.Tools
 {
@@ -10,8 +7,8 @@ namespace Dxflib.Tools
     {
         public static string GetEnumDescription(Enum value)
         {
-            FieldInfo fi = value.GetType().GetField(value.ToString());
-            DescriptionAttribute[] attributes =
+            var fi = value.GetType().GetField(value.ToString());
+            var attributes =
                 (DescriptionAttribute[]) fi.GetCustomAttributes(
                     typeof(DescriptionAttribute), false);
 

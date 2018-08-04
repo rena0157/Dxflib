@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Dxflib.AcadEntities
 {
     /// <summary>
-    /// A class that holds layer using a dictionary structure
+    ///     A class that holds layer using a dictionary structure
     /// </summary>
     public class LayerDictionary
     {
@@ -13,12 +12,7 @@ namespace Dxflib.AcadEntities
         private readonly Dictionary<string, Layer> _dictionary;
 
         /// <summary>
-        /// Count from the dictionary base
-        /// </summary>
-        public int Count => _dictionary.Count;
-
-        /// <summary>
-        /// Constructor that initalizes that LayerDictionary
+        ///     Constructor that initalizes that LayerDictionary
         /// </summary>
         public LayerDictionary()
         {
@@ -26,7 +20,12 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Adding a new layer to the dictionary
+        ///     Count from the dictionary base
+        /// </summary>
+        public int Count => _dictionary.Count;
+
+        /// <summary>
+        ///     Adding a new layer to the dictionary
         /// </summary>
         /// <param name="name">The name of the layer</param>
         public void NewLayer(string name)
@@ -38,14 +37,17 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Returns true or false if the layer is in this dictionary
+        ///     Returns true or false if the layer is in this dictionary
         /// </summary>
         /// <param name="name">The name of the layer you want to search</param>
         /// <returns>True: If the layer does exits, False: If the layer does not exist</returns>
-        public bool ContainsLayer(string name) => _dictionary.ContainsKey(name);
+        public bool ContainsLayer(string name)
+        {
+            return _dictionary.ContainsKey(name);
+        }
 
         /// <summary>
-        /// Get a layer from the dictionary
+        ///     Get a layer from the dictionary
         /// </summary>
         /// <param name="name">The name of the layer</param>
         /// <returns>The layer that coresponds with the name that was given</returns>
@@ -59,13 +61,12 @@ namespace Dxflib.AcadEntities
     }
 
     /// <summary>
-    /// Layer Exception class, this class handle all layer exceptions
+    ///     Layer Exception class, this class handle all layer exceptions
     /// </summary>
     public class LayerDictionaryException : Exception
     {
         public LayerDictionaryException()
         {
-            
         }
 
         public LayerDictionaryException(string message)

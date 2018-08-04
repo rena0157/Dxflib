@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Dxflib.Entities;
 
 namespace Dxflib.AcadEntities
@@ -9,14 +8,17 @@ namespace Dxflib.AcadEntities
     {
         private Dictionary<string, Entity> _entities;
 
-        public string Name { get; set; }
-
         public Layer(string name)
         {
             Name = name;
         }
 
-        public bool ContainsEntity(string handle) => _entities.ContainsKey(handle);
+        public string Name { get; set; }
+
+        public bool ContainsEntity(string handle)
+        {
+            return _entities.ContainsKey(handle);
+        }
 
         public void AddEntity(string handle, Entity entity)
         {
@@ -39,7 +41,6 @@ namespace Dxflib.AcadEntities
     {
         public LayerException()
         {
-            
         }
 
         public LayerException(string message)
