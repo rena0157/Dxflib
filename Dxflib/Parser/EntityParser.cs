@@ -65,6 +65,11 @@ namespace Dxflib.Parser
             }
         }
 
+        /// <summary>
+        /// Build the entity using the mainParsers information.
+        /// Switch on the CurrentEntity for extraction and Add it the the Entities List
+        /// </summary>
+        /// <param name="mainParser">The Main Parser</param>
         private static void BuildEntity(DxfFileMainParser mainParser)
         {
             switch (mainParser.CurrentEntityForExtraction)

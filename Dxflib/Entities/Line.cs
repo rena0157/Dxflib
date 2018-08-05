@@ -1,4 +1,6 @@
-﻿using Dxflib.Parser;
+﻿using System.Net;
+using System.Runtime.CompilerServices;
+using Dxflib.Parser;
 
 namespace Dxflib.Entities
 {
@@ -32,27 +34,27 @@ namespace Dxflib.Entities
             var currentLine = args.NewCurrentLine;
             var nextLine = args.NewNextLine;
 
-            base.Parse(args);
+            if (base.Parse(args))
+                return true;
 
             switch (currentLine)
             {
                 case LineGroupCodes.Thickness:
-                    break;
+                    return true;
                 case LineGroupCodes.x0:
                     x0 = double.Parse(args.NewNextLine);
-                    break;
+                    return true;
                 case LineGroupCodes.x1:
                     x1 = double.Parse(args.NewNextLine);
-                    break;
+                    return true;
                 case LineGroupCodes.y0:
                     y0 = double.Parse(args.NewNextLine);
-                    break;
+                    return true;
                 case LineGroupCodes.y1:
                     y1 = double.Parse(args.NewNextLine);
-                    break;
+                    return true;
+                default: return false;
             }
-
-            return false;
         }
 
         // Group Codes

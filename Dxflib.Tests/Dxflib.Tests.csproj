@@ -49,15 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DxfFileTests.cs" />
+    <Compile Include="Entities\GeoLineTests.cs" />
+    <Compile Include="Entities\VertexTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DxfReaderTests.cs" />
     <Compile Include="ParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DxfTestFiles\LinesParseTest.dxf" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DxfTestFiles\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dxflib\Dxflib.csproj">
       <Project>{298a5899-4508-4406-b19f-b1284e71f53e}</Project>

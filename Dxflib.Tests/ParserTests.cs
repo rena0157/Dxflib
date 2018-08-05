@@ -70,10 +70,24 @@ namespace Dxflib.Tests
         public void EntityCountTest_ThereShouldBe2EntitesThatAreLines()
         {
             var testFile =
-                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LinesParseTest.dxf");
+                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
 
             Assert.IsTrue(testFile.Entities.Count == 2);
             Assert.IsTrue(((Line) testFile.Entities[0]).EntityType == EntityTypes.Line);
+        }
+
+        [TestMethod]
+        public void EntityTypeTest_Shouldbe2Lines()
+        {
+            var testFile =
+                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
+            var linesSum = 0;
+            foreach (var entity in testFile.Entities)
+            {
+                if (entity.EntityType == EntityTypes.Line)
+                    ++linesSum;
+            }
+            Assert.IsTrue(linesSum == 2);
         }
     }
 }

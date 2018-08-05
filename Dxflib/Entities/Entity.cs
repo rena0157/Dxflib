@@ -39,8 +39,25 @@ namespace Dxflib.Entities
 
         public virtual bool Parse(LineChangeHandlerArgs args)
         {
-            return false;
+            switch (args.NewCurrentLine)
+            {
+                case EntityGroupCodes.Handle:
+                    handle = args.NewNextLine;
+                    return true;
+                // Layer
+                case EntityGroupCodes.Layer:
+                    LayerName = args.NewNextLine;
+                    return true;
+
+                default: return false;
+            }
         }
+    }
+
+    public static class EntityGroupCodes
+    {
+        public const string Handle = " 5";
+        public const string Layer = " 8";
     }
 
     public enum EntityTypes
