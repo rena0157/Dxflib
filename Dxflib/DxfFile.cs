@@ -4,15 +4,10 @@
 // ============================================================
 // 
 // Created: 2018-08-03
-// Last Updated: 2018-08-03-5:55 PM
+// Last Updated: 2018-08-05-8:53 AM
 // By: Adam Renaud
 // 
 // ============================================================
-//
-
-// Purpose: To Hold the functionality of the DxfFile Class
-
-// CLR References
 
 using System.Collections.Generic;
 using System.IO;
@@ -23,12 +18,12 @@ using Dxflib.Parser;
 
 namespace Dxflib
 {
+    /// <summary>
+    /// The DxfFile Class
+    /// </summary>
     public class DxfFile
     {
-        private readonly DxfReader _fileReader;
-
         #region Constructors
-
         /// <summary>
         ///     Constructor that requires a path to a file.
         ///     This constructor will read the file and set up all of the required
@@ -38,31 +33,39 @@ namespace Dxflib
         public DxfFile(string pathToFile)
         {
             // Initalize
-            _fileReader = new DxfReader(pathToFile);
+            var fileReader = new DxfReader(pathToFile);
             Layers = new LayerDictionary();
 
             // Setup file
-            PathToFile = _fileReader.PathToFile;
+            PathToFile = fileReader.PathToFile;
             FileName = Path.GetFileName(PathToFile);
 
             // Read and parse the file
-            ContentStrings = _fileReader.ReadFile();
+            ContentStrings = fileReader.ReadFile();
             Entities = new List<Entity>();
             var mainParser = new DxfFileMainParser(this);
+            Layers.UpdateDictionary(Entities);
         }
-
         #endregion
-
+        
         #region DxfFileContents
-
+        /// <summary>
+        /// The Content strings
+        /// </summary>
         public string[] ContentStrings { get; }
-        public LayerDictionary Layers { get; set; }
-        public List<Entity> Entities;
 
+        /// <summary>
+        /// The Layer Dictionary
+        /// </summary>
+        public LayerDictionary Layers { get; set; }
+
+        /// <summary>
+        /// All of the entities that are extracted
+        /// </summary>
+        public List<Entity> Entities { get; }
         #endregion
 
         #region FileProperties
-
         /// <summary>
         ///     The absolute path to the file
         /// </summary>
@@ -72,15 +75,24 @@ namespace Dxflib
         ///     The filename and the extension
         /// </summary>
         public string FileName { get; }
-
         #endregion
 
         #region HeaderProperties
-
+        /// <summary>
+        /// The Files AutoCAD Version
+        /// </summary>
         public AutoCADVersions AutoCADVersion { get; set; }
-        public Layer CurrentLayer { get; set; }
-        public string LastSavedBy { get; set; }
 
+        /// <summary>
+        /// The Current Layer
+        /// </summary>
+        public Layer CurrentLayer { get; set; }
+
+        /// <summary>
+        /// Who the file was last saved by
+        /// </summary>
+        public string LastSavedBy { get; set; }
         #endregion
+
     }
 }

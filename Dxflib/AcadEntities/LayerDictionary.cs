@@ -1,5 +1,17 @@
-﻿using System;
+﻿// Dxflib
+// LayerDictionary.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-04
+// Last Updated: 2018-08-05-8:53 AM
+// By: Adam Renaud
+// 
+// ============================================================
+
+using System;
 using System.Collections.Generic;
+using Dxflib.Entities;
 
 namespace Dxflib.AcadEntities
 {
@@ -57,6 +69,21 @@ namespace Dxflib.AcadEntities
                 throw new LayerDictionaryException("The Layer was not found in the dictionary");
 
             return _dictionary[name];
+        }
+
+        public void UpdateDictionary(IEnumerable<Entity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                // If the layer does not exist then create it
+                if (!ContainsLayer(entity.LayerName))
+                    NewLayer(entity.LayerName);
+
+                // If the layer does not already have the entity in it add 
+                // that entity to the dictionary
+                if (!_dictionary[entity.LayerName].ContainsEntity(entity.Handle))
+                    _dictionary[entity.LayerName].AddEntity(entity.Handle, entity);
+            }
         }
     }
 

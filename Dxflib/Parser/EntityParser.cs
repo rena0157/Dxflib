@@ -4,18 +4,19 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-04-5:16 PM
+// Last Updated: 2018-08-05-8:50 AM
 // By: Adam Renaud
 // 
 // ============================================================
-// 
-// Purpose:
 
 using System;
 using Dxflib.Entities;
 
 namespace Dxflib.Parser
 {
+    /// <summary>
+    ///     The Entity Parser
+    /// </summary>
     public static class EntityParser
     {
         // Extracton Properties
@@ -66,8 +67,8 @@ namespace Dxflib.Parser
         }
 
         /// <summary>
-        /// Build the entity using the mainParsers information.
-        /// Switch on the CurrentEntity for extraction and Add it the the Entities List
+        ///     Build the entity using the mainParsers information.
+        ///     Switch on the CurrentEntity for extraction and Add it the the Entities List
         /// </summary>
         /// <param name="mainParser">The Main Parser</param>
         private static void BuildEntity(DxfFileMainParser mainParser)

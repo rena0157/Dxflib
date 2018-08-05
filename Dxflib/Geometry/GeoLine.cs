@@ -1,10 +1,31 @@
-﻿namespace Dxflib.Geometry
+﻿// Dxflib
+// GeoLine.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-04
+// Last Updated: 2018-08-05-7:59 AM
+// By: Adam Renaud
+// 
+// ============================================================
+
+namespace Dxflib.Geometry
 {
+    /// <summary>
+    ///     A Geometric line. This line is different than a line that is
+    ///     inherienting the entity class. This line should only be used for geometric
+    ///     purposes
+    /// </summary>
     public class GeoLine : GeometricEntityBase
     {
         private Vertex _vertex0;
         private Vertex _vertex1;
 
+        /// <summary>
+        ///     Main Constructor of the GeoLine
+        /// </summary>
+        /// <param name="v0">The First Vertex</param>
+        /// <param name="v1">The Second Vertex</param>
         public GeoLine(Vertex v0, Vertex v1)
         {
             // Set Variables
@@ -19,6 +40,11 @@
             Length = GeoMath.Distance(v0, v1);
         }
 
+        /// <summary>
+        ///     The first Vertex. Note that when setting this property a GeometryChanged
+        ///     event will be broadcasted. Also changing this property will cause an update
+        ///     Geometry method to happen.
+        /// </summary>
         public Vertex Vertex0
         {
             get => _vertex0;
@@ -30,6 +56,9 @@
             }
         }
 
+        /// <summary>
+        ///     The same as <see cref="Vertex0" />. Just the second vertex.
+        /// </summary>
         public Vertex Vertex1
         {
             get => _vertex1;
@@ -41,6 +70,9 @@
             }
         }
 
+        /// <summary>
+        ///     The total length of the polyline.
+        /// </summary>
         public double Length { get; private set; }
 
         private void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
