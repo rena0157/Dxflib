@@ -29,9 +29,10 @@ namespace Dxflib.Entities
         /// </param>
         public Line(LineBuffer lineBuffer)
         {
+            // Setting up variables from the lineBuffer
             EntityType = EntityTypes.Line;
             Handle = lineBuffer.handle;
-            _layerName = lineBuffer.LayerName;
+            LayerNameBF = lineBuffer.LayerName;
             Thickness = lineBuffer.Thickness;
 
             // Setting the GeoLine

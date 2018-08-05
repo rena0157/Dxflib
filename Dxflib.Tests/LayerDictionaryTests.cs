@@ -4,14 +4,12 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-05-10:44 AM
+// Last Updated: 2018-08-05-11:41 AM
 // By: Adam Renaud
 // 
 // ============================================================
 
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Dxflib.AcadEntities;
 using Dxflib.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -85,7 +83,7 @@ namespace Dxflib.Tests
             var testDictionary = new LayerDictionary();
 
             // TestLine 0
-            var testLine0 = new Line(new LineBuffer()
+            var testLine0 = new Line(new LineBuffer
             {
                 EntityType = EntityTypes.Line,
                 handle = "1A",
@@ -98,7 +96,7 @@ namespace Dxflib.Tests
             });
 
             // TestLine1
-            var testLine1 = new Line(new LineBuffer()
+            var testLine1 = new Line(new LineBuffer
             {
                 EntityType = EntityTypes.Line,
                 handle = "2A",
@@ -112,7 +110,7 @@ namespace Dxflib.Tests
 
             // Place the entities into a list 
             var entities = new List<Entity> {testLine0, testLine1};
-            
+
             // Create the Dictionary
             testDictionary.UpdateDictionary(entities);
 

@@ -21,8 +21,15 @@ namespace Dxflib.Entities
     /// </summary>
     public abstract class Entity
     {
+        /// <summary>
+        /// Public event for layer changes
+        /// </summary>
         public event LayerChangedHandler LayerChanged;
-        public string _layerName;
+        
+        /// <summary>
+        /// The layer name private backing field 
+        /// </summary>
+        protected string LayerNameBF;
 
         /// <summary>
         /// The entity type
@@ -39,11 +46,11 @@ namespace Dxflib.Entities
         /// </summary>
         public string LayerName
         {
-            get => _layerName;
+            get => LayerNameBF;
             set
             {
-                OnLayerChanged(new LayerChangedHandlerArgs(_layerName, value));
-                _layerName = value;
+                OnLayerChanged(new LayerChangedHandlerArgs(LayerNameBF, value));
+                LayerNameBF = value;
             }
         }
 

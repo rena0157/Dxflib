@@ -111,17 +111,31 @@ namespace Dxflib.AcadEntities
         }
     }
 
+    /// <summary>
+    /// Layer Exception Class
+    /// </summary>
     public class LayerException : Exception
     {
+        /// <summary>
+        /// Barebones constructor
+        /// </summary>
         public LayerException()
         {
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Throw an exception with a message
+        /// </summary>
+        /// <param name="message"></param>
         public LayerException(string message)
         {
             Message = message;
         }
 
+        /// <summary>
+        /// The message from the exception
+        /// </summary>
         public override string Message { get; }
     }
 }
