@@ -86,7 +86,7 @@ namespace Dxflib.Tests
             var testLine0 = new Line(new LineBuffer
             {
                 EntityType = EntityTypes.Line,
-                handle = "1A",
+                Handle = "1A",
                 LayerName = "TestLayer",
                 Thickness = 0,
                 X0 = 0,
@@ -99,7 +99,7 @@ namespace Dxflib.Tests
             var testLine1 = new Line(new LineBuffer
             {
                 EntityType = EntityTypes.Line,
-                handle = "2A",
+                Handle = "2A",
                 LayerName = "TestLayer",
                 Thickness = 0,
                 X0 = 0,

@@ -31,7 +31,7 @@ namespace Dxflib.Entities
         {
             // Setting up variables from the lineBuffer
             EntityType = EntityTypes.Line;
-            Handle = lineBuffer.handle;
+            Handle = lineBuffer.Handle;
             LayerNameBF = lineBuffer.LayerName;
             Thickness = lineBuffer.Thickness;
 

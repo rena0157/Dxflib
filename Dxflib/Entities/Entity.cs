@@ -87,12 +87,12 @@ namespace Dxflib.Entities
         /// </summary>
         public EntityBuffer()
         {
-            handle = "";
+            Handle = "";
             LayerName = "";
             EntityType = EntityTypes.None;
         }
 
-        public string handle { get; set; }
+        public string Handle { get; set; }
         public string LayerName { get; set; }
 
         public virtual bool Parse(LineChangeHandlerArgs args)
@@ -100,7 +100,7 @@ namespace Dxflib.Entities
             switch (args.NewCurrentLine)
             {
                 case EntityGroupCodes.Handle:
-                    handle = args.NewNextLine;
+                    Handle = args.NewNextLine;
                     return true;
                 // Layer
                 case EntityGroupCodes.Layer:
