@@ -24,6 +24,7 @@ namespace Dxflib.AcadEntities
         // The dictionary backing field
         private Dictionary<string, Entity> _entities;
 
+
         /// <summary>
         /// Layer Constructor
         /// </summary>
@@ -38,6 +39,8 @@ namespace Dxflib.AcadEntities
         /// The Layer's Name
         /// </summary>
         public string Name { get; set; }
+
+        public int Count => _entities.Count;
 
         /// <summary>
         /// Returns true if the layer contains the entity
@@ -92,6 +95,19 @@ namespace Dxflib.AcadEntities
         public List<string> GetAllHandles()
         {
             return _entities.Keys.ToList();
+        }
+
+        /// <summary>
+        /// Gets a layer from it's handle
+        /// </summary>
+        /// <param name="handle">The handle of the entity</param>
+        /// <returns>The entity</returns>
+        public Entity GetEntity(string handle)
+        {
+            if (!_entities.ContainsKey(handle))
+                throw new LayerException($"Layer does not contain: {handle}");
+
+            return _entities[handle];
         }
     }
 

@@ -31,7 +31,7 @@ namespace Dxflib.Entities
         {
             EntityType = EntityTypes.Line;
             Handle = lineBuffer.handle;
-            LayerName = lineBuffer.LayerName;
+            _layerName = lineBuffer.LayerName;
             Thickness = lineBuffer.Thickness;
 
             // Setting the GeoLine
@@ -67,10 +67,10 @@ namespace Dxflib.Entities
         }
 
         public double Thickness { get; set; }
-        public double X0 { get; private set; }
-        public double X1 { get; private set; }
-        public double Y0 { get; private set; }
-        public double Y1 { get; private set; }
+        public double X0 { get; set; }
+        public double X1 { get; set; }
+        public double Y0 { get; set; }
+        public double Y1 { get; set; }
 
         /// <summary>
         /// Main Parsing function for the LineBuffer.

@@ -14,11 +14,16 @@ using Dxflib.Parser;
 
 namespace Dxflib.Entities
 {
+    public delegate void LayerChangedHandler(object sender, LayerChangedHandlerArgs args);
+
     /// <summary>
     /// The Entity base class that all entities will be derived
     /// </summary>
     public abstract class Entity
     {
+        public event LayerChangedHandler LayerChanged;
+        public string _layerName;
+
         /// <summary>
         /// The entity type
         /// </summary>
@@ -32,7 +37,32 @@ namespace Dxflib.Entities
         /// <summary>
         /// The entity's Layer name
         /// </summary>
-        public string LayerName { get; protected set; }
+        public string LayerName
+        {
+            get => _layerName;
+            set
+            {
+                OnLayerChanged(new LayerChangedHandlerArgs(_layerName, value));
+                _layerName = value;
+            }
+        }
+
+        protected virtual void OnLayerChanged(LayerChangedHandlerArgs args)
+        {
+            LayerChanged?.Invoke(this, args);
+        }
+    }
+
+    public class LayerChangedHandlerArgs
+    {
+        public LayerChangedHandlerArgs(string oldName, string newName)
+        {
+            OldName = oldName;
+            NewName = newName;
+        }
+
+        public string OldName { get; }
+        public string NewName { get; }
     }
 
     /// <summary>
@@ -55,8 +85,8 @@ namespace Dxflib.Entities
             EntityType = EntityTypes.None;
         }
 
-        public string handle { get; private set; }
-        public string LayerName { get; private set; }
+        public string handle { get; set; }
+        public string LayerName { get; set; }
 
         public virtual bool Parse(LineChangeHandlerArgs args)
         {
