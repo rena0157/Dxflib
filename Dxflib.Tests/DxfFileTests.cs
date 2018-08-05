@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Dxflib;
 using Dxflib.AcadEntities;
 using Dxflib.Entities;
+using Dxflib.Geometry;
 
 namespace Dxflib.Tests
 {
@@ -62,6 +63,25 @@ namespace Dxflib.Tests
                 Debug.WriteLine(e.Message);
                 Assert.IsTrue(true);
             }
+        }
+
+        [TestMethod]
+        public void TestingLinesFromEntities_CastingFromEntityToLine_GettingLength()
+        {
+            var testFile =
+                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
+
+            double sum = 0;
+            foreach (var entity in testFile.Entities)
+            {
+                Line testLine = null;
+                if (entity.EntityType == EntityTypes.Line)
+                    testLine = (Line)entity;
+                if (testLine != null)
+                    sum += testLine.Length;
+            }
+            Debug.WriteLine(sum);
+            Assert.IsTrue(Math.Abs(sum - 85591.0668) < GeoMath.Tolerance);
         }
     }
 }

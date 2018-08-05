@@ -19,8 +19,8 @@ namespace Dxflib.Entities
     public abstract class Entity
     {
         public EntityTypes EntityType;
-        public string handle { get; }
-        public string LayerName { get; }
+        public string Handle { get; protected set; }
+        public string LayerName { get; protected set; }
     }
 
     public class EntityBuffer

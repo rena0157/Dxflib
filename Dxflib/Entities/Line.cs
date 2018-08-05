@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Runtime.CompilerServices;
+﻿using Dxflib.Geometry;
 using Dxflib.Parser;
 
 namespace Dxflib.Entities
@@ -9,7 +8,16 @@ namespace Dxflib.Entities
         public Line(LineBuffer lineBuffer)
         {
             EntityType = EntityTypes.Line;
+            Handle = lineBuffer.handle;
+            LayerName = lineBuffer.LayerName;
+
+            // Setting the GeoLine
+            GLine = new GeoLine(new Vertex(lineBuffer.x0, lineBuffer.y0),
+                new Vertex(lineBuffer.x1, lineBuffer.y1));
         }
+
+        public GeoLine GLine { get; }
+        public double Length => GLine.Length;
     }
 
     public class LineBuffer : EntityBuffer
