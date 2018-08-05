@@ -26,6 +26,8 @@ namespace Dxflib.Geometry
         /// </summary>
         public event GeometryChangedHandler GeometryChanged;
 
+        public GeometryEntityTypes GeometryEntityType { get; protected set; }
+
         /// <summary>
         ///     Base class Invokation of the Geometry changed event
         /// </summary>
@@ -33,6 +35,11 @@ namespace Dxflib.Geometry
         protected virtual void OnGeometryChanged(GeometryChangedHandlerArgs args)
         {
             GeometryChanged?.Invoke(this, args);
+        }
+
+        protected virtual double CalcLength()
+        {
+            return 0;
         }
     }
 
@@ -76,5 +83,12 @@ namespace Dxflib.Geometry
         ///     Vertex ID
         /// </summary>
         public int VertexId { get; }
+    }
+
+    public enum GeometryEntityTypes
+    {
+        Vertex,
+        GeoLine,
+        GeoArc
     }
 }

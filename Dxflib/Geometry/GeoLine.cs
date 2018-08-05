@@ -28,6 +28,9 @@ namespace Dxflib.Geometry
         /// <param name="v1">The Second Vertex</param>
         public GeoLine(Vertex v0, Vertex v1)
         {
+            // Set type
+            GeometryEntityType = GeometryEntityTypes.GeoLine;
+
             // Set Variables
             _vertex0 = v0;
             _vertex1 = v1;
@@ -37,7 +40,7 @@ namespace Dxflib.Geometry
             _vertex1.GeometryChanged += UpdateGeometry;
 
             // Calculate geometry
-            Length = GeoMath.Distance(v0, v1);
+            Length = CalcLength();
         }
 
         /// <summary>
@@ -71,13 +74,19 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        /// Overrided CalcLength Function
+        /// </summary>
+        /// <returns></returns>
+        protected override double CalcLength() => GeoMath.Distance(Vertex0, Vertex1);
+
+        /// <summary>
         ///     The total length of the polyline.
         /// </summary>
         public double Length { get; private set; }
 
         private void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
-            Length = GeoMath.Distance(Vertex0, Vertex1);
+            Length = CalcLength();
         }
     }
 }
