@@ -16,6 +16,8 @@ using Dxflib.DxfStream;
 using Dxflib.Entities;
 using Dxflib.Parser;
 
+// Test Commit Message: Hello
+
 namespace Dxflib
 {
     /// <summary>
