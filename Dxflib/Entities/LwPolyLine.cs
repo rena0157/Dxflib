@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http.Headers;
+using Dxflib.Geometry;
 using Dxflib.Parser;
 
 namespace Dxflib.Entities
@@ -7,11 +9,32 @@ namespace Dxflib.Entities
     {
         public LwPolyLine(LwPolyLineBuffer lwPolyLineBuffer)
         {
+            
+        }
+
+        private List<GeometricEntityBase> _sections;
+
+        private List<GeometricEntityBase> SectionBuilder()
+        {
+            return new List<GeometricEntityBase>();
         }
     }
 
     public class LwPolyLineBuffer : EntityBuffer
     {
+
+        public LwPolyLineBuffer()
+        {
+            NumberOfVerticies = 0;
+            PolyLineFlag = false;
+            ConstantWidth = 0;
+            Elevation = 0;
+            Thickness = 0;
+            XValues = new List<double>();
+            YValues = new List<double>();
+            BulgeList = new List<double>();
+        }
+
         public int NumberOfVerticies { get; set; }
         public bool PolyLineFlag { get; set; }
         public double ConstantWidth { get; set; }
@@ -45,6 +68,32 @@ namespace Dxflib.Entities
                 case LwPolyLineGroupGroupCodes.ConstantWidth:
                     ConstantWidth = double.Parse(args.NewNextLine);
                     return true;
+
+                // Elevation
+                case LwPolyLineGroupGroupCodes.Elevation:
+                    Elevation = double.Parse(args.NewNextLine);
+                    return true;
+                
+                // Thickness
+                case LwPolyLineGroupGroupCodes.Thickness:
+                    Thickness = double.Parse(args.NewNextLine);
+                    return true;
+                
+                // Xvalues
+                case LwPolyLineGroupGroupCodes.XValue:
+                    XValues.Add(double.Parse(args.NewNextLine));
+                    return true;
+                
+                // Yvalues
+                case LwPolyLineGroupGroupCodes.YValue:
+                    YValues.Add(double.Parse(args.NewNextLine));
+                    return true;
+                
+                // Bulge Values
+                case LwPolyLineGroupGroupCodes.Bulge:
+                    BulgeList.Add(double.Parse(args.NewNextLine));
+                    return true;
+                    
             }
 
             return false;
@@ -53,7 +102,7 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The LwPolyline Group codes
         /// </summary>
-        internal static class LwPolyLineGroupGroupCodes
+        private static class LwPolyLineGroupGroupCodes
         {
             public const string NumberOfVerticies = " 90";
             public const string PolyLineFlag = " 70";

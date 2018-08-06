@@ -22,8 +22,9 @@ namespace Dxflib.Parser
         // Extracton Properties
         private const string EndMarker = "  0";
 
-        //Line
+        // StartMarkers
         private const string LineStartMarker = "LINE";
+        private const string LwPolyLineStartMarker = "LWPOLYLINE";
 
         /// <summary>
         ///     Entity Parse Function that takes the mainParser and linechanged Args and
@@ -41,6 +42,13 @@ namespace Dxflib.Parser
                     mainParser.CurrentEntityForExtraction = EntityTypes.Line;
                     mainParser.LineBuf = new LineBuffer();
                     break;
+
+                // LwPolyLine
+                case LwPolyLineStartMarker:
+                    mainParser.CurrentEntityForExtraction = EntityTypes.Lwpolyline;
+                    mainParser.LwPolyLineBuf = new LwPolyLineBuffer();
+                    break;
+
                 // End Marker
                 case EndMarker:
                     BuildEntity(mainParser);
@@ -57,6 +65,7 @@ namespace Dxflib.Parser
                     break;
                 // Lwpolyline
                 case EntityTypes.Lwpolyline:
+                    mainParser.LwPolyLineBuf.Parse(args);
                     break;
                 // None
                 case EntityTypes.None:
@@ -75,11 +84,19 @@ namespace Dxflib.Parser
         {
             switch (mainParser.CurrentEntityForExtraction)
             {
+                // Line
                 case EntityTypes.Line:
-                    mainParser.ThisFile.Entities.Add(new Line(mainParser.LineBuf));
+                    mainParser.ThisFile
+                        .Entities.Add(new Line(mainParser.LineBuf));
                     break;
+                
+                // LwPolyline
                 case EntityTypes.Lwpolyline:
+                    mainParser.ThisFile
+                        .Entities.Add(new LwPolyLine(mainParser.LwPolyLineBuf));
                     break;
+                
+                // none
                 case EntityTypes.None:
                     break;
                 default:

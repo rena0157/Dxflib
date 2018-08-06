@@ -13,9 +13,10 @@ namespace Dxflib.Parser
         /// <summary>
         ///     Constructor that sets the dxf file and creates and manages all of the other parsers
         /// </summary>
-        /// <param name="dxfFile"></param>
+        /// <param name="dxfFile">A DXF file</param>
         public DxfFileMainParser(DxfFile dxfFile)
         {
+            // The Current DxfFile
             ThisFile = dxfFile;
             var controller = new Controller(this);
 
