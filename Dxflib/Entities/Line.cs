@@ -51,11 +51,14 @@ namespace Dxflib.Entities
         public double Length => GLine.Length;
 
         /// <summary>
-        /// The Thickness of the line
+        ///     The Thickness of the line
         /// </summary>
         public double Thickness { get; }
     }
 
+    /// <summary>
+    ///     The LineBuffer Class that is used in extraction of the Line Class
+    /// </summary>
     public class LineBuffer : EntityBuffer
     {
         public LineBuffer()
@@ -74,10 +77,12 @@ namespace Dxflib.Entities
         public double Y1 { get; set; }
 
         /// <summary>
-        /// Main Parsing function for the LineBuffer.
+        ///     Main Parsing function for the LineBuffer.
         /// </summary>
-        /// <param name="args">Args that are passed by the line
-        /// changed event</param>
+        /// <param name="args">
+        ///     Args that are passed by the line
+        ///     changed event
+        /// </param>
         /// <returns>True if parse was sucessful</returns>
         public override bool Parse(LineChangeHandlerArgs args)
         {

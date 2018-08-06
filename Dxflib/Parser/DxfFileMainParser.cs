@@ -6,50 +6,57 @@ namespace Dxflib.Parser
     public class DxfFileMainParser
     {
         /// <summary>
-        /// The event broadcasts when the main parser clicks over to the next iteration
+        ///     This is the Dxf file that was passed by the main constructor
         /// </summary>
-        public event LineChangeHandler LineChanged;
+        public DxfFile ThisFile { get; }
 
         /// <summary>
-        /// This is the Dxf file that was passed by the main constructor
-        /// </summary>
-        public DxfFile ThisFile;
-
-        /// <summary>
-        /// The Current File section
-        /// Ex: Header, Entities, Objects
-        /// </summary>
-        public FileSection CurrentFileSection { get; set;}
-
-        /// <summary>
-        /// The Current Entity that is being extracted
-        /// </summary>
-        public EntityTypes CurrentEntityForExtraction { get; set;}
-
-        /// <summary>
-        /// The Line Buffer where all information is to be stored until the
-        /// Line Entity can be created
-        /// </summary>
-        public LineBuffer LineBuf { get; set; }
-
-        /// <summary>
-        /// Constructor that sets the dxf file and creates and manages all of the other parsers
+        ///     Constructor that sets the dxf file and creates and manages all of the other parsers
         /// </summary>
         /// <param name="dxfFile"></param>
         public DxfFileMainParser(DxfFile dxfFile)
         {
             ThisFile = dxfFile;
-            Controller controller = new Controller(this);
+            var controller = new Controller(this);
 
             // Default Values
             CurrentEntityForExtraction = EntityTypes.None;
             LineBuf = new LineBuffer();
+            LwPolyLineBuf = new LwPolyLineBuffer();
 
             IterateThroughFile();
         }
 
         /// <summary>
-        /// Invokation of the LineChanged event
+        ///     The Current File section
+        ///     Ex: Header, Entities, Objects
+        /// </summary>
+        public FileSection CurrentFileSection { get; set; }
+
+        /// <summary>
+        ///     The Current Entity that is being extracted
+        /// </summary>
+        public EntityTypes CurrentEntityForExtraction { get; set; }
+
+        /// <summary>
+        ///     The Line Buffer where all information is to be stored until the
+        ///     Line Entity can be created
+        /// </summary>
+        public LineBuffer LineBuf { get; set; }
+
+        /// <summary>
+        ///     The LwPolyline Buffer where all information is to be stored unil
+        ///     the LwPolyline Entity can be created
+        /// </summary>
+        public LwPolyLineBuffer LwPolyLineBuf { get; set; }
+
+        /// <summary>
+        ///     The event broadcasts when the main parser clicks over to the next iteration
+        /// </summary>
+        public event LineChangeHandler LineChanged;
+
+        /// <summary>
+        ///     Invokation of the LineChanged event
         /// </summary>
         /// <param name="args"></param>
         protected virtual void OnLineChanged(LineChangeHandlerArgs args)
@@ -58,12 +65,12 @@ namespace Dxflib.Parser
         }
 
         /// <summary>
-        /// Function that will iterate through the string[] that is in the
-        /// dxf file and broadcast the event <see cref="LineChanged"/> whenever the line does change
+        ///     Function that will iterate through the string[] that is in the
+        ///     dxf file and broadcast the event <see cref="LineChanged" /> whenever the line does change
         /// </summary>
         private void IterateThroughFile()
         {
-            for (int lineIndex = 0; lineIndex < ThisFile.ContentStrings.Length - 1; ++lineIndex)
+            for (var lineIndex = 0; lineIndex < ThisFile.ContentStrings.Length - 1; ++lineIndex)
             {
                 // updating the current and next lines
                 var currentLine = ThisFile.ContentStrings[lineIndex];
@@ -76,19 +83,19 @@ namespace Dxflib.Parser
     }
 
     /// <summary>
-    /// The Delegate for the Line changed
+    ///     The Delegate for the Line changed
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
     public delegate void LineChangeHandler(object sender, LineChangeHandlerArgs args);
 
     /// <summary>
-    /// The arguments that are passed to the delegate for the LineChangedHandler
+    ///     The arguments that are passed to the delegate for the LineChangedHandler
     /// </summary>
     public class LineChangeHandlerArgs
     {
         /// <summary>
-        /// Main Constructor for the LineChangeHandlerArgs class
+        ///     Main Constructor for the LineChangeHandlerArgs class
         /// </summary>
         /// <param name="newCurrentLine">The Current line that the iteration is at</param>
         /// <param name="newNextLine">The next line in the list that the iteration is at</param>
@@ -101,54 +108,47 @@ namespace Dxflib.Parser
         }
 
         /// <summary>
-        /// The New Current Line
+        ///     The New Current Line
         /// </summary>
         public string NewCurrentLine { get; }
 
         /// <summary>
-        /// The New Next Line
+        ///     The New Next Line
         /// </summary>
         public string NewNextLine { get; }
 
         /// <summary>
-        /// The Line Index
+        ///     The Line Index
         /// </summary>
         public int LineIndex { get; }
     }
 
     /// <summary>
-    /// The File Section Enumeration that holds Enumerations for
-    /// the different section of a dxf file
+    ///     The File Section Enumeration that holds Enumerations for
+    ///     the different section of a dxf file
     /// </summary>
     public enum FileSection
     {
-        [Description("Header")]
-        Header,
-        
-        [Description("Classes")]
-        Classes,
-        
-        [Description("Tables")]
-        Tables,
-        
-        [Description("Blocks")]
-        Blocks,
+        [Description("Header")] Header,
 
-        [Description("Entities")]
-        Entities,
+        [Description("Classes")] Classes,
 
-        [Description("Objects")]
-        Objects,
+        [Description("Tables")] Tables,
 
-        [Description("None")]
-        None
+        [Description("Blocks")] Blocks,
+
+        [Description("Entities")] Entities,
+
+        [Description("Objects")] Objects,
+
+        [Description("None")] None
     }
 
     public struct FileSectionStrings
     {
         public const string SectionStart = "SECTION";
         public const string SectionEnd = "ENDSEC";
-        
+
         public const string Header = "HEADER";
         public const string Classes = "CLASSES";
         public const string Tables = "TABLES";
