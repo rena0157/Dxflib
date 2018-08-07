@@ -11,8 +11,8 @@ namespace Dxflib.Geometry
     public class GeoArc : GeometricEntityBase
     {
         private double _bulge;
-        private readonly Vertex _vertex0;
-        private readonly Vertex _vertex1;
+        private Vertex _vertex0;
+        private Vertex _vertex1;
 
         /// <summary>
         ///     GeoArc Constructor
@@ -55,6 +55,48 @@ namespace Dxflib.Geometry
         public double Radius { get; private set; }
 
         /// <summary>
+        /// The First Vertex
+        /// </summary>
+        public Vertex Vertex0
+        {
+            get => _vertex0;
+            set
+            {
+                _vertex0 = value;
+                OnGeometryChanged(new GeometryChangedHandlerArgs(0));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
+            }
+        }
+
+        /// <summary>
+        /// The Second Vertex
+        /// </summary>
+        public Vertex Vertex1
+        {
+            get => _vertex1;
+            set
+            {
+                _vertex1 = value;
+                OnGeometryChanged(new GeometryChangedHandlerArgs(1));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
+            }
+        }
+
+        /// <summary>
+        /// The bulge value for this object (Is similar to the curvature of an arc)
+        /// </summary>
+        public double BulgeValue
+        {
+            get => _bulge;
+            set
+            {
+                _bulge = value;
+                OnGeometryChanged(new GeometryChangedHandlerArgs("Bulge"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("Bulge"));
+            }
+        }
+
+        /// <summary>
         ///     The Length of the GeoArc
         /// </summary>
         /// <returns>A double which represents the length</returns>
@@ -67,7 +109,17 @@ namespace Dxflib.Geometry
         /// <returns>The Radius</returns>
         private double CalcRadius() => Bulge.Radius(_vertex0, _vertex1, _bulge);
 
+        /// <summary>
+        /// Calculate the angle of the arc
+        /// </summary>
+        /// <returns></returns>
         private double CalcAngle() => Bulge.Angle(_bulge);
+
+        /// <summary>
+        /// Calcuate the area of the Geoarc
+        /// </summary>
+        /// <returns></returns>
+        private double CalcArea() => GeoMath.ChordArea(this);
 
         /// <summary>
         ///     Update the Geometry of the GeoArc

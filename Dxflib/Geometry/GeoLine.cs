@@ -77,13 +77,24 @@ namespace Dxflib.Geometry
         /// Overrided CalcLength Function
         /// </summary>
         /// <returns></returns>
-        protected override double CalcLength() => GeoMath.Distance(Vertex0, Vertex1);
+        protected sealed override double CalcLength() => GeoMath.Distance(Vertex0, Vertex1);
+
+        /// <summary>
+        /// Calculate the total area underneath this line and the x-axis
+        /// </summary>
+        /// <returns>The Area of the line and the x axis</returns>
+        private double CalcArea() => GeoMath.TrapzArea(this);
 
         /// <summary>
         ///     The total length of the polyline.
         /// </summary>
         public double Length { get; private set; }
 
+        /// <summary>
+        /// Updates the Geometry for this class
+        /// </summary>
+        /// <param name="sender">The sending object</param>
+        /// <param name="args"></param>
         protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
             Length = CalcLength();

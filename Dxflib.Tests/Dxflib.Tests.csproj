@@ -49,10 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DxfFileTests.cs" />
-    <Compile Include="Entities\GeoLineTests.cs" />
+    <Compile Include="Geometry\GeoLineTests.cs" />
     <Compile Include="Entities\LineTests.cs" />
     <Compile Include="Entities\LwPolyLineTests.cs" />
     <Compile Include="Entities\VertexTests.cs" />
+    <Compile Include="Geometry\GeoArcTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DxfReaderTests.cs" />
     <Compile Include="ParserTests.cs" />
