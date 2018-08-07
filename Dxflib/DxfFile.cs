@@ -26,6 +26,8 @@ namespace Dxflib
     /// </summary>
     public class DxfFile
     {
+        private readonly DxfFileMainParser _mainParser;
+
         #region Constructors
         /// <summary>
         ///     Constructor that requires a path to a file.
@@ -46,7 +48,7 @@ namespace Dxflib
             // Read and parse the file
             ContentStrings = fileReader.ReadFile();
             Entities = new List<Entity>();
-            var mainParser = new DxfFileMainParser(this);
+            _mainParser = new DxfFileMainParser(this);
             Layers.UpdateDictionary(Entities);
         }
         #endregion
@@ -60,7 +62,7 @@ namespace Dxflib
         /// <summary>
         /// The Layer Dictionary
         /// </summary>
-        public LayerDictionary Layers { get; set; }
+        public LayerDictionary Layers { get; }
 
         /// <summary>
         /// All of the entities that are extracted
@@ -101,6 +103,7 @@ namespace Dxflib
         /// <summary>
         /// The Files AutoCAD Version
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         public AutoCADVersions AutoCADVersion { get; set; }
 
         /// <summary>

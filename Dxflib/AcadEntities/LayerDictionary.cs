@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-05-8:53 AM
+// Last Updated: 2018-08-07-11:09 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -36,6 +36,11 @@ namespace Dxflib.AcadEntities
         ///     Count from the dictionary base
         /// </summary>
         public int Count => _dictionary.Count;
+
+        /// <summary>
+        ///     Returns all layers
+        /// </summary>
+        public List<Layer> GetAllLayers => _dictionary.Values.ToList();
 
         /// <summary>
         ///     Adding a new layer to the dictionary
@@ -73,9 +78,9 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Updates the dictionary.
-        /// If a layer does not exist then it adds it to the dictionary and
-        /// adds entities to their respective layers
+        ///     Updates the dictionary.
+        ///     If a layer does not exist then it adds it to the dictionary and
+        ///     adds entities to their respective layers
         /// </summary>
         /// <param name="entities">Entities that you want the dictionary to have</param>
         public void UpdateDictionary(IEnumerable<Entity> entities)
@@ -100,29 +105,23 @@ namespace Dxflib.AcadEntities
             // remove entities from layers if their layer name does not
             // match the layer that the dictionary has them on.
             foreach (var layer in _dictionary.Values.ToList())
-            {
-                foreach (var entity in layer.GetAllEntities())
-                {
-                    // If the layername does not match the current layer
-                    // then clean up that layer
-                    if (entity.LayerName != layer.Name)
-                    {
-                        _dictionary[layer.Name].RemoveEntity(entity.Handle);
-                    }
-                }
-            }
+            foreach (var entity in layer.GetAllEntities())
+                // If the layername does not match the current layer
+                // then clean up that layer
+                if (entity.LayerName != layer.Name)
+                    _dictionary[layer.Name].RemoveEntity(entity.Handle);
         }
 
         /// <summary>
-        /// Entity on layer changed is called when ever a layerName is changed on
-        /// an entity
+        ///     Entity on layer changed is called when ever a layerName is changed on
+        ///     an entity
         /// </summary>
         /// <param name="sender">The Sender and entity</param>
         /// <param name="args">Arguments</param>
         private void EntityOnLayerChanged(object sender, LayerChangedHandlerArgs args)
         {
             // Delete the old reference
-            _dictionary[args.OldName].RemoveEntity(((Entity)sender).Handle);
+            _dictionary[args.OldName].RemoveEntity(((Entity) sender).Handle);
 
             // If the layer does not already exist then create it
             if (!_dictionary.ContainsKey(args.NewName))
@@ -133,32 +132,44 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Remove a layer
+        ///     Remove a layer
         /// </summary>
         /// <param name="name">The name of the layer that is to be removed</param>
         /// <returns>True: if Sucessful</returns>
-        public bool RemoveLayer(string name) => _dictionary.Remove(name);
-
-        /// <summary>
-        /// Returns all layers
-        /// </summary>
-        public List<Layer> GetAllLayers => _dictionary.Values.ToList();
+        public bool RemoveLayer(string name)
+        {
+            return _dictionary.Remove(name);
+        }
     }
 
+    /// <inheritdoc />
     /// <summary>
     ///     Layer Exception class, this class handle all layer exceptions
     /// </summary>
     public class LayerDictionaryException : Exception
     {
+        /// <inheritdoc />
+        /// <summary>
+        /// Blank Constructor
+        /// </summary>
         public LayerDictionaryException()
         {
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Constructor with a message
+        /// </summary>
+        /// <param name="message">The Message</param>
         public LayerDictionaryException(string message)
         {
             Message = message;
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Message to send to the user
+        /// </summary>
         public override string Message { get; }
     }
 }

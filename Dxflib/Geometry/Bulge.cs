@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-07-8:24 AM
+// Last Updated: 2018-08-07-10:40 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -16,7 +16,7 @@ namespace Dxflib.Geometry
     internal struct Bulge
     {
         /// <summary>
-        /// The Bulge Null Value
+        ///     The Bulge Null Value
         /// </summary>
         public const double BulgeNull = -2.0;
 
@@ -25,7 +25,10 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <param name="bulgeValue">The bulge value</param>
         /// <returns>The Total Angle between the two arms to the arc in Radians</returns>
-        public static double Angle(double bulgeValue) => 4 * Math.Atan(Math.Abs(bulgeValue));
+        public static double Angle(double bulgeValue)
+        {
+            return 4 * Math.Atan(Math.Abs(bulgeValue));
+        }
 
         /// <summary>
         ///     The Radius of the Bulge
@@ -35,7 +38,9 @@ namespace Dxflib.Geometry
         /// <param name="angle">The Total Angle of the arc</param>
         /// <returns></returns>
         public static double Radius(Vertex v0, Vertex v1, double angle)
-            => GeoMath.Distance(v0, v1) / (2 * Math.Sin(angle / 2));
+        {
+            return GeoMath.Distance(v0, v1) / (2 * Math.Sin(angle / 2));
+        }
 
         /// <summary>
         ///     The Arc Length of the bulge
@@ -43,6 +48,9 @@ namespace Dxflib.Geometry
         /// <param name="radius">The Radius of the bulge</param>
         /// <param name="angle">The Angle of the bulge in radians</param>
         /// <returns></returns>
-        public static double Length(double radius, double angle) => radius * angle;
+        public static double Length(double radius, double angle)
+        {
+            return radius * angle;
+        }
     }
 }

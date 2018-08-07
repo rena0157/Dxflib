@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-05-9:20 AM
+// Last Updated: 2018-08-07-11:09 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -17,16 +17,16 @@ using Dxflib.Entities;
 namespace Dxflib.AcadEntities
 {
     /// <summary>
-    /// The Layer Class
+    ///     The Layer Class
     /// </summary>
     public class Layer
     {
         // The dictionary backing field
-        private Dictionary<string, Entity> _entities;
+        private readonly Dictionary<string, Entity> _entities;
 
 
         /// <summary>
-        /// Layer Constructor
+        ///     Layer Constructor
         /// </summary>
         /// <param name="name">The Layer Name</param>
         public Layer(string name)
@@ -36,26 +36,28 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// The Layer's Name
+        ///     The Layer's Name
         /// </summary>
         public string Name { get; set; }
 
         public int Count => _entities.Count;
 
         /// <summary>
-        /// Returns true if the layer contains the entity
-        /// with the provided handle
+        ///     Returns true if the layer contains the entity
+        ///     with the provided handle
         /// </summary>
         /// <param name="handle">Handle of the entity</param>
-        /// <returns>True: The entity is contained, False: the entity is not
-        /// contained</returns>
+        /// <returns>
+        ///     True: The entity is contained, False: the entity is not
+        ///     contained
+        /// </returns>
         public bool ContainsEntity(string handle)
         {
             return _entities.ContainsKey(handle);
         }
 
         /// <summary>
-        /// Adds an entity to the dictionary
+        ///     Adds an entity to the dictionary
         /// </summary>
         /// <param name="handle">The entity's handle</param>
         /// <param name="entity">The entity reference</param>
@@ -68,7 +70,7 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Removes the entity from the dictionary
+        ///     Removes the entity from the dictionary
         /// </summary>
         /// <param name="handle"></param>
         public void RemoveEntity(string handle)
@@ -80,7 +82,7 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Get all of the entities on the layer
+        ///     Get all of the entities on the layer
         /// </summary>
         /// <returns>a list of all of the entities on the layer</returns>
         public List<Entity> GetAllEntities()
@@ -89,7 +91,7 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Gets all of the handles from the dictionary
+        ///     Gets all of the handles from the dictionary
         /// </summary>
         /// <returns>A list of handles</returns>
         public List<string> GetAllHandles()
@@ -98,7 +100,7 @@ namespace Dxflib.AcadEntities
         }
 
         /// <summary>
-        /// Gets a layer from it's handle
+        ///     Gets a layer from it's handle
         /// </summary>
         /// <param name="handle">The handle of the entity</param>
         /// <returns>The entity</returns>
@@ -111,13 +113,15 @@ namespace Dxflib.AcadEntities
         }
     }
 
+    /// <inheritdoc />
     /// <summary>
-    /// Layer Exception Class
+    ///     Layer Exception Class
     /// </summary>
     public class LayerException : Exception
     {
+        /// <inheritdoc />
         /// <summary>
-        /// Barebones constructor
+        ///     Barebones constructor
         /// </summary>
         public LayerException()
         {
@@ -125,16 +129,17 @@ namespace Dxflib.AcadEntities
 
         /// <inheritdoc />
         /// <summary>
-        /// Throw an exception with a message
+        ///     Throw an exception with a message
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">The Message</param>
         public LayerException(string message)
         {
             Message = message;
         }
 
+        /// <inheritdoc />
         /// <summary>
-        /// The message from the exception
+        ///     The message from the exception
         /// </summary>
         public override string Message { get; }
     }
