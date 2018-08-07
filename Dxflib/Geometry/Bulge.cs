@@ -39,7 +39,7 @@ namespace Dxflib.Geometry
         /// <returns></returns>
         public static double Radius(Vertex v0, Vertex v1, double angle)
         {
-            return GeoMath.Distance(v0, v1) / (2 * Math.Sin(angle / 2));
+            return GeoMath.Distance(v0, v1) / ( 2 * Math.Sin(angle / 2) );
         }
 
         /// <summary>

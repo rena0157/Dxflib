@@ -89,7 +89,7 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The Area if the LwPolyLine is Closed
         /// </summary>
-        public double Area { get; }
+        public double Area => _geoPolyline.Area;
 
         #endregion
     }

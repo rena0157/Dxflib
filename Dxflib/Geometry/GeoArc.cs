@@ -1,4 +1,13 @@
-﻿using System;
+﻿// Dxflib
+// GeoArc.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-05
+// Last Updated: 2018-08-07-7:12 PM
+// By: Adam Renaud
+// 
+// ============================================================
 
 namespace Dxflib.Geometry
 {
@@ -45,17 +54,19 @@ namespace Dxflib.Geometry
         public double Length { get; private set; }
 
         /// <summary>
-        /// The Total Angle of the Arc
+        ///     The Total Angle of the Arc
         /// </summary>
         public double Angle { get; private set; }
 
         /// <summary>
-        /// The Radius of the Arc
+        ///     The Radius of the Arc
         /// </summary>
         public double Radius { get; private set; }
 
+        public double Area { get; private set; }
+
         /// <summary>
-        /// The First Vertex
+        ///     The First Vertex
         /// </summary>
         public Vertex Vertex0
         {
@@ -69,7 +80,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// The Second Vertex
+        ///     The Second Vertex
         /// </summary>
         public Vertex Vertex1
         {
@@ -83,7 +94,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// The bulge value for this object (Is similar to the curvature of an arc)
+        ///     The bulge value for this object (Is similar to the curvature of an arc)
         /// </summary>
         public double BulgeValue
         {
@@ -100,26 +111,33 @@ namespace Dxflib.Geometry
         ///     The Length of the GeoArc
         /// </summary>
         /// <returns>A double which represents the length</returns>
-        protected override double CalcLength() => GeoMath.Distance(
-            _vertex0, _vertex1, _bulge);
+        protected override double CalcLength()
+        {
+            return GeoMath.Distance(
+                _vertex0, _vertex1, _bulge);
+        }
 
         /// <summary>
-        /// The Radius that is defined by the bulge
+        ///     The Radius that is defined by the bulge
         /// </summary>
         /// <returns>The Radius</returns>
-        private double CalcRadius() => Bulge.Radius(_vertex0, _vertex1, _bulge);
+        private double CalcRadius() { return Bulge.Radius(_vertex0, _vertex1, Angle); }
 
         /// <summary>
-        /// Calculate the angle of the arc
+        ///     Calculate the angle of the arc
         /// </summary>
         /// <returns></returns>
-        private double CalcAngle() => Bulge.Angle(_bulge);
+        private double CalcAngle() { return Bulge.Angle(_bulge); }
 
         /// <summary>
-        /// Calcuate the area of the Geoarc
+        ///     Calcuate the area of the Geoarc
         /// </summary>
         /// <returns></returns>
-        private double CalcArea() => GeoMath.ChordArea(this);
+        private double CalcArea()
+        {
+            return GeoMath.ChordArea(this)
+                   + GeoMath.TrapzArea(new GeoLine(Vertex0, Vertex1));
+        }
 
         /// <summary>
         ///     Update the Geometry of the GeoArc
@@ -130,8 +148,9 @@ namespace Dxflib.Geometry
             object sender, GeometryChangedHandlerArgs args)
         {
             Length = CalcLength();
-            Radius = CalcRadius();
             Angle = CalcAngle();
+            Radius = CalcRadius();
+            Area = CalcArea();
         }
     }
 }

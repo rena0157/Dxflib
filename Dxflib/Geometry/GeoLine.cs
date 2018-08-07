@@ -41,6 +41,7 @@ namespace Dxflib.Geometry
 
             // Calculate geometry
             Length = CalcLength();
+            Area = CalcArea();
         }
 
         /// <summary>
@@ -91,6 +92,11 @@ namespace Dxflib.Geometry
         public double Length { get; private set; }
 
         /// <summary>
+        /// The Area of the GeoLine
+        /// </summary>
+        public double Area { get; private set; }
+
+        /// <summary>
         /// Updates the Geometry for this class
         /// </summary>
         /// <param name="sender">The sending object</param>
@@ -98,6 +104,7 @@ namespace Dxflib.Geometry
         protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
             Length = CalcLength();
+            Area = CalcArea();
         }
     }
 }

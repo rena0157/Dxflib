@@ -10,6 +10,7 @@
 // ============================================================
 
 using System;
+using System.Diagnostics;
 using Dxflib.Entities;
 using Dxflib.Geometry;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -75,8 +76,26 @@ namespace Dxflib.Tests.Entities
         {
             var dxfFile = new DxfFile(PathToFile);
             var polylines = dxfFile.GetEntitiesByType<LwPolyLine>(EntityTypes.Lwpolyline);
-            Assert.IsTrue(Math.Abs(polylines[1].Length - 17.7088) < GeoMath.Tolerance,
+            Assert.IsTrue(Math.Abs(polylines[1].Length - 20.2120) < GeoMath.Tolerance,
                 $"Length is: {polylines[1].Length}");
+        }
+
+        [TestMethod]
+        public void AreaTest_WithoutBulge()
+        {
+            var dxfFile = new DxfFile(PathToFile);
+            var polylines = dxfFile.GetEntitiesByType<LwPolyLine>(EntityTypes.Lwpolyline);
+            Debug.WriteLine($"Total Area of Polyline is: {polylines[0].Area}");
+            Assert.IsTrue(Math.Abs(polylines[0].Area - 11.8750) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void AreaTest_WithBulge()
+        {
+            var dxfFile = new DxfFile(PathToFile);
+            var polylines = dxfFile.GetEntitiesByType<LwPolyLine>(EntityTypes.Lwpolyline);
+            Debug.WriteLine($"Total Area of Polyline is: {polylines[1].Area}");
+            Assert.IsTrue(Math.Abs(polylines[1].Area - 27.0785) < GeoMath.Tolerance);
         }
     }
 }

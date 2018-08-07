@@ -74,7 +74,7 @@ namespace Dxflib.Geometry
                     SecionList.RemoveAt(SecionList.Count - 1);
             }
 
-            Length = CalcLength();
+            UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
         }
 
         /// <summary>
@@ -90,12 +90,12 @@ namespace Dxflib.Geometry
         /// <summary>
         /// The Total Length of the Polyline
         /// </summary>
-        public double Length { get; }
+        public double Length { get; private set; }
 
         /// <summary>
         /// The Total Area of the polyline
         /// </summary>
-        public double Area { get; }
+        public double Area { get; private set; }
 
 
         /// <summary>
@@ -103,9 +103,10 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <param name="sender">The object sender</param>
         /// <param name="args">The Arguments</param>
-        protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        protected sealed override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
-            CalcLength();
+            Length = CalcLength();
+            Area = CalcArea();
         }
 
         /// <summary>
@@ -131,6 +132,29 @@ namespace Dxflib.Geometry
                 }
 
             return sumLength;
+        }
+
+        private double CalcArea()
+        {
+            var sumArea = 0.0;
+            foreach ( var entity in SecionList )
+            {
+                switch ( entity.GeometryEntityType )
+                {
+                    case GeometryEntityTypes.Vertex:
+                        break;
+                    case GeometryEntityTypes.GeoLine:
+                        sumArea += ( (GeoLine) entity ).Area;
+                        break;
+                    case GeometryEntityTypes.GeoArc:
+                        sumArea += ( (GeoArc) entity ).Area;
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            }
+
+            return sumArea;
         }
     }
 }

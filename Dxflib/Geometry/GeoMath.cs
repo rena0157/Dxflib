@@ -86,8 +86,7 @@ namespace Dxflib.Geometry
         /// <returns>The Area</returns>
         public static double ChordArea(GeoArc geoArc)
         {
-            return Math.Pow(geoArc.Radius, 2) / 2 * geoArc.Angle
-                   - geoArc.Radius * Math.Cos(geoArc.Angle / 2) * Distance(geoArc.Vertex0, geoArc.Vertex1);
+            return Math.Pow(geoArc.Radius, 2) * ( geoArc.Angle - Math.Sin(geoArc.Angle) ) / 2;
         }
     }
 }
