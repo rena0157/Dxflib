@@ -37,6 +37,11 @@ namespace Dxflib.Geometry
             GeometryChanged?.Invoke(this, args);
         }
 
+        protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        {
+
+        }
+
         protected virtual double CalcLength()
         {
             return 0;

@@ -1,4 +1,6 @@
-﻿namespace Dxflib.Geometry
+﻿using System;
+
+namespace Dxflib.Geometry
 {
     /// <summary>
     ///     The GeoArc Class, a class that defines an arc. Note that
@@ -42,6 +44,14 @@
         /// </summary>
         public double Length { get; private set; }
 
+        /// <summary>
+        /// The Total Angle of the Arc
+        /// </summary>
+        public double Angle { get; private set; }
+
+        /// <summary>
+        /// The Radius of the Arc
+        /// </summary>
         public double Radius { get; private set; }
 
         /// <summary>
@@ -55,19 +65,21 @@
         /// The Radius that is defined by the bulge
         /// </summary>
         /// <returns>The Radius</returns>
-        private double CalcRadius()
-        {
-            return 0;
-        }
+        private double CalcRadius() => Bulge.Radius(_vertex0, _vertex1, _bulge);
+
+        private double CalcAngle() => Bulge.Angle(_bulge);
 
         /// <summary>
         ///     Update the Geometry of the GeoArc
         /// </summary>
         /// <param name="sender">Usually this</param>
         /// <param name="args">Arguments</param>
-        private void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        protected sealed override void UpdateGeometry(
+            object sender, GeometryChangedHandlerArgs args)
         {
             Length = CalcLength();
+            Radius = CalcRadius();
+            Angle = CalcAngle();
         }
     }
 }

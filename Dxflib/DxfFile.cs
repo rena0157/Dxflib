@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Entities;
@@ -77,6 +78,23 @@ namespace Dxflib
         ///     The filename and the extension
         /// </summary>
         public string FileName { get; }
+
+        /// <summary>
+        /// Get Entities by Entity Type
+        /// </summary>
+        /// <param name="entityType"></param>
+        /// <returns></returns>
+        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
+        {
+            var returnList = new List<Entity>();
+            foreach (Entity entity in Entities)
+            {
+                if (entity.EntityType == entityType)
+                    returnList.Add(entity);
+            }
+
+            return returnList.Cast<T>().ToList();
+        }
         #endregion
 
         #region HeaderProperties

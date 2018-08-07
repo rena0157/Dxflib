@@ -1,4 +1,15 @@
-﻿using System;
+﻿// Dxflib
+// GeoMath.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-04
+// Last Updated: 2018-08-07-8:24 AM
+// By: Adam Renaud
+// 
+// ============================================================
+
+using System;
 
 namespace Dxflib.Geometry
 {
@@ -41,14 +52,7 @@ namespace Dxflib.Geometry
         /// </returns>
         public static double Distance(Vertex v0, Vertex v1, double bulge)
         {
-            // Todo: Distance for bulges: Complete this
-            return 0;
-        }
-
-        public static double BulgeRadius(double bulge)
-        {
-            // Todo: BulgeRadius: Complete this
-            return 0;
+            return Bulge.Length(Bulge.Radius(v0, v1, Bulge.Angle(bulge)), Bulge.Angle(bulge));
         }
     }
 }

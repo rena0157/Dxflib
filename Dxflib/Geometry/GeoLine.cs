@@ -84,7 +84,7 @@ namespace Dxflib.Geometry
         /// </summary>
         public double Length { get; private set; }
 
-        private void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
             Length = CalcLength();
         }

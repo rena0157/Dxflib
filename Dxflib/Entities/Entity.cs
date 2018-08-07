@@ -4,11 +4,12 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-05-8:00 AM
+// Last Updated: 2018-08-07-6:55 AM
 // By: Adam Renaud
 // 
 // ============================================================
 
+using System;
 using System.ComponentModel;
 using Dxflib.Parser;
 
@@ -17,32 +18,27 @@ namespace Dxflib.Entities
     public delegate void LayerChangedHandler(object sender, LayerChangedHandlerArgs args);
 
     /// <summary>
-    /// The Entity base class that all entities will be derived
+    ///     The Entity base class that all entities will be derived
     /// </summary>
     public abstract class Entity
     {
         /// <summary>
-        /// Public event for layer changes
-        /// </summary>
-        public event LayerChangedHandler LayerChanged;
-        
-        /// <summary>
-        /// The layer name private backing field 
-        /// </summary>
-        protected string LayerNameBF;
-
-        /// <summary>
-        /// The entity type
+        ///     The entity type
         /// </summary>
         public EntityTypes EntityType;
 
         /// <summary>
-        /// The entity's Handel
+        ///     The layer name private backing field
+        /// </summary>
+        protected string LayerNameBF;
+
+        /// <summary>
+        ///     The entity's Handel
         /// </summary>
         public string Handle { get; protected set; }
 
         /// <summary>
-        /// The entity's Layer name
+        ///     The entity's Layer name
         /// </summary>
         public string LayerName
         {
@@ -53,6 +49,11 @@ namespace Dxflib.Entities
                 LayerNameBF = value;
             }
         }
+
+        /// <summary>
+        ///     Public event for layer changes
+        /// </summary>
+        public event LayerChangedHandler LayerChanged;
 
         protected virtual void OnLayerChanged(LayerChangedHandlerArgs args)
         {
@@ -73,17 +74,17 @@ namespace Dxflib.Entities
     }
 
     /// <summary>
-    /// The Entity buffer class that is used only in extraction
+    ///     The Entity buffer class that is used only in extraction
     /// </summary>
     public class EntityBuffer
     {
         /// <summary>
-        /// The Entity Type
+        ///     The Entity Type
         /// </summary>
         public EntityTypes EntityType;
 
         /// <summary>
-        /// Main Constructor that resets all values
+        ///     Main Constructor that resets all values
         /// </summary>
         public EntityBuffer()
         {
@@ -110,6 +111,20 @@ namespace Dxflib.Entities
                 default: return false;
             }
         }
+    }
+
+    public class EntityException : Exception
+    {
+        public EntityException()
+        {
+        }
+
+        public EntityException(string message)
+        {
+            Message = message;
+        }
+
+        public override string Message { get; }
     }
 
     public static class EntityGroupCodes
