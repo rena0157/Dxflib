@@ -151,11 +151,13 @@ namespace Dxflib.Entities
         }
     }
 
+    /// <inheritdoc />
     /// <summary>
     ///     The Entity Exception Class
     /// </summary>
     public class EntityException : Exception
     {
+        /// <inheritdoc />
         /// <summary>
         ///     Blank Constructor
         /// </summary>
@@ -163,6 +165,7 @@ namespace Dxflib.Entities
         {
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Constructor with a message
         /// </summary>
@@ -172,6 +175,7 @@ namespace Dxflib.Entities
             Message = message;
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     The Message override required to set the message property
         /// </summary>

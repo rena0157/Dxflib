@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-07-8:03 AM
+// Last Updated: 2018-08-07-11:36 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -16,8 +16,20 @@ using Dxflib.Entities;
 
 namespace Dxflib.Geometry
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// The GeoPolyline Class, which is a container of the GeoMetricEntityBase.
+    /// This Object contains both GeoArcs and GeoLines
+    /// </summary>
     public class GeoPolyline : GeometricEntityBase
     {
+        /// <summary>
+        /// The Main GeoPolyLine Constructor
+        /// </summary>
+        /// <param name="xValues">X Coordinates</param>
+        /// <param name="yValues">Y Coordinates</param>
+        /// <param name="bulgeList">A List of Bulges</param>
+        /// <param name="polylineFlag">The isClosed Property of a polyline</param>
         public GeoPolyline(List<double> xValues,
             List<double> yValues, List<double> bulgeList, bool polylineFlag)
         {
@@ -37,6 +49,7 @@ namespace Dxflib.Geometry
             Vertices.AddRange(xValues.Select((t, vertexIndex)
                 => new Vertex(t, yValues[vertexIndex])));
 
+            // Iterate through all of the verticies and build either GeoArcs or GeoLines
             for (var vertexIndex = 0; vertexIndex < Vertices.Count; ++vertexIndex)
             {
                 var currentVertex = Vertices[vertexIndex];
@@ -64,20 +77,41 @@ namespace Dxflib.Geometry
             Length = CalcLength();
         }
 
-        public List<GeometricEntityBase> SecionList { get; }
+        /// <summary>
+        /// The Sections
+        /// </summary>
+        private List<GeometricEntityBase> SecionList { get; }
 
-        public List<Vertex> Vertices { get; }
+        /// <summary>
+        /// The Vertices
+        /// </summary>
+        private List<Vertex> Vertices { get; }
 
+        /// <summary>
+        /// The Total Length of the Polyline
+        /// </summary>
         public double Length { get; }
 
+        /// <summary>
+        /// The Total Area of the polyline
+        /// </summary>
         public double Area { get; }
 
 
+        /// <summary>
+        /// Override of the Update Geometry method from the GeometricEntityBase class
+        /// </summary>
+        /// <param name="sender">The object sender</param>
+        /// <param name="args">The Arguments</param>
         protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
             CalcLength();
         }
 
+        /// <summary>
+        /// The CalcLength function that calculates the total length of the polyline
+        /// </summary>
+        /// <returns>The Total length of all sections</returns>
         protected sealed override double CalcLength()
         {
             var sumLength = 0.0;
