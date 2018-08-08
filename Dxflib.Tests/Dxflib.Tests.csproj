@@ -54,6 +54,7 @@
     <Compile Include="Entities\LwPolyLineTests.cs" />
     <Compile Include="Entities\VertexTests.cs" />
     <Compile Include="Geometry\GeoArcTests.cs" />
+    <Compile Include="Geometry\VectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DxfReaderTests.cs" />
     <Compile Include="ParserTests.cs" />
