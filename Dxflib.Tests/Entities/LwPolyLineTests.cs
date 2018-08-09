@@ -175,10 +175,10 @@ namespace Dxflib.Tests.Entities
                 = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\BulgeAreaAndLengthTests.dxf");
             var polylines = dxfFile.GetEntitiesByType<LwPolyLine>(EntityTypes.Lwpolyline);
             // Area
-            Assert.IsTrue(Math.Abs(polylines[5].Area - 128.0246) < GeoMath.Tolerance, 
+            Assert.IsTrue(Math.Abs(polylines[5].Area - 121.5797) < GeoMath.Tolerance, 
                 $"Area: {polylines[5].Area}");
             // Length
-            Assert.IsTrue(Math.Abs(polylines[5].Length - 45.6533) < GeoMath.Tolerance,
+            Assert.IsTrue(Math.Abs(polylines[5].Length - 45.9308) < GeoMath.Tolerance,
                 $"Length: {polylines[5].Length}");
         }
     }
