@@ -210,5 +210,20 @@ namespace Dxflib.Tests.Geometry
 
             var additionTest = testVector/0;
         }
+
+        [TestMethod]
+        public void UnitVectorTest()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+            var crossX = testVector.CrossProduct(UnitVectors.XUnitVector);
+            var crossY = testVector.CrossProduct(UnitVectors.YUnitVector);
+            var crossZ = testVector.CrossProduct(UnitVectors.ZUnitVector);
+
+            Assert.IsTrue(Math.Abs(crossX.Z - -4) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(crossY.Z - 3) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(crossZ.Z - 0) < GeoMath.Tolerance);
+        }
     }
 }
