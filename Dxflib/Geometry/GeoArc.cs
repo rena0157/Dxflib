@@ -11,6 +11,7 @@
 
 namespace Dxflib.Geometry
 {
+    /// <inheritdoc />
     /// <summary>
     ///     The GeoArc Class, a class that defines an arc. Note that
     ///     an arc can be defined in more than one way. If this GeoArc is a
