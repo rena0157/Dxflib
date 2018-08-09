@@ -164,6 +164,7 @@ namespace Dxflib.Geometry
 
         private bool SubtractBulge(double bulge)
         {
+            // Todo: Test this
             if ( SecionList.Count < 2 )
                 return false;
             var vec0 = SecionList[0].GeometryEntityType == GeometryEntityTypes.GeoArc 
