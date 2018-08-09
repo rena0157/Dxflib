@@ -97,7 +97,6 @@ namespace Dxflib.Geometry
         /// </summary>
         public double Area { get; private set; }
 
-
         /// <summary>
         /// Override of the Update Geometry method from the GeometricEntityBase class
         /// </summary>
@@ -147,7 +146,13 @@ namespace Dxflib.Geometry
                         sumArea += ( (GeoLine) entity ).Area;
                         break;
                     case GeometryEntityTypes.GeoArc:
-                        sumArea += ( (GeoArc) entity ).Area;
+                        if (SubtractBulge(((GeoArc)entity).BulgeValue))
+                            sumArea -= ( (GeoArc) entity ).Area;
+                        else
+                            sumArea += ( (GeoArc) entity ).Area;
+                        var line = new GeoLine(( (GeoArc) entity ).Vertex0,
+                            ( (GeoArc) entity ).Vertex1);
+                        sumArea += line.Area;
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -155,6 +160,19 @@ namespace Dxflib.Geometry
             }
 
             return sumArea;
+        }
+
+        private bool SubtractBulge(double bulge)
+        {
+            if ( SecionList.Count < 2 )
+                return false;
+            var vec0 = SecionList[0].GeometryEntityType == GeometryEntityTypes.GeoArc 
+                ? ((GeoArc) SecionList[0]).ToVector() : ((GeoLine) SecionList[0]).ToVector();
+
+            var vec1 = SecionList[1].GeometryEntityType == GeometryEntityTypes.GeoArc 
+                ? ((GeoArc) SecionList[1]).ToVector() : ((GeoLine) SecionList[1]).ToVector();
+
+            return vec0.CrossProduct(vec1).Z * bulge < 0;
         }
     }
 }

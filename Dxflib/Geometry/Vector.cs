@@ -62,6 +62,19 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="line"></param>
+        public Vector(GeoLine line)
+        {
+            // Todo: Test this
+            _vertex0 = new Vertex(line.Vertex0.X, line.Vertex0.Y, line.Vertex0.Z);
+            _vertex1 = new Vertex(line.Vertex1.X, line.Vertex1.Y, line.Vertex1.Z);
+            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
+            SubscribeToEvents();
+        }
+
+        /// <summary>
         ///     The vector's x component
         /// </summary>
         public double X { get; private set; }

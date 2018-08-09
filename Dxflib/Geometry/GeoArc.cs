@@ -108,6 +108,16 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Vector ToVector()
+        {
+            // Todo: Test This
+            return new Vector(_vertex0, _vertex1);
+        }
+
+        /// <summary>
         ///     The Length of the GeoArc
         /// </summary>
         /// <returns>A double which represents the length</returns>
@@ -133,11 +143,7 @@ namespace Dxflib.Geometry
         ///     Calcuate the area of the Geoarc
         /// </summary>
         /// <returns></returns>
-        private double CalcArea()
-        {
-            return GeoMath.ChordArea(this)
-                   + GeoMath.TrapzArea(new GeoLine(Vertex0, Vertex1));
-        }
+        private double CalcArea() { return GeoMath.ChordArea(this); }
 
         /// <summary>
         ///     Update the Geometry of the GeoArc

@@ -106,5 +106,15 @@ namespace Dxflib.Geometry
             Length = CalcLength();
             Area = CalcArea();
         }
+
+        /// <summary>
+        /// Convert this Geoline to a Vector
+        /// </summary>
+        /// <returns>A new Vector</returns>
+        public Vector ToVector()
+        {
+            // Todo: Test This
+            return new Vector(this);
+        }
     }
 }
