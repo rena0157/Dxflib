@@ -16,6 +16,9 @@ using System.IO;
 
 namespace Dxflib.DxfStream
 {
+    /// <summary>
+    /// The DxfReader class that reads a Dxf file and returns a string list
+    /// </summary>
     public class DxfReader
     {
         /// <summary>

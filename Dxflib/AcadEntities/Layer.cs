@@ -40,6 +40,9 @@ namespace Dxflib.AcadEntities
         /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// The Number of layers in the dictionary
+        /// </summary>
         public int Count => _entities.Count;
 
         /// <summary>
