@@ -143,5 +143,72 @@ namespace Dxflib.Tests.Geometry
             var crossProduct = testVector1.CrossProduct(testVector2);
             Assert.IsTrue(Math.Abs(crossProduct.Length - 4) < GeoMath.Tolerance);
         }
+
+        [TestMethod]
+        public void VectorOperator_Addition()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            var testVector2 = new Vector(1, 1);
+
+            var additionTest = testVector + testVector2;
+            Assert.IsTrue(Math.Abs(additionTest.X - 4) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Y - 5) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void VectorOperator_Subtraction()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            var testVector2 = new Vector(1, 1);
+
+            var additionTest = testVector - testVector2;
+            Assert.IsTrue(Math.Abs(additionTest.X - 2) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Y - 3) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void VectorOperator_ScalerMultiplication()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            var additionTest = 2*testVector;
+            Assert.IsTrue(Math.Abs(additionTest.X - 6) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Y - 8) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void VectorOperator_ScalerDivision()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            var additionTest = testVector/2;
+            Assert.IsTrue(Math.Abs(additionTest.X - 1.5) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Y - 2) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void VectorOperator_ScalerDivision_DivideByZero()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            var additionTest = testVector/0;
+        }
     }
 }

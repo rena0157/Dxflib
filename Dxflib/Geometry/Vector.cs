@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-08
-// Last Updated: 2018-08-08-7:02 PM
+// Last Updated: 2018-08-08-8:01 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -34,7 +34,8 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        ///     PositionVector Constructor
+        ///     PositionVector Constructor: This will create a vector with its tail
+        ///     at the origin and it's head at where the componets are on the cartesian 3D space.
         /// </summary>
         /// <param name="startingVertex">The Starting Vertex for the position vector</param>
         /// <param name="endingVertex">The Ending Vertex for the position vector</param>
@@ -170,6 +171,60 @@ namespace Dxflib.Geometry
                 Y * other.Z - Z * other.Y,
                 -( X * other.Z - other.X * Z ),
                 X * other.Y - other.X * Y);
+        }
+
+        /// <summary>
+        ///     The Addition overload operator for the vector class
+        /// </summary>
+        /// <param name="vec1"></param>
+        /// <param name="vec2"></param>
+        /// <returns></returns>
+        public static Vector operator +(Vector vec1, Vector vec2)
+        {
+            return new Vector(vec1.X + vec2.X, vec1.Y + vec2.Y, vec1.Z + vec2.Z);
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="vec1"></param>
+        /// <param name="vec2"></param>
+        /// <returns></returns>
+        public static Vector operator -(Vector vec1, Vector vec2)
+        {
+            return new Vector(vec1.X - vec2.X, vec1.Y - vec2.Y, vec1.Z - vec2.Z);
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="vec"></param>
+        /// <param name="scaler"></param>
+        /// <returns></returns>
+        public static Vector operator *(Vector vec, double scaler)
+        {
+            return new Vector(vec.X * scaler, vec.Y * scaler, vec.Z * scaler);
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="vec"></param>
+        /// <param name="scaler"></param>
+        /// <returns></returns>
+        public static Vector operator *(double scaler, Vector vec)
+        {
+            return vec*scaler;
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="vec"></param>
+        /// <param name="scaler"></param>
+        /// <returns></returns>
+        public static Vector operator /(Vector vec, double scaler)
+        {
+            if ( Math.Abs(scaler) < GeoMath.Tolerance )
+                throw new DivideByZeroException();
+
+            return new Vector(vec.X / scaler, vec.Y / scaler, vec.Z / scaler);
         }
     }
 }
