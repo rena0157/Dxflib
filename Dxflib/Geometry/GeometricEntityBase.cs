@@ -29,7 +29,7 @@ namespace Dxflib.Geometry
         public GeometryEntityTypes GeometryEntityType { get; protected set; }
 
         /// <summary>
-        ///     Base class Invokation of the Geometry changed event
+        ///     Base class Invocation of the Geometry changed event
         /// </summary>
         /// <param name="args">Arguments for the event</param>
         protected virtual void OnGeometryChanged(GeometryChangedHandlerArgs args)
@@ -37,11 +37,21 @@ namespace Dxflib.Geometry
             GeometryChanged?.Invoke(this, args);
         }
 
+        /// <summary>
+        /// Protected Virtual void function that should define how the geometry entity
+        /// deals with geometry update
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
 
         }
 
+        /// <summary>
+        /// Calculating the length of the geometric entity
+        /// </summary>
+        /// <returns>In the base entity it returns 0</returns>
         protected virtual double CalcLength()
         {
             return 0;
@@ -73,27 +83,36 @@ namespace Dxflib.Geometry
         ///     The vertex ID that was changed in the geometry event
         /// </summary>
         /// <param name="vertexId">Vertex ID could be 0 or 1 for a geoline</param>
+        // ReSharper disable once UnusedParameter.Local
         public GeometryChangedHandlerArgs(int vertexId)
         {
-            VertexId = vertexId;
             Name = "";
         }
 
         /// <summary>
-        ///     The Name strig
+        ///     The Name string
         /// </summary>
         public string Name { get; }
-
-        /// <summary>
-        ///     Vertex ID
-        /// </summary>
-        public int VertexId { get; }
     }
 
+    /// <summary>
+    /// The different geometry entity types
+    /// </summary>
     public enum GeometryEntityTypes
     {
+        /// <summary>
+        /// <see cref="Geometry.Vertex"/>
+        /// </summary>
         Vertex,
+
+        /// <summary>
+        /// <see cref="Dxflib.Geometry.GeoLine"/>
+        /// </summary>
         GeoLine,
+
+        /// <summary>
+        /// <see cref="Dxflib.Geometry.GeoArc"/>
+        /// </summary>
         GeoArc
     }
 }

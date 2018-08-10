@@ -279,7 +279,7 @@ namespace Dxflib.Tests.LinAlg
             var vertex1 = new Vertex(3, 4);
             var testVector = new Vector(vertex0, vertex1);
 
-            // Rotate the vector 90 degs CCW
+            // Rotate the vector 90 degrees CCW
             testVector.Rotate(-Math.PI / 2);
 
             // The tail should have stayed in the same spot
