@@ -141,8 +141,23 @@ namespace Dxflib.LinAlg
         public void Translate(Vertex newTail)
         {
             _vertex0 = newTail;
-            _vertex1 = new Vertex(_vertex1.X + newTail.X, _vertex1.Y + newTail.Y, _vertex1.Z + newTail.Z);
+            _vertex1 = new Vertex(
+                    _vertex1.X + newTail.X,
+                    _vertex1.Y + newTail.Y,
+                    _vertex1.Z + newTail.Z);
             UpdateGeometry(this, new GeometryChangedHandlerArgs("Update"));
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="scaler"></param>
+        public void Scale(double scaler)
+        {
+            HeadVertex = new Vertex(
+                X * scaler + TailVertex.X,
+                Y * scaler + TailVertex.Y,
+                Z * scaler + TailVertex.Z);
         }
 
         /// <summary>

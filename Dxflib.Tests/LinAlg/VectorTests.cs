@@ -316,5 +316,17 @@ namespace Dxflib.Tests.LinAlg
             Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 23) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(testVector.HeadVertex.Z - 10) < GeoMath.Tolerance);
         }
+
+        [TestMethod]
+        public void ScalingTests()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+            testVector.Scale(2);
+
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - 6) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 8) < GeoMath.Tolerance);
+        }
     }
 }
