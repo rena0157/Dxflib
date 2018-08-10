@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-08
-// Last Updated: 2018-08-08-6:57 PM
+// Created: 2018-08-10
+// Last Updated: 2018-08-10-12:30 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -14,7 +14,7 @@ using Dxflib.Geometry;
 using Dxflib.LinAlg;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Dxflib.Tests.Geometry
+namespace Dxflib.Tests.LinAlg
 {
     [TestClass]
     public class VectorTests
@@ -182,7 +182,7 @@ namespace Dxflib.Tests.Geometry
             var vertex1 = new Vertex(3, 4);
             var testVector = new Vector(vertex0, vertex1);
 
-            var additionTest = 2*testVector;
+            var additionTest = 2 * testVector;
             Assert.IsTrue(Math.Abs(additionTest.X - 6) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(additionTest.Y - 8) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
@@ -195,7 +195,7 @@ namespace Dxflib.Tests.Geometry
             var vertex1 = new Vertex(3, 4);
             var testVector = new Vector(vertex0, vertex1);
 
-            var additionTest = testVector/2;
+            var additionTest = testVector / 2;
             Assert.IsTrue(Math.Abs(additionTest.X - 1.5) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(additionTest.Y - 2) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(additionTest.Z - 0) < GeoMath.Tolerance);
@@ -209,7 +209,8 @@ namespace Dxflib.Tests.Geometry
             var vertex1 = new Vertex(3, 4);
             var testVector = new Vector(vertex0, vertex1);
 
-            var additionTest = testVector/0;
+            // ReSharper disable once UnusedVariable
+            var additionTest = testVector / 0;
         }
 
         [TestMethod]
@@ -225,6 +226,95 @@ namespace Dxflib.Tests.Geometry
             Assert.IsTrue(Math.Abs(crossX.Z - -4) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(crossY.Z - 3) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(crossZ.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void TranslateVector_WithVertex()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            // Translate the vector
+            testVector.Translate(new Vertex(1, 1));
+
+            // Length should not have changed
+            Assert.IsTrue(Math.Abs(testVector.Length - 5) < GeoMath.Tolerance);
+
+            // The tail should have moved
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.X - 1) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.Y - 1) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.Z - 0) < GeoMath.Tolerance);
+
+            // The Head should have moved as well
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - 4) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 5) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void TransformVectorTest_RotationCCW()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            // Rotate the vector 90 degs CCW
+            testVector.Rotate(Math.PI / 2);
+
+            // The tail should have stayed in the same spot
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.X) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.Y) < GeoMath.Tolerance);
+
+            // test the rotation values
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - -4) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 3) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void TransformVectorTest_RotationCW()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            // Rotate the vector 90 degs CCW
+            testVector.Rotate(-Math.PI / 2);
+
+            // The tail should have stayed in the same spot
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.X) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.Y) < GeoMath.Tolerance);
+
+            // Test the rotation values
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - 4) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - -3) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Z - 0) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        public void TransformVectorTest_RawTransformation()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+
+            // New set of basis vectors
+            var vecI = new Vector(5, 1, 2);
+            var vecJ = new Vector(3, 5, 1);
+            var vecK = new Vector(2, 3);
+
+            // Perform the transformation
+            testVector.Transform(vecI, vecJ, vecK);
+
+            // The tail should have stayed in the same spot
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.X) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.TailVertex.Y) < GeoMath.Tolerance);
+
+            // Test the transformation values
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - 27) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 23) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testVector.HeadVertex.Z - 10) < GeoMath.Tolerance);
         }
     }
 }

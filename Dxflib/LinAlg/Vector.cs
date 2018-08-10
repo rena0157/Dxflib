@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-08
-// Last Updated: 2018-08-08-8:01 PM
+// Created: 2018-08-10
+// Last Updated: 2018-08-10-12:27 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -30,6 +30,18 @@ namespace Dxflib.LinAlg
         {
             _vertex0 = new Vertex(0, 0);
             _vertex1 = new Vertex(1, 1, 1);
+            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
+            SubscribeToEvents();
+        }
+
+        /// <summary>
+        ///     Constructor from another vector
+        /// </summary>
+        /// <param name="other"></param>
+        public Vector(Vector other)
+        {
+            _vertex0 = new Vertex(other.TailVertex.X, other.TailVertex.Y, other.TailVertex.Z);
+            _vertex1 = new Vertex(other.HeadVertex.X, other.HeadVertex.Y, other.HeadVertex.Z);
             UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
             SubscribeToEvents();
         }
@@ -63,7 +75,6 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="line"></param>
         public Vector(GeoLine line)
@@ -121,6 +132,50 @@ namespace Dxflib.LinAlg
                 OnGeometryChanged(this, EventArgs.Empty);
                 UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
             }
+        }
+
+        /// <summary>
+        ///     Translate a vertex to a new point by its tail
+        /// </summary>
+        /// <param name="newTail">The new tail vertex</param>
+        public void Translate(Vertex newTail)
+        {
+            _vertex0 = newTail;
+            _vertex1 = new Vertex(_vertex1.X + newTail.X, _vertex1.Y + newTail.Y, _vertex1.Z + newTail.Z);
+            UpdateGeometry(this, new GeometryChangedHandlerArgs("Update"));
+        }
+
+        /// <summary>
+        ///     Rotate the vector about is tail
+        /// </summary>
+        /// <param name="angle">Rotation angle in radians</param>
+        public void Rotate(double angle)
+        {
+            Transform(new Vector(Math.Cos(angle), Math.Sin(angle)),
+                new Vector(-Math.Sin(angle), Math.Cos(angle)), new Vector(0, 0));
+        }
+
+        /// <summary>
+        ///     Transform method transforms this vector using a new set of basis vectors
+        /// </summary>
+        /// <param name="newXBasis">The new basis for the x component</param>
+        /// <param name="newYBasis">The new basis for the y component</param>
+        /// <param name="newZBasis">The new basis for the z component</param>
+        public void Transform(Vector newXBasis, Vector newYBasis, Vector newZBasis)
+        {
+            // Perform the transformation
+            var tempX = newXBasis.X * X + newYBasis.X * Y + newZBasis.X * Z;
+            var tempY = newXBasis.Y * X + newYBasis.Y * Y + newZBasis.Y * Z;
+            var tempZ = newXBasis.Z * X + newYBasis.Z * Y + newZBasis.Z * Z;
+            X = tempX;
+            Y = tempY;
+            Z = tempZ;
+
+            // Reset the head position
+            _vertex1 = new Vertex(_vertex0.X + X, _vertex0.Y + Y, _vertex0.Z + Z);
+
+            // recalculate the length
+            Length = GeoMath.Distance(_vertex0, _vertex1);
         }
 
         /// <summary>
@@ -199,20 +254,22 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
+        /// The overloaded operator "-"
         /// </summary>
         /// <param name="vec1"></param>
         /// <param name="vec2"></param>
-        /// <returns></returns>
+        /// <returns>A new vector that is the resultant of the subtraction</returns>
         public static Vector operator -(Vector vec1, Vector vec2)
         {
             return new Vector(vec1.X - vec2.X, vec1.Y - vec2.Y, vec1.Z - vec2.Z);
         }
 
         /// <summary>
+        /// The overloaded operator *
         /// </summary>
         /// <param name="vec"></param>
         /// <param name="scaler"></param>
-        /// <returns></returns>
+        /// <returns>A new vector that is the resultant of the scaler</returns>
         public static Vector operator *(Vector vec, double scaler)
         {
             return new Vector(vec.X * scaler, vec.Y * scaler, vec.Z * scaler);
@@ -223,10 +280,7 @@ namespace Dxflib.LinAlg
         /// <param name="vec"></param>
         /// <param name="scaler"></param>
         /// <returns></returns>
-        public static Vector operator *(double scaler, Vector vec)
-        {
-            return vec*scaler;
-        }
+        public static Vector operator *(double scaler, Vector vec) { return vec * scaler; }
 
         /// <summary>
         /// </summary>
