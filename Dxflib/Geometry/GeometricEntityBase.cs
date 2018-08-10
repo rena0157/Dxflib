@@ -26,6 +26,9 @@ namespace Dxflib.Geometry
         /// </summary>
         public event GeometryChangedHandler GeometryChanged;
 
+        /// <summary>
+        /// The entity type
+        /// </summary>
         public GeometryEntityTypes GeometryEntityType { get; protected set; }
 
         /// <summary>

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-10
-// Last Updated: 2018-08-10-12:27 PM
+// Last Updated: 2018-08-10-1:28 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -48,7 +48,7 @@ namespace Dxflib.LinAlg
 
         /// <summary>
         ///     PositionVector Constructor: This will create a vector with its tail
-        ///     at the origin and it's head at where the componets are on the cartesian 3D space.
+        ///     at the origin and it's head at where the components are on the cartesian 3D space.
         /// </summary>
         /// <param name="startingVertex">The Starting Vertex for the position vector</param>
         /// <param name="endingVertex">The Ending Vertex for the position vector</param>
@@ -205,7 +205,7 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
-        ///     On Geometry Changed invokation
+        ///     On Geometry Changed invocation
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
@@ -254,7 +254,7 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
-        /// The overloaded operator "-"
+        ///     The overloaded operator "-"
         /// </summary>
         /// <param name="vec1"></param>
         /// <param name="vec2"></param>
@@ -265,7 +265,7 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
-        /// The overloaded operator *
+        ///     The overloaded operator *
         /// </summary>
         /// <param name="vec"></param>
         /// <param name="scaler"></param>
