@@ -328,5 +328,27 @@ namespace Dxflib.Tests.LinAlg
             Assert.IsTrue(Math.Abs(testVector.HeadVertex.X - 6) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(testVector.HeadVertex.Y - 8) < GeoMath.Tolerance);
         }
+
+        [TestMethod]
+        public void AngleBetweenTest()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+            var angle = Vector.AngleBetweenVectors(testVector, UnitVectors.XUnitVector);
+
+            Assert.IsTrue(Math.Abs(angle - Math.Atan(4.0/3)) < GeoMath.Tolerance);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void AngleBetweenTests_ShouldThrowException()
+        {
+            var vertex0 = new Vertex(0, 0);
+            var vertex1 = new Vertex(3, 4);
+            var testVector = new Vector(vertex0, vertex1);
+            // ReSharper disable once UnusedVariable
+            var angle = Vector.AngleBetweenVectors(testVector, new Vector(0,0));
+        }
     }
 }

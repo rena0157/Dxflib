@@ -245,6 +245,19 @@ namespace Dxflib.LinAlg
         public double DotProduct(Vector other) { return other.X * X + other.Y * Y + other.Z * Z; }
 
         /// <summary>
+        /// The Angle between two vectors
+        /// </summary>
+        /// <param name="vec0">Vector 1</param>
+        /// <param name="vec1">Vector 2</param>
+        /// <returns>The angle between two vectors in radians</returns>
+        public static double AngleBetweenVectors(Vector vec0, Vector vec1)
+        {
+            if (Math.Abs(vec0.Length) < GeoMath.Tolerance || Math.Abs(vec1.Length) < GeoMath.Tolerance)
+                throw new DivideByZeroException("Cannot Divide by zero (Angle Between Vectors)");
+            return Math.Acos(vec0.DotProduct(vec1) / ( vec0.Length * vec1.Length ));
+        }
+
+        /// <summary>
         ///     The Cross product of this vector and the other vector (ThisVector x OtherVector)
         /// </summary>
         /// <param name="other">The other vector that is in the cross function</param>
