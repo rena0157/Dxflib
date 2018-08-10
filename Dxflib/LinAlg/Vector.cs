@@ -10,8 +10,9 @@
 // ============================================================
 
 using System;
+using Dxflib.Geometry;
 
-namespace Dxflib.Geometry
+namespace Dxflib.LinAlg
 {
     /// <summary>
     ///     The Vector Class: Defines vector mathematics and functionality

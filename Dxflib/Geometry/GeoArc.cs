@@ -9,6 +9,8 @@
 // 
 // ============================================================
 
+using Dxflib.LinAlg;
+
 namespace Dxflib.Geometry
 {
     /// <inheritdoc />

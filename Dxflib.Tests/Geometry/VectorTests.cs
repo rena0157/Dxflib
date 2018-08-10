@@ -11,6 +11,7 @@
 
 using System;
 using Dxflib.Geometry;
+using Dxflib.LinAlg;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests.Geometry
