@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-10-3:23 PM
+// Last Updated: 2018-08-10-8:55 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -20,10 +20,27 @@ namespace Dxflib.Geometry
     ///     an arc can be defined in more than one way. If this GeoArc is a
     ///     part of an LwPolyLine then is defined using a bulge. If it is
     ///     alone then it is defined using a radius.
+    ///
+    ///     Note that there are 3 distinct ways to construct an Arc
+    ///     1. The First way is the Vertex, Vertex and Bulge (VVB) Method
+    ///     This Method uses two vertices that are at endpoints of the arc and
+    ///     a numerical values called the bulge.
+    ///
+    ///     2. The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
+    ///     (CAAR) Method. The CAAR method uses a point that will be the center point of the arc
+    ///     the starting angle of the arc and the ending angle of the arc as well as the radius
+    ///     of the arc. This method is mostly used if a user would like to create an arc. Also,
+    ///     this method is used in the AutoCAD ARC Entity.
+    ///
+    ///     3. The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
+    ///     3 vertices that the arc must pass though. The first and second vertex are the starting
+    ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
+    ///     the moving of one vertex the center arc length is usually chosen as the middle vertex.
     /// </summary>
     public class GeoArc : GeometricEntityBase
     {
         private double _angle;
+        private Vertex _arcMiddleVertex;
         private double _bulge;
         private Vertex _centerVertex;
         private double _endAngle;
@@ -33,7 +50,7 @@ namespace Dxflib.Geometry
         private Vertex _vertex1;
 
         /// <summary>
-        ///     GeoArc Constructor: VVB
+        ///     GeoArc Constructor: Vertex, Vertex and Bulge (VVB)
         /// </summary>
         /// <param name="vertex0">First Vertex</param>
         /// <param name="vertex1">Second Vertex</param>
@@ -54,6 +71,13 @@ namespace Dxflib.Geometry
             UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildVVB"));
         }
 
+        /// <summary>
+        ///     GeoArc Constructor: Center Vertex, Starting Angle, Ending Angle and Radius (CAAR)
+        /// </summary>
+        /// <param name="centerVertex">The Center Vertex of the GeoArc</param>
+        /// <param name="startAngle">The Starting Angle (Radians)</param>
+        /// <param name="endAngle">The Ending Angle (Radians)</param>
+        /// <param name="radius">The Radius of the Arc</param>
         public GeoArc(Vertex centerVertex, double startAngle, double endAngle, double radius)
         {
             // Set Type
@@ -68,6 +92,19 @@ namespace Dxflib.Geometry
 
             // Calculate Geometry
             UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildCAAR"));
+        }
+
+        /// <summary>
+        /// Geo Arc Constructor: Vertex, Vertex, Vertex (V3)
+        /// The V3 Constructor takes three vertices that the arc must pass through and
+        /// calculates all of the other properties of the arc
+        /// </summary>
+        /// <param name="vertex0">The Starting Vertex</param>
+        /// <param name="middleVertex">The Middle Vertex</param>
+        /// <param name="vertex1">The Ending Vertex</param>
+        public GeoArc(Vertex vertex0, Vertex middleVertex, Vertex vertex1)
+        {
+            // Todo: Create a constructor that takes three vertices and creates a GeoArc
         }
 
         /// <summary>
@@ -244,11 +281,13 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        ///     A function that takes the center vertex of a circle or arc and
+        ///     can get any vertex that lies on the arc that corresponds with the angle given.
         /// </summary>
-        /// <param name="centerVertex"></param>
-        /// <param name="angle"></param>
-        /// <param name="radius"></param>
-        /// <returns></returns>
+        /// <param name="centerVertex">The center vertex of the circle/arc</param>
+        /// <param name="angle">The angle at which the vertex is located</param>
+        /// <param name="radius">The radius of the circle/arc</param>
+        /// <returns>A vertex that lies on the edge of a circle or arc</returns>
         public static Vertex CalcPointOnArc(Vertex centerVertex, double angle, double radius)
         {
             var vector = new Vector(UnitVectors.XUnitVector);
@@ -286,8 +325,14 @@ namespace Dxflib.Geometry
                 {
                     _angle = Bulge.Angle(_bulge);
                     _radius = Bulge.Radius(_vertex0, _vertex1, Angle);
+
                     _centerVertex = CalcCenterVertex(_vertex0, _vertex1, _bulge);
                     _centerVertex.GeometryChanged += OnVertexPropertyChanged;
+
+                    _startAngle = Vector.AngleBetweenVectors(
+                        new Vector(_centerVertex, _vertex0), UnitVectors.XUnitVector);
+                    _endAngle = Vector.AngleBetweenVectors(
+                        new Vector(_centerVertex, _vertex1), UnitVectors.XUnitVector);
 
                     // Get Only Properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
@@ -299,9 +344,13 @@ namespace Dxflib.Geometry
                 {
                     _angle = _endAngle - _startAngle;
                     _bulge = Math.Tan(_angle / 4);
+
                     _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
+                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
+
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
-                    
+                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
+
                     // Get only properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
                     Area = GeoMath.ChordArea(this);
@@ -312,7 +361,9 @@ namespace Dxflib.Geometry
                     // Update properties
                     _endAngle = _startAngle + _angle;
                     _bulge = Bulge.CalcBulge(_angle);
+
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
+                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
 
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
                     Area = GeoMath.ChordArea(this);
@@ -320,37 +371,57 @@ namespace Dxflib.Geometry
                     break;
                 case "Radius":
                 {
-                    
+                    _bulge = Math.Tan(_angle / 4);
+
+                    _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
+                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
+
+                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
+                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
+
+                    // Get only properties
+                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
+                    Area = GeoMath.ChordArea(this);
                 }
                     break;
                 case "StartAngle":
                 {
+                    _angle = _endAngle - _startAngle;
 
+                    _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
+                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
+
+                    // Get only properties
+                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
+                    Area = GeoMath.ChordArea(this);
                 }
                     break;
                 case "EndAngle":
                 {
+                    _angle = _endAngle - _startAngle;
 
+                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
+                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
+
+                    // Get only properties
+                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
+                    Area = GeoMath.ChordArea(this);
                 }
                     break;
                 case "Vertex0":
                 {
-
                 }
                     break;
                 case "Vertex1":
                 {
-
                 }
                     break;
                 case "CenterVertex":
                 {
-
                 }
                     break;
                 case "BulgeValue":
                 {
-
                 }
                     break;
             }
