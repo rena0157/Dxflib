@@ -410,18 +410,22 @@ namespace Dxflib.Geometry
                     break;
                 case "Vertex0":
                 {
+                    // todo: Add this
                 }
                     break;
                 case "Vertex1":
                 {
+                    // todo: add this
                 }
                     break;
                 case "CenterVertex":
                 {
+                    // todo: add this
                 }
                     break;
                 case "BulgeValue":
                 {
+                    // todo: add this
                 }
                     break;
             }
