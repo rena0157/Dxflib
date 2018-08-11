@@ -26,6 +26,7 @@ namespace Dxflib
     /// </summary>
     public class DxfFile
     {
+        // ReSharper disable once NotAccessedField.Local
         private readonly DxfFileMainParser _mainParser;
 
         #region Constructors
@@ -104,7 +105,7 @@ namespace Dxflib
         /// The Files AutoCAD Version
         /// </summary>
         // ReSharper disable once InconsistentNaming
-        public AutoCADVersions AutoCADVersion { get; set; }
+        public AutoCadVersions AutoCADVersion { get; set; }
 
         /// <summary>
         /// The Current Layer

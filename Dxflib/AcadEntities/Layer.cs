@@ -38,7 +38,7 @@ namespace Dxflib.AcadEntities
         /// <summary>
         ///     The Layer's Name
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; }
 
         /// <summary>
         /// The Number of layers in the dictionary

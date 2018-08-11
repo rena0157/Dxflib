@@ -30,6 +30,8 @@ namespace Dxflib.Geometry
             return 4 * Math.Atan(Math.Abs(bulgeValue));
         }
 
+        public static double CalcBulge(double value) { return Math.Tan(value / 4); }
+
         /// <summary>
         ///     The Radius of the Bulge
         /// </summary>
@@ -52,5 +54,7 @@ namespace Dxflib.Geometry
         {
             return radius * angle;
         }
+
+        public static double AngleFromRadius(Vertex vertex0, Vertex vertex1, double radius) { return 0; }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Dxflib.Geometry
+﻿namespace Dxflib.LinAlg
 {
     /// <summary>
     /// A Struct for basic unit vectors

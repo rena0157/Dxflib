@@ -2,10 +2,18 @@
 
 namespace Dxflib.Parser
 {
+    /// <summary>
+    /// The Controller class for parsing. The controller class controls the root of the
+    /// parsing tree
+    /// </summary>
     public class Controller
     {
         private readonly DxfFileMainParser _thisParser;
 
+        /// <summary>
+        /// Main Constructor for the Controller class
+        /// </summary>
+        /// <param name="thisParser">The Main Parser that the controller will control</param>
         public Controller(DxfFileMainParser thisParser)
         {
             thisParser.LineChanged += ThisParserOnLineChanged;
@@ -32,8 +40,6 @@ namespace Dxflib.Parser
                     break;
                 case FileSectionStrings.Objects:
                     _thisParser.CurrentFileSection = FileSection.Objects;
-                    break;
-                default:
                     break;
             }
 

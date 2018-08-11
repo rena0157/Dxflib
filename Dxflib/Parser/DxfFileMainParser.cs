@@ -3,7 +3,11 @@ using Dxflib.Entities;
 
 namespace Dxflib.Parser
 {
-    public class DxfFileMainParser
+    /// <summary>
+    /// The main parser class. This class defines functionality for the
+    /// parsing of the dxf file
+    /// </summary>
+    public sealed class DxfFileMainParser
     {
         /// <summary>
         ///     This is the Dxf file that was passed by the main constructor
@@ -18,6 +22,7 @@ namespace Dxflib.Parser
         {
             // The Current DxfFile
             ThisFile = dxfFile;
+            // ReSharper disable once UnusedVariable
             var controller = new Controller(this);
 
             // Default Values
@@ -60,7 +65,7 @@ namespace Dxflib.Parser
         ///     Invokation of the LineChanged event
         /// </summary>
         /// <param name="args"></param>
-        protected virtual void OnLineChanged(LineChangeHandlerArgs args)
+        private void OnLineChanged(LineChangeHandlerArgs args)
         {
             LineChanged?.Invoke(this, args);
         }

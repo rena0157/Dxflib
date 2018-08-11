@@ -40,7 +40,7 @@ namespace Dxflib.Tests
                 $"AutoCAD Version: {testFile.AutoCADVersion}({DxflibTools.GetEnumDescription(testFile.AutoCADVersion)})");
 
             // Assert
-            Assert.IsTrue(AutoCADVersions.AC1027 == testFile.AutoCADVersion);
+            Assert.IsTrue(AutoCadVersions.AC1027 == testFile.AutoCADVersion);
         }
 
         [TestMethod]
