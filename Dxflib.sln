@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dxflib", "Dxflib\Dxflib.csproj", "{298A5899-4508-4406-B19F-B1284E71F53E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dxflib", "Dxflib\Dxflib.csproj", "{298A5899-4508-4406-B19F-B1284E71F53E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dxflib.Tests", "Dxflib.Tests\Dxflib.Tests.csproj", "{7498E928-B3FA-4A9D-8454-4762791B84C1}"
 EndProject
