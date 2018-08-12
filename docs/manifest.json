@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.AcadEntities.Layer.html",
-          "hash": "LkaGSMitvs26Db4j+Q/x1Q=="
+          "hash": "H1MMyu/A6XEj6Q9BSLDTmw=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.AcadEntities.LayerDictionary.html",
-          "hash": "wUPj5TL55vR/DbPezTn6iQ=="
+          "hash": "3PVVlug3plHt7qgTCOayYw=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.AcadEntities.LayerDictionaryException.html",
-          "hash": "TJy9HpcrkPVVuTCIBP+Kug=="
+          "hash": "ZtNelSOBUY9aCchWG0i+ew=="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.AcadEntities.LayerException.html",
-          "hash": "ADuHZoqjxJ2dCNAqagTQyQ=="
+          "hash": "NP6faSIe0x5eR9FxoW3ukA=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.AcadEntities.html",
-          "hash": "u/UzRwbPARdZTArSvrcz9g=="
+          "hash": "CUXJzMl7TAk3AEKK7XY49A=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.DxfFile.html",
-          "hash": "9TbpysFV99kZBloWbg6u0Q=="
+          "hash": "KEjId2JfqOXJsCVQsdmxbQ=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.DxfStream.DxfReader.html",
-          "hash": "crI59yc//qlH5VtNayWfTA=="
+          "hash": "I6aLOVOSjpgc7A1yAyTybg=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.DxfStream.DxfStreamException.html",
-          "hash": "1vLSo9xVxkdhjs3BiRPTGA=="
+          "hash": "FIryz7V7e3zQDJJl5I9mwg=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.DxfStream.html",
-          "hash": "tQ1Kc3nNKlOSWVvHCQEz5A=="
+          "hash": "B1SA05sOmLzbduX6xlA9zg=="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.Entity.html",
-          "hash": "seyeJD58WHiNw39sEoc3Pg=="
+          "hash": "DzAJ0AJocjlCFuKHFda3Eg=="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.EntityBuffer.html",
-          "hash": "jbNxz63eloSXaDzoR5CFKg=="
+          "hash": "5Fkw1OW9BoN7OuegxMz52A=="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.EntityException.html",
-          "hash": "LQ4bR1DnRdXrRq13HVcnqA=="
+          "hash": "Jx7qp+aCSqvp6JTb5X51NA=="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.EntityGroupCodes.html",
-          "hash": "x4m14mTzeTrnVowRu4AZRA=="
+          "hash": "cpejBCbDJMDgWoRZwJGBSw=="
         }
       },
       "is_incremental": true,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.EntityTypes.html",
-          "hash": "aT/BU62u14XjfzW29XqUWw=="
+          "hash": "2l5DFD2nIZ27rERCvGdVRg=="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.HatchBuffer.html",
-          "hash": "JMTCtJLiuvM7UrejnlUDKw=="
+          "hash": "nB+attX2jrbI9w2udxqbuA=="
         }
       },
       "is_incremental": true,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LayerChangedHandler.html",
-          "hash": "nNfMfK4BoP8E6d6HdXpNBw=="
+          "hash": "ZuGRwQeTsOpzweQEeSSeEw=="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LayerChangedHandlerArgs.html",
-          "hash": "0NBfHmN2gP2mrt0T4Rmkqw=="
+          "hash": "x2uUiYHGxG2Nm+TRA4vj6A=="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.Line.html",
-          "hash": "hpf16rb4UAUN1T+RXo0vUA=="
+          "hash": "sWRpNTffEX9Jh8G1LZ3QMg=="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LineBuffer.html",
-          "hash": "FSeVs6IxmJ4dMlFqpZ9Trg=="
+          "hash": "ALxEOz0Hmq5h+BXnI+pbOA=="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LineGroupCodes.html",
-          "hash": "no2VcRLwRDML2hbfP7AqCQ=="
+          "hash": "sL2bAaLmLhlKT0AAtEyvJQ=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LwPolyLine.html",
-          "hash": "bX3cIawqoHAaltCQHgmwEQ=="
+          "hash": "zK6zr6YncjJhfF2Gr3puzw=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.LwPolyLineBuffer.html",
-          "hash": "ZQd78lZ6x9FWWpapyva5wA=="
+          "hash": "E2zZLEVOMVtLbfIaNNFr6g=="
         }
       },
       "is_incremental": true,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Entities.html",
-          "hash": "g0WjjENm28tUVntIVO78bw=="
+          "hash": "gs24X8XRadWce7rZJV2IXQ=="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoArc.html",
-          "hash": "UrqWFpfhBpdPbBXRUHweYQ=="
+          "hash": "QzZeF7riAdaq3NxKNvFkVg=="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoLine.html",
-          "hash": "9pyoIc8dcfXFYM503lhqPQ=="
+          "hash": "jmKtYKmY6qY4Y4ccPL/vCw=="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoMath.html",
-          "hash": "JF+mUxXOabUFZy1MqONgAA=="
+          "hash": "xjmqhGDhTZuCLPRyItm3Tw=="
         }
       },
       "is_incremental": true,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoPolyline.html",
-          "hash": "7HvuW+csFrvcuGNsYlZfMg=="
+          "hash": "NeDejRBtf6Aqmx5yvZz3Og=="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeometricEntityBase.html",
-          "hash": "wXj0EPvpiXGR0rrNPvOVig=="
+          "hash": "MGrqGApvwo/ENeVN6HyHQA=="
         }
       },
       "is_incremental": true,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeometryChangedHandler.html",
-          "hash": "6eZ0daxbZhTc/n7u7d2rRg=="
+          "hash": "PZs2ly4eCyQBd2IwqskUlw=="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeometryChangedHandlerArgs.html",
-          "hash": "dN9WGXL2KSPkgLPvfasjkA=="
+          "hash": "CnqObqgAb4Dk1bQM3B8h9A=="
         }
       },
       "is_incremental": true,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeometryEntityTypes.html",
-          "hash": "AXI9FCo/1hQzfz0Snu5+zg=="
+          "hash": "OIqVSkRZOBvrMcBS2yf5uQ=="
         }
       },
       "is_incremental": true,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.Vertex.html",
-          "hash": "EpsCX/bMpJsaLPM9LtkG1Q=="
+          "hash": "SxPsQuI70BhJ3UIPViQCVA=="
         }
       },
       "is_incremental": true,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.html",
-          "hash": "SYvoPU0ubAt23LgpS5nwWQ=="
+          "hash": "4PLKK2CnK3foPEsTwv5ViA=="
         }
       },
       "is_incremental": true,
@@ -405,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.LinAlg.UnitVectors.html",
-          "hash": "s0ZFopW1uMNN5tzfj6WQ2A=="
+          "hash": "suFXYpck3BDvYdUyNkEhbw=="
         }
       },
       "is_incremental": true,
@@ -417,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.LinAlg.Vector.html",
-          "hash": "COkHHaekObJmakqnxm7S4w=="
+          "hash": "soQHWf83jjzRIKkRIRlgnA=="
         }
       },
       "is_incremental": true,
@@ -429,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.LinAlg.html",
-          "hash": "ztTHuhK80XoGqeVUWcQhkw=="
+          "hash": "3Ac4NV0pSkhuQz9KxAdWoA=="
         }
       },
       "is_incremental": true,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.AutoCadVersions.html",
-          "hash": "FmH10evj8JYLspIWkN/CuQ=="
+          "hash": "PjW1N8taTTvSZTvZDsZe9Q=="
         }
       },
       "is_incremental": true,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.Controller.html",
-          "hash": "/+RBZOucQsPh/cB3QUEARA=="
+          "hash": "x2k9L5vTex5z4ioA1ECUIQ=="
         }
       },
       "is_incremental": true,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.DxfFileMainParser.html",
-          "hash": "T8bzZgjKND0DS/f22N8QxA=="
+          "hash": "8mbbX7FDbcEFv2vimeQQgg=="
         }
       },
       "is_incremental": true,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.EntityParser.html",
-          "hash": "nsFK+Ysdl7vYI/VkSntomA=="
+          "hash": "mSsQEGtp73SwvXjO2zSzaA=="
         }
       },
       "is_incremental": true,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.FileSection.html",
-          "hash": "u7Ih05pE0tvgTBfV0v3lAg=="
+          "hash": "1Acgt/30ZobWoLOVfP1y/g=="
         }
       },
       "is_incremental": true,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.FileSectionStrings.html",
-          "hash": "D9Twbc+vsjxuqxa/6wMTOw=="
+          "hash": "uwPE/qXaiA3ma7Gjdhq4dw=="
         }
       },
       "is_incremental": true,
@@ -513,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.HeaderParser.html",
-          "hash": "L04bkpMMdBB0ge39PL3Eqg=="
+          "hash": "x4A5jg3yhMigEpocHmwZ1g=="
         }
       },
       "is_incremental": true,
@@ -525,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.HeaderStrings.html",
-          "hash": "iZnL/rFWbjMIFJfCvHVwEg=="
+          "hash": "vDkH56YP6YDt5tHrstNRwQ=="
         }
       },
       "is_incremental": true,
@@ -537,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.LineChangeHandler.html",
-          "hash": "YyplXi2JzFISYj9PYQ9v9g=="
+          "hash": "HkZ9RO/K+r58T7iaclqMsw=="
         }
       },
       "is_incremental": true,
@@ -549,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.LineChangeHandlerArgs.html",
-          "hash": "RcqUnhNUFNuxI7m+BjEaxQ=="
+          "hash": "JB3zY9GbkdruADs8eKVAEw=="
         }
       },
       "is_incremental": true,
@@ -561,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Parser.html",
-          "hash": "R4HwoibE/OZlwFgYmL6XtA=="
+          "hash": "2kRwfGgEP1z83H/juEt3Vg=="
         }
       },
       "is_incremental": true,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Tools.DxflibTools.html",
-          "hash": "eggfnmrA+be8PSUEWsINFA=="
+          "hash": "91GAdidS1PoHRX5uEwABHw=="
         }
       },
       "is_incremental": true,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Tools.html",
-          "hash": "sLMJsD0sDZ+nudmv32uqAQ=="
+          "hash": "rApf0cTcOWQMEozMSaxESg=="
         }
       },
       "is_incremental": true,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.html",
-          "hash": "JDzwP8WRsyhpLQ1Wjoaocg=="
+          "hash": "26OM7ZmxoJFugLV6GAsq/A=="
         }
       },
       "is_incremental": true,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "41E+2qhvyBeDDPa33idEkg=="
+          "hash": "ikmvY2gwSZbZP4ckayTSvA=="
         }
       },
       "is_incremental": true,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/ChangeLog.html",
-          "hash": "BMNLEHYsbVblsz5R89vtHw=="
+          "hash": "WHaECs4op6/0TLM4exdnig=="
         }
       },
       "is_incremental": true,
@@ -645,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "QSmo0gMPxux09MZFO5wY7w=="
+          "hash": "HoDNi7eYv7hWNEg0RKLcsQ=="
         }
       },
       "is_incremental": true,
@@ -681,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "devlog/index.html",
-          "hash": "KwNEio76satvyAtV7e+8gg=="
+          "hash": "xvbFICjKKHNvjbIM7xCsKw=="
         }
       },
       "is_incremental": true,
@@ -716,7 +716,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "0r5QSANdZH4oh3mSJs87LQ=="
+          "hash": "+ZpNtPeP8hEZZWrDvhw9jQ=="
         }
       },
       "is_incremental": true,
@@ -742,9 +742,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
@@ -755,9 +755,9 @@
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
