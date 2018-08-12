@@ -161,6 +161,11 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
+        /// The 2D Slope of the vector (dY/dX)
+        /// </summary>
+        public double Slope => Y / X;
+
+        /// <summary>
         ///     Rotate the vector about is tail
         /// </summary>
         /// <param name="angle">Rotation angle in radians</param>
