@@ -1,0 +1,716 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Dev/Dxflib/Dxflib",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.AcadEntities.Layer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.AcadEntities.Layer.html",
+          "hash": "x0U4vfqGhpYVpbUc/jQMog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.AcadEntities.LayerDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.AcadEntities.LayerDictionary.html",
+          "hash": "RdYdAJJeq9OakLBQNPvziw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.AcadEntities.LayerDictionaryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.AcadEntities.LayerDictionaryException.html",
+          "hash": "h1aG8iolxOG3g/C+orSKSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.AcadEntities.LayerException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.AcadEntities.LayerException.html",
+          "hash": "DTaiX2/qbfyJbxu2e/qk8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.AcadEntities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.AcadEntities.html",
+          "hash": "K0dRwEyWBBzRaU/hc+0FbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.DxfFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.DxfFile.html",
+          "hash": "g4RE0AXFYV5s7qb60mdnbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.DxfStream.DxfReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.DxfStream.DxfReader.html",
+          "hash": "94V1j42Db91NL5Zj3UlNDQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.DxfStream.DxfStreamException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.DxfStream.DxfStreamException.html",
+          "hash": "L73VdGN+9uTm6y7v/bqyjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.DxfStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.DxfStream.html",
+          "hash": "pMXLL7JQmMQJjbFRueLgOg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.Entity.html",
+          "hash": "LqyfwVeVfjf1gezNH7iKrw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.EntityBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.EntityBuffer.html",
+          "hash": "31j0B2G4rzUfyNuZFo3CWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.EntityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.EntityException.html",
+          "hash": "HZ21BnY1lCtNmj66fE/E8Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.EntityGroupCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.EntityGroupCodes.html",
+          "hash": "WPFRt0LTyDEz2LwKp/kBKQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.EntityTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.EntityTypes.html",
+          "hash": "9Q9HfX+uMlF25oXj4iCNCw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.HatchBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.HatchBuffer.html",
+          "hash": "ABmRtskZw4dpOSm4x5kX1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LayerChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LayerChangedHandler.html",
+          "hash": "RKt2vI9hdJInNQjmVnKhdQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LayerChangedHandlerArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LayerChangedHandlerArgs.html",
+          "hash": "xoeUcz2HW3Ir2rlUjWAW3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.Line.html",
+          "hash": "zuQulukUUm9KiIOyClyLKg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LineBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LineBuffer.html",
+          "hash": "GCOlp3JBnHyN7830TLO/Xg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LineGroupCodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LineGroupCodes.html",
+          "hash": "PInTpVQrwlQPbtmUX+Sbpg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LwPolyLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LwPolyLine.html",
+          "hash": "jOx/V0pYweRCxG7BrDZqog=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.LwPolyLineBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.LwPolyLineBuffer.html",
+          "hash": "MNH3wshFRNudmbACVpL2Ow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Entities.html",
+          "hash": "spGHMT0uuxpCBJyv1qnqnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeoArc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeoArc.html",
+          "hash": "83MFp8oZ/y0+PEi2zrNtcg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeoLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeoLine.html",
+          "hash": "qjOBevd2/MkO4caMctH36Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeoMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeoMath.html",
+          "hash": "gkTQ4aXuATEMIRT1yPokOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeoPolyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeoPolyline.html",
+          "hash": "a+kHppRlMbXalwTRMcMMqA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeometricEntityBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeometricEntityBase.html",
+          "hash": "xNe9pfg3DqUc7Vvl/5XbTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeometryChangedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeometryChangedHandler.html",
+          "hash": "+QVqAFyVhwdfjM7VRAI+mw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeometryChangedHandlerArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeometryChangedHandlerArgs.html",
+          "hash": "5/is467773t2T4BDtPsffA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.GeometryEntityTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.GeometryEntityTypes.html",
+          "hash": "a7LFVsfiTRflDXKnX1pq0g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.Vertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.Vertex.html",
+          "hash": "J308MdW8oCpOk0wB+Mx4fw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Geometry.html",
+          "hash": "7kZEz0i9hC7e+GSg+DylBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.LinAlg.UnitVectors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.LinAlg.UnitVectors.html",
+          "hash": "RfxECPVfW+GOkMHCXkqQsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.LinAlg.Vector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.LinAlg.Vector.html",
+          "hash": "x3P9p8g36b/LHKva8xtBJA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.LinAlg.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.LinAlg.html",
+          "hash": "suQmrBhirY10j9s72js36Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.AutoCadVersions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.AutoCadVersions.html",
+          "hash": "xFvSpfu7vkSJEueEQmmihQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.Controller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.Controller.html",
+          "hash": "JQrA71n2wEZ0MSegBSF90w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.DxfFileMainParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.DxfFileMainParser.html",
+          "hash": "2O4yLt4P4WzN3t6UFNczXA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.EntityParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.EntityParser.html",
+          "hash": "eAeSZ5srHByFm3hLpJaQWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.FileSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.FileSection.html",
+          "hash": "xcY4T3DfKzcIPqXt6OW9pA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.FileSectionStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.FileSectionStrings.html",
+          "hash": "XQIhu+6psnWfmDxea/FV0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.HeaderParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.HeaderParser.html",
+          "hash": "i1gU+FBcxlw4E8bnR8WqMA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.HeaderStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.HeaderStrings.html",
+          "hash": "hFXYR4GCRzNjWjN91J4y/w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.LineChangeHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.LineChangeHandler.html",
+          "hash": "C3kTwnwBC0wkzMXEfatslg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.LineChangeHandlerArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.LineChangeHandlerArgs.html",
+          "hash": "UbANqYZOeY2SGbciKQFfqQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Parser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Parser.html",
+          "hash": "wo25WXGqrhGoKtfMyZIkbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Tools.DxflibTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Tools.DxflibTools.html",
+          "hash": "qOl7i6lHjsUCWuKgXnVFjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.Tools.html",
+          "hash": "xAsKclQ1mgtfM+PFPeKzyg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Dxflib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Dxflib.html",
+          "hash": "pNt7ucAZ2IpicAOe3TMD4A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "VHiKMYnLwBTrX6ds2n4EnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "7pFI5EChK3SXrOMDqrsfvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "8Aih5mvXC3msI4lJTT7quA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "zMSpZ0SK/cgwCs2ZdXYHSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
