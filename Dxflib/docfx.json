@@ -9,7 +9,7 @@
           "src": "C:\\Dev\\Dxflib\\Dxflib"
         }
       ],
-      "dest": "api",
+      "dest": "docs",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
