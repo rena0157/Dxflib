@@ -22,7 +22,8 @@ using Dxflib.Parser;
 namespace Dxflib
 {
     /// <summary>
-    /// The DxfFile Class
+    /// The DxfFile Class: is a class that is designed to replicate the properties and methods
+    /// of a DXF file. It is the root class for all entities and is required for reading a file.
     /// </summary>
     public class DxfFile
     {
@@ -56,37 +57,40 @@ namespace Dxflib
         
         #region DxfFileContents
         /// <summary>
-        /// The Content strings
+        /// The Content strings are all of the lines from the dxf file in a list of strings
         /// </summary>
         public string[] ContentStrings { get; }
 
         /// <summary>
-        /// The Layer Dictionary
+        /// The Layer Dictionary is a <see cref="Dxflib.AcadEntities.LayerDictionary"/> object that is
+        /// designed to hold all of the layers.
         /// </summary>
         public LayerDictionary Layers { get; }
 
         /// <summary>
-        /// All of the entities that are extracted
+        /// The Entities property is a list of all the entities that were read from the file. The
+        /// <see cref="Entity"/> types can be changed into any other type of derived class.
         /// </summary>
         public List<Entity> Entities { get; }
         #endregion
 
         #region FileProperties
         /// <summary>
-        ///     The absolute path to the file
+        ///     The absolute path to the file that is read.
         /// </summary>
         public string PathToFile { get; set; }
 
         /// <summary>
-        ///     The filename and the extension
+        ///     The filename and the extension of the file that was read.
         /// </summary>
         public string FileName { get; }
 
         /// <summary>
-        /// Get Entities by Entity Type
+        /// Get Entities by Entity Type returns a list of entities
+        /// by the type that was selected. See <see cref="Entity"/>.
         /// </summary>
-        /// <param name="entityType"></param>
-        /// <returns></returns>
+        /// <param name="entityType">The <see cref="EntityTypes"/> that will be placed into the list</param>
+        /// <returns>A list of entities all members of the type <see cref="EntityTypes"/></returns>
         public List<T> GetEntitiesByType<T>(EntityTypes entityType)
         {
             var returnList = new List<Entity>();
@@ -102,18 +106,19 @@ namespace Dxflib
 
         #region HeaderProperties
         /// <summary>
-        /// The Files AutoCAD Version
+        /// The Files AutoCAD Version <see cref="AutoCadVersions"/>
         /// </summary>
         // ReSharper disable once InconsistentNaming
         public AutoCadVersions AutoCADVersion { get; set; }
 
         /// <summary>
-        /// The Current Layer
+        /// The Current Layer of the file. This is the last
+        /// layer that was selected before the file was saved.
         /// </summary>
         public Layer CurrentLayer { get; set; }
 
         /// <summary>
-        /// Who the file was last saved by
+        /// The username of the person who the file was last saved by
         /// </summary>
         public string LastSavedBy { get; set; }
         #endregion

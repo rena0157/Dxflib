@@ -8,6 +8,8 @@ will help drafters with the more repetative task without needing to learn lisp.
 
 Check out my website for the application on github-pages: [https://rena0157.github.io/Dxflib/]()
 
+Also, take a look at the change log [https://rena0157.github.io/Dxflib/articles/ChangeLog.html]()
+
 ### Supported Versions
 Currently this Library supports the following Versions of AutoCAD
 - AC1006 (R10)

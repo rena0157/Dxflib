@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-07-11:09 AM
+// Last Updated: 2018-08-12-1:41 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -17,7 +17,8 @@ using Dxflib.Entities;
 namespace Dxflib.AcadEntities
 {
     /// <summary>
-    ///     A class that holds layer using a dictionary structure
+    ///     A class that holds layers using a dictionary structure with the layer
+    ///     names being used as the keys.
     /// </summary>
     public class LayerDictionary
     {
@@ -25,30 +26,31 @@ namespace Dxflib.AcadEntities
         private readonly Dictionary<string, Layer> _dictionary;
 
         /// <summary>
-        ///     Constructor that initalizes that LayerDictionary
+        ///     Constructor that initializes the Layer Dictionary to an
+        ///     empty <see cref="Dictionary{TKey,TValue}" />
         /// </summary>
-        public LayerDictionary()
-        {
-            _dictionary = new Dictionary<string, Layer>();
-        }
+        public LayerDictionary() { _dictionary = new Dictionary<string, Layer>(); }
 
         /// <summary>
-        ///     Count from the dictionary base
+        ///     The number of objects in the dictionary
         /// </summary>
         public int Count => _dictionary.Count;
 
         /// <summary>
-        ///     Returns all layers
+        ///     Returns all layers as a <list type="Layer"></list>
         /// </summary>
         public List<Layer> GetAllLayers => _dictionary.Values.ToList();
 
         /// <summary>
         ///     Adding a new layer to the dictionary
         /// </summary>
+        /// <exception cref="LayerException">
+        ///     Thrown when the <paramref name="name" /> is already a member of the dictionary
+        /// </exception>
         /// <param name="name">The name of the layer</param>
         public void NewLayer(string name)
         {
-            if (_dictionary.ContainsKey(name))
+            if ( _dictionary.ContainsKey(name) )
                 throw new LayerDictionaryException($"The Layer: {name} Already Exists");
 
             _dictionary.Add(name, new Layer(name));
@@ -59,19 +61,19 @@ namespace Dxflib.AcadEntities
         /// </summary>
         /// <param name="name">The name of the layer you want to search</param>
         /// <returns>True: If the layer does exits, False: If the layer does not exist</returns>
-        public bool ContainsLayer(string name)
-        {
-            return _dictionary.ContainsKey(name);
-        }
+        public bool ContainsLayer(string name) { return _dictionary.ContainsKey(name); }
 
         /// <summary>
-        ///     Get a layer from the dictionary
+        ///     Get a <see cref="Layer" /> from the dictionary by its name
         /// </summary>
         /// <param name="name">The name of the layer</param>
-        /// <returns>The layer that coresponds with the name that was given</returns>
+        /// <returns>
+        ///     The layer that corresponds with the
+        ///     <paramref name="name" /> that was given
+        /// </returns>
         public Layer GetLayer(string name)
         {
-            if (!_dictionary.ContainsKey(name))
+            if ( !_dictionary.ContainsKey(name) )
                 throw new LayerDictionaryException("The Layer was not found in the dictionary");
 
             return _dictionary[name];
@@ -80,21 +82,21 @@ namespace Dxflib.AcadEntities
         /// <summary>
         ///     Updates the dictionary.
         ///     If a layer does not exist then it adds it to the dictionary and
-        ///     adds entities to their respective layers
+        ///     adds entities to their respective layers.
         /// </summary>
         /// <param name="entities">Entities that you want the dictionary to have</param>
         public void UpdateDictionary(IEnumerable<Entity> entities)
         {
             // Add entities to their layers
-            foreach (var entity in entities)
+            foreach ( var entity in entities )
             {
                 // If the layer does not exist then create it
-                if (!ContainsLayer(entity.LayerName))
+                if ( !ContainsLayer(entity.LayerName) )
                     NewLayer(entity.LayerName);
 
                 // If the layer does not already have the entity in it add 
                 // that entity to the dictionary
-                if (!_dictionary[entity.LayerName].ContainsEntity(entity.Handle))
+                if ( !_dictionary[entity.LayerName].ContainsEntity(entity.Handle) )
                 {
                     _dictionary[entity.LayerName].AddEntity(entity.Handle, entity);
                     entity.LayerChanged += EntityOnLayerChanged;
@@ -104,11 +106,11 @@ namespace Dxflib.AcadEntities
             // Iterate through all layers and entities\
             // remove entities from layers if their layer name does not
             // match the layer that the dictionary has them on.
-            foreach (var layer in _dictionary.Values.ToList())
-            foreach (var entity in layer.GetAllEntities())
-                // If the layername does not match the current layer
+            foreach ( var layer in _dictionary.Values.ToList() )
+            foreach ( var entity in layer.GetAllEntities() )
+                // If the layer-name does not match the current layer
                 // then clean up that layer
-                if (entity.LayerName != layer.Name)
+                if ( entity.LayerName != layer.Name )
                     _dictionary[layer.Name].RemoveEntity(entity.Handle);
         }
 
@@ -121,25 +123,22 @@ namespace Dxflib.AcadEntities
         private void EntityOnLayerChanged(object sender, LayerChangedHandlerArgs args)
         {
             // Delete the old reference
-            _dictionary[args.OldName].RemoveEntity(((Entity) sender).Handle);
+            _dictionary[args.OldName].RemoveEntity(( (Entity) sender ).Handle);
 
             // If the layer does not already exist then create it
-            if (!_dictionary.ContainsKey(args.NewName))
+            if ( !_dictionary.ContainsKey(args.NewName) )
                 _dictionary.Add(args.NewName, new Layer(args.NewName));
 
             // Add the entity to the new layer name
-            _dictionary[args.NewName].AddEntity(((Entity) sender).Handle, (Entity) sender);
+            _dictionary[args.NewName].AddEntity(( (Entity) sender ).Handle, (Entity) sender);
         }
 
         /// <summary>
-        ///     Remove a layer
+        ///     Remove a layer by its <paramref name="name" />
         /// </summary>
         /// <param name="name">The name of the layer that is to be removed</param>
-        /// <returns>True: if Sucessful</returns>
-        public bool RemoveLayer(string name)
-        {
-            return _dictionary.Remove(name);
-        }
+        /// <returns>True: if Successful</returns>
+        public bool RemoveLayer(string name) { return _dictionary.Remove(name); }
     }
 
     /// <inheritdoc />
@@ -150,25 +149,20 @@ namespace Dxflib.AcadEntities
     {
         /// <inheritdoc />
         /// <summary>
-        /// Blank Constructor
+        ///     Blank Constructor
         /// </summary>
-        public LayerDictionaryException()
-        {
-        }
+        public LayerDictionaryException() { }
 
         /// <inheritdoc />
         /// <summary>
-        /// Constructor with a message
+        ///     Constructor with a message
         /// </summary>
         /// <param name="message">The Message</param>
-        public LayerDictionaryException(string message)
-        {
-            Message = message;
-        }
+        public LayerDictionaryException(string message) { Message = message; }
 
         /// <inheritdoc />
         /// <summary>
-        /// Message to send to the user
+        ///     Message to send to the user
         /// </summary>
         public override string Message { get; }
     }
