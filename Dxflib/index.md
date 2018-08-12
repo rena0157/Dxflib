@@ -55,3 +55,6 @@ there are other drafting applications that also use the file type. Also, because
 required for a drafting library it can also one day be used to create drawings without the use
 of AutoCAD or other drafting applications.
 
+## Test Image
+![Test Image](images/testimage.png)
+

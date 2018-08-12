@@ -1098,19 +1098,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.LwPolyLine.Length
   nameWithType: LwPolyLine.Length
-- uid: Dxflib.Entities.LwPolyLine.NumberOfVerticies
-  name: NumberOfVerticies
-  href: api/Dxflib.Entities.LwPolyLine.html#Dxflib_Entities_LwPolyLine_NumberOfVerticies
-  commentId: P:Dxflib.Entities.LwPolyLine.NumberOfVerticies
-  fullName: Dxflib.Entities.LwPolyLine.NumberOfVerticies
-  nameWithType: LwPolyLine.NumberOfVerticies
-- uid: Dxflib.Entities.LwPolyLine.NumberOfVerticies*
-  name: NumberOfVerticies
-  href: api/Dxflib.Entities.LwPolyLine.html#Dxflib_Entities_LwPolyLine_NumberOfVerticies_
-  commentId: Overload:Dxflib.Entities.LwPolyLine.NumberOfVerticies
+- uid: Dxflib.Entities.LwPolyLine.NumberOfVertices
+  name: NumberOfVertices
+  href: api/Dxflib.Entities.LwPolyLine.html#Dxflib_Entities_LwPolyLine_NumberOfVertices
+  commentId: P:Dxflib.Entities.LwPolyLine.NumberOfVertices
+  fullName: Dxflib.Entities.LwPolyLine.NumberOfVertices
+  nameWithType: LwPolyLine.NumberOfVertices
+- uid: Dxflib.Entities.LwPolyLine.NumberOfVertices*
+  name: NumberOfVertices
+  href: api/Dxflib.Entities.LwPolyLine.html#Dxflib_Entities_LwPolyLine_NumberOfVertices_
+  commentId: Overload:Dxflib.Entities.LwPolyLine.NumberOfVertices
   isSpec: "True"
-  fullName: Dxflib.Entities.LwPolyLine.NumberOfVerticies
-  nameWithType: LwPolyLine.NumberOfVerticies
+  fullName: Dxflib.Entities.LwPolyLine.NumberOfVertices
+  nameWithType: LwPolyLine.NumberOfVertices
 - uid: Dxflib.Entities.LwPolyLine.PolyLineFlag
   name: PolyLineFlag
   href: api/Dxflib.Entities.LwPolyLine.html#Dxflib_Entities_LwPolyLine_PolyLineFlag
@@ -1195,19 +1195,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.LwPolyLineBuffer.Elevation
   nameWithType: LwPolyLineBuffer.Elevation
-- uid: Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies
-  name: NumberOfVerticies
-  href: api/Dxflib.Entities.LwPolyLineBuffer.html#Dxflib_Entities_LwPolyLineBuffer_NumberOfVerticies
-  commentId: P:Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies
-  fullName: Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies
-  nameWithType: LwPolyLineBuffer.NumberOfVerticies
-- uid: Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies*
-  name: NumberOfVerticies
-  href: api/Dxflib.Entities.LwPolyLineBuffer.html#Dxflib_Entities_LwPolyLineBuffer_NumberOfVerticies_
-  commentId: Overload:Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies
+- uid: Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices
+  name: NumberOfVertices
+  href: api/Dxflib.Entities.LwPolyLineBuffer.html#Dxflib_Entities_LwPolyLineBuffer_NumberOfVertices
+  commentId: P:Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices
+  fullName: Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices
+  nameWithType: LwPolyLineBuffer.NumberOfVertices
+- uid: Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices*
+  name: NumberOfVertices
+  href: api/Dxflib.Entities.LwPolyLineBuffer.html#Dxflib_Entities_LwPolyLineBuffer_NumberOfVertices_
+  commentId: Overload:Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices
   isSpec: "True"
-  fullName: Dxflib.Entities.LwPolyLineBuffer.NumberOfVerticies
-  nameWithType: LwPolyLineBuffer.NumberOfVerticies
+  fullName: Dxflib.Entities.LwPolyLineBuffer.NumberOfVertices
+  nameWithType: LwPolyLineBuffer.NumberOfVertices
 - uid: Dxflib.Entities.LwPolyLineBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
   name: Parse(LineChangeHandlerArgs)
   href: api/Dxflib.Entities.LwPolyLineBuffer.html#Dxflib_Entities_LwPolyLineBuffer_Parse_Dxflib_Parser_LineChangeHandlerArgs_
