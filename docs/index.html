@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dxflib - The .NET Dxf Library Site </title>
+    <title>Dxflib - The .NET Dxf Library </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Dxflib - The .NET Dxf Library Site ">
+    <meta name="title" content="Dxflib - The .NET Dxf Library ">
     <meta name="generator" content="docfx 2.37.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -68,8 +68,56 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="dxflib---the-net-dxf-library-site">Dxflib - The .NET Dxf Library Site</h1>
+<h1 id="dxflib---the-net-dxf-library">Dxflib - The .NET Dxf Library</h1>
 
+<h2 id="introduction">Introduction</h2>
+<p>The Dxf file format stands for Drawing Interchange Format. It is a CAD data
+file format developed by AutoDESK, the creators of AutoCAD. It was designed to create data
+interoperabilty between AutoCAD and other programs. Dxf was originally introduced in 1982 (a very
+long time ago). The file is broken down into different sections, namely header, classes, tables, blocks
+entities, and a thumbnail image section.</p>
+<h2 id="dxf-file-basics">Dxf File Basics</h2>
+<p>Data is stored in a &quot;Tagged&quot; format. For example here is a section of a DXF file that contains
+some information about a LWPOLYLINE entity.</p>
+<pre><code>LWPOLYLINE // Start Marker
+  5 // Group Code - handle
+2C1 // Group Code value - The handle value
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbPolyline
+ 90
+        4
+ 70
+     1
+ 43
+0.0
+ 10
+0.0
+</code></pre>
+<p>In the above section I included some comments, the first line is what I call the start marker
+for an entity type. It is the entity's name. The line where the second comment is located is called
+a group code. A group code is a numberical value that 1 determines the type of the next line - which
+is the actual value of the group codes element - and the value type. For example the group code
+that I highlighted is for the handle of the Entity. The value is <code>2C1</code>.</p>
+<p>This pattern of group code followed by group code value is the basis of the dxf file's system for
+organizing information.</p>
+<h2 id="development">Development</h2>
+<p>The goal of the development for the dxf library is to provide a programming interface in the
+.NET framework for the DXF platform. Development for the library has started in many different
+forms and has been written and rewritten in many different languages. I started developing the
+library in python, then it moved to rust, then C++, and not C#. I started developing the library
+to help me at my job where I was a drafts person. I found that during drafting there is often
+very repetative tasks that ought to be done by a computer. I know that AutoCAD has its own
+.NET framework that is infinitely more up-to-date than this library, but it requires a premium
+license. Also, there are other reasons for developing a dxf library that completely bypass AutoCAD
+there are other drafting applications that also use the file type. Also, because of the functionality
+required for a drafting library it can also one day be used to create drawings without the use
+of AutoCAD or other drafting applications.</p>
 </article>
           </div>
           

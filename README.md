@@ -6,6 +6,8 @@ one is to help me learn the .NET framework and the second is in the future I hop
 will be the backend for an AutoCAD Drafting companion application. This Drafting companion application
 will help drafters with the more repetative task without needing to learn lisp.
 
+Check out my website for the application on github-pages: [https://rena0157.github.io/Dxflib/]()
+
 ### Supported Versions
 Currently this Library supports the following Versions of AutoCAD
 - AC1006 (R10)
@@ -57,4 +59,3 @@ Future development includes adding these other entities (in order of importance)
 - MTEXT
 - ARC
 - POLYLINE
-[sf]()
