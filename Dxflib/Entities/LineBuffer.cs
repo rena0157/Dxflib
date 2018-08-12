@@ -19,6 +19,9 @@ namespace Dxflib.Entities
     /// </summary>
     public class LineBuffer : EntityBuffer
     {
+        /// <summary>
+        /// Constructor that will return all values to their defaults
+        /// </summary>
         public LineBuffer()
         {
             Thickness = 0;
@@ -28,20 +31,47 @@ namespace Dxflib.Entities
             Y1 = 0;
         }
 
+        /// <summary>
+        /// The Thickness of the <see cref="Line.Thickness"/>
+        /// </summary>
         public double Thickness { get; set; }
+
+        /// <summary>
+        /// The X starting coordinate of the line
+        /// </summary>
         public double X0 { get; set; }
+
+        /// <summary>
+        /// The X ending coordinate of the line
+        /// </summary>
         public double X1 { get; set; }
+
+        /// <summary>
+        /// The Y starting coordinate of the line
+        /// </summary>
         public double Y0 { get; set; }
+
+        /// <summary>
+        /// The Y ending coordinate of the line
+        /// </summary>
         public double Y1 { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Main Parsing function for the LineBuffer.
         /// </summary>
+        /// <remarks>
+        ///     This parsing function will first try and parse
+        ///     the information for the base class <see cref="T:Dxflib.Entities.EntityBuffer" />.
+        ///     If that function returns false then it will attempt to parse based on
+        ///     the <see cref="T:Dxflib.Entities.LineGroupCodes" />. If that fails then the line buffer
+        ///     does not fill anything and the extraction process moves to the next line.
+        /// </remarks>
         /// <param name="args">
         ///     Args that are passed by the line
-        ///     changed event
+        ///     changed event.
         /// </param>
-        /// <returns>True if parse was sucessful</returns>
+        /// <returns>True if parse was successful</returns>
         public override bool Parse(LineChangeHandlerArgs args)
         {
             // The Current line

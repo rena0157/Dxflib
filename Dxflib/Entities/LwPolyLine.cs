@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-07-11:04 AM
+// Last Updated: 2018-08-12-2:26 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -25,9 +25,9 @@ namespace Dxflib.Entities
         #region Constructors
 
         /// <summary>
-        ///     The Main Extraction Constructor for the LwPolyLine Class
+        ///     The extraction constructor for the lwpolyline class
         /// </summary>
-        /// <param name="lwPolyLineBuffer"></param>
+        /// <param name="lwPolyLineBuffer">A <see cref="LwPolyLineBuffer" /></param>
         public LwPolyLine(LwPolyLineBuffer lwPolyLineBuffer)
         {
             // Entity Base
@@ -36,7 +36,7 @@ namespace Dxflib.Entities
             Handle = lwPolyLineBuffer.Handle;
 
             // LwPolyLine Specific
-            NumberOfVerticies = lwPolyLineBuffer.NumberOfVerticies;
+            NumberOfVertices = lwPolyLineBuffer.NumberOfVertices;
             PolyLineFlag = lwPolyLineBuffer.PolyLineFlag;
             ConstantWidth = lwPolyLineBuffer.ConstantWidth;
             Elevation = lwPolyLineBuffer.Elevation;
@@ -53,9 +53,9 @@ namespace Dxflib.Entities
         #region AutoCADEntityProperties
 
         /// <summary>
-        ///     The Total Number of Verticies in the LwPolyLine
+        ///     The Total Number of Vertices in the LwPolyLine
         /// </summary>
-        public int NumberOfVerticies { get; }
+        public int NumberOfVertices { get; }
 
         /// <summary>
         ///     The Polyline Flag which tell you if the polyline is closed or open

@@ -20,7 +20,7 @@ namespace Dxflib.Entities
     public class Line : Entity
     {
         /// <summary>
-        ///     Main Constructor
+        ///     Extraction Constructor, requires filling out of an <see cref="EntityBuffer"/>
         /// </summary>
         /// <param name="lineBuffer">
         ///     The Line Buffer that was filled
@@ -40,7 +40,8 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     The GeoLine of the Line
+        ///     The <see cref="GeoLine"/> of the Line, which
+        ///     is a sort of geometric backing type for the line
         /// </summary>
         public GeoLine GLine { get; }
 

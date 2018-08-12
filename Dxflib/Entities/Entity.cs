@@ -18,17 +18,17 @@ namespace Dxflib.Entities
     /// <summary>
     ///     The Delegate for the LayerChanged Event
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="args"></param>
+    /// <param name="sender">The Sending Object</param>
+    /// <param name="args">The arguments</param>
     public delegate void LayerChangedHandler(object sender, LayerChangedHandlerArgs args);
 
     /// <summary>
-    ///     The Entity base class that all entities will be derived
+    ///     The Entity base class that all entities will be derived from.
     /// </summary>
     public abstract class Entity
     {
         /// <summary>
-        ///     The entity type
+        ///     The entity type of this entity
         /// </summary>
         public EntityTypes EntityType;
 
@@ -38,13 +38,17 @@ namespace Dxflib.Entities
         protected string LayerNameBf;
 
         /// <summary>
-        ///     The entity's Handel
+        ///     The entity's Handle
         /// </summary>
         public string Handle { get; protected set; }
 
         /// <summary>
         ///     The entity's Layer name
         /// </summary>
+        /// <remarks>
+        ///     Note that a <see cref="LayerChanged"/> event
+        ///     will be fired off if this property is changed.
+        /// </remarks>
         public string LayerName
         {
             get => LayerNameBf;
@@ -56,12 +60,12 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     Public event for layer changes
+        ///     Public event for <see cref="LayerName"/> changes
         /// </summary>
         public event LayerChangedHandler LayerChanged;
 
         /// <summary>
-        ///     The OnLayerChanged Function that invokes the event
+        ///     The OnLayerChanged Function that invokes all of the subscribing methods
         /// </summary>
         /// <param name="args"></param>
         protected virtual void OnLayerChanged(LayerChangedHandlerArgs args)
@@ -129,11 +133,11 @@ namespace Dxflib.Entities
 
         /// <summary>
         ///     The Parse Virtual Function that is to be overriden by
-        ///     each entity that is to be extracted. This funciton also,
-        ///     Parses global entity properties such as handle or layername.
+        ///     each entity that is to be extracted. This function also,
+        ///     Parses global entity properties such as handle or <see cref="LayerName"/>.
         /// </summary>
         /// <param name="args">Line Changed Handler arguments</param>
-        /// <returns>True if the parse was sucessful</returns>
+        /// <returns>True if the parse was successful</returns>
         public virtual bool Parse(LineChangeHandlerArgs args)
         {
             switch (args.NewCurrentLine)
@@ -187,7 +191,14 @@ namespace Dxflib.Entities
     /// </summary>
     public static class EntityGroupCodes
     {
+        /// <summary>
+        ///     The Handle of an <see cref="Entity.Handle"/>
+        /// </summary>
         public const string Handle = "  5";
+
+        /// <summary>
+        ///     The LayerName of an <see cref="Entity.LayerName"/>
+        /// </summary>
         public const string Layer = "  8";
     }
 

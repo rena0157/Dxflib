@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-07-10:54 AM
+// Last Updated: 2018-08-12-2:24 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -30,7 +30,7 @@ namespace Dxflib.Entities
         {
             LayerName = "";
             Handle = "";
-            NumberOfVerticies = 0;
+            NumberOfVertices = 0;
             PolyLineFlag = false;
             ConstantWidth = 0;
             Elevation = 0;
@@ -41,12 +41,12 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     The Number of Verticies in the Polyline
+        ///     The Number of Vertices in the Lwpolyline
         /// </summary>
-        public int NumberOfVerticies { get; private set; }
+        public int NumberOfVertices { get; private set; }
 
         /// <summary>
-        ///     The Polyline Flag, tells if the polyline is open or closed
+        ///     The Lwpolyline Flag, tells if the lwpolyline is open or closed
         /// </summary>
         public bool PolyLineFlag { get; private set; }
 
@@ -56,22 +56,22 @@ namespace Dxflib.Entities
         public double ConstantWidth { get; private set; }
 
         /// <summary>
-        ///     The elevation of the Polyline
+        ///     The elevation of the Lwpolyline
         /// </summary>
         public double Elevation { get; private set; }
 
         /// <summary>
-        ///     The Thickness of the polyline
+        ///     The Thickness of the lwpolyline
         /// </summary>
         public double Thickness { get; private set; }
 
         /// <summary>
-        ///     The Xvalues list
+        ///     The X values list
         /// </summary>
         public List<double> XValues { get; }
 
         /// <summary>
-        ///     The YValues List
+        ///     The Y Values List
         /// </summary>
         public List<double> YValues { get; }
 
@@ -80,29 +80,38 @@ namespace Dxflib.Entities
         /// </summary>
         public List<double> BulgeList { get; }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Main Parse Function for the Lwpolyline Class
         /// </summary>
         /// <param name="args">LineChangeHandlerArguments</param>
-        /// <returns>True or false if the parse was sucessful</returns>
+        /// <returns>True or false if the parse was successful</returns>
         public override bool Parse(LineChangeHandlerArgs args)
         {
-            if (base.Parse(args))
+            if ( base.Parse(args) )
                 return true;
 
-            switch (args.NewCurrentLine)
+            switch ( args.NewCurrentLine )
             {
-                // Number of Verticies
-                case LwPolyLineGroupGroupCodes.NumberOfVerticies:
-                    NumberOfVerticies = int.Parse(args.NewNextLine);
+                // Number of Vertices
+                case LwPolyLineGroupGroupCodes.NumberOfVertices:
+                    NumberOfVertices = int.Parse(args.NewNextLine);
                     return true;
 
-                // Polyline Flag
+                // Lwpolyline Flag
                 case LwPolyLineGroupGroupCodes.PolyLineFlag:
-                    if (int.Parse(args.NewNextLine) == 0)
-                        PolyLineFlag = false;
-                    else if (int.Parse(args.NewNextLine) == 1)
-                        PolyLineFlag = true;
+                    switch ( int.Parse(args.NewNextLine) )
+                    {
+                        case 0:
+                            PolyLineFlag = false;
+                            break;
+                        case 1:
+                            PolyLineFlag = true;
+                            break;
+                        default:
+                            return false;
+                    }
+
                     return true;
 
                 // Constant Width
@@ -120,13 +129,13 @@ namespace Dxflib.Entities
                     Thickness = double.Parse(args.NewNextLine);
                     return true;
 
-                // Xvalues
+                // X values
                 case LwPolyLineGroupGroupCodes.XValue:
                     BulgeList.Add(Bulge.BulgeNull);
                     XValues.Add(double.Parse(args.NewNextLine));
                     return true;
 
-                // Yvalues
+                // Y values
                 case LwPolyLineGroupGroupCodes.YValue:
                     YValues.Add(double.Parse(args.NewNextLine));
                     return true;
@@ -136,17 +145,21 @@ namespace Dxflib.Entities
                     BulgeList.RemoveAt(BulgeList.Count - 1);
                     BulgeList.Add(double.Parse(args.NewNextLine));
                     return true;
-            }
 
-            return false;
+                // ReSharper disable once RedundantEmptySwitchSection
+                // This is required for unexpected behaviour
+                default:
+                    return false;
+            }
         }
 
         /// <summary>
-        ///     The LwPolyline Group codes
+        ///     Class that holds all of the constant strings
+        ///     for the lwpolyline group codes.
         /// </summary>
         private static class LwPolyLineGroupGroupCodes
         {
-            public const string NumberOfVerticies = " 90";
+            public const string NumberOfVertices = " 90";
             public const string PolyLineFlag = " 70";
             public const string ConstantWidth = " 43";
             public const string Elevation = " 38";

@@ -28,7 +28,7 @@ namespace Dxflib.Tests.Entities
         {
             var dxfFile = new DxfFile(PathToFile);
             var polyLines = dxfFile.GetEntitiesByType<LwPolyLine>(EntityTypes.Lwpolyline);
-            Assert.IsTrue(polyLines[0].NumberOfVerticies == 5);
+            Assert.IsTrue(polyLines[0].NumberOfVertices == 5);
         }
 
         [TestMethod]
