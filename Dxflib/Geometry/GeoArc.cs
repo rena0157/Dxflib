@@ -202,7 +202,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        ///     The Center of the Arc
+        ///     The Circular center point of the arc
         /// </summary>
         public Vertex CenterVertex
         {
@@ -212,6 +212,22 @@ namespace Dxflib.Geometry
                 _centerVertex = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("CenterVertex"));
                 UpdateGeometry(this, new GeometryChangedHandlerArgs("CenterVertex"));
+            }
+        }
+
+        /// <summary>
+        /// The middle point between the Starting Vertex (<see cref="Vertex0"/>)
+        /// and the Ending Vertex (<see cref="Vertex1"/>) that lies on the path
+        /// of the arc. 
+        /// </summary>
+        public Vertex MiddleVertex
+        {
+            get => _arcMiddleVertex;
+            set
+            {
+                _arcMiddleVertex = value;
+                OnGeometryChanged(new GeometryChangedHandlerArgs("MiddleVertex"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("MiddleVertex"));
             }
         }
 
@@ -230,8 +246,13 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        /// Converts this object to a <see cref="Vector"/>.
+        /// Where the <see cref="Vector.HeadVertex"/> and
+        /// <see cref="Vector.TailVertex"/> correspond with
+        /// the <see cref="Vertex0"/> and <see cref="Vertex1"/>
+        /// of this object respectively.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A new <see cref="Vector"/> Object</returns>
         public Vector ToVector()
         {
             // Todo: Test This
@@ -252,7 +273,7 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     Calculates the Center Vertex
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A <see cref="Vertex"/> object</returns>
         public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertex1, double bulge)
         {
             // Vector between V0 and V1
@@ -299,6 +320,18 @@ namespace Dxflib.Geometry
                 vector.HeadVertex.Z + centerVertex.Z);
         }
 
+        /// <summary>
+        /// Method that calculates the middle point on the arc
+        /// </summary>
+        /// <returns>A Vertex that is the middle point on the arc</returns>
+        private Vertex GetMiddlePoint()
+        {
+            var minAngle = Math.Min(StartAngle, EndAngle);
+            var maxAngle = Math.Max(StartAngle, EndAngle);
+            var middlePointAngle = ( maxAngle - minAngle ) / 2 + minAngle;
+            return CalcPointOnArc(CenterVertex, middlePointAngle, Radius);
+        }
+
         private void OnVertexPropertyChanged(object sender, GeometryChangedHandlerArgs args)
         {
             if ( sender == _vertex0 )
@@ -334,6 +367,9 @@ namespace Dxflib.Geometry
                     _endAngle = Vector.AngleBetweenVectors(
                         new Vector(_centerVertex, _vertex1), UnitVectors.XUnitVector);
 
+                    // The Middle Vertex
+                    _arcMiddleVertex = GetMiddlePoint();
+
                     // Get Only Properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
                     Area = GeoMath.ChordArea(this);
@@ -351,6 +387,9 @@ namespace Dxflib.Geometry
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
                     _vertex1.GeometryChanged += OnVertexPropertyChanged;
 
+                    // Middle Vertex
+                    _arcMiddleVertex = GetMiddlePoint();
+
                     // Get only properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
                     Area = GeoMath.ChordArea(this);
@@ -362,8 +401,12 @@ namespace Dxflib.Geometry
                     _endAngle = _startAngle + _angle;
                     _bulge = Bulge.CalcBulge(_angle);
 
+                    // Move the end vertex over by the change in angle
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
                     _vertex1.GeometryChanged += OnVertexPropertyChanged;
+
+                    // middle vertex
+                    _arcMiddleVertex = GetMiddlePoint();
 
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
                     Area = GeoMath.ChordArea(this);
@@ -372,12 +415,17 @@ namespace Dxflib.Geometry
                 case "Radius":
                 {
                     _bulge = Math.Tan(_angle / 4);
-
+                    
+                    // Recalculate the starting vertex
                     _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
                     _vertex0.GeometryChanged += OnVertexPropertyChanged;
-
+                    
+                    // Recalculate the ending vertex
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
                     _vertex1.GeometryChanged += OnVertexPropertyChanged;
+                    
+                    // middle vertex
+                    _arcMiddleVertex = GetMiddlePoint();
 
                     // Get only properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
@@ -388,8 +436,11 @@ namespace Dxflib.Geometry
                 {
                     _angle = _endAngle - _startAngle;
 
+                    // Move the starting vertex over
                     _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
                     _vertex0.GeometryChanged += OnVertexPropertyChanged;
+                    
+                    _arcMiddleVertex = GetMiddlePoint();
 
                     // Get only properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
@@ -402,6 +453,8 @@ namespace Dxflib.Geometry
 
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
                     _vertex1.GeometryChanged += OnVertexPropertyChanged;
+
+                    _arcMiddleVertex = GetMiddlePoint();
 
                     // Get only properties
                     Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);

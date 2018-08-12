@@ -112,6 +112,18 @@ namespace Dxflib.Tests.Geometry
             Assert.IsTrue(Math.Abs(testArc.Area - 1.1741) < GeoMath.Tolerance);
         }
 
+        [TestMethod]
+        public void MiddleVertexTest()
+        {
+            var vertex0 = new Vertex(0, 2);
+            var vertex1 = new Vertex(2, 2);
+            const double bulgeValue = -0.5;
+            var testArc = new GeoArc(vertex0, vertex1, bulgeValue);
+
+            Assert.IsTrue(Math.Abs(testArc.MiddleVertex.X - 1) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testArc.MiddleVertex.Y - 2.5) < GeoMath.Tolerance);
+        }
+
         // CAAR Tests -------------------------------------------------------
 
         [TestMethod]

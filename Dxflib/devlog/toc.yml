@@ -1,5 +1,4 @@
 ﻿- name: Introduction
   href: index.md
-  homepage: index.md
 - name: GeoArcs and Geometry
   href: GeoArcsGeometry.md
