@@ -8,8 +8,4 @@
     <DocumentationFile>bin\Debug\netstandard2.0\Dxflib.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.37.2" />
-  </ItemGroup>
-
 </Project>
