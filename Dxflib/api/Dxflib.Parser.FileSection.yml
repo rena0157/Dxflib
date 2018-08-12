@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Parser.FileSection
+  commentId: T:Dxflib.Parser.FileSection
+  id: FileSection
+  parent: Dxflib.Parser
+  children:
+  - Dxflib.Parser.FileSection.Blocks
+  - Dxflib.Parser.FileSection.Classes
+  - Dxflib.Parser.FileSection.Entities
+  - Dxflib.Parser.FileSection.Header
+  - Dxflib.Parser.FileSection.None
+  - Dxflib.Parser.FileSection.Objects
+  - Dxflib.Parser.FileSection.Tables
+  langs:
+  - csharp
+  - vb
+  name: FileSection
+  nameWithType: FileSection
+  fullName: Dxflib.Parser.FileSection
+  type: Enum
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: FileSection
+    path: Parser/DxfFileMainParser.cs
+    startLine: 135
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  summary: "\nThe File Section Enumeration that holds Enumerations for\nthe different section of a dxf file\n"
+  example: []
+  syntax:
+    content: public enum FileSection
+    content.vb: Public Enum FileSection
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Dxflib.Parser.FileSection.Header
+  commentId: F:Dxflib.Parser.FileSection.Header
+  id: Header
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: FileSection.Header
+  fullName: Dxflib.Parser.FileSection.Header
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Header
+    path: Parser/DxfFileMainParser.cs
+    startLine: 137
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Header = 0
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.Classes
+  commentId: F:Dxflib.Parser.FileSection.Classes
+  id: Classes
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Classes
+  nameWithType: FileSection.Classes
+  fullName: Dxflib.Parser.FileSection.Classes
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Classes
+    path: Parser/DxfFileMainParser.cs
+    startLine: 139
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Classes = 1
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.Tables
+  commentId: F:Dxflib.Parser.FileSection.Tables
+  id: Tables
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Tables
+  nameWithType: FileSection.Tables
+  fullName: Dxflib.Parser.FileSection.Tables
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Tables
+    path: Parser/DxfFileMainParser.cs
+    startLine: 141
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Tables = 2
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.Blocks
+  commentId: F:Dxflib.Parser.FileSection.Blocks
+  id: Blocks
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Blocks
+  nameWithType: FileSection.Blocks
+  fullName: Dxflib.Parser.FileSection.Blocks
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Blocks
+    path: Parser/DxfFileMainParser.cs
+    startLine: 143
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Blocks = 3
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.Entities
+  commentId: F:Dxflib.Parser.FileSection.Entities
+  id: Entities
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: FileSection.Entities
+  fullName: Dxflib.Parser.FileSection.Entities
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Entities
+    path: Parser/DxfFileMainParser.cs
+    startLine: 145
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Entities = 4
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.Objects
+  commentId: F:Dxflib.Parser.FileSection.Objects
+  id: Objects
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: Objects
+  nameWithType: FileSection.Objects
+  fullName: Dxflib.Parser.FileSection.Objects
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Objects
+    path: Parser/DxfFileMainParser.cs
+    startLine: 147
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: Objects = 5
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSection.None
+  commentId: F:Dxflib.Parser.FileSection.None
+  id: None
+  parent: Dxflib.Parser.FileSection
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: FileSection.None
+  fullName: Dxflib.Parser.FileSection.None
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: None
+    path: Parser/DxfFileMainParser.cs
+    startLine: 149
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: None = 6
+    return:
+      type: Dxflib.Parser.FileSection
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Dxflib.Parser
+  commentId: N:Dxflib.Parser
+  name: Dxflib.Parser
+  nameWithType: Dxflib.Parser
+  fullName: Dxflib.Parser
+- uid: Dxflib.Parser.FileSection
+  commentId: T:Dxflib.Parser.FileSection
+  parent: Dxflib.Parser
+  name: FileSection
+  nameWithType: FileSection
+  fullName: Dxflib.Parser.FileSection

@@ -1,0 +1,109 @@
+### YamlMime:TableOfContent
+- uid: Dxflib
+  name: Dxflib
+  items:
+  - uid: Dxflib.DxfFile
+    name: DxfFile
+- uid: Dxflib.AcadEntities
+  name: Dxflib.AcadEntities
+  items:
+  - uid: Dxflib.AcadEntities.Layer
+    name: Layer
+  - uid: Dxflib.AcadEntities.LayerDictionary
+    name: LayerDictionary
+  - uid: Dxflib.AcadEntities.LayerDictionaryException
+    name: LayerDictionaryException
+  - uid: Dxflib.AcadEntities.LayerException
+    name: LayerException
+- uid: Dxflib.DxfStream
+  name: Dxflib.DxfStream
+  items:
+  - uid: Dxflib.DxfStream.DxfReader
+    name: DxfReader
+  - uid: Dxflib.DxfStream.DxfStreamException
+    name: DxfStreamException
+- uid: Dxflib.Entities
+  name: Dxflib.Entities
+  items:
+  - uid: Dxflib.Entities.Entity
+    name: Entity
+  - uid: Dxflib.Entities.EntityBuffer
+    name: EntityBuffer
+  - uid: Dxflib.Entities.EntityException
+    name: EntityException
+  - uid: Dxflib.Entities.EntityGroupCodes
+    name: EntityGroupCodes
+  - uid: Dxflib.Entities.EntityTypes
+    name: EntityTypes
+  - uid: Dxflib.Entities.HatchBuffer
+    name: HatchBuffer
+  - uid: Dxflib.Entities.LayerChangedHandler
+    name: LayerChangedHandler
+  - uid: Dxflib.Entities.LayerChangedHandlerArgs
+    name: LayerChangedHandlerArgs
+  - uid: Dxflib.Entities.Line
+    name: Line
+  - uid: Dxflib.Entities.LineBuffer
+    name: LineBuffer
+  - uid: Dxflib.Entities.LineGroupCodes
+    name: LineGroupCodes
+  - uid: Dxflib.Entities.LwPolyLine
+    name: LwPolyLine
+  - uid: Dxflib.Entities.LwPolyLineBuffer
+    name: LwPolyLineBuffer
+- uid: Dxflib.Geometry
+  name: Dxflib.Geometry
+  items:
+  - uid: Dxflib.Geometry.GeoArc
+    name: GeoArc
+  - uid: Dxflib.Geometry.GeoLine
+    name: GeoLine
+  - uid: Dxflib.Geometry.GeoMath
+    name: GeoMath
+  - uid: Dxflib.Geometry.GeometricEntityBase
+    name: GeometricEntityBase
+  - uid: Dxflib.Geometry.GeometryChangedHandler
+    name: GeometryChangedHandler
+  - uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+    name: GeometryChangedHandlerArgs
+  - uid: Dxflib.Geometry.GeometryEntityTypes
+    name: GeometryEntityTypes
+  - uid: Dxflib.Geometry.GeoPolyline
+    name: GeoPolyline
+  - uid: Dxflib.Geometry.Vertex
+    name: Vertex
+- uid: Dxflib.LinAlg
+  name: Dxflib.LinAlg
+  items:
+  - uid: Dxflib.LinAlg.UnitVectors
+    name: UnitVectors
+  - uid: Dxflib.LinAlg.Vector
+    name: Vector
+- uid: Dxflib.Parser
+  name: Dxflib.Parser
+  items:
+  - uid: Dxflib.Parser.AutoCadVersions
+    name: AutoCadVersions
+  - uid: Dxflib.Parser.Controller
+    name: Controller
+  - uid: Dxflib.Parser.DxfFileMainParser
+    name: DxfFileMainParser
+  - uid: Dxflib.Parser.EntityParser
+    name: EntityParser
+  - uid: Dxflib.Parser.FileSection
+    name: FileSection
+  - uid: Dxflib.Parser.FileSectionStrings
+    name: FileSectionStrings
+  - uid: Dxflib.Parser.HeaderParser
+    name: HeaderParser
+  - uid: Dxflib.Parser.HeaderStrings
+    name: HeaderStrings
+  - uid: Dxflib.Parser.LineChangeHandler
+    name: LineChangeHandler
+  - uid: Dxflib.Parser.LineChangeHandlerArgs
+    name: LineChangeHandlerArgs
+- uid: Dxflib.Tools
+  name: Dxflib.Tools
+  items:
+  - uid: Dxflib.Tools.DxflibTools
+    name: DxflibTools

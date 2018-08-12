@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Geometry.GeometryEntityTypes
+  commentId: T:Dxflib.Geometry.GeometryEntityTypes
+  id: GeometryEntityTypes
+  parent: Dxflib.Geometry
+  children:
+  - Dxflib.Geometry.GeometryEntityTypes.GeoArc
+  - Dxflib.Geometry.GeometryEntityTypes.GeoLine
+  - Dxflib.Geometry.GeometryEntityTypes.Vertex
+  langs:
+  - csharp
+  - vb
+  name: GeometryEntityTypes
+  nameWithType: GeometryEntityTypes
+  fullName: Dxflib.Geometry.GeometryEntityTypes
+  type: Enum
+  source:
+    remote:
+      path: Dxflib/Geometry/GeometricEntityBase.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeometryEntityTypes
+    path: Geometry/GeometricEntityBase.cs
+    startLine: 103
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe different geometry entity types\n"
+  example: []
+  syntax:
+    content: public enum GeometryEntityTypes
+    content.vb: Public Enum GeometryEntityTypes
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Dxflib.Geometry.GeometryEntityTypes.Vertex
+  commentId: F:Dxflib.Geometry.GeometryEntityTypes.Vertex
+  id: Vertex
+  parent: Dxflib.Geometry.GeometryEntityTypes
+  langs:
+  - csharp
+  - vb
+  name: Vertex
+  nameWithType: GeometryEntityTypes.Vertex
+  fullName: Dxflib.Geometry.GeometryEntityTypes.Vertex
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Geometry/GeometricEntityBase.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Vertex
+    path: Geometry/GeometricEntityBase.cs
+    startLine: 108
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\n<xref href=\"Dxflib.Geometry.Vertex\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: Vertex = 0
+    return:
+      type: Dxflib.Geometry.GeometryEntityTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Geometry.GeometryEntityTypes.GeoLine
+  commentId: F:Dxflib.Geometry.GeometryEntityTypes.GeoLine
+  id: GeoLine
+  parent: Dxflib.Geometry.GeometryEntityTypes
+  langs:
+  - csharp
+  - vb
+  name: GeoLine
+  nameWithType: GeometryEntityTypes.GeoLine
+  fullName: Dxflib.Geometry.GeometryEntityTypes.GeoLine
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Geometry/GeometricEntityBase.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeoLine
+    path: Geometry/GeometricEntityBase.cs
+    startLine: 113
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\n<xref href=\"Dxflib.Geometry.GeoLine\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: GeoLine = 1
+    return:
+      type: Dxflib.Geometry.GeometryEntityTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Geometry.GeometryEntityTypes.GeoArc
+  commentId: F:Dxflib.Geometry.GeometryEntityTypes.GeoArc
+  id: GeoArc
+  parent: Dxflib.Geometry.GeometryEntityTypes
+  langs:
+  - csharp
+  - vb
+  name: GeoArc
+  nameWithType: GeometryEntityTypes.GeoArc
+  fullName: Dxflib.Geometry.GeometryEntityTypes.GeoArc
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Geometry/GeometricEntityBase.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeoArc
+    path: Geometry/GeometricEntityBase.cs
+    startLine: 118
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\n<xref href=\"Dxflib.Geometry.GeoArc\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: GeoArc = 2
+    return:
+      type: Dxflib.Geometry.GeometryEntityTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Dxflib.Geometry
+  commentId: N:Dxflib.Geometry
+  name: Dxflib.Geometry
+  nameWithType: Dxflib.Geometry
+  fullName: Dxflib.Geometry
+- uid: Dxflib.Geometry.Vertex
+  commentId: T:Dxflib.Geometry.Vertex
+  parent: Dxflib.Geometry
+  name: Vertex
+  nameWithType: Vertex
+  fullName: Dxflib.Geometry.Vertex
+- uid: Dxflib.Geometry.GeometryEntityTypes
+  commentId: T:Dxflib.Geometry.GeometryEntityTypes
+  parent: Dxflib.Geometry
+  name: GeometryEntityTypes
+  nameWithType: GeometryEntityTypes
+  fullName: Dxflib.Geometry.GeometryEntityTypes
+- uid: Dxflib.Geometry.GeoLine
+  commentId: T:Dxflib.Geometry.GeoLine
+  parent: Dxflib.Geometry
+  name: GeoLine
+  nameWithType: GeoLine
+  fullName: Dxflib.Geometry.GeoLine
+- uid: Dxflib.Geometry.GeoArc
+  commentId: T:Dxflib.Geometry.GeoArc
+  parent: Dxflib.Geometry
+  name: GeoArc
+  nameWithType: GeoArc
+  fullName: Dxflib.Geometry.GeoArc

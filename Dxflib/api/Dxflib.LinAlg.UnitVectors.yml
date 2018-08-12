@@ -1,0 +1,437 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.LinAlg.UnitVectors
+  commentId: T:Dxflib.LinAlg.UnitVectors
+  id: UnitVectors
+  parent: Dxflib.LinAlg
+  children:
+  - Dxflib.LinAlg.UnitVectors.XUnitVector
+  - Dxflib.LinAlg.UnitVectors.YUnitVector
+  - Dxflib.LinAlg.UnitVectors.ZUnitVector
+  langs:
+  - csharp
+  - vb
+  name: UnitVectors
+  nameWithType: UnitVectors
+  fullName: Dxflib.LinAlg.UnitVectors
+  type: Struct
+  source:
+    remote:
+      path: Dxflib/LinAlg/UnitVectors.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: UnitVectors
+    path: LinAlg/UnitVectors.cs
+    startLine: 5
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nA Struct for basic unit vectors\n"
+  example: []
+  syntax:
+    content: public struct UnitVectors
+    content.vb: Public Structure UnitVectors
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Dxflib.LinAlg.UnitVectors.XUnitVector
+  commentId: F:Dxflib.LinAlg.UnitVectors.XUnitVector
+  id: XUnitVector
+  parent: Dxflib.LinAlg.UnitVectors
+  langs:
+  - csharp
+  - vb
+  name: XUnitVector
+  nameWithType: UnitVectors.XUnitVector
+  fullName: Dxflib.LinAlg.UnitVectors.XUnitVector
+  type: Field
+  source:
+    remote:
+      path: Dxflib/LinAlg/UnitVectors.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: XUnitVector
+    path: LinAlg/UnitVectors.cs
+    startLine: 10
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe X unit vector\n"
+  example: []
+  syntax:
+    content: public static readonly Vector XUnitVector
+    return:
+      type: Dxflib.LinAlg.Vector
+    content.vb: Public Shared ReadOnly XUnitVector As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Dxflib.LinAlg.UnitVectors.YUnitVector
+  commentId: F:Dxflib.LinAlg.UnitVectors.YUnitVector
+  id: YUnitVector
+  parent: Dxflib.LinAlg.UnitVectors
+  langs:
+  - csharp
+  - vb
+  name: YUnitVector
+  nameWithType: UnitVectors.YUnitVector
+  fullName: Dxflib.LinAlg.UnitVectors.YUnitVector
+  type: Field
+  source:
+    remote:
+      path: Dxflib/LinAlg/UnitVectors.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: YUnitVector
+    path: LinAlg/UnitVectors.cs
+    startLine: 15
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Y unit vector\n"
+  example: []
+  syntax:
+    content: public static readonly Vector YUnitVector
+    return:
+      type: Dxflib.LinAlg.Vector
+    content.vb: Public Shared ReadOnly YUnitVector As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Dxflib.LinAlg.UnitVectors.ZUnitVector
+  commentId: F:Dxflib.LinAlg.UnitVectors.ZUnitVector
+  id: ZUnitVector
+  parent: Dxflib.LinAlg.UnitVectors
+  langs:
+  - csharp
+  - vb
+  name: ZUnitVector
+  nameWithType: UnitVectors.ZUnitVector
+  fullName: Dxflib.LinAlg.UnitVectors.ZUnitVector
+  type: Field
+  source:
+    remote:
+      path: Dxflib/LinAlg/UnitVectors.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: ZUnitVector
+    path: LinAlg/UnitVectors.cs
+    startLine: 20
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Z unit vector\n"
+  example: []
+  syntax:
+    content: public static readonly Vector ZUnitVector
+    return:
+      type: Dxflib.LinAlg.Vector
+    content.vb: Public Shared ReadOnly ZUnitVector As Vector
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dxflib.LinAlg
+  commentId: N:Dxflib.LinAlg
+  name: Dxflib.LinAlg
+  nameWithType: Dxflib.LinAlg
+  fullName: Dxflib.LinAlg
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.LinAlg.Vector
+  commentId: T:Dxflib.LinAlg.Vector
+  parent: Dxflib.LinAlg
+  name: Vector
+  nameWithType: Vector
+  fullName: Dxflib.LinAlg.Vector

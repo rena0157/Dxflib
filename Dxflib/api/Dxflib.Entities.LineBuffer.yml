@@ -1,0 +1,724 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Entities.LineBuffer
+  commentId: T:Dxflib.Entities.LineBuffer
+  id: LineBuffer
+  parent: Dxflib.Entities
+  children:
+  - Dxflib.Entities.LineBuffer.#ctor
+  - Dxflib.Entities.LineBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  - Dxflib.Entities.LineBuffer.Thickness
+  - Dxflib.Entities.LineBuffer.X0
+  - Dxflib.Entities.LineBuffer.X1
+  - Dxflib.Entities.LineBuffer.Y0
+  - Dxflib.Entities.LineBuffer.Y1
+  langs:
+  - csharp
+  - vb
+  name: LineBuffer
+  nameWithType: LineBuffer
+  fullName: Dxflib.Entities.LineBuffer
+  type: Class
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: LineBuffer
+    path: Entities/LineBuffer.cs
+    startLine: 19
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe LineBuffer Class that is used in extraction of the Line Class\n"
+  example: []
+  syntax:
+    content: 'public class LineBuffer : EntityBuffer'
+    content.vb: >-
+      Public Class LineBuffer
+          Inherits EntityBuffer
+  inheritance:
+  - System.Object
+  - Dxflib.Entities.EntityBuffer
+  inheritedMembers:
+  - Dxflib.Entities.EntityBuffer.EntityType
+  - Dxflib.Entities.EntityBuffer.Handle
+  - Dxflib.Entities.EntityBuffer.LayerName
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dxflib.Entities.LineBuffer.#ctor
+  commentId: M:Dxflib.Entities.LineBuffer.#ctor
+  id: '#ctor'
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: LineBuffer()
+  nameWithType: LineBuffer.LineBuffer()
+  fullName: Dxflib.Entities.LineBuffer.LineBuffer()
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: Entities/LineBuffer.cs
+    startLine: 21
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public LineBuffer()
+    content.vb: Public Sub New
+  overload: Dxflib.Entities.LineBuffer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.Thickness
+  commentId: P:Dxflib.Entities.LineBuffer.Thickness
+  id: Thickness
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: Thickness
+  nameWithType: LineBuffer.Thickness
+  fullName: Dxflib.Entities.LineBuffer.Thickness
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Thickness
+    path: Entities/LineBuffer.cs
+    startLine: 30
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public double Thickness { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Thickness As Double
+  overload: Dxflib.Entities.LineBuffer.Thickness*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.X0
+  commentId: P:Dxflib.Entities.LineBuffer.X0
+  id: X0
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: X0
+  nameWithType: LineBuffer.X0
+  fullName: Dxflib.Entities.LineBuffer.X0
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: X0
+    path: Entities/LineBuffer.cs
+    startLine: 31
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public double X0 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X0 As Double
+  overload: Dxflib.Entities.LineBuffer.X0*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.X1
+  commentId: P:Dxflib.Entities.LineBuffer.X1
+  id: X1
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: X1
+  nameWithType: LineBuffer.X1
+  fullName: Dxflib.Entities.LineBuffer.X1
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: X1
+    path: Entities/LineBuffer.cs
+    startLine: 32
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public double X1 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X1 As Double
+  overload: Dxflib.Entities.LineBuffer.X1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.Y0
+  commentId: P:Dxflib.Entities.LineBuffer.Y0
+  id: Y0
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: Y0
+  nameWithType: LineBuffer.Y0
+  fullName: Dxflib.Entities.LineBuffer.Y0
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Y0
+    path: Entities/LineBuffer.cs
+    startLine: 33
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public double Y0 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y0 As Double
+  overload: Dxflib.Entities.LineBuffer.Y0*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.Y1
+  commentId: P:Dxflib.Entities.LineBuffer.Y1
+  id: Y1
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: Y1
+  nameWithType: LineBuffer.Y1
+  fullName: Dxflib.Entities.LineBuffer.Y1
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Y1
+    path: Entities/LineBuffer.cs
+    startLine: 34
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  syntax:
+    content: public double Y1 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y1 As Double
+  overload: Dxflib.Entities.LineBuffer.Y1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LineBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  commentId: M:Dxflib.Entities.LineBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  id: Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  parent: Dxflib.Entities.LineBuffer
+  langs:
+  - csharp
+  - vb
+  name: Parse(LineChangeHandlerArgs)
+  nameWithType: LineBuffer.Parse(LineChangeHandlerArgs)
+  fullName: Dxflib.Entities.LineBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Entities/LineBuffer.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Parse
+    path: Entities/LineBuffer.cs
+    startLine: 44
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nMain Parsing function for the LineBuffer.\n"
+  example: []
+  syntax:
+    content: public override bool Parse(LineChangeHandlerArgs args)
+    parameters:
+    - id: args
+      type: Dxflib.Parser.LineChangeHandlerArgs
+      description: "\nArgs that are passed by the line\nchanged event\n"
+    return:
+      type: System.Boolean
+      description: True if parse was sucessful
+    content.vb: Public Overrides Function Parse(args As LineChangeHandlerArgs) As Boolean
+  overridden: Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  overload: Dxflib.Entities.LineBuffer.Parse*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Dxflib.Entities
+  commentId: N:Dxflib.Entities
+  name: Dxflib.Entities
+  nameWithType: Dxflib.Entities
+  fullName: Dxflib.Entities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dxflib.Entities.EntityBuffer
+  commentId: T:Dxflib.Entities.EntityBuffer
+  parent: Dxflib.Entities
+  name: EntityBuffer
+  nameWithType: EntityBuffer
+  fullName: Dxflib.Entities.EntityBuffer
+- uid: Dxflib.Entities.EntityBuffer.EntityType
+  commentId: F:Dxflib.Entities.EntityBuffer.EntityType
+  parent: Dxflib.Entities.EntityBuffer
+  name: EntityType
+  nameWithType: EntityBuffer.EntityType
+  fullName: Dxflib.Entities.EntityBuffer.EntityType
+- uid: Dxflib.Entities.EntityBuffer.Handle
+  commentId: P:Dxflib.Entities.EntityBuffer.Handle
+  parent: Dxflib.Entities.EntityBuffer
+  name: Handle
+  nameWithType: EntityBuffer.Handle
+  fullName: Dxflib.Entities.EntityBuffer.Handle
+- uid: Dxflib.Entities.EntityBuffer.LayerName
+  commentId: P:Dxflib.Entities.EntityBuffer.LayerName
+  parent: Dxflib.Entities.EntityBuffer
+  name: LayerName
+  nameWithType: EntityBuffer.LayerName
+  fullName: Dxflib.Entities.EntityBuffer.LayerName
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.Entities.LineBuffer.#ctor*
+  commentId: Overload:Dxflib.Entities.LineBuffer.#ctor
+  name: LineBuffer
+  nameWithType: LineBuffer.LineBuffer
+  fullName: Dxflib.Entities.LineBuffer.LineBuffer
+- uid: Dxflib.Entities.LineBuffer.Thickness*
+  commentId: Overload:Dxflib.Entities.LineBuffer.Thickness
+  name: Thickness
+  nameWithType: LineBuffer.Thickness
+  fullName: Dxflib.Entities.LineBuffer.Thickness
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dxflib.Entities.LineBuffer.X0*
+  commentId: Overload:Dxflib.Entities.LineBuffer.X0
+  name: X0
+  nameWithType: LineBuffer.X0
+  fullName: Dxflib.Entities.LineBuffer.X0
+- uid: Dxflib.Entities.LineBuffer.X1*
+  commentId: Overload:Dxflib.Entities.LineBuffer.X1
+  name: X1
+  nameWithType: LineBuffer.X1
+  fullName: Dxflib.Entities.LineBuffer.X1
+- uid: Dxflib.Entities.LineBuffer.Y0*
+  commentId: Overload:Dxflib.Entities.LineBuffer.Y0
+  name: Y0
+  nameWithType: LineBuffer.Y0
+  fullName: Dxflib.Entities.LineBuffer.Y0
+- uid: Dxflib.Entities.LineBuffer.Y1*
+  commentId: Overload:Dxflib.Entities.LineBuffer.Y1
+  name: Y1
+  nameWithType: LineBuffer.Y1
+  fullName: Dxflib.Entities.LineBuffer.Y1
+- uid: Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  commentId: M:Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  parent: Dxflib.Entities.EntityBuffer
+  name: Parse(LineChangeHandlerArgs)
+  nameWithType: EntityBuffer.Parse(LineChangeHandlerArgs)
+  fullName: Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+  spec.csharp:
+  - uid: Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+    name: Parse
+    nameWithType: EntityBuffer.Parse
+    fullName: Dxflib.Entities.EntityBuffer.Parse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Parser.LineChangeHandlerArgs
+    name: LineChangeHandlerArgs
+    nameWithType: LineChangeHandlerArgs
+    fullName: Dxflib.Parser.LineChangeHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dxflib.Entities.EntityBuffer.Parse(Dxflib.Parser.LineChangeHandlerArgs)
+    name: Parse
+    nameWithType: EntityBuffer.Parse
+    fullName: Dxflib.Entities.EntityBuffer.Parse
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Parser.LineChangeHandlerArgs
+    name: LineChangeHandlerArgs
+    nameWithType: LineChangeHandlerArgs
+    fullName: Dxflib.Parser.LineChangeHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dxflib.Entities.LineBuffer.Parse*
+  commentId: Overload:Dxflib.Entities.LineBuffer.Parse
+  name: Parse
+  nameWithType: LineBuffer.Parse
+  fullName: Dxflib.Entities.LineBuffer.Parse
+- uid: Dxflib.Parser.LineChangeHandlerArgs
+  commentId: T:Dxflib.Parser.LineChangeHandlerArgs
+  parent: Dxflib.Parser
+  name: LineChangeHandlerArgs
+  nameWithType: LineChangeHandlerArgs
+  fullName: Dxflib.Parser.LineChangeHandlerArgs
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dxflib.Parser
+  commentId: N:Dxflib.Parser
+  name: Dxflib.Parser
+  nameWithType: Dxflib.Parser
+  fullName: Dxflib.Parser

@@ -1,0 +1,692 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Geometry.GeoMath
+  commentId: T:Dxflib.Geometry.GeoMath
+  id: GeoMath
+  parent: Dxflib.Geometry
+  children:
+  - Dxflib.Geometry.GeoMath.ChordArea(Dxflib.Geometry.GeoArc)
+  - Dxflib.Geometry.GeoMath.DegToRad(System.Double)
+  - Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  - Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)
+  - Dxflib.Geometry.GeoMath.RadToDeg(System.Double)
+  - Dxflib.Geometry.GeoMath.Tolerance
+  - Dxflib.Geometry.GeoMath.TrapzArea(Dxflib.Geometry.GeoLine)
+  langs:
+  - csharp
+  - vb
+  name: GeoMath
+  nameWithType: GeoMath
+  fullName: Dxflib.Geometry.GeoMath
+  type: Class
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeoMath
+    path: Geometry/GeoMath.cs
+    startLine: 19
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nA Static Class that contains static method for calcuating geometric\nvalues.\n"
+  example: []
+  syntax:
+    content: public static class GeoMath
+    content.vb: Public Module GeoMath
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Dxflib.Geometry.GeoMath.Tolerance
+  commentId: F:Dxflib.Geometry.GeoMath.Tolerance
+  id: Tolerance
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: Tolerance
+  nameWithType: GeoMath.Tolerance
+  fullName: Dxflib.Geometry.GeoMath.Tolerance
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Tolerance
+    path: Geometry/GeoMath.cs
+    startLine: 24
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Global tolerance for comparing double values\n"
+  example: []
+  syntax:
+    content: public const double Tolerance = 0.001
+    return:
+      type: System.Double
+    content.vb: Public Const Tolerance As Double = 0.001
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Geometry.GeoMath.RadToDeg(System.Double)
+  commentId: M:Dxflib.Geometry.GeoMath.RadToDeg(System.Double)
+  id: RadToDeg(System.Double)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: RadToDeg(Double)
+  nameWithType: GeoMath.RadToDeg(Double)
+  fullName: Dxflib.Geometry.GeoMath.RadToDeg(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: RadToDeg
+    path: Geometry/GeoMath.cs
+    startLine: 31
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nConversion from Radians to Degrees\n"
+  example: []
+  syntax:
+    content: public static double RadToDeg(double num)
+    parameters:
+    - id: num
+      type: System.Double
+      description: The quantity you would like to convert
+    return:
+      type: System.Double
+      description: Degrees
+    content.vb: Public Shared Function RadToDeg(num As Double) As Double
+  overload: Dxflib.Geometry.GeoMath.RadToDeg*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.Geometry.GeoMath.DegToRad(System.Double)
+  commentId: M:Dxflib.Geometry.GeoMath.DegToRad(System.Double)
+  id: DegToRad(System.Double)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: DegToRad(Double)
+  nameWithType: GeoMath.DegToRad(Double)
+  fullName: Dxflib.Geometry.GeoMath.DegToRad(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: DegToRad
+    path: Geometry/GeoMath.cs
+    startLine: 38
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nConversion from Degrees to Radians\n"
+  example: []
+  syntax:
+    content: public static double DegToRad(double num)
+    parameters:
+    - id: num
+      type: System.Double
+      description: The quantity you would like to convert
+    return:
+      type: System.Double
+      description: Radians
+    content.vb: Public Shared Function DegToRad(num As Double) As Double
+  overload: Dxflib.Geometry.GeoMath.DegToRad*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  commentId: M:Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  id: Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: Distance(Vertex, Vertex)
+  nameWithType: GeoMath.Distance(Vertex, Vertex)
+  fullName: Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex, Dxflib.Geometry.Vertex)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Distance
+    path: Geometry/GeoMath.cs
+    startLine: 47
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nCalculates the direct distance between two verticies using\nPythagoean Theorem.\n"
+  example: []
+  syntax:
+    content: public static double Distance(Vertex v0, Vertex v1)
+    parameters:
+    - id: v0
+      type: Dxflib.Geometry.Vertex
+      description: The First Vertex
+    - id: v1
+      type: Dxflib.Geometry.Vertex
+      description: The Second Vertex
+    return:
+      type: System.Double
+      description: The Distance between the two points
+    content.vb: Public Shared Function Distance(v0 As Vertex, v1 As Vertex) As Double
+  overload: Dxflib.Geometry.GeoMath.Distance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)
+  commentId: M:Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)
+  id: Distance(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: Distance(Vertex, Vertex, Double)
+  nameWithType: GeoMath.Distance(Vertex, Vertex, Double)
+  fullName: Dxflib.Geometry.GeoMath.Distance(Dxflib.Geometry.Vertex, Dxflib.Geometry.Vertex, System.Double)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Distance
+    path: Geometry/GeoMath.cs
+    startLine: 66
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nCalculates the distance between two points as it follows\nan arc that is defined by a bulge.\n"
+  example: []
+  syntax:
+    content: public static double Distance(Vertex v0, Vertex v1, double bulge)
+    parameters:
+    - id: v0
+      type: Dxflib.Geometry.Vertex
+      description: The First Vertex
+    - id: v1
+      type: Dxflib.Geometry.Vertex
+      description: The Second Vertex
+    - id: bulge
+      type: System.Double
+      description: The Bulge
+    return:
+      type: System.Double
+      description: "\nA double values that represents the length\nalong the arc defined by the two points and\nthe Bulge\n"
+    content.vb: Public Shared Function Distance(v0 As Vertex, v1 As Vertex, bulge As Double) As Double
+  overload: Dxflib.Geometry.GeoMath.Distance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.Geometry.GeoMath.TrapzArea(Dxflib.Geometry.GeoLine)
+  commentId: M:Dxflib.Geometry.GeoMath.TrapzArea(Dxflib.Geometry.GeoLine)
+  id: TrapzArea(Dxflib.Geometry.GeoLine)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: TrapzArea(GeoLine)
+  nameWithType: GeoMath.TrapzArea(GeoLine)
+  fullName: Dxflib.Geometry.GeoMath.TrapzArea(Dxflib.Geometry.GeoLine)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: TrapzArea
+    path: Geometry/GeoMath.cs
+    startLine: 76
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Area between a Geoline and the x-axis\n"
+  example: []
+  syntax:
+    content: public static double TrapzArea(GeoLine line)
+    parameters:
+    - id: line
+      type: Dxflib.Geometry.GeoLine
+      description: The line that defined the area
+    return:
+      type: System.Double
+      description: The area between a GeoLine and the x-axis
+    content.vb: Public Shared Function TrapzArea(line As GeoLine) As Double
+  overload: Dxflib.Geometry.GeoMath.TrapzArea*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.Geometry.GeoMath.ChordArea(Dxflib.Geometry.GeoArc)
+  commentId: M:Dxflib.Geometry.GeoMath.ChordArea(Dxflib.Geometry.GeoArc)
+  id: ChordArea(Dxflib.Geometry.GeoArc)
+  parent: Dxflib.Geometry.GeoMath
+  langs:
+  - csharp
+  - vb
+  name: ChordArea(GeoArc)
+  nameWithType: GeoMath.ChordArea(GeoArc)
+  fullName: Dxflib.Geometry.GeoMath.ChordArea(Dxflib.Geometry.GeoArc)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoMath.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: ChordArea
+    path: Geometry/GeoMath.cs
+    startLine: 86
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Area between the arc line and a line that connects the two points of an arc\n"
+  example: []
+  syntax:
+    content: public static double ChordArea(GeoArc geoArc)
+    parameters:
+    - id: geoArc
+      type: Dxflib.Geometry.GeoArc
+      description: The GeoArc that is going to be calculated
+    return:
+      type: System.Double
+      description: The Area
+    content.vb: Public Shared Function ChordArea(geoArc As GeoArc) As Double
+  overload: Dxflib.Geometry.GeoMath.ChordArea*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Dxflib.Geometry
+  commentId: N:Dxflib.Geometry
+  name: Dxflib.Geometry
+  nameWithType: Dxflib.Geometry
+  fullName: Dxflib.Geometry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dxflib.Geometry.GeoMath.RadToDeg*
+  commentId: Overload:Dxflib.Geometry.GeoMath.RadToDeg
+  name: RadToDeg
+  nameWithType: GeoMath.RadToDeg
+  fullName: Dxflib.Geometry.GeoMath.RadToDeg
+- uid: Dxflib.Geometry.GeoMath.DegToRad*
+  commentId: Overload:Dxflib.Geometry.GeoMath.DegToRad
+  name: DegToRad
+  nameWithType: GeoMath.DegToRad
+  fullName: Dxflib.Geometry.GeoMath.DegToRad
+- uid: Dxflib.Geometry.GeoMath.Distance*
+  commentId: Overload:Dxflib.Geometry.GeoMath.Distance
+  name: Distance
+  nameWithType: GeoMath.Distance
+  fullName: Dxflib.Geometry.GeoMath.Distance
+- uid: Dxflib.Geometry.Vertex
+  commentId: T:Dxflib.Geometry.Vertex
+  parent: Dxflib.Geometry
+  name: Vertex
+  nameWithType: Vertex
+  fullName: Dxflib.Geometry.Vertex
+- uid: Dxflib.Geometry.GeoMath.TrapzArea*
+  commentId: Overload:Dxflib.Geometry.GeoMath.TrapzArea
+  name: TrapzArea
+  nameWithType: GeoMath.TrapzArea
+  fullName: Dxflib.Geometry.GeoMath.TrapzArea
+- uid: Dxflib.Geometry.GeoLine
+  commentId: T:Dxflib.Geometry.GeoLine
+  parent: Dxflib.Geometry
+  name: GeoLine
+  nameWithType: GeoLine
+  fullName: Dxflib.Geometry.GeoLine
+- uid: Dxflib.Geometry.GeoMath.ChordArea*
+  commentId: Overload:Dxflib.Geometry.GeoMath.ChordArea
+  name: ChordArea
+  nameWithType: GeoMath.ChordArea
+  fullName: Dxflib.Geometry.GeoMath.ChordArea
+- uid: Dxflib.Geometry.GeoArc
+  commentId: T:Dxflib.Geometry.GeoArc
+  parent: Dxflib.Geometry
+  name: GeoArc
+  nameWithType: GeoArc
+  fullName: Dxflib.Geometry.GeoArc

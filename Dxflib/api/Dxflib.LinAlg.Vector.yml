@@ -1,0 +1,1468 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.LinAlg.Vector
+  commentId: T:Dxflib.LinAlg.Vector
+  id: Vector
+  parent: Dxflib.LinAlg
+  children:
+  - Dxflib.LinAlg.Vector.#ctor
+  - Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.GeoLine)
+  - Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  - Dxflib.LinAlg.Vector.#ctor(Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.#ctor(System.Double,System.Double,System.Double)
+  - Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.GeometryChanged
+  - Dxflib.LinAlg.Vector.HeadVertex
+  - Dxflib.LinAlg.Vector.Length
+  - Dxflib.LinAlg.Vector.op_Addition(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.op_Division(Dxflib.LinAlg.Vector,System.Double)
+  - Dxflib.LinAlg.Vector.op_Multiply(Dxflib.LinAlg.Vector,System.Double)
+  - Dxflib.LinAlg.Vector.op_Multiply(System.Double,Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.op_Subtraction(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.Rotate(System.Double)
+  - Dxflib.LinAlg.Vector.Scale(System.Double)
+  - Dxflib.LinAlg.Vector.TailVertex
+  - Dxflib.LinAlg.Vector.ToUnitVector
+  - Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  - Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)
+  - Dxflib.LinAlg.Vector.X
+  - Dxflib.LinAlg.Vector.Y
+  - Dxflib.LinAlg.Vector.Z
+  langs:
+  - csharp
+  - vb
+  name: Vector
+  nameWithType: Vector
+  fullName: Dxflib.LinAlg.Vector
+  type: Class
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Vector
+    path: LinAlg/Vector.cs
+    startLine: 20
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Vector Class: Defines vector mathematics and functionality\nfor the dxf library\n"
+  example: []
+  syntax:
+    content: public class Vector
+    content.vb: Public Class Vector
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dxflib.LinAlg.Vector.#ctor
+  commentId: M:Dxflib.LinAlg.Vector.#ctor
+  id: '#ctor'
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector()
+  nameWithType: Vector.Vector()
+  fullName: Dxflib.LinAlg.Vector.Vector()
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: LinAlg/Vector.cs
+    startLine: 28
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nDefault Constructor\n"
+  example: []
+  syntax:
+    content: public Vector()
+    content.vb: Public Sub New
+  overload: Dxflib.LinAlg.Vector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.#ctor(Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.#ctor(Dxflib.LinAlg.Vector)
+  id: '#ctor(Dxflib.LinAlg.Vector)'
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(Vector)
+  nameWithType: Vector.Vector(Vector)
+  fullName: Dxflib.LinAlg.Vector.Vector(Dxflib.LinAlg.Vector)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: LinAlg/Vector.cs
+    startLine: 40
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nConstructor from another vector\n"
+  example: []
+  syntax:
+    content: public Vector(Vector other)
+    parameters:
+    - id: other
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    content.vb: Public Sub New(other As Vector)
+  overload: Dxflib.LinAlg.Vector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  commentId: M:Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  id: '#ctor(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)'
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(Vertex, Vertex)
+  nameWithType: Vector.Vector(Vertex, Vertex)
+  fullName: Dxflib.LinAlg.Vector.Vector(Dxflib.Geometry.Vertex, Dxflib.Geometry.Vertex)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: LinAlg/Vector.cs
+    startLine: 54
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nPositionVector Constructor: This will create a vector with its tail\nat the origin and it&apos;s head at where the components are on the cartesian 3D space.\n"
+  example: []
+  syntax:
+    content: public Vector(Vertex startingVertex, Vertex endingVertex)
+    parameters:
+    - id: startingVertex
+      type: Dxflib.Geometry.Vertex
+      description: The Starting Vertex for the position vector
+    - id: endingVertex
+      type: Dxflib.Geometry.Vertex
+      description: The Ending Vertex for the position vector
+    content.vb: Public Sub New(startingVertex As Vertex, endingVertex As Vertex)
+  overload: Dxflib.LinAlg.Vector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.#ctor(System.Double,System.Double,System.Double)
+  commentId: M:Dxflib.LinAlg.Vector.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(Double, Double, Double)
+  nameWithType: Vector.Vector(Double, Double, Double)
+  fullName: Dxflib.LinAlg.Vector.Vector(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: LinAlg/Vector.cs
+    startLine: 68
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nUnitVector Constructor\n"
+  example: []
+  syntax:
+    content: public Vector(double xComponent, double yComponent, double zComponent = 0)
+    parameters:
+    - id: xComponent
+      type: System.Double
+      description: The x component of a unit vector
+    - id: yComponent
+      type: System.Double
+      description: The y component of a unit vector
+    - id: zComponent
+      type: System.Double
+      description: The z component of a unit vector
+    content.vb: Public Sub New(xComponent As Double, yComponent As Double, zComponent As Double = 0)
+  overload: Dxflib.LinAlg.Vector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.GeoLine)
+  commentId: M:Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.GeoLine)
+  id: '#ctor(Dxflib.Geometry.GeoLine)'
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Vector(GeoLine)
+  nameWithType: Vector.Vector(GeoLine)
+  fullName: Dxflib.LinAlg.Vector.Vector(Dxflib.Geometry.GeoLine)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: LinAlg/Vector.cs
+    startLine: 79
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\n"
+  example: []
+  syntax:
+    content: public Vector(GeoLine line)
+    parameters:
+    - id: line
+      type: Dxflib.Geometry.GeoLine
+      description: ''
+    content.vb: Public Sub New(line As GeoLine)
+  overload: Dxflib.LinAlg.Vector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.X
+  commentId: P:Dxflib.LinAlg.Vector.X
+  id: X
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Vector.X
+  fullName: Dxflib.LinAlg.Vector.X
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: X
+    path: LinAlg/Vector.cs
+    startLine: 91
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe vector&apos;s x component\n"
+  example: []
+  syntax:
+    content: public double X { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property X As Double
+  overload: Dxflib.LinAlg.Vector.X*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.LinAlg.Vector.Y
+  commentId: P:Dxflib.LinAlg.Vector.Y
+  id: Y
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: Vector.Y
+  fullName: Dxflib.LinAlg.Vector.Y
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Y
+    path: LinAlg/Vector.cs
+    startLine: 96
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe vector&apos;s y component\n"
+  example: []
+  syntax:
+    content: public double Y { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Y As Double
+  overload: Dxflib.LinAlg.Vector.Y*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.LinAlg.Vector.Z
+  commentId: P:Dxflib.LinAlg.Vector.Z
+  id: Z
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: Vector.Z
+  fullName: Dxflib.LinAlg.Vector.Z
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Z
+    path: LinAlg/Vector.cs
+    startLine: 101
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe vector&apos;s z component\n"
+  example: []
+  syntax:
+    content: public double Z { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Z As Double
+  overload: Dxflib.LinAlg.Vector.Z*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.LinAlg.Vector.Length
+  commentId: P:Dxflib.LinAlg.Vector.Length
+  id: Length
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: Vector.Length
+  fullName: Dxflib.LinAlg.Vector.Length
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Length
+    path: LinAlg/Vector.cs
+    startLine: 106
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe vector&apos;s lenght or magnitude\n"
+  example: []
+  syntax:
+    content: public double Length { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Length As Double
+  overload: Dxflib.LinAlg.Vector.Length*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.LinAlg.Vector.HeadVertex
+  commentId: P:Dxflib.LinAlg.Vector.HeadVertex
+  id: HeadVertex
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: HeadVertex
+  nameWithType: Vector.HeadVertex
+  fullName: Dxflib.LinAlg.Vector.HeadVertex
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: HeadVertex
+    path: LinAlg/Vector.cs
+    startLine: 111
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Head of the vector or the ending vector (Point of Application)\n"
+  example: []
+  syntax:
+    content: public Vertex HeadVertex { get; set; }
+    parameters: []
+    return:
+      type: Dxflib.Geometry.Vertex
+    content.vb: Public Property HeadVertex As Vertex
+  overload: Dxflib.LinAlg.Vector.HeadVertex*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.TailVertex
+  commentId: P:Dxflib.LinAlg.Vector.TailVertex
+  id: TailVertex
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: TailVertex
+  nameWithType: Vector.TailVertex
+  fullName: Dxflib.LinAlg.Vector.TailVertex
+  type: Property
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: TailVertex
+    path: LinAlg/Vector.cs
+    startLine: 125
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Tail of the vector: where the vector originates\n"
+  example: []
+  syntax:
+    content: public Vertex TailVertex { get; set; }
+    parameters: []
+    return:
+      type: Dxflib.Geometry.Vertex
+    content.vb: Public Property TailVertex As Vertex
+  overload: Dxflib.LinAlg.Vector.TailVertex*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)
+  commentId: M:Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)
+  id: Translate(Dxflib.Geometry.Vertex)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Translate(Vertex)
+  nameWithType: Vector.Translate(Vertex)
+  fullName: Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Translate
+    path: LinAlg/Vector.cs
+    startLine: 140
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nTranslate a vertex to a new point by its tail\n"
+  example: []
+  syntax:
+    content: public void Translate(Vertex newTail)
+    parameters:
+    - id: newTail
+      type: Dxflib.Geometry.Vertex
+      description: The new tail vertex
+    content.vb: Public Sub Translate(newTail As Vertex)
+  overload: Dxflib.LinAlg.Vector.Translate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.Scale(System.Double)
+  commentId: M:Dxflib.LinAlg.Vector.Scale(System.Double)
+  id: Scale(System.Double)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Scale(Double)
+  nameWithType: Vector.Scale(Double)
+  fullName: Dxflib.LinAlg.Vector.Scale(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Scale
+    path: LinAlg/Vector.cs
+    startLine: 154
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public void Scale(double scaler)
+    parameters:
+    - id: scaler
+      type: System.Double
+      description: ''
+    content.vb: Public Sub Scale(scaler As Double)
+  overload: Dxflib.LinAlg.Vector.Scale*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.Rotate(System.Double)
+  commentId: M:Dxflib.LinAlg.Vector.Rotate(System.Double)
+  id: Rotate(System.Double)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Rotate(Double)
+  nameWithType: Vector.Rotate(Double)
+  fullName: Dxflib.LinAlg.Vector.Rotate(System.Double)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Rotate
+    path: LinAlg/Vector.cs
+    startLine: 166
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nRotate the vector about is tail\n"
+  example: []
+  syntax:
+    content: public void Rotate(double angle)
+    parameters:
+    - id: angle
+      type: System.Double
+      description: Rotation angle in radians
+    content.vb: Public Sub Rotate(angle As Double)
+  overload: Dxflib.LinAlg.Vector.Rotate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  id: Transform(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Transform(Vector, Vector, Vector)
+  nameWithType: Vector.Transform(Vector, Vector, Vector)
+  fullName: Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector, Dxflib.LinAlg.Vector, Dxflib.LinAlg.Vector)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Transform
+    path: LinAlg/Vector.cs
+    startLine: 178
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nTransform method transforms this vector using a new set of basis vectors\n"
+  example: []
+  syntax:
+    content: public void Transform(Vector newXBasis, Vector newYBasis, Vector newZBasis)
+    parameters:
+    - id: newXBasis
+      type: Dxflib.LinAlg.Vector
+      description: The new basis for the x component
+    - id: newYBasis
+      type: Dxflib.LinAlg.Vector
+      description: The new basis for the y component
+    - id: newZBasis
+      type: Dxflib.LinAlg.Vector
+      description: The new basis for the z component
+    content.vb: Public Sub Transform(newXBasis As Vector, newYBasis As Vector, newZBasis As Vector)
+  overload: Dxflib.LinAlg.Vector.Transform*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.GeometryChanged
+  commentId: E:Dxflib.LinAlg.Vector.GeometryChanged
+  id: GeometryChanged
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: GeometryChanged
+  nameWithType: Vector.GeometryChanged
+  fullName: Dxflib.LinAlg.Vector.GeometryChanged
+  type: Event
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeometryChanged
+    path: LinAlg/Vector.cs
+    startLine: 198
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe event when ever one of the vertexes change or if one of the components change\n"
+  example: []
+  syntax:
+    content: public event EventHandler GeometryChanged
+    return:
+      type: System.EventHandler
+    content.vb: Public Event GeometryChanged As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.ToUnitVector
+  commentId: M:Dxflib.LinAlg.Vector.ToUnitVector
+  id: ToUnitVector
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: ToUnitVector()
+  nameWithType: Vector.ToUnitVector()
+  fullName: Dxflib.LinAlg.Vector.ToUnitVector()
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: ToUnitVector
+    path: LinAlg/Vector.cs
+    startLine: 232
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nCreates a new vector that is the unit vector of this vector\n"
+  example: []
+  syntax:
+    content: public Vector ToUnitVector()
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: A new Vector object
+    content.vb: Public Function ToUnitVector As Vector
+  overload: Dxflib.LinAlg.Vector.ToUnitVector*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)
+  id: DotProduct(Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: DotProduct(Vector)
+  nameWithType: Vector.DotProduct(Vector)
+  fullName: Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: DotProduct
+    path: LinAlg/Vector.cs
+    startLine: 244
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Mathematical Dot Product of two vectors\n"
+  example: []
+  syntax:
+    content: public double DotProduct(Vector other)
+    parameters:
+    - id: other
+      type: Dxflib.LinAlg.Vector
+      description: The other vector in the dot product equation
+    return:
+      type: System.Double
+      description: A double value that is the dot product of other and this vector
+    content.vb: Public Function DotProduct(other As Vector) As Double
+  overload: Dxflib.LinAlg.Vector.DotProduct*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  id: AngleBetweenVectors(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: AngleBetweenVectors(Vector, Vector)
+  nameWithType: Vector.AngleBetweenVectors(Vector, Vector)
+  fullName: Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector, Dxflib.LinAlg.Vector)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: AngleBetweenVectors
+    path: LinAlg/Vector.cs
+    startLine: 252
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Angle between two vectors\n"
+  example: []
+  syntax:
+    content: public static double AngleBetweenVectors(Vector vec0, Vector vec1)
+    parameters:
+    - id: vec0
+      type: Dxflib.LinAlg.Vector
+      description: Vector 1
+    - id: vec1
+      type: Dxflib.LinAlg.Vector
+      description: Vector 2
+    return:
+      type: System.Double
+      description: The angle between two vectors in radians
+    content.vb: Public Shared Function AngleBetweenVectors(vec0 As Vector, vec1 As Vector) As Double
+  overload: Dxflib.LinAlg.Vector.AngleBetweenVectors*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)
+  id: CrossProduct(Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: CrossProduct(Vector)
+  nameWithType: Vector.CrossProduct(Vector)
+  fullName: Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: CrossProduct
+    path: LinAlg/Vector.cs
+    startLine: 264
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Cross product of this vector and the other vector (ThisVector x OtherVector)\n"
+  example: []
+  syntax:
+    content: public Vector CrossProduct(Vector other)
+    parameters:
+    - id: other
+      type: Dxflib.LinAlg.Vector
+      description: The other vector that is in the cross function
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: A new vector that is the resultant of the cross product
+    content.vb: Public Function CrossProduct(other As Vector) As Vector
+  overload: Dxflib.LinAlg.Vector.CrossProduct*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.LinAlg.Vector.op_Addition(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.op_Addition(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  id: op_Addition(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Addition(Vector, Vector)
+  nameWithType: Vector.Addition(Vector, Vector)
+  fullName: Dxflib.LinAlg.Vector.Addition(Dxflib.LinAlg.Vector, Dxflib.LinAlg.Vector)
+  type: Operator
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: op_Addition
+    path: LinAlg/Vector.cs
+    startLine: 278
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe Addition overload operator for the vector class\n"
+  example: []
+  syntax:
+    content: public static Vector operator +(Vector vec1, Vector vec2)
+    parameters:
+    - id: vec1
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    - id: vec2
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    content.vb: Public Shared Operator +(vec1 As Vector, vec2 As Vector) As Vector
+  overload: Dxflib.LinAlg.Vector.op_Addition*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.LinAlg.Vector.op_Subtraction(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.op_Subtraction(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  id: op_Subtraction(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(Vector, Vector)
+  nameWithType: Vector.Subtraction(Vector, Vector)
+  fullName: Dxflib.LinAlg.Vector.Subtraction(Dxflib.LinAlg.Vector, Dxflib.LinAlg.Vector)
+  type: Operator
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: op_Subtraction
+    path: LinAlg/Vector.cs
+    startLine: 289
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe overloaded operator &quot;-&quot;\n"
+  example: []
+  syntax:
+    content: public static Vector operator -(Vector vec1, Vector vec2)
+    parameters:
+    - id: vec1
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    - id: vec2
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: A new vector that is the resultant of the subtraction
+    content.vb: Public Shared Operator -(vec1 As Vector, vec2 As Vector) As Vector
+  overload: Dxflib.LinAlg.Vector.op_Subtraction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.LinAlg.Vector.op_Multiply(Dxflib.LinAlg.Vector,System.Double)
+  commentId: M:Dxflib.LinAlg.Vector.op_Multiply(Dxflib.LinAlg.Vector,System.Double)
+  id: op_Multiply(Dxflib.LinAlg.Vector,System.Double)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Vector, Double)
+  nameWithType: Vector.Multiply(Vector, Double)
+  fullName: Dxflib.LinAlg.Vector.Multiply(Dxflib.LinAlg.Vector, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: op_Multiply
+    path: LinAlg/Vector.cs
+    startLine: 300
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\nThe overloaded operator *\n"
+  example: []
+  syntax:
+    content: public static Vector operator *(Vector vec, double scaler)
+    parameters:
+    - id: vec
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    - id: scaler
+      type: System.Double
+      description: ''
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: A new vector that is the resultant of the scaler
+    content.vb: Public Shared Operator *(vec As Vector, scaler As Double) As Vector
+  overload: Dxflib.LinAlg.Vector.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.LinAlg.Vector.op_Multiply(System.Double,Dxflib.LinAlg.Vector)
+  commentId: M:Dxflib.LinAlg.Vector.op_Multiply(System.Double,Dxflib.LinAlg.Vector)
+  id: op_Multiply(System.Double,Dxflib.LinAlg.Vector)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Double, Vector)
+  nameWithType: Vector.Multiply(Double, Vector)
+  fullName: Dxflib.LinAlg.Vector.Multiply(System.Double, Dxflib.LinAlg.Vector)
+  type: Operator
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: op_Multiply
+    path: LinAlg/Vector.cs
+    startLine: 310
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\n"
+  example: []
+  syntax:
+    content: public static Vector operator *(double scaler, Vector vec)
+    parameters:
+    - id: scaler
+      type: System.Double
+      description: ''
+    - id: vec
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    content.vb: Public Shared Operator *(scaler As Double, vec As Vector) As Vector
+  overload: Dxflib.LinAlg.Vector.op_Multiply*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Dxflib.LinAlg.Vector.op_Division(Dxflib.LinAlg.Vector,System.Double)
+  commentId: M:Dxflib.LinAlg.Vector.op_Division(Dxflib.LinAlg.Vector,System.Double)
+  id: op_Division(Dxflib.LinAlg.Vector,System.Double)
+  parent: Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Division(Vector, Double)
+  nameWithType: Vector.Division(Vector, Double)
+  fullName: Dxflib.LinAlg.Vector.Division(Dxflib.LinAlg.Vector, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: Dxflib/LinAlg/Vector.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: op_Division
+    path: LinAlg/Vector.cs
+    startLine: 317
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.LinAlg
+  summary: "\n"
+  example: []
+  syntax:
+    content: public static Vector operator /(Vector vec, double scaler)
+    parameters:
+    - id: vec
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    - id: scaler
+      type: System.Double
+      description: ''
+    return:
+      type: Dxflib.LinAlg.Vector
+      description: ''
+    content.vb: Public Shared Operator /(vec As Vector, scaler As Double) As Vector
+  overload: Dxflib.LinAlg.Vector.op_Division*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Dxflib.LinAlg
+  commentId: N:Dxflib.LinAlg
+  name: Dxflib.LinAlg
+  nameWithType: Dxflib.LinAlg
+  fullName: Dxflib.LinAlg
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.LinAlg.Vector.#ctor*
+  commentId: Overload:Dxflib.LinAlg.Vector.#ctor
+  name: Vector
+  nameWithType: Vector.Vector
+  fullName: Dxflib.LinAlg.Vector.Vector
+- uid: Dxflib.LinAlg.Vector
+  commentId: T:Dxflib.LinAlg.Vector
+  parent: Dxflib.LinAlg
+  name: Vector
+  nameWithType: Vector
+  fullName: Dxflib.LinAlg.Vector
+- uid: Dxflib.Geometry.Vertex
+  commentId: T:Dxflib.Geometry.Vertex
+  parent: Dxflib.Geometry
+  name: Vertex
+  nameWithType: Vertex
+  fullName: Dxflib.Geometry.Vertex
+- uid: Dxflib.Geometry
+  commentId: N:Dxflib.Geometry
+  name: Dxflib.Geometry
+  nameWithType: Dxflib.Geometry
+  fullName: Dxflib.Geometry
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dxflib.Geometry.GeoLine
+  commentId: T:Dxflib.Geometry.GeoLine
+  parent: Dxflib.Geometry
+  name: GeoLine
+  nameWithType: GeoLine
+  fullName: Dxflib.Geometry.GeoLine
+- uid: Dxflib.LinAlg.Vector.X*
+  commentId: Overload:Dxflib.LinAlg.Vector.X
+  name: X
+  nameWithType: Vector.X
+  fullName: Dxflib.LinAlg.Vector.X
+- uid: Dxflib.LinAlg.Vector.Y*
+  commentId: Overload:Dxflib.LinAlg.Vector.Y
+  name: Y
+  nameWithType: Vector.Y
+  fullName: Dxflib.LinAlg.Vector.Y
+- uid: Dxflib.LinAlg.Vector.Z*
+  commentId: Overload:Dxflib.LinAlg.Vector.Z
+  name: Z
+  nameWithType: Vector.Z
+  fullName: Dxflib.LinAlg.Vector.Z
+- uid: Dxflib.LinAlg.Vector.Length*
+  commentId: Overload:Dxflib.LinAlg.Vector.Length
+  name: Length
+  nameWithType: Vector.Length
+  fullName: Dxflib.LinAlg.Vector.Length
+- uid: Dxflib.LinAlg.Vector.HeadVertex*
+  commentId: Overload:Dxflib.LinAlg.Vector.HeadVertex
+  name: HeadVertex
+  nameWithType: Vector.HeadVertex
+  fullName: Dxflib.LinAlg.Vector.HeadVertex
+- uid: Dxflib.LinAlg.Vector.TailVertex*
+  commentId: Overload:Dxflib.LinAlg.Vector.TailVertex
+  name: TailVertex
+  nameWithType: Vector.TailVertex
+  fullName: Dxflib.LinAlg.Vector.TailVertex
+- uid: Dxflib.LinAlg.Vector.Translate*
+  commentId: Overload:Dxflib.LinAlg.Vector.Translate
+  name: Translate
+  nameWithType: Vector.Translate
+  fullName: Dxflib.LinAlg.Vector.Translate
+- uid: Dxflib.LinAlg.Vector.Scale*
+  commentId: Overload:Dxflib.LinAlg.Vector.Scale
+  name: Scale
+  nameWithType: Vector.Scale
+  fullName: Dxflib.LinAlg.Vector.Scale
+- uid: Dxflib.LinAlg.Vector.Rotate*
+  commentId: Overload:Dxflib.LinAlg.Vector.Rotate
+  name: Rotate
+  nameWithType: Vector.Rotate
+  fullName: Dxflib.LinAlg.Vector.Rotate
+- uid: Dxflib.LinAlg.Vector.Transform*
+  commentId: Overload:Dxflib.LinAlg.Vector.Transform
+  name: Transform
+  nameWithType: Vector.Transform
+  fullName: Dxflib.LinAlg.Vector.Transform
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: Dxflib.LinAlg.Vector.ToUnitVector*
+  commentId: Overload:Dxflib.LinAlg.Vector.ToUnitVector
+  name: ToUnitVector
+  nameWithType: Vector.ToUnitVector
+  fullName: Dxflib.LinAlg.Vector.ToUnitVector
+- uid: Dxflib.LinAlg.Vector.DotProduct*
+  commentId: Overload:Dxflib.LinAlg.Vector.DotProduct
+  name: DotProduct
+  nameWithType: Vector.DotProduct
+  fullName: Dxflib.LinAlg.Vector.DotProduct
+- uid: Dxflib.LinAlg.Vector.AngleBetweenVectors*
+  commentId: Overload:Dxflib.LinAlg.Vector.AngleBetweenVectors
+  name: AngleBetweenVectors
+  nameWithType: Vector.AngleBetweenVectors
+  fullName: Dxflib.LinAlg.Vector.AngleBetweenVectors
+- uid: Dxflib.LinAlg.Vector.CrossProduct*
+  commentId: Overload:Dxflib.LinAlg.Vector.CrossProduct
+  name: CrossProduct
+  nameWithType: Vector.CrossProduct
+  fullName: Dxflib.LinAlg.Vector.CrossProduct
+- uid: Dxflib.LinAlg.Vector.op_Addition*
+  commentId: Overload:Dxflib.LinAlg.Vector.op_Addition
+  name: Addition
+  nameWithType: Vector.Addition
+  fullName: Dxflib.LinAlg.Vector.Addition
+- uid: Dxflib.LinAlg.Vector.op_Subtraction*
+  commentId: Overload:Dxflib.LinAlg.Vector.op_Subtraction
+  name: Subtraction
+  nameWithType: Vector.Subtraction
+  fullName: Dxflib.LinAlg.Vector.Subtraction
+- uid: Dxflib.LinAlg.Vector.op_Multiply*
+  commentId: Overload:Dxflib.LinAlg.Vector.op_Multiply
+  name: Multiply
+  nameWithType: Vector.Multiply
+  fullName: Dxflib.LinAlg.Vector.Multiply
+- uid: Dxflib.LinAlg.Vector.op_Division*
+  commentId: Overload:Dxflib.LinAlg.Vector.op_Division
+  name: Division
+  nameWithType: Vector.Division
+  fullName: Dxflib.LinAlg.Vector.Division

@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Geometry.GeoPolyline
+  commentId: T:Dxflib.Geometry.GeoPolyline
+  id: GeoPolyline
+  parent: Dxflib.Geometry
+  children:
+  - Dxflib.Geometry.GeoPolyline.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)
+  - Dxflib.Geometry.GeoPolyline.Area
+  - Dxflib.Geometry.GeoPolyline.CalcLength
+  - Dxflib.Geometry.GeoPolyline.Length
+  - Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  langs:
+  - csharp
+  - vb
+  name: GeoPolyline
+  nameWithType: GeoPolyline
+  fullName: Dxflib.Geometry.GeoPolyline
+  type: Class
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GeoPolyline
+    path: Geometry/GeoPolyline.cs
+    startLine: 23
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe GeoPolyline Class, which is a container of the GeoMetricEntityBase.\nThis Object contains both GeoArcs and GeoLines\n"
+  example: []
+  syntax:
+    content: 'public class GeoPolyline : GeometricEntityBase'
+    content.vb: >-
+      Public Class GeoPolyline
+          Inherits GeometricEntityBase
+  inheritance:
+  - System.Object
+  - Dxflib.Geometry.GeometricEntityBase
+  inheritedMembers:
+  - Dxflib.Geometry.GeometricEntityBase.GeometryChanged
+  - Dxflib.Geometry.GeometricEntityBase.GeometryEntityType
+  - Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dxflib.Geometry.GeoPolyline.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)
+  commentId: M:Dxflib.Geometry.GeoPolyline.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)
+  id: '#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)'
+  parent: Dxflib.Geometry.GeoPolyline
+  langs:
+  - csharp
+  - vb
+  name: GeoPolyline(List<Double>, List<Double>, List<Double>, Boolean)
+  nameWithType: GeoPolyline.GeoPolyline(List<Double>, List<Double>, List<Double>, Boolean)
+  fullName: Dxflib.Geometry.GeoPolyline.GeoPolyline(System.Collections.Generic.List<System.Double>, System.Collections.Generic.List<System.Double>, System.Collections.Generic.List<System.Double>, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: Geometry/GeoPolyline.cs
+    startLine: 32
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Main GeoPolyLine Constructor\n"
+  example: []
+  syntax:
+    content: public GeoPolyline(List<double> xValues, List<double> yValues, List<double> bulgeList, bool polylineFlag)
+    parameters:
+    - id: xValues
+      type: System.Collections.Generic.List{System.Double}
+      description: X Coordinates
+    - id: yValues
+      type: System.Collections.Generic.List{System.Double}
+      description: Y Coordinates
+    - id: bulgeList
+      type: System.Collections.Generic.List{System.Double}
+      description: A List of Bulges
+    - id: polylineFlag
+      type: System.Boolean
+      description: The isClosed Property of a polyline
+    content.vb: Public Sub New(xValues As List(Of Double), yValues As List(Of Double), bulgeList As List(Of Double), polylineFlag As Boolean)
+  overload: Dxflib.Geometry.GeoPolyline.#ctor*
+  nameWithType.vb: GeoPolyline.GeoPolyline(List(Of Double), List(Of Double), List(Of Double), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dxflib.Geometry.GeoPolyline.GeoPolyline(System.Collections.Generic.List(Of System.Double), System.Collections.Generic.List(Of System.Double), System.Collections.Generic.List(Of System.Double), System.Boolean)
+  name.vb: GeoPolyline(List(Of Double), List(Of Double), List(Of Double), Boolean)
+- uid: Dxflib.Geometry.GeoPolyline.Length
+  commentId: P:Dxflib.Geometry.GeoPolyline.Length
+  id: Length
+  parent: Dxflib.Geometry.GeoPolyline
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: GeoPolyline.Length
+  fullName: Dxflib.Geometry.GeoPolyline.Length
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Length
+    path: Geometry/GeoPolyline.cs
+    startLine: 92
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Total Length of the Polyline\n"
+  example: []
+  syntax:
+    content: public double Length { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Length As Double
+  overload: Dxflib.Geometry.GeoPolyline.Length*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.Geometry.GeoPolyline.Area
+  commentId: P:Dxflib.Geometry.GeoPolyline.Area
+  id: Area
+  parent: Dxflib.Geometry.GeoPolyline
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: GeoPolyline.Area
+  fullName: Dxflib.Geometry.GeoPolyline.Area
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Area
+    path: Geometry/GeoPolyline.cs
+    startLine: 97
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe Total Area of the polyline\n"
+  example: []
+  syntax:
+    content: public double Area { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Area As Double
+  overload: Dxflib.Geometry.GeoPolyline.Area*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  commentId: M:Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  id: UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  parent: Dxflib.Geometry.GeoPolyline
+  langs:
+  - csharp
+  - vb
+  name: UpdateGeometry(Object, GeometryChangedHandlerArgs)
+  nameWithType: GeoPolyline.UpdateGeometry(Object, GeometryChangedHandlerArgs)
+  fullName: Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object, Dxflib.Geometry.GeometryChangedHandlerArgs)
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: UpdateGeometry
+    path: Geometry/GeoPolyline.cs
+    startLine: 104
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nOverride of the Update Geometry method from the GeometricEntityBase class\n"
+  example: []
+  syntax:
+    content: protected override sealed void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: The object sender
+    - id: args
+      type: Dxflib.Geometry.GeometryChangedHandlerArgs
+      description: The Arguments
+    content.vb: Protected NotOverridable Overrides Sub UpdateGeometry(sender As Object, args As GeometryChangedHandlerArgs)
+  overridden: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  overload: Dxflib.Geometry.GeoPolyline.UpdateGeometry*
+  modifiers.csharp:
+  - protected
+  - override
+  - sealed
+  modifiers.vb:
+  - Protected
+  - Overrides
+  - NotOverridable
+- uid: Dxflib.Geometry.GeoPolyline.CalcLength
+  commentId: M:Dxflib.Geometry.GeoPolyline.CalcLength
+  id: CalcLength
+  parent: Dxflib.Geometry.GeoPolyline
+  langs:
+  - csharp
+  - vb
+  name: CalcLength()
+  nameWithType: GeoPolyline.CalcLength()
+  fullName: Dxflib.Geometry.GeoPolyline.CalcLength()
+  type: Method
+  source:
+    remote:
+      path: Dxflib/Geometry/GeoPolyline.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: CalcLength
+    path: Geometry/GeoPolyline.cs
+    startLine: 114
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Geometry
+  summary: "\nThe CalcLength function that calculates the total length of the polyline\n"
+  example: []
+  syntax:
+    content: protected override sealed double CalcLength()
+    return:
+      type: System.Double
+      description: The Total length of all sections
+    content.vb: Protected NotOverridable Overrides Function CalcLength As Double
+  overridden: Dxflib.Geometry.GeometricEntityBase.CalcLength
+  overload: Dxflib.Geometry.GeoPolyline.CalcLength*
+  modifiers.csharp:
+  - protected
+  - override
+  - sealed
+  modifiers.vb:
+  - Protected
+  - Overrides
+  - NotOverridable
+references:
+- uid: Dxflib.Geometry
+  commentId: N:Dxflib.Geometry
+  name: Dxflib.Geometry
+  nameWithType: Dxflib.Geometry
+  fullName: Dxflib.Geometry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dxflib.Geometry.GeometricEntityBase
+  commentId: T:Dxflib.Geometry.GeometricEntityBase
+  parent: Dxflib.Geometry
+  name: GeometricEntityBase
+  nameWithType: GeometricEntityBase
+  fullName: Dxflib.Geometry.GeometricEntityBase
+- uid: Dxflib.Geometry.GeometricEntityBase.GeometryChanged
+  commentId: E:Dxflib.Geometry.GeometricEntityBase.GeometryChanged
+  parent: Dxflib.Geometry.GeometricEntityBase
+  name: GeometryChanged
+  nameWithType: GeometricEntityBase.GeometryChanged
+  fullName: Dxflib.Geometry.GeometricEntityBase.GeometryChanged
+- uid: Dxflib.Geometry.GeometricEntityBase.GeometryEntityType
+  commentId: P:Dxflib.Geometry.GeometricEntityBase.GeometryEntityType
+  parent: Dxflib.Geometry.GeometricEntityBase
+  name: GeometryEntityType
+  nameWithType: GeometricEntityBase.GeometryEntityType
+  fullName: Dxflib.Geometry.GeometricEntityBase.GeometryEntityType
+- uid: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+  commentId: M:Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+  parent: Dxflib.Geometry.GeometricEntityBase
+  name: OnGeometryChanged(GeometryChangedHandlerArgs)
+  nameWithType: GeometricEntityBase.OnGeometryChanged(GeometryChangedHandlerArgs)
+  fullName: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+  spec.csharp:
+  - uid: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+    name: OnGeometryChanged
+    nameWithType: GeometricEntityBase.OnGeometryChanged
+    fullName: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+    name: GeometryChangedHandlerArgs
+    nameWithType: GeometryChangedHandlerArgs
+    fullName: Dxflib.Geometry.GeometryChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged(Dxflib.Geometry.GeometryChangedHandlerArgs)
+    name: OnGeometryChanged
+    nameWithType: GeometricEntityBase.OnGeometryChanged
+    fullName: Dxflib.Geometry.GeometricEntityBase.OnGeometryChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+    name: GeometryChangedHandlerArgs
+    nameWithType: GeometryChangedHandlerArgs
+    fullName: Dxflib.Geometry.GeometryChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.Geometry.GeoPolyline.#ctor*
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.#ctor
+  name: GeoPolyline
+  nameWithType: GeoPolyline.GeoPolyline
+  fullName: Dxflib.Geometry.GeoPolyline.GeoPolyline
+- uid: System.Collections.Generic.List{System.Double}
+  commentId: T:System.Collections.Generic.List{System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Double>
+  nameWithType: List<Double>
+  fullName: System.Collections.Generic.List<System.Double>
+  nameWithType.vb: List(Of Double)
+  fullName.vb: System.Collections.Generic.List(Of System.Double)
+  name.vb: List(Of Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Dxflib.Geometry.GeoPolyline.Length*
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.Length
+  name: Length
+  nameWithType: GeoPolyline.Length
+  fullName: Dxflib.Geometry.GeoPolyline.Length
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dxflib.Geometry.GeoPolyline.Area*
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.Area
+  name: Area
+  nameWithType: GeoPolyline.Area
+  fullName: Dxflib.Geometry.GeoPolyline.Area
+- uid: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  commentId: M:Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+  parent: Dxflib.Geometry.GeometricEntityBase
+  isExternal: true
+  name: UpdateGeometry(Object, GeometryChangedHandlerArgs)
+  nameWithType: GeometricEntityBase.UpdateGeometry(Object, GeometryChangedHandlerArgs)
+  fullName: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object, Dxflib.Geometry.GeometryChangedHandlerArgs)
+  spec.csharp:
+  - uid: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+    name: UpdateGeometry
+    nameWithType: GeometricEntityBase.UpdateGeometry
+    fullName: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+    name: GeometryChangedHandlerArgs
+    nameWithType: GeometryChangedHandlerArgs
+    fullName: Dxflib.Geometry.GeometryChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
+    name: UpdateGeometry
+    nameWithType: GeometricEntityBase.UpdateGeometry
+    fullName: Dxflib.Geometry.GeometricEntityBase.UpdateGeometry
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+    name: GeometryChangedHandlerArgs
+    nameWithType: GeometryChangedHandlerArgs
+    fullName: Dxflib.Geometry.GeometryChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dxflib.Geometry.GeoPolyline.UpdateGeometry*
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.UpdateGeometry
+  name: UpdateGeometry
+  nameWithType: GeoPolyline.UpdateGeometry
+  fullName: Dxflib.Geometry.GeoPolyline.UpdateGeometry
+- uid: Dxflib.Geometry.GeometryChangedHandlerArgs
+  commentId: T:Dxflib.Geometry.GeometryChangedHandlerArgs
+  parent: Dxflib.Geometry
+  name: GeometryChangedHandlerArgs
+  nameWithType: GeometryChangedHandlerArgs
+  fullName: Dxflib.Geometry.GeometryChangedHandlerArgs
+- uid: Dxflib.Geometry.GeometricEntityBase.CalcLength
+  commentId: M:Dxflib.Geometry.GeometricEntityBase.CalcLength
+  parent: Dxflib.Geometry.GeometricEntityBase
+  name: CalcLength()
+  nameWithType: GeometricEntityBase.CalcLength()
+  fullName: Dxflib.Geometry.GeometricEntityBase.CalcLength()
+  spec.csharp:
+  - uid: Dxflib.Geometry.GeometricEntityBase.CalcLength
+    name: CalcLength
+    nameWithType: GeometricEntityBase.CalcLength
+    fullName: Dxflib.Geometry.GeometricEntityBase.CalcLength
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dxflib.Geometry.GeometricEntityBase.CalcLength
+    name: CalcLength
+    nameWithType: GeometricEntityBase.CalcLength
+    fullName: Dxflib.Geometry.GeometricEntityBase.CalcLength
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dxflib.Geometry.GeoPolyline.CalcLength*
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.CalcLength
+  name: CalcLength
+  nameWithType: GeoPolyline.CalcLength
+  fullName: Dxflib.Geometry.GeoPolyline.CalcLength

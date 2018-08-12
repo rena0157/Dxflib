@@ -1,0 +1,594 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Parser.FileSectionStrings
+  commentId: T:Dxflib.Parser.FileSectionStrings
+  id: FileSectionStrings
+  parent: Dxflib.Parser
+  children:
+  - Dxflib.Parser.FileSectionStrings.Blocks
+  - Dxflib.Parser.FileSectionStrings.Classes
+  - Dxflib.Parser.FileSectionStrings.Entities
+  - Dxflib.Parser.FileSectionStrings.Header
+  - Dxflib.Parser.FileSectionStrings.Objects
+  - Dxflib.Parser.FileSectionStrings.SectionEnd
+  - Dxflib.Parser.FileSectionStrings.SectionStart
+  - Dxflib.Parser.FileSectionStrings.Tables
+  langs:
+  - csharp
+  - vb
+  name: FileSectionStrings
+  nameWithType: FileSectionStrings
+  fullName: Dxflib.Parser.FileSectionStrings
+  type: Struct
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: FileSectionStrings
+    path: Parser/DxfFileMainParser.cs
+    startLine: 152
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public struct FileSectionStrings
+    content.vb: Public Structure FileSectionStrings
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Dxflib.Parser.FileSectionStrings.SectionStart
+  commentId: F:Dxflib.Parser.FileSectionStrings.SectionStart
+  id: SectionStart
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: SectionStart
+  nameWithType: FileSectionStrings.SectionStart
+  fullName: Dxflib.Parser.FileSectionStrings.SectionStart
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: SectionStart
+    path: Parser/DxfFileMainParser.cs
+    startLine: 154
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string SectionStart = "SECTION"
+    return:
+      type: System.String
+    content.vb: Public Const SectionStart As String = "SECTION"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.SectionEnd
+  commentId: F:Dxflib.Parser.FileSectionStrings.SectionEnd
+  id: SectionEnd
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: SectionEnd
+  nameWithType: FileSectionStrings.SectionEnd
+  fullName: Dxflib.Parser.FileSectionStrings.SectionEnd
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: SectionEnd
+    path: Parser/DxfFileMainParser.cs
+    startLine: 155
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string SectionEnd = "ENDSEC"
+    return:
+      type: System.String
+    content.vb: Public Const SectionEnd As String = "ENDSEC"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Header
+  commentId: F:Dxflib.Parser.FileSectionStrings.Header
+  id: Header
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: FileSectionStrings.Header
+  fullName: Dxflib.Parser.FileSectionStrings.Header
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Header
+    path: Parser/DxfFileMainParser.cs
+    startLine: 157
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Header = "HEADER"
+    return:
+      type: System.String
+    content.vb: Public Const Header As String = "HEADER"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Classes
+  commentId: F:Dxflib.Parser.FileSectionStrings.Classes
+  id: Classes
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Classes
+  nameWithType: FileSectionStrings.Classes
+  fullName: Dxflib.Parser.FileSectionStrings.Classes
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Classes
+    path: Parser/DxfFileMainParser.cs
+    startLine: 158
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Classes = "CLASSES"
+    return:
+      type: System.String
+    content.vb: Public Const Classes As String = "CLASSES"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Tables
+  commentId: F:Dxflib.Parser.FileSectionStrings.Tables
+  id: Tables
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Tables
+  nameWithType: FileSectionStrings.Tables
+  fullName: Dxflib.Parser.FileSectionStrings.Tables
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Tables
+    path: Parser/DxfFileMainParser.cs
+    startLine: 159
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Tables = "TABLES"
+    return:
+      type: System.String
+    content.vb: Public Const Tables As String = "TABLES"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Blocks
+  commentId: F:Dxflib.Parser.FileSectionStrings.Blocks
+  id: Blocks
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Blocks
+  nameWithType: FileSectionStrings.Blocks
+  fullName: Dxflib.Parser.FileSectionStrings.Blocks
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Blocks
+    path: Parser/DxfFileMainParser.cs
+    startLine: 160
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Blocks = "BLOCKS"
+    return:
+      type: System.String
+    content.vb: Public Const Blocks As String = "BLOCKS"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Entities
+  commentId: F:Dxflib.Parser.FileSectionStrings.Entities
+  id: Entities
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: FileSectionStrings.Entities
+  fullName: Dxflib.Parser.FileSectionStrings.Entities
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Entities
+    path: Parser/DxfFileMainParser.cs
+    startLine: 161
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Entities = "ENTITIES"
+    return:
+      type: System.String
+    content.vb: Public Const Entities As String = "ENTITIES"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dxflib.Parser.FileSectionStrings.Objects
+  commentId: F:Dxflib.Parser.FileSectionStrings.Objects
+  id: Objects
+  parent: Dxflib.Parser.FileSectionStrings
+  langs:
+  - csharp
+  - vb
+  name: Objects
+  nameWithType: FileSectionStrings.Objects
+  fullName: Dxflib.Parser.FileSectionStrings.Objects
+  type: Field
+  source:
+    remote:
+      path: Dxflib/Parser/DxfFileMainParser.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Objects
+    path: Parser/DxfFileMainParser.cs
+    startLine: 162
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Parser
+  syntax:
+    content: public const string Objects = "OBJECTS"
+    return:
+      type: System.String
+    content.vb: Public Const Objects As String = "OBJECTS"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Dxflib.Parser
+  commentId: N:Dxflib.Parser
+  name: Dxflib.Parser
+  nameWithType: Dxflib.Parser
+  fullName: Dxflib.Parser
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

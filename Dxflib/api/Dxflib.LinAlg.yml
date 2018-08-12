@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.LinAlg
+  commentId: N:Dxflib.LinAlg
+  id: Dxflib.LinAlg
+  children:
+  - Dxflib.LinAlg.UnitVectors
+  - Dxflib.LinAlg.Vector
+  langs:
+  - csharp
+  - vb
+  name: Dxflib.LinAlg
+  nameWithType: Dxflib.LinAlg
+  fullName: Dxflib.LinAlg
+  type: Namespace
+  assemblies:
+  - Dxflib
+references:
+- uid: Dxflib.LinAlg.UnitVectors
+  commentId: T:Dxflib.LinAlg.UnitVectors
+  name: UnitVectors
+  nameWithType: UnitVectors
+  fullName: Dxflib.LinAlg.UnitVectors
+- uid: Dxflib.LinAlg.Vector
+  commentId: T:Dxflib.LinAlg.Vector
+  parent: Dxflib.LinAlg
+  name: Vector
+  nameWithType: Vector
+  fullName: Dxflib.LinAlg.Vector
+- uid: Dxflib.LinAlg
+  commentId: N:Dxflib.LinAlg
+  name: Dxflib.LinAlg
+  nameWithType: Dxflib.LinAlg
+  fullName: Dxflib.LinAlg

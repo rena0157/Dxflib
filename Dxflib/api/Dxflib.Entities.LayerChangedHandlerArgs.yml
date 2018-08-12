@@ -1,0 +1,482 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Entities.LayerChangedHandlerArgs
+  commentId: T:Dxflib.Entities.LayerChangedHandlerArgs
+  id: LayerChangedHandlerArgs
+  parent: Dxflib.Entities
+  children:
+  - Dxflib.Entities.LayerChangedHandlerArgs.#ctor(System.String,System.String)
+  - Dxflib.Entities.LayerChangedHandlerArgs.NewName
+  - Dxflib.Entities.LayerChangedHandlerArgs.OldName
+  langs:
+  - csharp
+  - vb
+  name: LayerChangedHandlerArgs
+  nameWithType: LayerChangedHandlerArgs
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs
+  type: Class
+  source:
+    remote:
+      path: Dxflib/Entities/Entity.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: LayerChangedHandlerArgs
+    path: Entities/Entity.cs
+    startLine: 75
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nHandler Arguments for the LayerChanged Event\n"
+  example: []
+  syntax:
+    content: public class LayerChangedHandlerArgs
+    content.vb: Public Class LayerChangedHandlerArgs
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.#ctor(System.String,System.String)
+  commentId: M:Dxflib.Entities.LayerChangedHandlerArgs.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dxflib.Entities.LayerChangedHandlerArgs
+  langs:
+  - csharp
+  - vb
+  name: LayerChangedHandlerArgs(String, String)
+  nameWithType: LayerChangedHandlerArgs.LayerChangedHandlerArgs(String, String)
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.LayerChangedHandlerArgs(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/Entities/Entity.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: Entities/Entity.cs
+    startLine: 82
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe Main Constructor for the layer changed event\n"
+  example: []
+  syntax:
+    content: public LayerChangedHandlerArgs(string oldName, string newName)
+    parameters:
+    - id: oldName
+      type: System.String
+      description: The Old Layer Name
+    - id: newName
+      type: System.String
+      description: The New Layer Name
+    content.vb: Public Sub New(oldName As String, newName As String)
+  overload: Dxflib.Entities.LayerChangedHandlerArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.OldName
+  commentId: P:Dxflib.Entities.LayerChangedHandlerArgs.OldName
+  id: OldName
+  parent: Dxflib.Entities.LayerChangedHandlerArgs
+  langs:
+  - csharp
+  - vb
+  name: OldName
+  nameWithType: LayerChangedHandlerArgs.OldName
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.OldName
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/Entity.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: OldName
+    path: Entities/Entity.cs
+    startLine: 91
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe Old Layer Name\n"
+  example: []
+  syntax:
+    content: public string OldName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property OldName As String
+  overload: Dxflib.Entities.LayerChangedHandlerArgs.OldName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.NewName
+  commentId: P:Dxflib.Entities.LayerChangedHandlerArgs.NewName
+  id: NewName
+  parent: Dxflib.Entities.LayerChangedHandlerArgs
+  langs:
+  - csharp
+  - vb
+  name: NewName
+  nameWithType: LayerChangedHandlerArgs.NewName
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.NewName
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/Entity.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: NewName
+    path: Entities/Entity.cs
+    startLine: 96
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe New Layer Name\n"
+  example: []
+  syntax:
+    content: public string NewName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property NewName As String
+  overload: Dxflib.Entities.LayerChangedHandlerArgs.NewName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dxflib.Entities
+  commentId: N:Dxflib.Entities
+  name: Dxflib.Entities
+  nameWithType: Dxflib.Entities
+  fullName: Dxflib.Entities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.#ctor*
+  commentId: Overload:Dxflib.Entities.LayerChangedHandlerArgs.#ctor
+  name: LayerChangedHandlerArgs
+  nameWithType: LayerChangedHandlerArgs.LayerChangedHandlerArgs
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.LayerChangedHandlerArgs
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.OldName*
+  commentId: Overload:Dxflib.Entities.LayerChangedHandlerArgs.OldName
+  name: OldName
+  nameWithType: LayerChangedHandlerArgs.OldName
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.OldName
+- uid: Dxflib.Entities.LayerChangedHandlerArgs.NewName*
+  commentId: Overload:Dxflib.Entities.LayerChangedHandlerArgs.NewName
+  name: NewName
+  nameWithType: LayerChangedHandlerArgs.NewName
+  fullName: Dxflib.Entities.LayerChangedHandlerArgs.NewName

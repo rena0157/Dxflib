@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.DxfStream
+  commentId: N:Dxflib.DxfStream
+  id: Dxflib.DxfStream
+  children:
+  - Dxflib.DxfStream.DxfReader
+  - Dxflib.DxfStream.DxfStreamException
+  langs:
+  - csharp
+  - vb
+  name: Dxflib.DxfStream
+  nameWithType: Dxflib.DxfStream
+  fullName: Dxflib.DxfStream
+  type: Namespace
+  assemblies:
+  - Dxflib
+references:
+- uid: Dxflib.DxfStream.DxfReader
+  commentId: T:Dxflib.DxfStream.DxfReader
+  name: DxfReader
+  nameWithType: DxfReader
+  fullName: Dxflib.DxfStream.DxfReader
+- uid: Dxflib.DxfStream.DxfStreamException
+  commentId: T:Dxflib.DxfStream.DxfStreamException
+  name: DxfStreamException
+  nameWithType: DxfStreamException
+  fullName: Dxflib.DxfStream.DxfStreamException

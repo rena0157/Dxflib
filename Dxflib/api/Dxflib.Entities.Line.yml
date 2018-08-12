@@ -1,0 +1,620 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dxflib.Entities.Line
+  commentId: T:Dxflib.Entities.Line
+  id: Line
+  parent: Dxflib.Entities
+  children:
+  - Dxflib.Entities.Line.#ctor(Dxflib.Entities.LineBuffer)
+  - Dxflib.Entities.Line.GLine
+  - Dxflib.Entities.Line.Length
+  - Dxflib.Entities.Line.Thickness
+  langs:
+  - csharp
+  - vb
+  name: Line
+  nameWithType: Line
+  fullName: Dxflib.Entities.Line
+  type: Class
+  source:
+    remote:
+      path: Dxflib/Entities/Line.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Line
+    path: Entities/Line.cs
+    startLine: 19
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe Line Entity Class\n"
+  example: []
+  syntax:
+    content: 'public class Line : Entity'
+    content.vb: >-
+      Public Class Line
+          Inherits Entity
+  inheritance:
+  - System.Object
+  - Dxflib.Entities.Entity
+  inheritedMembers:
+  - Dxflib.Entities.Entity.EntityType
+  - Dxflib.Entities.Entity.LayerNameBf
+  - Dxflib.Entities.Entity.Handle
+  - Dxflib.Entities.Entity.LayerName
+  - Dxflib.Entities.Entity.LayerChanged
+  - Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dxflib.Entities.Line.#ctor(Dxflib.Entities.LineBuffer)
+  commentId: M:Dxflib.Entities.Line.#ctor(Dxflib.Entities.LineBuffer)
+  id: '#ctor(Dxflib.Entities.LineBuffer)'
+  parent: Dxflib.Entities.Line
+  langs:
+  - csharp
+  - vb
+  name: Line(LineBuffer)
+  nameWithType: Line.Line(LineBuffer)
+  fullName: Dxflib.Entities.Line.Line(Dxflib.Entities.LineBuffer)
+  type: Constructor
+  source:
+    remote:
+      path: Dxflib/Entities/Line.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: .ctor
+    path: Entities/Line.cs
+    startLine: 28
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nMain Constructor\n"
+  example: []
+  syntax:
+    content: public Line(LineBuffer lineBuffer)
+    parameters:
+    - id: lineBuffer
+      type: Dxflib.Entities.LineBuffer
+      description: "\nThe Line Buffer that was filled\nin the extraction process\n"
+    content.vb: Public Sub New(lineBuffer As LineBuffer)
+  overload: Dxflib.Entities.Line.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dxflib.Entities.Line.GLine
+  commentId: P:Dxflib.Entities.Line.GLine
+  id: GLine
+  parent: Dxflib.Entities.Line
+  langs:
+  - csharp
+  - vb
+  name: GLine
+  nameWithType: Line.GLine
+  fullName: Dxflib.Entities.Line.GLine
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/Line.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: GLine
+    path: Entities/Line.cs
+    startLine: 44
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe GeoLine of the Line\n"
+  example: []
+  syntax:
+    content: public GeoLine GLine { get; }
+    parameters: []
+    return:
+      type: Dxflib.Geometry.GeoLine
+    content.vb: Public ReadOnly Property GLine As GeoLine
+  overload: Dxflib.Entities.Line.GLine*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.Entities.Line.Length
+  commentId: P:Dxflib.Entities.Line.Length
+  id: Length
+  parent: Dxflib.Entities.Line
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: Line.Length
+  fullName: Dxflib.Entities.Line.Length
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/Line.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Length
+    path: Entities/Line.cs
+    startLine: 49
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe Length of the Line\n"
+  example: []
+  syntax:
+    content: public double Length { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Length As Double
+  overload: Dxflib.Entities.Line.Length*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dxflib.Entities.Line.Thickness
+  commentId: P:Dxflib.Entities.Line.Thickness
+  id: Thickness
+  parent: Dxflib.Entities.Line
+  langs:
+  - csharp
+  - vb
+  name: Thickness
+  nameWithType: Line.Thickness
+  fullName: Dxflib.Entities.Line.Thickness
+  type: Property
+  source:
+    remote:
+      path: Dxflib/Entities/Line.cs
+      branch: DocsFXTest
+      repo: https://github.com/rena0157/Dxflib.git
+    id: Thickness
+    path: Entities/Line.cs
+    startLine: 54
+  assemblies:
+  - Dxflib
+  namespace: Dxflib.Entities
+  summary: "\nThe Thickness of the line\n"
+  example: []
+  syntax:
+    content: public double Thickness { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Thickness As Double
+  overload: Dxflib.Entities.Line.Thickness*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dxflib.Entities
+  commentId: N:Dxflib.Entities
+  name: Dxflib.Entities
+  nameWithType: Dxflib.Entities
+  fullName: Dxflib.Entities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dxflib.Entities.Entity
+  commentId: T:Dxflib.Entities.Entity
+  parent: Dxflib.Entities
+  name: Entity
+  nameWithType: Entity
+  fullName: Dxflib.Entities.Entity
+- uid: Dxflib.Entities.Entity.EntityType
+  commentId: F:Dxflib.Entities.Entity.EntityType
+  parent: Dxflib.Entities.Entity
+  name: EntityType
+  nameWithType: Entity.EntityType
+  fullName: Dxflib.Entities.Entity.EntityType
+- uid: Dxflib.Entities.Entity.LayerNameBf
+  commentId: F:Dxflib.Entities.Entity.LayerNameBf
+  parent: Dxflib.Entities.Entity
+  name: LayerNameBf
+  nameWithType: Entity.LayerNameBf
+  fullName: Dxflib.Entities.Entity.LayerNameBf
+- uid: Dxflib.Entities.Entity.Handle
+  commentId: P:Dxflib.Entities.Entity.Handle
+  parent: Dxflib.Entities.Entity
+  name: Handle
+  nameWithType: Entity.Handle
+  fullName: Dxflib.Entities.Entity.Handle
+- uid: Dxflib.Entities.Entity.LayerName
+  commentId: P:Dxflib.Entities.Entity.LayerName
+  parent: Dxflib.Entities.Entity
+  name: LayerName
+  nameWithType: Entity.LayerName
+  fullName: Dxflib.Entities.Entity.LayerName
+- uid: Dxflib.Entities.Entity.LayerChanged
+  commentId: E:Dxflib.Entities.Entity.LayerChanged
+  parent: Dxflib.Entities.Entity
+  name: LayerChanged
+  nameWithType: Entity.LayerChanged
+  fullName: Dxflib.Entities.Entity.LayerChanged
+- uid: Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+  commentId: M:Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+  parent: Dxflib.Entities.Entity
+  name: OnLayerChanged(LayerChangedHandlerArgs)
+  nameWithType: Entity.OnLayerChanged(LayerChangedHandlerArgs)
+  fullName: Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+  spec.csharp:
+  - uid: Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+    name: OnLayerChanged
+    nameWithType: Entity.OnLayerChanged
+    fullName: Dxflib.Entities.Entity.OnLayerChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Entities.LayerChangedHandlerArgs
+    name: LayerChangedHandlerArgs
+    nameWithType: LayerChangedHandlerArgs
+    fullName: Dxflib.Entities.LayerChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
+    name: OnLayerChanged
+    nameWithType: Entity.OnLayerChanged
+    fullName: Dxflib.Entities.Entity.OnLayerChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Dxflib.Entities.LayerChangedHandlerArgs
+    name: LayerChangedHandlerArgs
+    nameWithType: LayerChangedHandlerArgs
+    fullName: Dxflib.Entities.LayerChangedHandlerArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Dxflib.Entities.Line.#ctor*
+  commentId: Overload:Dxflib.Entities.Line.#ctor
+  name: Line
+  nameWithType: Line.Line
+  fullName: Dxflib.Entities.Line.Line
+- uid: Dxflib.Entities.LineBuffer
+  commentId: T:Dxflib.Entities.LineBuffer
+  parent: Dxflib.Entities
+  name: LineBuffer
+  nameWithType: LineBuffer
+  fullName: Dxflib.Entities.LineBuffer
+- uid: Dxflib.Entities.Line.GLine*
+  commentId: Overload:Dxflib.Entities.Line.GLine
+  name: GLine
+  nameWithType: Line.GLine
+  fullName: Dxflib.Entities.Line.GLine
+- uid: Dxflib.Geometry.GeoLine
+  commentId: T:Dxflib.Geometry.GeoLine
+  parent: Dxflib.Geometry
+  name: GeoLine
+  nameWithType: GeoLine
+  fullName: Dxflib.Geometry.GeoLine
+- uid: Dxflib.Geometry
+  commentId: N:Dxflib.Geometry
+  name: Dxflib.Geometry
+  nameWithType: Dxflib.Geometry
+  fullName: Dxflib.Geometry
+- uid: Dxflib.Entities.Line.Length*
+  commentId: Overload:Dxflib.Entities.Line.Length
+  name: Length
+  nameWithType: Line.Length
+  fullName: Dxflib.Entities.Line.Length
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dxflib.Entities.Line.Thickness*
+  commentId: Overload:Dxflib.Entities.Line.Thickness
+  name: Thickness
+  nameWithType: Line.Thickness
+  fullName: Dxflib.Entities.Line.Thickness
