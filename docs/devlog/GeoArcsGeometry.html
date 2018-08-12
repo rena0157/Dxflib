@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Markdown file </title>
+    <title>2018-08-12 Blog Post 1 - GeoArcs and Geometry </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Markdown file ">
+    <meta name="title" content="2018-08-12 Blog Post 1 - GeoArcs and Geometry ">
     <meta name="generator" content="docfx 2.37.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -96,9 +96,28 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="markdown-file">Markdown file</h1>
+<h1 id="2018-08-12-blog-post-1---geoarcs-and-geometry">2018-08-12 Blog Post 1 - GeoArcs and Geometry</h1>
 
-<p>Testing</p>
+<h2 id="introduction">Introduction</h2>
+<p>in the dxf standard Arcs are defined in several different ways:</p>
+<ul>
+<li>Starting Vertex, Ending Vertex and a bulge value</li>
+<li>Center Vertex, Starting ray angle, ending ray angle and radius</li>
+<li>3 vertices that the arc passes through, two at each end are the ends of the arc</li>
+</ul>
+<p>This article is all about how to deal with arcs in their three different forms and how
+I was able to calculate all of the data from the dxf file.</p>
+<h2 id="some-background">Some background</h2>
+<p>An arc is a geometry curved line that is a segment of a circle. Note that there are different kinds of arcs
+this post will only talk about the circular arcs. I may in the future create a post on eliptical arcs.
+<img src="../images/ExampleArc1.png" style="padding: 15px;float: left">
+Here is an example arc that has a starting point and an ending point. The total angle is measured
+between the ray of the starting point and the ray of the ending point. Thy center point is where the two rays
+meet.</p>
+<p>Througout this documentation and post I will be using the following naming for the elements discussed
+above. The starting point is <code>vertex0</code>, the ending point is <code>vertex1</code>, the total angle is <code>angle</code>, the center point
+is <code>centerPoint</code>, the starting angle (The angle between <code>vertex0</code> and the x-axis) is <code>startingAngle</code> and the
+ending angle (the angle beteen <code>vertex1</code> and the y-axis) is <code>endingAngle</code>.</p>
 </article>
           </div>
           
