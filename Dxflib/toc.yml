@@ -3,3 +3,6 @@
 - name: API Documentation
   href: api/
   homepage: api/index.md
+- name: Devlog
+  href: devlog/
+  homepage: index.md

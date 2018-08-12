@@ -664,6 +664,30 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "devlog/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "devlog/index.html",
+          "hash": "+u+Dagb+eNwRU2QE9+Iulg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "devlog/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "devlog/toc.html",
+          "hash": "EEc4NtlA3ttCeD7rVmCQkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/testimage.png",
       "output": {
@@ -680,10 +704,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "v3COlT4U+FEFTXnrB+G+Rw=="
+          "hash": "0r5QSANdZH4oh3mSJs87LQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -692,7 +716,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "eICmIxg6DskcqThRyLZc4g=="
+          "hash": "RnB5A0p88o5yv582+tX1AQ=="
         }
       },
       "is_incremental": false,

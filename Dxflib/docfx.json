@@ -22,6 +22,12 @@
       },
       {
         "files": [
+          "devlog/**.yml",
+          "devlog/index.md"
+        ]
+      },
+      {
+        "files": [
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
