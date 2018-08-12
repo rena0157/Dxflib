@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Dxflib/Tools/DxflibTools.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: DxflibTools
     path: Tools/DxflibTools.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Dxflib/Tools/DxflibTools.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetEnumDescription
     path: Tools/DxflibTools.cs

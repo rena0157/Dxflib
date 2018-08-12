@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: DxfFileMainParser
     path: Parser/DxfFileMainParser.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ThisFile
     path: Parser/DxfFileMainParser.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Parser/DxfFileMainParser.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CurrentFileSection
     path: Parser/DxfFileMainParser.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CurrentEntityForExtraction
     path: Parser/DxfFileMainParser.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineBuf
     path: Parser/DxfFileMainParser.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LwPolyLineBuf
     path: Parser/DxfFileMainParser.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineChanged
     path: Parser/DxfFileMainParser.cs

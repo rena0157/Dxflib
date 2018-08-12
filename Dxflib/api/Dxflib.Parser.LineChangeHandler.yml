@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineChangeHandler
     path: Parser/DxfFileMainParser.cs

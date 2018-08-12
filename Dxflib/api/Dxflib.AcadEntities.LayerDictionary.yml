@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LayerDictionary
     path: AcadEntities/LayerDictionary.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: AcadEntities/LayerDictionary.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Count
     path: AcadEntities/LayerDictionary.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetAllLayers
     path: AcadEntities/LayerDictionary.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: NewLayer
     path: AcadEntities/LayerDictionary.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ContainsLayer
     path: AcadEntities/LayerDictionary.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetLayer
     path: AcadEntities/LayerDictionary.cs
@@ -286,7 +286,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UpdateDictionary
     path: AcadEntities/LayerDictionary.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/LayerDictionary.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: RemoveLayer
     path: AcadEntities/LayerDictionary.cs

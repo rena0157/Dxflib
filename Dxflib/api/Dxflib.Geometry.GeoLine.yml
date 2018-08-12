@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeoLine
     path: Geometry/GeoLine.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Geometry/GeoLine.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Vertex0
     path: Geometry/GeoLine.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Vertex1
     path: Geometry/GeoLine.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcLength
     path: Geometry/GeoLine.cs
@@ -225,7 +225,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Length
     path: Geometry/GeoLine.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Area
     path: Geometry/GeoLine.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UpdateGeometry
     path: Geometry/GeoLine.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ToVector
     path: Geometry/GeoLine.cs

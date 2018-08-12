@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineGroupCodes
     path: Entities/Line.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Thickness
     path: Entities/Line.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: X0
     path: Entities/Line.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: X1
     path: Entities/Line.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Y0
     path: Entities/Line.cs
@@ -196,7 +196,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Line.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Y1
     path: Entities/Line.cs

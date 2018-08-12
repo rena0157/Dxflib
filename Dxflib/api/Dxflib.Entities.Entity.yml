@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Entity
     path: Entities/Entity.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: EntityType
     path: Entities/Entity.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LayerNameBf
     path: Entities/Entity.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Handle
     path: Entities/Entity.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LayerName
     path: Entities/Entity.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LayerChanged
     path: Entities/Entity.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: OnLayerChanged
     path: Entities/Entity.cs

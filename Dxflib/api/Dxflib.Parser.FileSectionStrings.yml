@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: FileSectionStrings
     path: Parser/DxfFileMainParser.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: SectionStart
     path: Parser/DxfFileMainParser.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: SectionEnd
     path: Parser/DxfFileMainParser.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Header
     path: Parser/DxfFileMainParser.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Classes
     path: Parser/DxfFileMainParser.cs
@@ -193,7 +193,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Tables
     path: Parser/DxfFileMainParser.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Blocks
     path: Parser/DxfFileMainParser.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Entities
     path: Parser/DxfFileMainParser.cs
@@ -292,7 +292,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Objects
     path: Parser/DxfFileMainParser.cs

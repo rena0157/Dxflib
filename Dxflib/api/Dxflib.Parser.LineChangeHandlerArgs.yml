@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineChangeHandlerArgs
     path: Parser/DxfFileMainParser.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Parser/DxfFileMainParser.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: NewCurrentLine
     path: Parser/DxfFileMainParser.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: NewNextLine
     path: Parser/DxfFileMainParser.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/DxfFileMainParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineIndex
     path: Parser/DxfFileMainParser.cs

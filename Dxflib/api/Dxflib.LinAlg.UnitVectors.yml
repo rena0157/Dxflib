@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/UnitVectors.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UnitVectors
     path: LinAlg/UnitVectors.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/UnitVectors.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: XUnitVector
     path: LinAlg/UnitVectors.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/UnitVectors.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: YUnitVector
     path: LinAlg/UnitVectors.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/UnitVectors.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ZUnitVector
     path: LinAlg/UnitVectors.cs

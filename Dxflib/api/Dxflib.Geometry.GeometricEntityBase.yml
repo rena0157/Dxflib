@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeometricEntityBase
     path: Geometry/GeometricEntityBase.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeometryChanged
     path: Geometry/GeometricEntityBase.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeometryEntityType
     path: Geometry/GeometricEntityBase.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: OnGeometryChanged
     path: Geometry/GeometricEntityBase.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UpdateGeometry
     path: Geometry/GeometricEntityBase.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcLength
     path: Geometry/GeometricEntityBase.cs

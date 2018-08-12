@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LineBuffer
     path: Entities/LineBuffer.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Entities/LineBuffer.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Thickness
     path: Entities/LineBuffer.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: X0
     path: Entities/LineBuffer.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: X1
     path: Entities/LineBuffer.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Y0
     path: Entities/LineBuffer.cs
@@ -241,7 +241,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Y1
     path: Entities/LineBuffer.cs
@@ -276,7 +276,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Parse
     path: Entities/LineBuffer.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Layer
     path: AcadEntities/Layer.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: AcadEntities/Layer.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Name
     path: AcadEntities/Layer.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Count
     path: AcadEntities/Layer.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ContainsEntity
     path: AcadEntities/Layer.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AddEntity
     path: AcadEntities/Layer.cs
@@ -255,7 +255,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: RemoveEntity
     path: AcadEntities/Layer.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetAllEntities
     path: AcadEntities/Layer.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetAllHandles
     path: AcadEntities/Layer.cs
@@ -361,7 +361,7 @@ items:
   source:
     remote:
       path: Dxflib/AcadEntities/Layer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetEntity
     path: AcadEntities/Layer.cs

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AutoCadVersions
     path: Parser/HeaderParser.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1006
     path: Parser/HeaderParser.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1009
     path: Parser/HeaderParser.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1012
     path: Parser/HeaderParser.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1014
     path: Parser/HeaderParser.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1015
     path: Parser/HeaderParser.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1018
     path: Parser/HeaderParser.cs
@@ -250,7 +250,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1021
     path: Parser/HeaderParser.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1024
     path: Parser/HeaderParser.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AC1027
     path: Parser/HeaderParser.cs
@@ -346,7 +346,7 @@ items:
   source:
     remote:
       path: Dxflib/Parser/HeaderParser.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Unknown
     path: Parser/HeaderParser.cs

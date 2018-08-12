@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeoMath
     path: Geometry/GeoMath.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Tolerance
     path: Geometry/GeoMath.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: RadToDeg
     path: Geometry/GeoMath.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: DegToRad
     path: Geometry/GeoMath.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Distance
     path: Geometry/GeoMath.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Distance
     path: Geometry/GeoMath.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: TrapzArea
     path: Geometry/GeoMath.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoMath.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ChordArea
     path: Geometry/GeoMath.cs

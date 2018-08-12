@@ -40,7 +40,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Vector
     path: LinAlg/Vector.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: LinAlg/Vector.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: LinAlg/Vector.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: LinAlg/Vector.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: LinAlg/Vector.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: LinAlg/Vector.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: X
     path: LinAlg/Vector.cs
@@ -305,7 +305,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Y
     path: LinAlg/Vector.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Z
     path: LinAlg/Vector.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Length
     path: LinAlg/Vector.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: HeadVertex
     path: LinAlg/Vector.cs
@@ -453,7 +453,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: TailVertex
     path: LinAlg/Vector.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Translate
     path: LinAlg/Vector.cs
@@ -526,7 +526,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Scale
     path: LinAlg/Vector.cs
@@ -562,7 +562,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Rotate
     path: LinAlg/Vector.cs
@@ -598,7 +598,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Transform
     path: LinAlg/Vector.cs
@@ -640,7 +640,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeometryChanged
     path: LinAlg/Vector.cs
@@ -673,7 +673,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ToUnitVector
     path: LinAlg/Vector.cs
@@ -708,7 +708,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: DotProduct
     path: LinAlg/Vector.cs
@@ -747,7 +747,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AngleBetweenVectors
     path: LinAlg/Vector.cs
@@ -791,7 +791,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CrossProduct
     path: LinAlg/Vector.cs
@@ -830,7 +830,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: op_Addition
     path: LinAlg/Vector.cs
@@ -874,7 +874,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: op_Subtraction
     path: LinAlg/Vector.cs
@@ -918,7 +918,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: op_Multiply
     path: LinAlg/Vector.cs
@@ -962,7 +962,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: op_Multiply
     path: LinAlg/Vector.cs
@@ -1006,7 +1006,7 @@ items:
   source:
     remote:
       path: Dxflib/LinAlg/Vector.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: op_Division
     path: LinAlg/Vector.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LwPolyLine
     path: Entities/LwPolyLine.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Entities/LwPolyLine.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: NumberOfVerticies
     path: Entities/LwPolyLine.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: PolyLineFlag
     path: Entities/LwPolyLine.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ConstantWidth
     path: Entities/LwPolyLine.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Elevation
     path: Entities/LwPolyLine.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Thickness
     path: Entities/LwPolyLine.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Length
     path: Entities/LwPolyLine.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLine.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Area
     path: Entities/LwPolyLine.cs

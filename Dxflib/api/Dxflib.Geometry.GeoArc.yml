@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeoArc
     path: Geometry/GeoArc.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Geometry/GeoArc.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Geometry/GeoArc.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Geometry/GeoArc.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Length
     path: Geometry/GeoArc.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Angle
     path: Geometry/GeoArc.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Radius
     path: Geometry/GeoArc.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Area
     path: Geometry/GeoArc.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: StartAngle
     path: Geometry/GeoArc.cs
@@ -396,7 +396,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: EndAngle
     path: Geometry/GeoArc.cs
@@ -433,7 +433,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Vertex0
     path: Geometry/GeoArc.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Vertex1
     path: Geometry/GeoArc.cs
@@ -507,7 +507,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CenterVertex
     path: Geometry/GeoArc.cs
@@ -544,7 +544,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: BulgeValue
     path: Geometry/GeoArc.cs
@@ -581,7 +581,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ToVector
     path: Geometry/GeoArc.cs
@@ -616,7 +616,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcLength
     path: Geometry/GeoArc.cs
@@ -654,7 +654,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcCenterVertex
     path: Geometry/GeoArc.cs
@@ -698,7 +698,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcPointOnArc
     path: Geometry/GeoArc.cs
@@ -745,7 +745,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoArc.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UpdateGeometry
     path: Geometry/GeoArc.cs

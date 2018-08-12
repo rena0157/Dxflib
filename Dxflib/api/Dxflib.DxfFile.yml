@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: DxfFile
     path: DxfFile.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: DxfFile.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ContentStrings
     path: DxfFile.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Layers
     path: DxfFile.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Entities
     path: DxfFile.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: PathToFile
     path: DxfFile.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: FileName
     path: DxfFile.cs
@@ -289,7 +289,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GetEntitiesByType
     path: DxfFile.cs
@@ -333,7 +333,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: AutoCADVersion
     path: DxfFile.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CurrentLayer
     path: DxfFile.cs
@@ -407,7 +407,7 @@ items:
   source:
     remote:
       path: Dxflib/DxfFile.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LastSavedBy
     path: DxfFile.cs

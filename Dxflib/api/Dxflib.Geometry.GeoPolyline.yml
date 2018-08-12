@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeoPolyline
     path: Geometry/GeoPolyline.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Geometry/GeoPolyline.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Length
     path: Geometry/GeoPolyline.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Area
     path: Geometry/GeoPolyline.cs
@@ -191,7 +191,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: UpdateGeometry
     path: Geometry/GeoPolyline.cs
@@ -235,7 +235,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeoPolyline.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: CalcLength
     path: Geometry/GeoPolyline.cs

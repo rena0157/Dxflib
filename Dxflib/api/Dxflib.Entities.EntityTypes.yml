@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: EntityTypes
     path: Entities/Entity.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Line
     path: Entities/Entity.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Lwpolyline
     path: Entities/Entity.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/Entity.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: None
     path: Entities/Entity.cs

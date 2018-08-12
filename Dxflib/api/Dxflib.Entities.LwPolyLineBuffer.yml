@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: LwPolyLineBuffer
     path: Entities/LwPolyLineBuffer.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: .ctor
     path: Entities/LwPolyLineBuffer.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: NumberOfVerticies
     path: Entities/LwPolyLineBuffer.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: PolyLineFlag
     path: Entities/LwPolyLineBuffer.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: ConstantWidth
     path: Entities/LwPolyLineBuffer.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Elevation
     path: Entities/LwPolyLineBuffer.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Thickness
     path: Entities/LwPolyLineBuffer.cs
@@ -291,7 +291,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: XValues
     path: Entities/LwPolyLineBuffer.cs
@@ -328,7 +328,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: YValues
     path: Entities/LwPolyLineBuffer.cs
@@ -365,7 +365,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: BulgeList
     path: Entities/LwPolyLineBuffer.cs
@@ -402,7 +402,7 @@ items:
   source:
     remote:
       path: Dxflib/Entities/LwPolyLineBuffer.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: Parse
     path: Entities/LwPolyLineBuffer.cs

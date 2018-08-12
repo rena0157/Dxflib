@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Dxflib/Geometry/GeometricEntityBase.cs
-      branch: DocsFXTest
+      branch: master
       repo: https://github.com/rena0157/Dxflib.git
     id: GeometryChangedHandler
     path: Geometry/GeometricEntityBase.cs
