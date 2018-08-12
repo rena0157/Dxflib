@@ -57,12 +57,4 @@ Future development includes adding these other entities (in order of importance)
 - MTEXT
 - ARC
 - POLYLINE
-- SPLINE
-- Others to come...
-
-### Contribution
-Contribution would really by helpful give me a shout if you would like to contribute or send 
-a pull request. I am not that new to coding but I am learning C# and would really appreciate any
-input.
-
-<a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/_site/index.html">Hello</a>
+[sf]()
