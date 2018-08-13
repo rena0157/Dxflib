@@ -33,9 +33,6 @@ namespace Dxflib.Geometry
     ///     3 vertices that the arc must pass though. The first and second vertex are the starting
     ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
     ///     the moving of one vertex the center arc length is usually chosen as the middle vertex.
-    ///     <remarks>
-    ///     This is not an entity class
-    ///     </remarks>
     /// </summary>
     public class GeoArc : GeometricEntityBase
     {
