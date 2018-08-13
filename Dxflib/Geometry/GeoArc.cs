@@ -305,17 +305,6 @@ namespace Dxflib.Geometry
 
         #endregion
 
-        /// <summary>
-        ///     Converts this object to a <see cref="Vector" />.
-        ///     Where the <see cref="Vector.HeadVertex" /> and
-        ///     <see cref="Vector.TailVertex" /> correspond with
-        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
-        ///     of this object respectively.
-        /// </summary>
-        /// <returns>A new <see cref="Vector" /> Object</returns>
-        public Vector ToVector() { return new Vector(_vertex0, _vertex1); }
-
-
         #region StaticMethods
 
         /// <summary>
@@ -417,6 +406,18 @@ namespace Dxflib.Geometry
         }
 
         #endregion
+
+        #region Methods
+
+        /// <summary>
+        ///     Converts this object to a <see cref="Vector" />.
+        ///     Where the <see cref="Vector.HeadVertex" /> and
+        ///     <see cref="Vector.TailVertex" /> correspond with
+        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
+        ///     of this object respectively.
+        /// </summary>
+        /// <returns>A new <see cref="Vector" /> Object</returns>
+        public Vector ToVector() { return new Vector(_vertex0, _vertex1); }
 
         /// <summary>
         ///     Method that calculates the middle point on the arc
@@ -586,5 +587,9 @@ namespace Dxflib.Geometry
                     break;
             }
         }
+
+        #endregion
+
+
     }
 }
