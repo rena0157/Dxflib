@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.37.2" />
+    <PackageReference Include="docfx.console" Version="2.38.0" />
   </ItemGroup>
 
 </Project>
