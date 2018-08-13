@@ -1,4 +1,4 @@
-# DXF Library - The Drawing Exchange Format Library in C#
+# DXF Library - The Drawing Interchange Format Library in C#
 
 ### Introduction
 This is one of many DXF librarys that is avalible here on Github. This library serves a dual purpose:

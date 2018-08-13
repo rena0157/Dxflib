@@ -239,5 +239,19 @@ namespace Dxflib.Tests.Geometry
             Assert.IsTrue(Math.Abs(testArc.Vertex1.X - -0.6000) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(testArc.Vertex1.Y - 2.4500) < GeoMath.Tolerance);
         }
+
+        // 3V Tests ------------------------------------------------
+
+        [TestMethod]
+        public void Build3VTests()
+        {
+            var vertex0 = new Vertex(0, 2);
+            var vertex1 = new Vertex(1, 2.5);
+            var vertex2 = new Vertex(2, 2);
+            var testArc = new GeoArc(vertex0, vertex1, vertex2);
+
+            Assert.IsTrue(Math.Abs(testArc.CenterVertex.X - 1) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(testArc.CenterVertex.Y - 1.25) < GeoMath.Tolerance);
+        }
     }
 }

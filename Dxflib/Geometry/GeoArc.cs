@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-10-8:55 PM
+// Last Updated: 2018-08-12-8:35 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -20,18 +20,15 @@ namespace Dxflib.Geometry
     ///     an arc can be defined in more than one way. If this GeoArc is a
     ///     part of an LwPolyLine then is defined using a bulge. If it is
     ///     alone then it is defined using a radius.
-    ///
     ///     Note that there are 3 distinct ways to construct an Arc
     ///     1. The First way is the Vertex, Vertex and Bulge (VVB) Method
     ///     This Method uses two vertices that are at endpoints of the arc and
     ///     a numerical values called the bulge.
-    ///
     ///     2. The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
     ///     (CAAR) Method. The CAAR method uses a point that will be the center point of the arc
     ///     the starting angle of the arc and the ending angle of the arc as well as the radius
     ///     of the arc. This method is mostly used if a user would like to create an arc. Also,
     ///     this method is used in the AutoCAD ARC Entity.
-    ///
     ///     3. The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
     ///     3 vertices that the arc must pass though. The first and second vertex are the starting
     ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
@@ -95,16 +92,20 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Geo Arc Constructor: Vertex, Vertex, Vertex (V3)
-        /// The V3 Constructor takes three vertices that the arc must pass through and
-        /// calculates all of the other properties of the arc
+        ///     Geo Arc Constructor: Vertex, Vertex, Vertex (V3)
+        ///     The V3 Constructor takes three vertices that the arc must pass through and
+        ///     calculates all of the other properties of the arc
         /// </summary>
         /// <param name="vertex0">The Starting Vertex</param>
         /// <param name="middleVertex">The Middle Vertex</param>
         /// <param name="vertex1">The Ending Vertex</param>
         public GeoArc(Vertex vertex0, Vertex middleVertex, Vertex vertex1)
         {
-            // Todo: Create a constructor that takes three vertices and creates a GeoArc
+            _vertex0 = vertex0;
+            _arcMiddleVertex = middleVertex;
+            _vertex1 = vertex1;
+
+            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
         }
 
         /// <summary>
@@ -183,7 +184,7 @@ namespace Dxflib.Geometry
             {
                 _vertex0 = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("Vertex0"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Vertex0"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
             }
         }
 
@@ -197,7 +198,7 @@ namespace Dxflib.Geometry
             {
                 _vertex1 = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("Vertex1"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Vertex1"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
             }
         }
 
@@ -216,9 +217,9 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// The middle point between the Starting Vertex (<see cref="Vertex0"/>)
-        /// and the Ending Vertex (<see cref="Vertex1"/>) that lies on the path
-        /// of the arc. 
+        ///     The middle point between the Starting Vertex (<see cref="Vertex0" />)
+        ///     and the Ending Vertex (<see cref="Vertex1" />) that lies on the path
+        ///     of the arc.
         /// </summary>
         public Vertex MiddleVertex
         {
@@ -246,13 +247,13 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Converts this object to a <see cref="Vector"/>.
-        /// Where the <see cref="Vector.HeadVertex"/> and
-        /// <see cref="Vector.TailVertex"/> correspond with
-        /// the <see cref="Vertex0"/> and <see cref="Vertex1"/>
-        /// of this object respectively.
+        ///     Converts this object to a <see cref="Vector" />.
+        ///     Where the <see cref="Vector.HeadVertex" /> and
+        ///     <see cref="Vector.TailVertex" /> correspond with
+        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
+        ///     of this object respectively.
         /// </summary>
-        /// <returns>A new <see cref="Vector"/> Object</returns>
+        /// <returns>A new <see cref="Vector" /> Object</returns>
         public Vector ToVector()
         {
             // Todo: Test This
@@ -273,7 +274,7 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     Calculates the Center Vertex
         /// </summary>
-        /// <returns>A <see cref="Vertex"/> object</returns>
+        /// <returns>A <see cref="Vertex" /> object</returns>
         public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertex1, double bulge)
         {
             // Vector between V0 and V1
@@ -302,6 +303,44 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
+        ///     Calculates the center vertex from 3 other vertices.
+        /// </summary>
+        /// <param name="vertex0">The Starting Vertex</param>
+        /// <param name="vertexOnArc">Any Vertex that the arc will pass through</param>
+        /// <param name="vertex1">The Ending Vertex</param>
+        /// <returns>The center vertex of the arc</returns>
+        public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertexOnArc, Vertex vertex1)
+        {
+            var centerVertex = new Vertex(0, 0);
+
+            // Slope between the first vertex and the second
+            var m1 = ( vertexOnArc.Y - vertex0.Y ) / ( vertexOnArc.X - vertex0.X );
+
+            // Slope between the second and the third vertex
+            var m2 = ( vertex1.Y - vertexOnArc.Y ) / ( vertex1.X - vertexOnArc.X );
+
+            // Vertex that is at the center point on a line that is drawn
+            // between vertex0 and vertexOnArc
+            var vertexA = new Vertex(
+                vertex0.X + ( vertexOnArc.X - vertex0.X ) / 2,
+                vertex0.Y + ( vertexOnArc.Y - vertex0.Y ) / 2);
+
+            // Vertex that is at the center point on a line that is drawn
+            // between vertexOnArc and vertex1
+            var vertexB = new Vertex(
+                vertexOnArc.X + ( vertex1.X - vertexOnArc.X ) / 2,
+                vertexOnArc.Y + ( vertex1.Y - vertexOnArc.Y ) / 2);
+
+            // Calculating and setting the x coordinate of the center vertex
+            centerVertex.X = ( vertexB.Y - vertexA.Y + vertexB.X / m2 - vertexA.X / m1 ) /
+                             ( 1 / m2 - 1 / m1 );
+            // Calculating and setting the y coordinate of the center vertex
+            centerVertex.Y = -1 / m1 * ( centerVertex.X - vertexA.X ) + vertexA.Y;
+            // Return the centerVertex
+            return centerVertex;
+        }
+
+        /// <summary>
         ///     A function that takes the center vertex of a circle or arc and
         ///     can get any vertex that lies on the arc that corresponds with the angle given.
         /// </summary>
@@ -321,7 +360,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Method that calculates the middle point on the arc
+        ///     Method that calculates the middle point on the arc
         /// </summary>
         /// <returns>A Vertex that is the middle point on the arc</returns>
         private Vertex GetMiddlePoint()
@@ -395,6 +434,28 @@ namespace Dxflib.Geometry
                     Area = GeoMath.ChordArea(this);
                 }
                     break;
+
+                case "Build3V":
+                {
+                    _centerVertex = CalcCenterVertex(_vertex0, _arcMiddleVertex, _vertex1);
+
+                    _startAngle = Vector.AngleBetweenVectors(
+                        new Vector(_centerVertex, _vertex0).ToUnitVector(),
+                        UnitVectors.XUnitVector);
+
+                    _endAngle = Vector.AngleBetweenVectors(
+                        new Vector(_centerVertex, _vertex1).ToUnitVector(),
+                        UnitVectors.XUnitVector);
+
+                    _angle = _endAngle - _startAngle;
+                    _bulge = Bulge.CalcBulge(_angle);
+                    _radius = new GeoLine(_centerVertex, _arcMiddleVertex).Length;
+
+                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
+                    Area = GeoMath.ChordArea(this);
+                }
+                    break;
+
                 case "Angle":
                 {
                     // Update properties
@@ -415,15 +476,15 @@ namespace Dxflib.Geometry
                 case "Radius":
                 {
                     _bulge = Math.Tan(_angle / 4);
-                    
+
                     // Recalculate the starting vertex
                     _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
                     _vertex0.GeometryChanged += OnVertexPropertyChanged;
-                    
+
                     // Recalculate the ending vertex
                     _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
                     _vertex1.GeometryChanged += OnVertexPropertyChanged;
-                    
+
                     // middle vertex
                     _arcMiddleVertex = GetMiddlePoint();
 
@@ -439,7 +500,7 @@ namespace Dxflib.Geometry
                     // Move the starting vertex over
                     _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
                     _vertex0.GeometryChanged += OnVertexPropertyChanged;
-                    
+
                     _arcMiddleVertex = GetMiddlePoint();
 
                     // Get only properties
@@ -461,16 +522,6 @@ namespace Dxflib.Geometry
                     Area = GeoMath.ChordArea(this);
                 }
                     break;
-                case "Vertex0":
-                {
-                    // todo: Add this
-                }
-                    break;
-                case "Vertex1":
-                {
-                    // todo: add this
-                }
-                    break;
                 case "CenterVertex":
                 {
                     // todo: add this
@@ -480,6 +531,9 @@ namespace Dxflib.Geometry
                 {
                     // todo: add this
                 }
+                    break;
+                // ReSharper disable once RedundantEmptySwitchSection
+                default:
                     break;
             }
         }
