@@ -1349,6 +1349,12 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.GeoArc.BulgeValue
   nameWithType: GeoArc.BulgeValue
+- uid: Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  name: CalcCenterVertex(Vertex, Vertex, Vertex)
+  href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_
+  commentId: M:Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)
+  fullName: Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex, Dxflib.Geometry.Vertex, Dxflib.Geometry.Vertex)
+  nameWithType: GeoArc.CalcCenterVertex(Vertex, Vertex, Vertex)
 - uid: Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)
   name: CalcCenterVertex(Vertex, Vertex, Double)
   href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_System_Double_
@@ -1427,6 +1433,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.GeoArc.Length
   nameWithType: GeoArc.Length
+- uid: Dxflib.Geometry.GeoArc.MiddleVertex
+  name: MiddleVertex
+  href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_MiddleVertex
+  commentId: P:Dxflib.Geometry.GeoArc.MiddleVertex
+  fullName: Dxflib.Geometry.GeoArc.MiddleVertex
+  nameWithType: GeoArc.MiddleVertex
+- uid: Dxflib.Geometry.GeoArc.MiddleVertex*
+  name: MiddleVertex
+  href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_MiddleVertex_
+  commentId: Overload:Dxflib.Geometry.GeoArc.MiddleVertex
+  isSpec: "True"
+  fullName: Dxflib.Geometry.GeoArc.MiddleVertex
+  nameWithType: GeoArc.MiddleVertex
 - uid: Dxflib.Geometry.GeoArc.Radius
   name: Radius
   href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_Radius
@@ -2190,6 +2209,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.LinAlg.Vector.Scale
   nameWithType: Vector.Scale
+- uid: Dxflib.LinAlg.Vector.Slope
+  name: Slope
+  href: api/Dxflib.LinAlg.Vector.html#Dxflib_LinAlg_Vector_Slope
+  commentId: P:Dxflib.LinAlg.Vector.Slope
+  fullName: Dxflib.LinAlg.Vector.Slope
+  nameWithType: Vector.Slope
+- uid: Dxflib.LinAlg.Vector.Slope*
+  name: Slope
+  href: api/Dxflib.LinAlg.Vector.html#Dxflib_LinAlg_Vector_Slope_
+  commentId: Overload:Dxflib.LinAlg.Vector.Slope
+  isSpec: "True"
+  fullName: Dxflib.LinAlg.Vector.Slope
+  nameWithType: Vector.Slope
 - uid: Dxflib.LinAlg.Vector.TailVertex
   name: TailVertex
   href: api/Dxflib.LinAlg.Vector.html#Dxflib_LinAlg_Vector_TailVertex

@@ -278,24 +278,24 @@
       <section><p>The GeoArc Class, a class that defines an arc. Note that
 an arc can be defined in more than one way. If this GeoArc is a
 part of an LwPolyLine then is defined using a bulge. If it is
-alone then it is defined using a radius.</p>
-<p>Note that there are 3 distinct ways to construct an Arc</p>
+alone then it is defined using a radius.
+Note that there are 3 distinct ways to construct an Arc</p>
 <ol>
-<li><p>The First way is the Vertex, Vertex and Bulge (VVB) Method
+<li>The First way is the Vertex, Vertex and Bulge (VVB) Method
 This Method uses two vertices that are at endpoints of the arc and
-a numerical values called the bulge.</p>
-</li>
-<li><p>The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
+a numerical values called the bulge.</li>
+<li>The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
 (CAAR) Method. The CAAR method uses a point that will be the center point of the arc
 the starting angle of the arc and the ending angle of the arc as well as the radius
 of the arc. This method is mostly used if a user would like to create an arc. Also,
-this method is used in the AutoCAD ARC Entity.</p>
-</li>
-<li><p>The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
+this method is used in the AutoCAD ARC Entity.</li>
+<li>The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
 3 vertices that the arc must pass though. The first and second vertex are the starting
 and ending vertices. The middle vertex can be any vertex that is on the arc. During
-the moving of one vertex the center arc length is usually chosen as the middle vertex.</p>
-</li>
+the moving of one vertex the center arc length is usually chosen as the middle vertex.
+<remarks>
+This is not an entity class
+</remarks></li>
 </ol>
 </section>
       <h4><a class="xref" href="Dxflib.Geometry.GeoLine.html">GeoLine</a></h4>

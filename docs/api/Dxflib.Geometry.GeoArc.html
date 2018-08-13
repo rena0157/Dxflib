@@ -273,24 +273,24 @@
   <div class="markdown level0 summary"><p>The GeoArc Class, a class that defines an arc. Note that
 an arc can be defined in more than one way. If this GeoArc is a
 part of an LwPolyLine then is defined using a bulge. If it is
-alone then it is defined using a radius.</p>
-<p>Note that there are 3 distinct ways to construct an Arc</p>
+alone then it is defined using a radius.
+Note that there are 3 distinct ways to construct an Arc</p>
 <ol>
-<li><p>The First way is the Vertex, Vertex and Bulge (VVB) Method
+<li>The First way is the Vertex, Vertex and Bulge (VVB) Method
 This Method uses two vertices that are at endpoints of the arc and
-a numerical values called the bulge.</p>
-</li>
-<li><p>The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
+a numerical values called the bulge.</li>
+<li>The Second Method is the Center Point, Starting Angle, Ending Angle and Radius
 (CAAR) Method. The CAAR method uses a point that will be the center point of the arc
 the starting angle of the arc and the ending angle of the arc as well as the radius
 of the arc. This method is mostly used if a user would like to create an arc. Also,
-this method is used in the AutoCAD ARC Entity.</p>
-</li>
-<li><p>The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
+this method is used in the AutoCAD ARC Entity.</li>
+<li>The Third Method is the Vertex, Vertex, Vertex (V3) Method. The V3 method uses
 3 vertices that the arc must pass though. The first and second vertex are the starting
 and ending vertices. The middle vertex can be any vertex that is on the arc. During
-the moving of one vertex the center arc length is usually chosen as the middle vertex.</p>
-</li>
+the moving of one vertex the center arc length is usually chosen as the middle vertex.
+<remarks>
+This is not an entity class
+</remarks></li>
 </ol>
 </div>
   <div class="markdown level0 conceptual"></div>
@@ -494,7 +494,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Angle.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Angle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L118">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L122">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Angle_" data-uid="Dxflib.Geometry.GeoArc.Angle*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Angle" data-uid="Dxflib.Geometry.GeoArc.Angle">Angle</h4>
@@ -525,7 +525,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Area.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Area%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L146">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L150">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Area_" data-uid="Dxflib.Geometry.GeoArc.Area*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Area" data-uid="Dxflib.Geometry.GeoArc.Area">Area</h4>
@@ -556,7 +556,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_BulgeValue.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.BulgeValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L221">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L241">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_BulgeValue_" data-uid="Dxflib.Geometry.GeoArc.BulgeValue*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_BulgeValue" data-uid="Dxflib.Geometry.GeoArc.BulgeValue">BulgeValue</h4>
@@ -587,11 +587,11 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_CenterVertex.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.CenterVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L207">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L211">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_CenterVertex_" data-uid="Dxflib.Geometry.GeoArc.CenterVertex*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_CenterVertex" data-uid="Dxflib.Geometry.GeoArc.CenterVertex">CenterVertex</h4>
-  <div class="markdown level1 summary"><p>The Center of the Arc</p>
+  <div class="markdown level1 summary"><p>The Circular center point of the arc</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -618,7 +618,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_EndAngle.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.EndAngle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L165">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L169">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_EndAngle_" data-uid="Dxflib.Geometry.GeoArc.EndAngle*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_EndAngle" data-uid="Dxflib.Geometry.GeoArc.EndAngle">EndAngle</h4>
@@ -649,7 +649,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Length.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L113">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L117">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Length_" data-uid="Dxflib.Geometry.GeoArc.Length*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Length" data-uid="Dxflib.Geometry.GeoArc.Length">Length</h4>
@@ -677,10 +677,43 @@ calculates all of the other properties of the arc</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_MiddleVertex.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.MiddleVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L227">View Source</a>
+  </span>
+  <a id="Dxflib_Geometry_GeoArc_MiddleVertex_" data-uid="Dxflib.Geometry.GeoArc.MiddleVertex*"></a>
+  <h4 id="Dxflib_Geometry_GeoArc_MiddleVertex" data-uid="Dxflib.Geometry.GeoArc.MiddleVertex">MiddleVertex</h4>
+  <div class="markdown level1 summary"><p>The middle point between the Starting Vertex (<a class="xref" href="Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_Vertex0">Vertex0</a>)
+and the Ending Vertex (<a class="xref" href="Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_Vertex1">Vertex1</a>) that lies on the path
+of the arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vertex MiddleVertex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Radius.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Radius%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L132">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L136">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Radius_" data-uid="Dxflib.Geometry.GeoArc.Radius*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Radius" data-uid="Dxflib.Geometry.GeoArc.Radius">Radius</h4>
@@ -711,7 +744,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_StartAngle.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.StartAngle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L151">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L155">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_StartAngle_" data-uid="Dxflib.Geometry.GeoArc.StartAngle*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_StartAngle" data-uid="Dxflib.Geometry.GeoArc.StartAngle">StartAngle</h4>
@@ -742,7 +775,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Vertex0.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Vertex0%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L179">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L183">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Vertex0_" data-uid="Dxflib.Geometry.GeoArc.Vertex0*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Vertex0" data-uid="Dxflib.Geometry.GeoArc.Vertex0">Vertex0</h4>
@@ -773,7 +806,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_Vertex1.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.Vertex1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L193">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L197">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_Vertex1_" data-uid="Dxflib.Geometry.GeoArc.Vertex1*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_Vertex1" data-uid="Dxflib.Geometry.GeoArc.Vertex1">Vertex1</h4>
@@ -803,10 +836,72 @@ calculates all of the other properties of the arc</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex%2CDxflib.Geometry.Vertex%2CDxflib.Geometry.Vertex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L315">View Source</a>
+  </span>
+  <a id="Dxflib_Geometry_GeoArc_CalcCenterVertex_" data-uid="Dxflib.Geometry.GeoArc.CalcCenterVertex*"></a>
+  <h4 id="Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_" data-uid="Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)">CalcCenterVertex(Vertex, Vertex, Vertex)</h4>
+  <div class="markdown level1 summary"><p>Calculates the center vertex from 3 other vertices.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertexOnArc, Vertex vertex1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td><span class="parametername">vertex0</span></td>
+        <td><p>The Starting Vertex</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td><span class="parametername">vertexOnArc</span></td>
+        <td><p>Any Vertex that the arc will pass through</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td><span class="parametername">vertex1</span></td>
+        <td><p>The Ending Vertex</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td><p>The center vertex of the arc</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex%2CDxflib.Geometry.Vertex%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L256">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L281">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_CalcCenterVertex_" data-uid="Dxflib.Geometry.GeoArc.CalcCenterVertex*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_CalcCenterVertex_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_System_Double_" data-uid="Dxflib.Geometry.GeoArc.CalcCenterVertex(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex,System.Double)">CalcCenterVertex(Vertex, Vertex, Double)</h4>
@@ -855,7 +950,8 @@ calculates all of the other properties of the arc</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
-        <td></td>
+        <td><p>A <a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a> object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -864,7 +960,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_CalcLength.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.CalcLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L246">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L271">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_CalcLength_" data-uid="Dxflib.Geometry.GeoArc.CalcLength*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_CalcLength" data-uid="Dxflib.Geometry.GeoArc.CalcLength">CalcLength()</h4>
@@ -898,7 +994,7 @@ calculates all of the other properties of the arc</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_CalcPointOnArc_Dxflib_Geometry_Vertex_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.CalcPointOnArc(Dxflib.Geometry.Vertex%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L291">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L354">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_CalcPointOnArc_" data-uid="Dxflib.Geometry.GeoArc.CalcPointOnArc*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_CalcPointOnArc_Dxflib_Geometry_Vertex_System_Double_System_Double_" data-uid="Dxflib.Geometry.GeoArc.CalcPointOnArc(Dxflib.Geometry.Vertex,System.Double,System.Double)">CalcPointOnArc(Vertex, Double, Double)</h4>
@@ -961,11 +1057,16 @@ can get any vertex that lies on the arc that corresponds with the angle given.</
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_ToVector.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.ToVector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L235">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L260">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_ToVector_" data-uid="Dxflib.Geometry.GeoArc.ToVector*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_ToVector" data-uid="Dxflib.Geometry.GeoArc.ToVector">ToVector()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Converts this object to a <a class="xref" href="Dxflib.LinAlg.Vector.html">Vector</a>.
+Where the <a class="xref" href="Dxflib.LinAlg.Vector.html#Dxflib_LinAlg_Vector_HeadVertex">HeadVertex</a> and
+<a class="xref" href="Dxflib.LinAlg.Vector.html#Dxflib_LinAlg_Vector_TailVertex">TailVertex</a> correspond with
+the <a class="xref" href="Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_Vertex0">Vertex0</a> and <a class="xref" href="Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_Vertex1">Vertex1</a>
+of this object respectively.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -982,7 +1083,8 @@ can get any vertex that lies on the arc that corresponds with the angle given.</
     <tbody>
       <tr>
         <td><a class="xref" href="Dxflib.LinAlg.Vector.html">Vector</a></td>
-        <td></td>
+        <td><p>A new <a class="xref" href="Dxflib.LinAlg.Vector.html">Vector</a> Object</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -991,7 +1093,7 @@ can get any vertex that lies on the arc that corresponds with the angle given.</
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoArc_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoArc.UpdateGeometry(System.Object%2CDxflib.Geometry.GeometryChangedHandlerArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L319">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoArc.cs/#L394">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoArc_UpdateGeometry_" data-uid="Dxflib.Geometry.GeoArc.UpdateGeometry*"></a>
   <h4 id="Dxflib_Geometry_GeoArc_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_" data-uid="Dxflib.Geometry.GeoArc.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)">UpdateGeometry(Object, GeometryChangedHandlerArgs)</h4>
