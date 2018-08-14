@@ -16,7 +16,7 @@ namespace Dxflib.LinAlg
 {
     /// <summary>
     ///     The Vector Class: Defines vector mathematics and functionality
-    ///     for the dxf library
+    ///     for the dxf library 
     /// </summary>
     public class Vector
     {

@@ -15,7 +15,7 @@ namespace Dxflib.Entities
 {
     /// <inheritdoc />
     /// <summary>
-    ///     The LwPolyLine Entity
+    ///     The LwPolyLine Entity 
     /// </summary>
     public class LwPolyLine : Entity
     {
