@@ -1368,19 +1368,6 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.GeoArc.CalcCenterVertex
   nameWithType: GeoArc.CalcCenterVertex
-- uid: Dxflib.Geometry.GeoArc.CalcLength
-  name: CalcLength()
-  href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_CalcLength
-  commentId: M:Dxflib.Geometry.GeoArc.CalcLength
-  fullName: Dxflib.Geometry.GeoArc.CalcLength()
-  nameWithType: GeoArc.CalcLength()
-- uid: Dxflib.Geometry.GeoArc.CalcLength*
-  name: CalcLength
-  href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_CalcLength_
-  commentId: Overload:Dxflib.Geometry.GeoArc.CalcLength
-  isSpec: "True"
-  fullName: Dxflib.Geometry.GeoArc.CalcLength
-  nameWithType: GeoArc.CalcLength
 - uid: Dxflib.Geometry.GeoArc.CalcPointOnArc(Dxflib.Geometry.Vertex,System.Double,System.Double)
   name: CalcPointOnArc(Vertex, Double, Double)
   href: api/Dxflib.Geometry.GeoArc.html#Dxflib_Geometry_GeoArc_CalcPointOnArc_Dxflib_Geometry_Vertex_System_Double_System_Double_

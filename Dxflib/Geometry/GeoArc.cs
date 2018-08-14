@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-12-8:35 PM
+// Last Updated: 2018-08-13-6:35 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -36,6 +36,8 @@ namespace Dxflib.Geometry
     /// </summary>
     public class GeoArc : GeometricEntityBase
     {
+        #region PrivateFields
+
         private double _angle;
         private Vertex _arcMiddleVertex;
         private double _bulge;
@@ -45,6 +47,10 @@ namespace Dxflib.Geometry
         private double _startAngle;
         private Vertex _vertex0;
         private Vertex _vertex1;
+
+        #endregion
+
+        #region Constructors
 
         /// <summary>
         ///     GeoArc Constructor: Vertex, Vertex and Bulge (VVB)
@@ -108,6 +114,10 @@ namespace Dxflib.Geometry
             UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
         }
 
+        #endregion
+
+        #region Properties
+
         /// <summary>
         ///     The Length of the GeoArc
         /// </summary>
@@ -116,6 +126,11 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Total Angle of the Arc
         /// </summary>
+        /// <remarks>
+        ///     On Changing this value <see cref="Vertex1" />
+        ///     will be moved to a new location that corresponds with the
+        ///     new total angle.
+        /// </remarks>
         public double Angle
         {
             get => _angle;
@@ -130,6 +145,15 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Radius of the Arc
         /// </summary>
+        /// <remarks>
+        ///     On Changing this property <see cref="Vertex0" />
+        ///     and <see cref="Vertex1" /> will be recalculated
+        ///     using <see cref="CalcPointOnArc" /> with the new Radius Given
+        ///     and the same center point.
+        ///     Also, When this property is change the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" />
+        ///     Event will be thrown.
+        /// </remarks>
         public double Radius
         {
             get => _radius;
@@ -149,6 +173,13 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Starting Angle of the arc
         /// </summary>
+        /// <remarks>
+        ///     On Changing this property <see cref="Vertex0" />
+        ///     will be updated using <see cref="CalcPointOnArc" /> with
+        ///     the new angle given.
+        ///     Also, when this property is changed the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public double StartAngle
         {
             get => _startAngle;
@@ -163,6 +194,12 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Ending Angle of the arc
         /// </summary>
+        /// <remarks>
+        ///     On Changing this property <see cref="Vertex1" />
+        ///     will change and the <see cref="GeometricEntityBase.GeometryChanged" /> with the
+        ///     given new angle
+        ///     event will fire.
+        /// </remarks>
         public double EndAngle
         {
             get => _endAngle;
@@ -177,6 +214,10 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The First Vertex
         /// </summary>
+        /// <remarks>
+        ///     On changing the property the GeoArc will update and the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public Vertex Vertex0
         {
             get => _vertex0;
@@ -191,6 +232,10 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Second Vertex
         /// </summary>
+        /// <remarks>
+        ///     On changing this property the GeoArc will update and the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public Vertex Vertex1
         {
             get => _vertex1;
@@ -205,6 +250,10 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Circular center point of the arc
         /// </summary>
+        /// <remarks>
+        ///     On changing this property the GeoArc will update and the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public Vertex CenterVertex
         {
             get => _centerVertex;
@@ -212,7 +261,7 @@ namespace Dxflib.Geometry
             {
                 _centerVertex = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("CenterVertex"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("CenterVertex"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildCAAR"));
             }
         }
 
@@ -221,6 +270,10 @@ namespace Dxflib.Geometry
         ///     and the Ending Vertex (<see cref="Vertex1" />) that lies on the path
         ///     of the arc.
         /// </summary>
+        /// <remarks>
+        ///     On changing this property the GeoArc will update and the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public Vertex MiddleVertex
         {
             get => _arcMiddleVertex;
@@ -235,6 +288,10 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The bulge value for this object (Is similar to the curvature of an arc)
         /// </summary>
+        /// <remarks>
+        ///     On changing this property the GeoArc will update and the
+        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        /// </remarks>
         public double BulgeValue
         {
             get => _bulge;
@@ -242,38 +299,27 @@ namespace Dxflib.Geometry
             {
                 _bulge = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("BulgeValue"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("BulgeValue"));
+                UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildVVB"));
             }
         }
 
-        /// <summary>
-        ///     Converts this object to a <see cref="Vector" />.
-        ///     Where the <see cref="Vector.HeadVertex" /> and
-        ///     <see cref="Vector.TailVertex" /> correspond with
-        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
-        ///     of this object respectively.
-        /// </summary>
-        /// <returns>A new <see cref="Vector" /> Object</returns>
-        public Vector ToVector()
-        {
-            // Todo: Test This
-            return new Vector(_vertex0, _vertex1);
-        }
+        #endregion
 
-        /// <inheritdoc />
-        /// <summary>
-        ///     The Length of the GeoArc
-        /// </summary>
-        /// <returns>A double which represents the length</returns>
-        protected override double CalcLength()
-        {
-            return GeoMath.Distance(
-                _vertex0, _vertex1, _bulge);
-        }
+        #region StaticMethods
 
         /// <summary>
         ///     Calculates the Center Vertex
         /// </summary>
+        /// <code>
+        ///      // Create the vertices and the bulge
+        ///      var vertex1 = new Vertex(2, 2);
+        ///      var vertex0 = new Vertex(0, 2);
+        ///      const double bulgeValue = -0.5;
+        /// 
+        ///      // Build the Vertex
+        ///      var testVertex = CalcCenterVertex(vertex0, vertex1, bulgeValue);
+        ///      // Should create a Vertex == (1, 1.25)
+        ///  </code>
         /// <returns>A <see cref="Vertex" /> object</returns>
         public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertex1, double bulge)
         {
@@ -358,6 +404,20 @@ namespace Dxflib.Geometry
                 vector.HeadVertex.Y + centerVertex.Y,
                 vector.HeadVertex.Z + centerVertex.Z);
         }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        ///     Converts this object to a <see cref="Vector" />.
+        ///     Where the <see cref="Vector.HeadVertex" /> and
+        ///     <see cref="Vector.TailVertex" /> correspond with
+        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
+        ///     of this object respectively.
+        /// </summary>
+        /// <returns>A new <see cref="Vector" /> Object</returns>
+        public Vector ToVector() { return new Vector(_vertex0, _vertex1); }
 
         /// <summary>
         ///     Method that calculates the middle point on the arc
@@ -522,20 +582,14 @@ namespace Dxflib.Geometry
                     Area = GeoMath.ChordArea(this);
                 }
                     break;
-                case "CenterVertex":
-                {
-                    // todo: add this
-                }
-                    break;
-                case "BulgeValue":
-                {
-                    // todo: add this
-                }
-                    break;
                 // ReSharper disable once RedundantEmptySwitchSection
                 default:
                     break;
             }
         }
+
+        #endregion
+
+
     }
 }
