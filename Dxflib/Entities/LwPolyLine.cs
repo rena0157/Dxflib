@@ -19,8 +19,7 @@ namespace Dxflib.Entities
     /// </summary>
     public class LwPolyLine : Entity
     {
-        // The Geometric backing class
-        private readonly GeoPolyline _geoPolyline;
+
 
         #region Constructors
 
@@ -43,7 +42,7 @@ namespace Dxflib.Entities
             Thickness = lwPolyLineBuffer.Thickness;
 
             // Create the GeoPolyline
-            _geoPolyline = new GeoPolyline(
+            GPolyline = new GeoPolyline(
                 lwPolyLineBuffer.XValues, lwPolyLineBuffer.YValues,
                 lwPolyLineBuffer.BulgeList, PolyLineFlag);
         }
@@ -77,6 +76,11 @@ namespace Dxflib.Entities
         /// </summary>
         public double Thickness { get; }
 
+        /// <summary>
+        /// The GeoPolyline Property
+        /// </summary>
+        public GeoPolyline GPolyline { get; }
+
         #endregion
 
         #region GeometricProperties
@@ -84,12 +88,12 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The Total Length of the LwPolyLine
         /// </summary>
-        public double Length => _geoPolyline.Length;
+        public double Length => GPolyline.Length;
 
         /// <summary>
         ///     The Area if the LwPolyLine is Closed
         /// </summary>
-        public double Area => _geoPolyline.Area;
+        public double Area => GPolyline.Area;
 
         #endregion
     }
