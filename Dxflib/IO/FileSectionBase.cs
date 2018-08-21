@@ -78,4 +78,14 @@ namespace Dxflib.IO
 
         [Description("None")] None
     }
+
+    public class FileSectionStartMarkers
+    {
+        public const string Header = "HEADER";
+        public const string Classes = "CLASSES";
+        public const string Tables = "TABLES";
+        public const string Blocks = "BLOCKS";
+        public const string Entities = "ENTITIES";
+        public const string Objects = "OBJECTS";
+    }
 }

@@ -48,6 +48,6 @@ namespace Dxflib.IO
         /// Get the next pair
         /// </summary>
         public TaggedData Next 
-            => Index < _list.Count - 1 ? _list[++Index] : new TaggedData("  0", "EOF");
+            => Index < _list.Count - 1 ? _list[++Index] : throw new IndexOutOfRangeException("Cannot Access this element as it is out of range");
     }
 }
