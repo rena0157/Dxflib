@@ -11,6 +11,7 @@
 
 using System;
 using System.ComponentModel;
+using Dxflib.IO;
 using Dxflib.Parser;
 
 namespace Dxflib.Entities
@@ -138,19 +139,19 @@ namespace Dxflib.Entities
         /// </summary>
         /// <param name="args">Line Changed Handler arguments</param>
         /// <returns>True if the parse was successful</returns>
-        public virtual bool Parse(LineChangeHandlerArgs args)
+        public virtual bool Parse(TaggedDataList list)
         {
-            switch (args.NewCurrentLine)
+            var currentData = list.CurrentData;
+            switch ( currentData.GroupCode )
             {
-                case EntityGroupCodes.Handle:
-                    Handle = args.NewNextLine;
+                case GroupCodesBase.Handle:
+                    Handle = currentData.Value;
                     return true;
-                // Layer
-                case EntityGroupCodes.Layer:
-                    LayerName = args.NewNextLine;
+                case GroupCodesBase.LayerName:
+                    LayerName = currentData.Value;
                     return true;
-
-                default: return false;
+                default:
+                    return false;
             }
         }
     }
@@ -184,22 +185,6 @@ namespace Dxflib.Entities
         ///     The Message override required to set the message property
         /// </summary>
         public override string Message { get; }
-    }
-
-    /// <summary>
-    ///     The Entity Global Group codes
-    /// </summary>
-    public static class EntityGroupCodes
-    {
-        /// <summary>
-        ///     The Handle of an <see cref="Entity.Handle"/>
-        /// </summary>
-        public const string Handle = "  5";
-
-        /// <summary>
-        ///     The LayerName of an <see cref="Entity.LayerName"/>
-        /// </summary>
-        public const string Layer = "  8";
     }
 
     /// <summary>

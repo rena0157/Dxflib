@@ -15,9 +15,8 @@ using System.Linq;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Entities;
+using Dxflib.IO;
 using Dxflib.Parser;
-
-// Test Commit Message: Hello
 
 namespace Dxflib
 {
@@ -39,7 +38,7 @@ namespace Dxflib
         /// <param name="pathToFile">An absolute or relative path to a dxf file</param>
         public DxfFile(string pathToFile)
         {
-            // Initalize
+            // Initialize
             var fileReader = new DxfReader(pathToFile);
             Layers = new LayerDictionary();
 
@@ -48,10 +47,16 @@ namespace Dxflib
             FileName = Path.GetFileName(PathToFile);
 
             // Read and parse the file
-            ContentStrings = fileReader.ReadFile();
+
             Entities = new List<Entity>();
-            _mainParser = new DxfFileMainParser(this);
-            Layers.UpdateDictionary(Entities);
+
+            DxfFileData = new TaggedDataList(fileReader.ReadFile());
+
+            var testAsciiParser = new AsciiParser(this);
+            testAsciiParser.ParseFile();
+
+            // _mainParser = new DxfFileMainParser(this);
+            // Layers.UpdateDictionary(Entities);
         }
         #endregion
         
@@ -60,6 +65,11 @@ namespace Dxflib
         /// The Content strings are all of the lines from the dxf file in a list of strings
         /// </summary>
         public string[] ContentStrings { get; }
+
+        /// <summary>
+        /// The Data List
+        /// </summary>
+        public TaggedDataList DxfFileData { get; }
 
         /// <summary>
         /// The Layer Dictionary is a <see cref="Dxflib.AcadEntities.LayerDictionary"/> object that is
@@ -71,7 +81,7 @@ namespace Dxflib
         /// The Entities property is a list of all the entities that were read from the file. The
         /// <see cref="Entity"/> types can be changed into any other type of derived class.
         /// </summary>
-        public List<Entity> Entities { get; }
+        public List<Entity> Entities { get; set; }
         #endregion
 
         #region FileProperties

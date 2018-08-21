@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using Dxflib.Entities;
+using Dxflib.IO;
 
 namespace Dxflib.Parser
 {
@@ -37,7 +38,7 @@ namespace Dxflib.Parser
         ///     The Current File section
         ///     Ex: Header, Entities, Objects
         /// </summary>
-        public FileSection CurrentFileSection { get; set; }
+        public FileSections CurrentFileSection { get; set; }
 
         /// <summary>
         ///     The Current Entity that is being extracted
@@ -129,26 +130,7 @@ namespace Dxflib.Parser
         public int LineIndex { get; }
     }
 
-    /// <summary>
-    ///     The File Section Enumeration that holds Enumerations for
-    ///     the different section of a dxf file
-    /// </summary>
-    public enum FileSection
-    {
-        [Description("Header")] Header,
 
-        [Description("Classes")] Classes,
-
-        [Description("Tables")] Tables,
-
-        [Description("Blocks")] Blocks,
-
-        [Description("Entities")] Entities,
-
-        [Description("Objects")] Objects,
-
-        [Description("None")] None
-    }
 
     public struct FileSectionStrings
     {

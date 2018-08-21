@@ -1,4 +1,5 @@
 ﻿using System;
+using Dxflib.IO;
 
 namespace Dxflib.Parser
 {
@@ -27,39 +28,39 @@ namespace Dxflib.Parser
                 case FileSectionStrings.SectionEnd:
                     break;
                 case FileSectionStrings.Header:
-                    _thisParser.CurrentFileSection = FileSection.Header;
+                    _thisParser.CurrentFileSection = FileSections.Header;
                     break;
                 case FileSectionStrings.Classes:
-                    _thisParser.CurrentFileSection = FileSection.Classes;
+                    _thisParser.CurrentFileSection = FileSections.Classes;
                     break;
                 case FileSectionStrings.Blocks:
-                    _thisParser.CurrentFileSection = FileSection.Blocks;
+                    _thisParser.CurrentFileSection = FileSections.Blocks;
                     break;
                 case FileSectionStrings.Entities:
-                    _thisParser.CurrentFileSection = FileSection.Entities;
+                    _thisParser.CurrentFileSection = FileSections.Entities;
                     break;
                 case FileSectionStrings.Objects:
-                    _thisParser.CurrentFileSection = FileSection.Objects;
+                    _thisParser.CurrentFileSection = FileSections.Objects;
                     break;
             }
 
             switch (_thisParser.CurrentFileSection)
             {
-                case FileSection.Header:
+                case FileSections.Header:
                     HeaderParser.Parse(_thisParser, args);
                     break;
-                case FileSection.Classes:
+                case FileSections.Classes:
                     break;
-                case FileSection.Tables:
+                case FileSections.Tables:
                     break;
-                case FileSection.Blocks:
+                case FileSections.Blocks:
                     break;
-                case FileSection.Entities:
+                case FileSections.Entities:
                     EntityParser.Parse(_thisParser, args);
                     break;
-                case FileSection.Objects:
+                case FileSections.Objects:
                     break;
-                case FileSection.None:
+                case FileSections.None:
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

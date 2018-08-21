@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using Dxflib.IO;
 using Dxflib.Parser;
 
 namespace Dxflib.Entities
@@ -72,36 +73,39 @@ namespace Dxflib.Entities
         ///     changed event.
         /// </param>
         /// <returns>True if parse was successful</returns>
-        public override bool Parse(LineChangeHandlerArgs args)
+        public override bool Parse(TaggedDataList list)
         {
-            // The Current line
-            var currentLine = args.NewCurrentLine;
-
-            // See if the base can parse the line
-            if (base.Parse(args))
-                return true;
-
-            // Switch on the current line to see 
-            // if it matches anything that is in the DXF spec.
-            switch (currentLine)
+            EntityType = EntityTypes.Line;
+            for ( var currentData = list.CurrentData;
+                currentData.GroupCode != GroupCodesBase.EntityType;
+                currentData = list.Next )
             {
-                case LineGroupCodes.Thickness:
-                    Thickness = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.X0:
-                    X0 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.X1:
-                    X1 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.Y0:
-                    Y0 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.Y1:
-                    Y1 = double.Parse(args.NewNextLine);
-                    return true;
-                default: return false;
+                if (base.Parse(list))
+                    continue;
+
+                switch ( currentData.GroupCode )
+                {
+                    case GroupCodesBase.XPoint:
+                        X0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.XPointEnd:
+                        X1 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPoint:
+                        Y0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPointEnd:
+                        Y1 = double.Parse(currentData.Value);
+                        continue;
+                    case LineGroupCodes.Thickness:
+                        Thickness = double.Parse(currentData.Value);
+                        continue;
+                    default:
+                        continue;
+                }
             }
+
+            return true;
         }
     }
 }

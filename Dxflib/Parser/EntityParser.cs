@@ -59,19 +59,19 @@ namespace Dxflib.Parser
             // Entity Parsing Branch
             switch (mainParser.CurrentEntityForExtraction)
             {
-                // Line
-                case EntityTypes.Line:
-                    mainParser.LineBuf.Parse(args);
-                    break;
-                // Lwpolyline
-                case EntityTypes.Lwpolyline:
-                    mainParser.LwPolyLineBuf.Parse(args);
-                    break;
-                // None
-                case EntityTypes.None:
-                    break;
-                default:
-                    throw new NotImplementedException();
+                //// Line
+                //case EntityTypes.Line:
+                //    mainParser.LineBuf.Parse(args);
+                //    break;
+                //// Lwpolyline
+                //case EntityTypes.Lwpolyline:
+                //    mainParser.LwPolyLineBuf.Parse(args);
+                //    break;
+                //// None
+                //case EntityTypes.None:
+                //    break;
+                //default:
+                    // throw new NotImplementedException();
             }
         }
 

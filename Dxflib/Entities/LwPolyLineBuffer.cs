@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using Dxflib.Geometry;
+using Dxflib.IO;
 using Dxflib.Parser;
 
 namespace Dxflib.Entities
@@ -86,71 +87,65 @@ namespace Dxflib.Entities
         /// </summary>
         /// <param name="args">LineChangeHandlerArguments</param>
         /// <returns>True or false if the parse was successful</returns>
-        public override bool Parse(LineChangeHandlerArgs args)
+        public override bool Parse(TaggedDataList list)
         {
-            if ( base.Parse(args) )
-                return true;
+            EntityType = EntityTypes.Lwpolyline;
 
-            switch ( args.NewCurrentLine )
+            for ( var currentData = list.Next;
+                currentData.GroupCode != GroupCodesBase.EntityType;
+                currentData = list.Next )
             {
-                // Number of Vertices
-                case LwPolyLineGroupGroupCodes.NumberOfVertices:
-                    NumberOfVertices = int.Parse(args.NewNextLine);
-                    return true;
+                if (base.Parse(list))
+                    continue;
 
-                // Lwpolyline Flag
-                case LwPolyLineGroupGroupCodes.PolyLineFlag:
-                    switch ( int.Parse(args.NewNextLine) )
-                    {
-                        case 0:
-                            PolyLineFlag = false;
-                            break;
-                        case 1:
-                            PolyLineFlag = true;
-                            break;
-                        default:
-                            return false;
-                    }
+                switch ( currentData.GroupCode )
+                {
+                    // Number of Vertices
+                    case LwPolyLineGroupGroupCodes.NumberOfVertices:
+                        NumberOfVertices = int.Parse(currentData.Value);
+                        continue;  
 
-                    return true;
+                    // Lwpolyline Flag
+                    case LwPolyLineGroupGroupCodes.PolyLineFlag:
+                        PolyLineFlag = currentData.Value.Contains("1");
+                        continue;
 
-                // Constant Width
-                case LwPolyLineGroupGroupCodes.ConstantWidth:
-                    ConstantWidth = double.Parse(args.NewNextLine);
-                    return true;
+                    // Constant Width
+                    case LwPolyLineGroupGroupCodes.ConstantWidth:
+                        ConstantWidth = double.Parse(currentData.Value);
+                        continue;
 
-                // Elevation
-                case LwPolyLineGroupGroupCodes.Elevation:
-                    Elevation = double.Parse(args.NewNextLine);
-                    return true;
+                    // Elevation
+                    case LwPolyLineGroupGroupCodes.Elevation:
+                        Elevation = double.Parse(currentData.Value);
+                        continue;
+                    
+                    // Thickness
+                    case LwPolyLineGroupGroupCodes.Thickness:
+                        Thickness = double.Parse(currentData.Value);
+                        continue;
 
-                // Thickness
-                case LwPolyLineGroupGroupCodes.Thickness:
-                    Thickness = double.Parse(args.NewNextLine);
-                    return true;
+                    // X values
+                    case LwPolyLineGroupGroupCodes.XValue:
+                        BulgeList.Add(Bulge.BulgeNull);
+                        XValues.Add(double.Parse(currentData.Value));
+                        continue;
 
-                // X values
-                case LwPolyLineGroupGroupCodes.XValue:
-                    BulgeList.Add(Bulge.BulgeNull);
-                    XValues.Add(double.Parse(args.NewNextLine));
-                    return true;
+                    // Y values
+                    case LwPolyLineGroupGroupCodes.YValue:
+                        YValues.Add(double.Parse(currentData.Value));
+                        continue;
 
-                // Y values
-                case LwPolyLineGroupGroupCodes.YValue:
-                    YValues.Add(double.Parse(args.NewNextLine));
-                    return true;
-
-                // Bulge Values
-                case LwPolyLineGroupGroupCodes.Bulge:
-                    BulgeList.RemoveAt(BulgeList.Count - 1);
-                    BulgeList.Add(double.Parse(args.NewNextLine));
-                    return true;
-
-                // ReSharper disable once RedundantEmptySwitchSection
-                // This is required for unexpected behaviour
-                default:
-                    return false;
+                    // Bulge Values
+                    case LwPolyLineGroupGroupCodes.Bulge:
+                        BulgeList.RemoveAt(BulgeList.Count - 1);
+                        BulgeList.Add(double.Parse(currentData.Value));
+                        continue;
+                    default:
+                        continue;
+                }
             }
+            return true;
         }
 
         /// <summary>
