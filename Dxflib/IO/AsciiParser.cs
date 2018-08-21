@@ -39,39 +39,32 @@ namespace Dxflib.IO
                 _dxfFile.DxfFileData.Index < _dxfFile.DxfFileData.Length;
                 currentData = _dxfFile.DxfFileData.Next)
             {
-
-                if ( currentData.Value == DxflibTools
-                         .GetEnumDescription(FileSections.Header) )
+                switch ( currentData.Value )
                 {
-                    _currentSection = FileSections.Header;
-                    _headerSectionArgs 
-                        = new HeaderSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
-                    _headerSectionArgs.ReadSection();
-                    BuildHeader();
-                }
-                else if ( currentData.Value == DxflibTools
-                              .GetEnumDescription(FileSections.Tables) )
-                {
-                    _currentSection = FileSections.Tables;
-                }
-                else if ( currentData.Value == DxflibTools
-                              .GetEnumDescription(FileSections.Blocks) )
-                {
-                    _currentSection = FileSections.Blocks;
-                }
-                else if ( currentData.Value == DxflibTools
-                              .GetEnumDescription(FileSections.Entities) )
-                {
-                    _currentSection = FileSections.Entities;
-                    _entitiesSectionArgs = new EntitiesSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
-                    _entitiesSectionArgs.ReadSection();
-                    BuildEntities();
-
-                }
-                else if ( currentData.Value == DxflibTools
-                              .GetEnumDescription(FileSections.Objects) )
-                {
-                    _currentSection = FileSections.Objects;
+                    case FileSectionStartMarkers.Header:
+                        _currentSection = FileSections.Header;
+                        _headerSectionArgs 
+                            = new HeaderSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
+                        _headerSectionArgs.ReadSection();
+                        BuildHeader();
+                        continue;
+                    case FileSectionStartMarkers.Tables:
+                        _currentSection = FileSections.Tables;
+                        continue;
+                    case FileSectionStartMarkers.Blocks:
+                        _currentSection = FileSections.Blocks;
+                        continue;
+                    case FileSectionStartMarkers.Entities:
+                        _currentSection = FileSections.Entities;
+                        _entitiesSectionArgs = new EntitiesSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
+                        _entitiesSectionArgs.ReadSection();
+                        BuildEntities();
+                        continue;
+                    case FileSectionStartMarkers.Objects:
+                        _currentSection = FileSections.Objects;
+                        continue;
+                    default:
+                        continue;
                 }
             }
         }
