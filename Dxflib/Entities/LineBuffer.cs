@@ -76,11 +76,13 @@ namespace Dxflib.Entities
         public override bool Parse(TaggedDataList list, int index)
         {
             EntityType = EntityTypes.Line;
-            var currentIndex = index;
-            for (var currentData = list.GetPair(currentIndex); 
-                currentData.GroupCode != GroupCodesBase.EntityType && currentIndex < list.Length; ++currentIndex)
+            for (var currentIndex = index + 1; 
+                currentIndex < list.Length; ++currentIndex)
             {
-                currentData = list.GetPair(currentIndex);
+                var currentData = list.GetPair(currentIndex);
+
+                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                    break;
 
                 if (base.Parse(list, currentIndex))
                     continue;

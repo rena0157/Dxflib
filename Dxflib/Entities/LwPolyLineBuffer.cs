@@ -85,7 +85,8 @@ namespace Dxflib.Entities
         /// <summary>
         ///     Main Parse Function for the Lwpolyline Class
         /// </summary>
-        /// <param name="args">LineChangeHandlerArguments</param>
+        /// <param name="list"></param>
+        /// <param name="index"></param>
         /// <returns>True or false if the parse was successful</returns>
         public override bool Parse(TaggedDataList list, int index)
         {

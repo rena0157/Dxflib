@@ -43,6 +43,7 @@ namespace Dxflib.IO
         public const string VariableNameIdentifier = "  9";
         public const string AutoCadVersion = "$ACADVER";
         public const string LastSavedBy = "$LASTSAVEDBY";
+        public const string CurrentLayer = "$CLAYER";
     }
 
     /// <summary>

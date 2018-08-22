@@ -10,6 +10,7 @@
 // ============================================================
 
 using System;
+using Dxflib.AcadEntities;
 using Dxflib.Tools;
 
 namespace Dxflib.IO
@@ -74,6 +75,7 @@ namespace Dxflib.IO
         {
             _dxfFile.AutoCADVersion = _headerSectionArgs.AutoCadVersion.Value;
             _dxfFile.LastSavedBy = _headerSectionArgs.LastSavedBy.Value;
+            _dxfFile.CurrentLayer = new Layer(_headerSectionArgs.CurrentLayer.Value);
         }
 
         private void BuildEntities()

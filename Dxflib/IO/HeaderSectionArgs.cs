@@ -12,8 +12,8 @@ namespace Dxflib.IO
     /// </summary>
     public class HeaderSectionArgs : FileSectionBase
     {
+        /// <inheritdoc />
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="startingIndex"></param>
         /// <param name="list"></param>
@@ -23,42 +23,56 @@ namespace Dxflib.IO
             FileSection = FileSections.Header;
             AutoCadVersion = new AutoCadVersionVar(string.Empty);
             LastSavedBy = new StringVar(FileVariableCodes.LastSavedBy, string.Empty);
+            CurrentLayer = new StringVar(FileVariableCodes.CurrentLayer, string.Empty);
         }
 
         /// <summary>
         /// What the AutoCAD Version is
         /// </summary>
-        public AutoCadVersionVar AutoCadVersion { get; set; }
+        public AutoCadVersionVar AutoCadVersion { get; }
 
         /// <summary>
         /// Who the file was last saved by
         /// </summary>
-        public StringVar LastSavedBy { get; set; }
+        public StringVar LastSavedBy { get; }
 
         /// <summary>
-        /// 
+        /// The CurrentLayer
+        /// </summary>
+        public StringVar CurrentLayer { get; }
+
+        /// <inheritdoc />
+        /// <summary>
         /// </summary>
         public override void ReadSection()
         {
-            var currentIndex = StartIndex;
-            for (var currentData = DataList.GetPair(currentIndex);
-                currentData.Value != GroupCodesBase.EndSecionMarker && currentIndex < DataList.Length; ++currentIndex)
+            for (var currentIndex = StartIndex;
+                currentIndex < DataList.Length; ++currentIndex)
             {
+                var currentData = DataList.GetPair(currentIndex);
+                EndIndex = currentIndex;
+                if (currentData.Value == GroupCodesBase.EndSecionMarker)
+                    break;
 
-                if ( currentData.Value == FileVariableCodes.AutoCadVersion )
+                switch ( currentData.Value )
                 {
-                    currentData = DataList.GetPair(++currentIndex);
-                    AutoCadVersion.Value = AutoCadVersionVar.ParseAutoCadVersion(currentData.Value);
-                }
-                else if ( currentData.Value == FileVariableCodes.LastSavedBy )
-                {
-                    currentData = DataList.GetPair(++currentIndex);
-                    LastSavedBy.Value = currentData.Value;
-                }
+                    case FileVariableCodes.AutoCadVersion:
+                        currentData = DataList.GetPair(++currentIndex);
+                        AutoCadVersion.Value = AutoCadVersionVar.ParseAutoCadVersion(currentData.Value);
+                        continue;
+                    case FileVariableCodes.LastSavedBy:
+                        currentData = DataList.GetPair(++currentIndex);
+                        LastSavedBy.Value = currentData.Value;
+                        continue;
 
+                    case FileVariableCodes.CurrentLayer:
+                        currentData = DataList.GetPair(++currentIndex);
+                        CurrentLayer.Value = currentData.Value;
+                        continue;
+                    default:
+                        continue;
+                }
             }
-
-            EndIndex = currentIndex;
         }
     }
 }

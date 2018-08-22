@@ -23,27 +23,6 @@ namespace Dxflib.Tests
     public class ParserTests
     {
         [TestMethod]
-        public void Controller_PrintoutTest()
-        {
-            // var testFile = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
-            Debug.WriteLine("Nothing Should Happen here");
-        }
-
-        [TestMethod]
-        public void VersionTest_VersionShouldBeAutoCAD2013()
-        {
-            // Create the test file
-            var testFile = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
-
-            // Print out the version 
-            Debug.WriteLine(
-                $"AutoCAD Version: {testFile.AutoCADVersion}({DxflibTools.GetEnumDescription(testFile.AutoCADVersion)})");
-
-            // Assert
-            Assert.IsTrue(AutoCadVersions.AC1027 == testFile.AutoCADVersion);
-        }
-
-        [TestMethod]
         public void CurrentLayer_CurrentLayerShouldBe0()
         {
             // The test file
@@ -55,15 +34,6 @@ namespace Dxflib.Tests
 
             // Assert that the current layer name is "0"
             Assert.IsTrue(testFile.CurrentLayer.Name == "0");
-        }
-
-        [TestMethod]
-        public void LastSavedByTest_ShouldBeadamf()
-        {
-            var testFile =
-                new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
-            Debug.WriteLine($"The file was last saved by: {testFile.LastSavedBy}");
-            Assert.IsTrue(testFile.LastSavedBy == "adamf");
         }
 
         [TestMethod]
