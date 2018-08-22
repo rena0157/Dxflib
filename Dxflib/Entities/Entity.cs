@@ -137,11 +137,12 @@ namespace Dxflib.Entities
         ///     each entity that is to be extracted. This function also,
         ///     Parses global entity properties such as handle or <see cref="LayerName"/>.
         /// </summary>
-        /// <param name="args">Line Changed Handler arguments</param>
+        /// <param name="list"></param>
+        /// <param name="index"></param>
         /// <returns>True if the parse was successful</returns>
-        public virtual bool Parse(TaggedDataList list)
+        public virtual bool Parse(TaggedDataList list, int index)
         {
-            var currentData = list.CurrentData;
+            var currentData = list.GetPair(index);
             switch ( currentData.GroupCode )
             {
                 case GroupCodesBase.Handle:

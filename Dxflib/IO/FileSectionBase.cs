@@ -54,7 +54,9 @@ namespace Dxflib.IO
         /// A virtual class that is designed to extract the data from the section.
         /// Note that the End Index is only ever recorded at the calling of this virtual function
         /// </summary>
-        public virtual void ReadSection() { EndIndex = DataList.Index; }
+        public virtual void ReadSection()
+        {
+        }
     }
 
 

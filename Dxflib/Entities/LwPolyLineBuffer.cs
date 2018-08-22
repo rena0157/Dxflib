@@ -87,15 +87,19 @@ namespace Dxflib.Entities
         /// </summary>
         /// <param name="args">LineChangeHandlerArguments</param>
         /// <returns>True or false if the parse was successful</returns>
-        public override bool Parse(TaggedDataList list)
+        public override bool Parse(TaggedDataList list, int index)
         {
             EntityType = EntityTypes.Lwpolyline;
-
-            for ( var currentData = list.Next;
-                currentData.GroupCode != GroupCodesBase.EntityType;
-                currentData = list.Next )
+            for ( var currentIndex = index + 1;
+                currentIndex < list.Length;
+                ++currentIndex )
             {
-                if (base.Parse(list))
+                var currentData = list.GetPair(currentIndex);
+
+                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                    break;
+
+                if (base.Parse(list, currentIndex))
                     continue;
 
                 switch ( currentData.GroupCode )

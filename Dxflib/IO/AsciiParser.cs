@@ -35,16 +35,17 @@ namespace Dxflib.IO
         /// </summary>
         public void ParseFile()
         {
-            for ( var currentData = _dxfFile.DxfFileData.GetPair(0);
-                _dxfFile.DxfFileData.Index < _dxfFile.DxfFileData.Length;
-                currentData = _dxfFile.DxfFileData.Next)
+            
+            for ( var currentIndex = 0; currentIndex < _dxfFile.DxfFileData.Length;
+                ++currentIndex)
             {
+                var currentData = _dxfFile.DxfFileData.GetPair(currentIndex);
                 switch ( currentData.Value )
                 {
                     case FileSectionStartMarkers.Header:
                         _currentSection = FileSections.Header;
                         _headerSectionArgs 
-                            = new HeaderSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
+                            = new HeaderSectionArgs(currentIndex, _dxfFile.DxfFileData);
                         _headerSectionArgs.ReadSection();
                         BuildHeader();
                         continue;
@@ -56,7 +57,7 @@ namespace Dxflib.IO
                         continue;
                     case FileSectionStartMarkers.Entities:
                         _currentSection = FileSections.Entities;
-                        _entitiesSectionArgs = new EntitiesSectionArgs(_dxfFile.DxfFileData.Index, _dxfFile.DxfFileData);
+                        _entitiesSectionArgs = new EntitiesSectionArgs(currentIndex, _dxfFile.DxfFileData);
                         _entitiesSectionArgs.ReadSection();
                         BuildEntities();
                         continue;

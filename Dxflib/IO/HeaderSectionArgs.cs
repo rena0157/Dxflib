@@ -40,25 +40,25 @@ namespace Dxflib.IO
         /// </summary>
         public override void ReadSection()
         {
-
-            while ( DataList.CurrentData.Value != GroupCodesBase.EndSecionMarker)
+            var currentIndex = StartIndex;
+            for (var currentData = DataList.GetPair(currentIndex);
+                currentData.Value != GroupCodesBase.EndSecionMarker && currentIndex < DataList.Length; ++currentIndex)
             {
-                var currentData = DataList.Next;
 
                 if ( currentData.Value == FileVariableCodes.AutoCadVersion )
                 {
-                    currentData = DataList.Next;
+                    currentData = DataList.GetPair(++currentIndex);
                     AutoCadVersion.Value = AutoCadVersionVar.ParseAutoCadVersion(currentData.Value);
                 }
                 else if ( currentData.Value == FileVariableCodes.LastSavedBy )
                 {
-                    currentData = DataList.Next;
+                    currentData = DataList.GetPair(++currentIndex);
                     LastSavedBy.Value = currentData.Value;
                 }
 
             }
 
-            base.ReadSection();
+            EndIndex = currentIndex;
         }
     }
 }

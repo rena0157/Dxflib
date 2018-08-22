@@ -24,7 +24,7 @@ namespace Dxflib.Tests
 
             for ( int i = 0; i < contents.Length; ++i )
             {
-                var currentPair = contents.Next;
+                var currentPair = contents.GetPair(i);
                 Debug.WriteLine($"Group Code: {currentPair.GroupCode}, Value: {currentPair.Value}");
             }
 

@@ -23,16 +23,6 @@ namespace Dxflib.IO
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public int Index { get; set; }
-
-        /// <summary>
-        /// Where the pointer is at
-        /// </summary>
-        public TaggedData CurrentData => _list[Index];
-
-        /// <summary>
         /// Total Length of the list
         /// </summary>
         public int Length => _list.Count;
@@ -43,11 +33,5 @@ namespace Dxflib.IO
         /// <param name="index"></param>
         /// <returns></returns>
         public TaggedData GetPair(int index) => _list[index];
-
-        /// <summary>
-        /// Get the next pair
-        /// </summary>
-        public TaggedData Next 
-            => Index < _list.Count - 1 ? _list[++Index] : throw new IndexOutOfRangeException("Cannot Access this element as it is out of range");
     }
 }

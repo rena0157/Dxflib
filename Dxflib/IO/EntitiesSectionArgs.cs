@@ -29,27 +29,31 @@ namespace Dxflib.IO
         /// </summary>
         public List<Entity> Entities { get; }
 
+        /// <inheritdoc />
         /// <summary>
-        /// 
         /// </summary>
         public override void ReadSection()
         {
-            for ( var currentData = DataList.Next; 
-                currentData.Value != GroupCodesBase.EndSecionMarker;
-                currentData = DataList.Next)
+            for (var currentIndex = StartIndex;
+                currentIndex < DataList.Length;
+                ++currentIndex)
             {
+                var currentData = DataList.GetPair(currentIndex);
+                if (currentData.GroupCode == GroupCodesBase.EndSecionMarker)
+                    break;
+
                 switch ( currentData.Value )
                 {
                     case LineGroupCodes.StartMarker:
                         _lineBuffer = new LineBuffer();
-                        _lineBuffer.Parse(DataList);
+                        _lineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Line(_lineBuffer));
-                        break;
+                        continue;
                     case LwPolylineCodes.StartMarker:
                         _lwPolyLineBuffer = new LwPolyLineBuffer();
-                        _lwPolyLineBuffer.Parse(DataList);
+                        _lwPolyLineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new LwPolyLine(_lwPolyLineBuffer));
-                        break;
+                        continue;
                     default:
                         continue;
                 }

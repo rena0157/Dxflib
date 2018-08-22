@@ -9,6 +9,8 @@
 // 
 // ============================================================
 
+using System;
+using System.Runtime.InteropServices;
 using Dxflib.IO;
 using Dxflib.Parser;
 
@@ -68,19 +70,19 @@ namespace Dxflib.Entities
         ///     the <see cref="T:Dxflib.Entities.LineGroupCodes" />. If that fails then the line buffer
         ///     does not fill anything and the extraction process moves to the next line.
         /// </remarks>
-        /// <param name="args">
-        ///     Args that are passed by the line
-        ///     changed event.
-        /// </param>
+        /// <param name="list"></param>
+        /// <param name="index"></param>
         /// <returns>True if parse was successful</returns>
-        public override bool Parse(TaggedDataList list)
+        public override bool Parse(TaggedDataList list, int index)
         {
             EntityType = EntityTypes.Line;
-            for ( var currentData = list.CurrentData;
-                currentData.GroupCode != GroupCodesBase.EntityType;
-                currentData = list.Next )
+            var currentIndex = index;
+            for (var currentData = list.GetPair(currentIndex); 
+                currentData.GroupCode != GroupCodesBase.EntityType && currentIndex < list.Length; ++currentIndex)
             {
-                if (base.Parse(list))
+                currentData = list.GetPair(currentIndex);
+
+                if (base.Parse(list, currentIndex))
                     continue;
 
                 switch ( currentData.GroupCode )
