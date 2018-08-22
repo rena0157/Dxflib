@@ -9,9 +9,7 @@
 // 
 // ============================================================
 
-using System;
 using Dxflib.AcadEntities;
-using Dxflib.Tools;
 
 namespace Dxflib.IO
 {

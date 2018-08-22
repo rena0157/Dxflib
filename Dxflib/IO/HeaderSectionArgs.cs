@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dxflib.Parser;
+﻿using System.ComponentModel;
 
 namespace Dxflib.IO
 {
@@ -74,5 +71,22 @@ namespace Dxflib.IO
                 }
             }
         }
+    }
+
+    /// <summary>
+    ///     AutoCAD Versions up to 2013
+    /// </summary>
+    public enum AutoCadVersions
+    {
+        [Description("R10")] AC1006,
+        [Description("R11 and R12")] AC1009,
+        [Description("R13")] AC1012,
+        [Description("R14")] AC1014,
+        [Description("AutoCAD 2000")] AC1015,
+        [Description("AutoCAD 2004")] AC1018,
+        [Description("AutoCAD 2007")] AC1021,
+        [Description("AutoCAD 2010")] AC1024,
+        [Description("AutoCAD 2013")] AC1027,
+        [Description("Unknown")] Unknown
     }
 }

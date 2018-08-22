@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using Dxflib.IO;
+﻿using Dxflib.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests.IO

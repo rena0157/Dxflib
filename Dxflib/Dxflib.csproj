@@ -8,4 +8,8 @@
     <DocumentationFile>bin\Debug\netstandard2.0\Dxflib.xml</DocumentationFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Parser\" />
+  </ItemGroup>
+
 </Project>

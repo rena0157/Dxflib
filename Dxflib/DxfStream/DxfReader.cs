@@ -50,7 +50,7 @@ namespace Dxflib.DxfStream
             if (Path.GetExtension(PathToFile) != ".dxf")
                 throw new DxfStreamException("The file extension must be .dxf");
 
-            // The file stream and streamreader that is used to acces the file system
+            // The file stream and stream reader that is used to access the file system
             var fs = new FileStream(PathToFile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var sr = new StreamReader(fs);
 

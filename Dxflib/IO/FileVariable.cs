@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Dxflib.IO;
-using Dxflib.Parser;
 
 namespace Dxflib.IO
 {

@@ -13,8 +13,6 @@
 
 using System.Diagnostics;
 using Dxflib.Entities;
-using Dxflib.Parser;
-using Dxflib.Tools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests

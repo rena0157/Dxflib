@@ -12,7 +12,6 @@
 using System;
 using System.ComponentModel;
 using Dxflib.IO;
-using Dxflib.Parser;
 
 namespace Dxflib.Entities
 {

@@ -9,10 +9,7 @@
 // 
 // ============================================================
 
-using System;
-using System.Runtime.InteropServices;
 using Dxflib.IO;
-using Dxflib.Parser;
 
 namespace Dxflib.Entities
 {

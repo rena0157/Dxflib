@@ -16,7 +16,6 @@ using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Entities;
 using Dxflib.IO;
-using Dxflib.Parser;
 
 namespace Dxflib
 {
@@ -26,9 +25,6 @@ namespace Dxflib
     /// </summary>
     public class DxfFile
     {
-        // ReSharper disable once NotAccessedField.Local
-        private readonly DxfFileMainParser _mainParser;
-
         #region Constructors
         /// <summary>
         ///     Constructor that requires a path to a file.
@@ -45,34 +41,28 @@ namespace Dxflib
             // Setup file
             PathToFile = fileReader.PathToFile;
             FileName = Path.GetFileName(PathToFile);
-
-            // Read and parse the file
-
-            Entities = new List<Entity>();
-
             DxfFileData = new TaggedDataList(fileReader.ReadFile());
 
-            var testAsciiParser = new AsciiParser(this);
-            testAsciiParser.ParseFile();
+            // Read and parse the file
+            Entities = new List<Entity>();
 
-            // _mainParser = new DxfFileMainParser(this);
-            // Layers.UpdateDictionary(Entities);
+            // The Main Parsing Calling Function
+            var asciiParser = new AsciiParser(this);
+            asciiParser.ParseFile();
+
+            // Update the layer dictionary now that the Entities are all built
+            Layers.UpdateDictionary(Entities);
         }
         #endregion
         
         #region DxfFileContents
-        /// <summary>
-        /// The Content strings are all of the lines from the dxf file in a list of strings
-        /// </summary>
-        public string[] ContentStrings { get; }
-
         /// <summary>
         /// The Data List
         /// </summary>
         public TaggedDataList DxfFileData { get; }
 
         /// <summary>
-        /// The Layer Dictionary is a <see cref="Dxflib.AcadEntities.LayerDictionary"/> object that is
+        /// The Layer Dictionary is a <see cref="LayerDictionary"/> object that is
         /// designed to hold all of the layers.
         /// </summary>
         public LayerDictionary Layers { get; }

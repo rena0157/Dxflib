@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿// Dxflib.Tests
+// DxfFileTests.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-03
+// Last Updated: 2018-08-21-8:54 PM
+// By: Adam Renaud
+// 
+// ============================================================
 
-using Dxflib;
-using Dxflib.AcadEntities;
+using System.Diagnostics;
 using Dxflib.Entities;
-using Dxflib.Geometry;
-using Dxflib.Parser;
+using Dxflib.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests
 {
@@ -22,12 +27,11 @@ namespace Dxflib.Tests
 
             var contents = testFile.DxfFileData;
 
-            for ( int i = 0; i < contents.Length; ++i )
+            for ( var i = 0; i < contents.Length; ++i )
             {
                 var currentPair = contents.GetPair(i);
                 Debug.WriteLine($"Group Code: {currentPair.GroupCode}, Value: {currentPair.Value}");
             }
-
         }
 
         [TestMethod]
