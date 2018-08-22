@@ -1,5 +1,7 @@
 # DXF Library - The Drawing Interchange Format Library in C#
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/310014992d7743078a5d2d57e79ce44c)](https://www.codacy.com/project/muckanee/Dxflib/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rena0157/Dxflib&amp;utm_campaign=Badge_Grade_Dashboard)
+
 ### Introduction
 This is one of many DXF librarys that is avalible here on Github. This library serves a dual purpose:
 one is to help me learn the .NET framework and the second is in the future I hope that this library
