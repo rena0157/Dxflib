@@ -33,7 +33,8 @@ namespace Dxflib.IO
         }
 
         /// <summary>
-        ///     The Group Code
+        ///     The Group Code <see cref="GroupCodesBase"/>
+        ///     for a list of group codes
         /// </summary>
         public string GroupCode => _groupCodeTuple.Item1;
 

@@ -24,7 +24,7 @@ namespace Dxflib.Entities
         /// <inheritdoc />
         /// <summary>
         ///     The Lwpolyline Buffer Constructor that holds all information
-        ///     for the Lwpolyline class before it is built
+        ///     for the Lwpolyline class before it is built.
         /// </summary>
         public LwPolyLineBuffer()
         {
@@ -105,43 +105,43 @@ namespace Dxflib.Entities
                 switch ( currentData.GroupCode )
                 {
                     // Number of Vertices
-                    case LwPolyLineGroupGroupCodes.NumberOfVertices:
+                    case LwPolylineCodes.NumberOfVertices:
                         NumberOfVertices = int.Parse(currentData.Value);
                         continue;  
 
                     // Lwpolyline Flag
-                    case LwPolyLineGroupGroupCodes.PolyLineFlag:
+                    case LwPolylineCodes.PolylineFlag:
                         PolyLineFlag = currentData.Value.Contains("1");
                         continue;
 
                     // Constant Width
-                    case LwPolyLineGroupGroupCodes.ConstantWidth:
+                    case LwPolylineCodes.ConstantWidth:
                         ConstantWidth = double.Parse(currentData.Value);
                         continue;
 
                     // Elevation
-                    case LwPolyLineGroupGroupCodes.Elevation:
+                    case LwPolylineCodes.Elevation:
                         Elevation = double.Parse(currentData.Value);
                         continue;
                     
                     // Thickness
-                    case LwPolyLineGroupGroupCodes.Thickness:
+                    case LwPolylineCodes.Thickness:
                         Thickness = double.Parse(currentData.Value);
                         continue;
 
                     // X values
-                    case LwPolyLineGroupGroupCodes.XValue:
+                    case GroupCodesBase.XPoint:
                         BulgeList.Add(Bulge.BulgeNull);
                         XValues.Add(double.Parse(currentData.Value));
                         continue;
 
                     // Y values
-                    case LwPolyLineGroupGroupCodes.YValue:
+                    case GroupCodesBase.YPoint:
                         YValues.Add(double.Parse(currentData.Value));
                         continue;
 
                     // Bulge Values
-                    case LwPolyLineGroupGroupCodes.Bulge:
+                    case LwPolylineCodes.Bulge:
                         BulgeList.RemoveAt(BulgeList.Count - 1);
                         BulgeList.Add(double.Parse(currentData.Value));
                         continue;
@@ -150,22 +150,6 @@ namespace Dxflib.Entities
                 }
             }
             return true;
-        }
-
-        /// <summary>
-        ///     Class that holds all of the constant strings
-        ///     for the lwpolyline group codes.
-        /// </summary>
-        private static class LwPolyLineGroupGroupCodes
-        {
-            public const string NumberOfVertices = " 90";
-            public const string PolyLineFlag = " 70";
-            public const string ConstantWidth = " 43";
-            public const string Elevation = " 38";
-            public const string Thickness = " 39";
-            public const string XValue = " 10";
-            public const string YValue = " 20";
-            public const string Bulge = " 42";
         }
     }
 }

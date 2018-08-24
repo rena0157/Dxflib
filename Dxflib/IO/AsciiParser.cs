@@ -3,47 +3,70 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-19
-// Last Updated: 2018-08-19-7:49 PM
+// Created: 2018-08-21
+// Last Updated: 2018-08-23-8:28 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
+using System.IO;
 using Dxflib.AcadEntities;
+
+#pragma warning disable 414 // There was annoying error that was ignored here
 
 namespace Dxflib.IO
 {
     /// <summary>
-    /// 
+    ///     The ASCII Parser is the one of the main parsers in the Dxflib Library.
+    ///     This class is used to extract data from a ASCII dxf file. The main constructor
+    ///     requires a <see cref="DxfFile" /> and when <see cref="ParseFile" /> is called
+    ///     will populate all of the fields in the <see cref="DxfFile" />.
     /// </summary>
     public class AsciiParser
     {
+        private readonly DxfFile _dxfFile;
         private FileSections _currentSection;
-        private HeaderSectionArgs _headerSectionArgs;
         private EntitiesSectionArgs _entitiesSectionArgs;
-        private DxfFile _dxfFile;
+        private HeaderSectionArgs _headerSectionArgs;
 
         /// <summary>
-        /// 
+        ///     The main constructor. This constructor will set the target dxf file.
         /// </summary>
-        /// <param name="dxfFile"></param>
+        /// <param name="dxfFile">
+        ///     The dxf file that data will be extracted from.
+        ///     All of the fields will be populated.
+        /// </param>
         public AsciiParser(DxfFile dxfFile) { _dxfFile = dxfFile; }
 
         /// <summary>
-        /// Parse the file
+        ///     This function will parse the file. It will populate all of the fields of the
+        ///     dxf file that was passed to the constructor.
         /// </summary>
         public void ParseFile()
         {
-            
-            for ( var currentIndex = 0; currentIndex < _dxfFile.DxfFileData.Length;
-                ++currentIndex)
+            // Throw an exception if the file is empty
+            if (_dxfFile.DxfFileData.Length == 0)
+                throw new FileLoadException("The File is not a valid Dxf file or is empty");
+
+            // Iterate through the tagged data list
+            for ( var currentIndex = 0;
+                currentIndex < _dxfFile.DxfFileData.Length;
+                ++currentIndex )
             {
+                // The current tagged data pair
                 var currentData = _dxfFile.DxfFileData.GetPair(currentIndex);
                 switch ( currentData.Value )
                 {
+                    /*
+                     * In each switch statement the following pattern is followed
+                     * 1. The Current section is set to the case name
+                     * 2. The SectionArgs is initialized and then is populated
+                     *    and is built using a build private function
+                     * 3. When a new section header is reached the process is started over again
+                     */
                     case FileSectionStartMarkers.Header:
                         _currentSection = FileSections.Header;
-                        _headerSectionArgs 
+                        _headerSectionArgs
                             = new HeaderSectionArgs(currentIndex, _dxfFile.DxfFileData);
                         _headerSectionArgs.ReadSection();
                         BuildHeader();
@@ -69,6 +92,9 @@ namespace Dxflib.IO
             }
         }
 
+        /// <summary>
+        ///     The Header Build Private function
+        /// </summary>
         private void BuildHeader()
         {
             _dxfFile.AutoCADVersion = _headerSectionArgs.AutoCadVersion.Value;
@@ -76,9 +102,9 @@ namespace Dxflib.IO
             _dxfFile.CurrentLayer = new Layer(_headerSectionArgs.CurrentLayer.Value);
         }
 
-        private void BuildEntities()
-        {
-            _dxfFile.Entities = _entitiesSectionArgs.Entities;
-        }
+        /// <summary>
+        ///     The Entities Build Private Function
+        /// </summary>
+        private void BuildEntities() { _dxfFile.Entities = _entitiesSectionArgs.Entities; }
     }
 }

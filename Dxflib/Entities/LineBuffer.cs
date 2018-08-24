@@ -67,23 +67,31 @@ namespace Dxflib.Entities
         ///     the <see cref="T:Dxflib.Entities.LineGroupCodes" />. If that fails then the line buffer
         ///     does not fill anything and the extraction process moves to the next line.
         /// </remarks>
-        /// <param name="list"></param>
-        /// <param name="index"></param>
+        /// <param name="list">The List of Tagged Data</param>
+        /// <param name="index">The Index where the entity starts</param>
         /// <returns>True if parse was successful</returns>
         public override bool Parse(TaggedDataList list, int index)
         {
+            // Setting the current entity
             EntityType = EntityTypes.Line;
+
+            // Iterate through the file and extract data until the current line 
+            // is an entity end marker
             for (var currentIndex = index + 1; 
                 currentIndex < list.Length; ++currentIndex)
             {
+                // The current data is set
                 var currentData = list.GetPair(currentIndex);
 
                 if (currentData.GroupCode == GroupCodesBase.EntityType)
                     break;
 
+                // Check to see if the entity bass class can parse first
                 if (base.Parse(list, currentIndex))
                     continue;
 
+                // If not then parse here
+                // If this class can still not parse then continue
                 switch ( currentData.GroupCode )
                 {
                     case GroupCodesBase.XPoint:
@@ -105,7 +113,6 @@ namespace Dxflib.Entities
                         continue;
                 }
             }
-
             return true;
         }
     }

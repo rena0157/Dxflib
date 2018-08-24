@@ -17,7 +17,6 @@ namespace Dxflib.IO
         public HeaderSectionArgs(int startingIndex, TaggedDataList list)
             : base(startingIndex, list)
         {
-            FileSection = FileSections.Header;
             AutoCadVersion = new AutoCadVersionVar(string.Empty);
             LastSavedBy = new StringVar(FileVariableCodes.LastSavedBy, string.Empty);
             CurrentLayer = new StringVar(FileVariableCodes.CurrentLayer, string.Empty);
@@ -48,7 +47,7 @@ namespace Dxflib.IO
             {
                 var currentData = DataList.GetPair(currentIndex);
                 EndIndex = currentIndex;
-                if (currentData.Value == GroupCodesBase.EndSecionMarker)
+                if (currentData.Value == GroupCodesBase.EndSectionMarker)
                     break;
 
                 switch ( currentData.Value )
