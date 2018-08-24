@@ -19,6 +19,7 @@ namespace Dxflib.Entities
     /// </summary>
     public class LineBuffer : EntityBuffer
     {
+        /// <inheritdoc />
         /// <summary>
         /// Constructor that will return all values to their defaults
         /// </summary>

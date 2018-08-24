@@ -25,7 +25,6 @@ namespace Dxflib.IO
     public class AsciiParser
     {
         private readonly DxfFile _dxfFile;
-        private FileSections _currentSection;
         private EntitiesSectionArgs _entitiesSectionArgs;
         private HeaderSectionArgs _headerSectionArgs;
 
@@ -65,26 +64,21 @@ namespace Dxflib.IO
                      * 3. When a new section header is reached the process is started over again
                      */
                     case FileSectionStartMarkers.Header:
-                        _currentSection = FileSections.Header;
                         _headerSectionArgs
                             = new HeaderSectionArgs(currentIndex, _dxfFile.DxfFileData);
                         _headerSectionArgs.ReadSection();
                         BuildHeader();
                         continue;
                     case FileSectionStartMarkers.Tables:
-                        _currentSection = FileSections.Tables;
                         continue;
                     case FileSectionStartMarkers.Blocks:
-                        _currentSection = FileSections.Blocks;
                         continue;
                     case FileSectionStartMarkers.Entities:
-                        _currentSection = FileSections.Entities;
                         _entitiesSectionArgs = new EntitiesSectionArgs(currentIndex, _dxfFile.DxfFileData);
                         _entitiesSectionArgs.ReadSection();
                         BuildEntities();
                         continue;
                     case FileSectionStartMarkers.Objects:
-                        _currentSection = FileSections.Objects;
                         continue;
                     default:
                         continue;

@@ -21,8 +21,6 @@ namespace Dxflib.IO
     /// </summary>
     public class EntitiesSectionArgs : FileSectionBase
     {
-        private LineBuffer _lineBuffer;
-        private LwPolyLineBuffer _lwPolyLineBuffer;
 
         /// <inheritdoc />
         /// <summary>
@@ -78,14 +76,14 @@ namespace Dxflib.IO
                      * 3. Add the entity to the entity list
                      */
                     case LineGroupCodes.StartMarker:
-                        _lineBuffer = new LineBuffer();
-                        _lineBuffer.Parse(DataList, currentIndex);
-                        Entities.Add(new Line(_lineBuffer));
+                        var lineBuffer = new LineBuffer();
+                        lineBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Line(lineBuffer));
                         continue;
                     case LwPolylineCodes.StartMarker:
-                        _lwPolyLineBuffer = new LwPolyLineBuffer();
-                        _lwPolyLineBuffer.Parse(DataList, currentIndex);
-                        Entities.Add(new LwPolyLine(_lwPolyLineBuffer));
+                        var lwPolyLineBuffer = new LwPolyLineBuffer();
+                        lwPolyLineBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new LwPolyLine(lwPolyLineBuffer));
                         continue;
                     default:
                         continue;
