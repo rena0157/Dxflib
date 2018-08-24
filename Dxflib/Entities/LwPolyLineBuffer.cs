@@ -11,7 +11,7 @@
 
 using System.Collections.Generic;
 using Dxflib.Geometry;
-using Dxflib.Parser;
+using Dxflib.IO;
 
 namespace Dxflib.Entities
 {
@@ -24,7 +24,7 @@ namespace Dxflib.Entities
         /// <inheritdoc />
         /// <summary>
         ///     The Lwpolyline Buffer Constructor that holds all information
-        ///     for the Lwpolyline class before it is built
+        ///     for the Lwpolyline class before it is built.
         /// </summary>
         public LwPolyLineBuffer()
         {
@@ -84,89 +84,72 @@ namespace Dxflib.Entities
         /// <summary>
         ///     Main Parse Function for the Lwpolyline Class
         /// </summary>
-        /// <param name="args">LineChangeHandlerArguments</param>
+        /// <param name="list"></param>
+        /// <param name="index"></param>
         /// <returns>True or false if the parse was successful</returns>
-        public override bool Parse(LineChangeHandlerArgs args)
+        public override bool Parse(TaggedDataList list, int index)
         {
-            if ( base.Parse(args) )
-                return true;
-
-            switch ( args.NewCurrentLine )
+            EntityType = EntityTypes.Lwpolyline;
+            for ( var currentIndex = index + 1;
+                currentIndex < list.Length;
+                ++currentIndex )
             {
-                // Number of Vertices
-                case LwPolyLineGroupGroupCodes.NumberOfVertices:
-                    NumberOfVertices = int.Parse(args.NewNextLine);
-                    return true;
+                var currentData = list.GetPair(currentIndex);
 
-                // Lwpolyline Flag
-                case LwPolyLineGroupGroupCodes.PolyLineFlag:
-                    switch ( int.Parse(args.NewNextLine) )
-                    {
-                        case 0:
-                            PolyLineFlag = false;
-                            break;
-                        case 1:
-                            PolyLineFlag = true;
-                            break;
-                        default:
-                            return false;
-                    }
+                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                    break;
 
-                    return true;
+                if (base.Parse(list, currentIndex))
+                    continue;
 
-                // Constant Width
-                case LwPolyLineGroupGroupCodes.ConstantWidth:
-                    ConstantWidth = double.Parse(args.NewNextLine);
-                    return true;
+                switch ( currentData.GroupCode )
+                {
+                    // Number of Vertices
+                    case LwPolylineCodes.NumberOfVertices:
+                        NumberOfVertices = int.Parse(currentData.Value);
+                        continue;  
 
-                // Elevation
-                case LwPolyLineGroupGroupCodes.Elevation:
-                    Elevation = double.Parse(args.NewNextLine);
-                    return true;
+                    // Lwpolyline Flag
+                    case LwPolylineCodes.PolylineFlag:
+                        PolyLineFlag = currentData.Value.Contains("1");
+                        continue;
 
-                // Thickness
-                case LwPolyLineGroupGroupCodes.Thickness:
-                    Thickness = double.Parse(args.NewNextLine);
-                    return true;
+                    // Constant Width
+                    case LwPolylineCodes.ConstantWidth:
+                        ConstantWidth = double.Parse(currentData.Value);
+                        continue;
 
-                // X values
-                case LwPolyLineGroupGroupCodes.XValue:
-                    BulgeList.Add(Bulge.BulgeNull);
-                    XValues.Add(double.Parse(args.NewNextLine));
-                    return true;
+                    // Elevation
+                    case LwPolylineCodes.Elevation:
+                        Elevation = double.Parse(currentData.Value);
+                        continue;
+                    
+                    // Thickness
+                    case LwPolylineCodes.Thickness:
+                        Thickness = double.Parse(currentData.Value);
+                        continue;
 
-                // Y values
-                case LwPolyLineGroupGroupCodes.YValue:
-                    YValues.Add(double.Parse(args.NewNextLine));
-                    return true;
+                    // X values
+                    case GroupCodesBase.XPoint:
+                        BulgeList.Add(Bulge.BulgeNull);
+                        XValues.Add(double.Parse(currentData.Value));
+                        continue;
 
-                // Bulge Values
-                case LwPolyLineGroupGroupCodes.Bulge:
-                    BulgeList.RemoveAt(BulgeList.Count - 1);
-                    BulgeList.Add(double.Parse(args.NewNextLine));
-                    return true;
+                    // Y values
+                    case GroupCodesBase.YPoint:
+                        YValues.Add(double.Parse(currentData.Value));
+                        continue;
 
-                // ReSharper disable once RedundantEmptySwitchSection
-                // This is required for unexpected behaviour
-                default:
-                    return false;
+                    // Bulge Values
+                    case LwPolylineCodes.Bulge:
+                        BulgeList.RemoveAt(BulgeList.Count - 1);
+                        BulgeList.Add(double.Parse(currentData.Value));
+                        continue;
+                    default:
+                        continue;
+                }
             }
-        }
-
-        /// <summary>
-        ///     Class that holds all of the constant strings
-        ///     for the lwpolyline group codes.
-        /// </summary>
-        private static class LwPolyLineGroupGroupCodes
-        {
-            public const string NumberOfVertices = " 90";
-            public const string PolyLineFlag = " 70";
-            public const string ConstantWidth = " 43";
-            public const string Elevation = " 38";
-            public const string Thickness = " 39";
-            public const string XValue = " 10";
-            public const string YValue = " 20";
-            public const string Bulge = " 42";
+            return true;
         }
     }
 }

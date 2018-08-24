@@ -11,7 +11,7 @@
 
 using System;
 using System.ComponentModel;
-using Dxflib.Parser;
+using Dxflib.IO;
 
 namespace Dxflib.Entities
 {
@@ -136,21 +136,22 @@ namespace Dxflib.Entities
         ///     each entity that is to be extracted. This function also,
         ///     Parses global entity properties such as handle or <see cref="LayerName"/>.
         /// </summary>
-        /// <param name="args">Line Changed Handler arguments</param>
+        /// <param name="list"></param>
+        /// <param name="index"></param>
         /// <returns>True if the parse was successful</returns>
-        public virtual bool Parse(LineChangeHandlerArgs args)
+        public virtual bool Parse(TaggedDataList list, int index)
         {
-            switch (args.NewCurrentLine)
+            var currentData = list.GetPair(index);
+            switch ( currentData.GroupCode )
             {
-                case EntityGroupCodes.Handle:
-                    Handle = args.NewNextLine;
+                case GroupCodesBase.Handle:
+                    Handle = currentData.Value;
                     return true;
-                // Layer
-                case EntityGroupCodes.Layer:
-                    LayerName = args.NewNextLine;
+                case GroupCodesBase.LayerName:
+                    LayerName = currentData.Value;
                     return true;
-
-                default: return false;
+                default:
+                    return false;
             }
         }
     }
@@ -184,22 +185,6 @@ namespace Dxflib.Entities
         ///     The Message override required to set the message property
         /// </summary>
         public override string Message { get; }
-    }
-
-    /// <summary>
-    ///     The Entity Global Group codes
-    /// </summary>
-    public static class EntityGroupCodes
-    {
-        /// <summary>
-        ///     The Handle of an <see cref="Entity.Handle"/>
-        /// </summary>
-        public const string Handle = "  5";
-
-        /// <summary>
-        ///     The LayerName of an <see cref="Entity.LayerName"/>
-        /// </summary>
-        public const string Layer = "  8";
     }
 
     /// <summary>

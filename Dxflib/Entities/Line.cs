@@ -55,16 +55,4 @@ namespace Dxflib.Entities
         /// </summary>
         public double Thickness { get; }
     }
-
-    /// <summary>
-    ///     The Group codes for the Line Entity
-    /// </summary>
-    public static class LineGroupCodes
-    {
-        public const string Thickness = "39";
-        public const string X0 = " 10";
-        public const string X1 = " 11";
-        public const string Y0 = " 20";
-        public const string Y1 = " 21";
-    }
 }

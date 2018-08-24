@@ -9,7 +9,7 @@
 // 
 // ============================================================
 
-using Dxflib.Parser;
+using Dxflib.IO;
 
 namespace Dxflib.Entities
 {
@@ -19,6 +19,7 @@ namespace Dxflib.Entities
     /// </summary>
     public class LineBuffer : EntityBuffer
     {
+        /// <inheritdoc />
         /// <summary>
         /// Constructor that will return all values to their defaults
         /// </summary>
@@ -67,41 +68,53 @@ namespace Dxflib.Entities
         ///     the <see cref="T:Dxflib.Entities.LineGroupCodes" />. If that fails then the line buffer
         ///     does not fill anything and the extraction process moves to the next line.
         /// </remarks>
-        /// <param name="args">
-        ///     Args that are passed by the line
-        ///     changed event.
-        /// </param>
+        /// <param name="list">The List of Tagged Data</param>
+        /// <param name="index">The Index where the entity starts</param>
         /// <returns>True if parse was successful</returns>
-        public override bool Parse(LineChangeHandlerArgs args)
+        public override bool Parse(TaggedDataList list, int index)
         {
-            // The Current line
-            var currentLine = args.NewCurrentLine;
+            // Setting the current entity
+            EntityType = EntityTypes.Line;
 
-            // See if the base can parse the line
-            if (base.Parse(args))
-                return true;
-
-            // Switch on the current line to see 
-            // if it matches anything that is in the DXF spec.
-            switch (currentLine)
+            // Iterate through the file and extract data until the current line 
+            // is an entity end marker
+            for (var currentIndex = index + 1; 
+                currentIndex < list.Length; ++currentIndex)
             {
-                case LineGroupCodes.Thickness:
-                    Thickness = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.X0:
-                    X0 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.X1:
-                    X1 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.Y0:
-                    Y0 = double.Parse(args.NewNextLine);
-                    return true;
-                case LineGroupCodes.Y1:
-                    Y1 = double.Parse(args.NewNextLine);
-                    return true;
-                default: return false;
+                // The current data is set
+                var currentData = list.GetPair(currentIndex);
+
+                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                    break;
+
+                // Check to see if the entity bass class can parse first
+                if (base.Parse(list, currentIndex))
+                    continue;
+
+                // If not then parse here
+                // If this class can still not parse then continue
+                switch ( currentData.GroupCode )
+                {
+                    case GroupCodesBase.XPoint:
+                        X0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.XPointEnd:
+                        X1 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPoint:
+                        Y0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPointEnd:
+                        Y1 = double.Parse(currentData.Value);
+                        continue;
+                    case LineGroupCodes.Thickness:
+                        Thickness = double.Parse(currentData.Value);
+                        continue;
+                    default:
+                        continue;
+                }
             }
+            return true;
         }
     }
 }

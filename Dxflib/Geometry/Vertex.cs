@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace Dxflib.Geometry
+﻿namespace Dxflib.Geometry
 {
     public class Vertex : GeometricEntityBase
     {
