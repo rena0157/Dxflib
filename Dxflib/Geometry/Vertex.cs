@@ -1,5 +1,20 @@
-﻿namespace Dxflib.Geometry
+﻿// Dxflib
+// Vertex.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-04
+// Last Updated: 2018-08-23-9:50 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+namespace Dxflib.Geometry
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// The Vertex Class
+    /// </summary>
     public class Vertex : GeometricEntityBase
     {
         private double _x;
@@ -60,6 +75,5 @@
                 OnGeometryChanged(new GeometryChangedHandlerArgs("Z"));
             }
         }
-
     }
 }

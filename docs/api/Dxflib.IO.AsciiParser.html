@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class DxflibTools
+    <title>Class AsciiParser
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class DxflibTools
+    <meta name="title" content="Class AsciiParser
    ">
     <meta name="generator" content="docfx 2.38.1.0">
     
@@ -68,19 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Dxflib.Tools.DxflibTools">
+            <article class="content wrap" id="_content" data-uid="Dxflib.IO.AsciiParser">
   
   
-  <h1 id="Dxflib_Tools_DxflibTools" data-uid="Dxflib.Tools.DxflibTools" class="text-break">Class DxflibTools
+  <h1 id="Dxflib_IO_AsciiParser" data-uid="Dxflib.IO.AsciiParser" class="text-break">Class AsciiParser
   </h1>
-  <div class="markdown level0 summary"><p>General Static Class that holds all kinds of different tools for the
-library</p>
+  <div class="markdown level0 summary"><p>The ASCII Parser is the one of the main parsers in the Dxflib Library.
+This class is used to extract data from a ASCII dxf file. The main constructor
+requires a <a class="xref" href="Dxflib.DxfFile.html">DxfFile</a> and when <a class="xref" href="Dxflib.IO.AsciiParser.html#Dxflib_IO_AsciiParser_ParseFile">ParseFile()</a> is called
+will populate all of the fields in the <a class="xref" href="Dxflib.DxfFile.html">DxfFile</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">DxflibTools</span></div>
+    <div class="level1"><span class="xref">AsciiParser</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -106,29 +108,29 @@ library</p>
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dxflib.Tools.html">Dxflib.Tools</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dxflib.IO.html">Dxflib.IO</a></h6>
   <h6><strong>Assembly</strong>: Dxflib.dll</h6>
-  <h5 id="Dxflib_Tools_DxflibTools_syntax">Syntax</h5>
+  <h5 id="Dxflib_IO_AsciiParser_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class DxflibTools</code></pre>
+    <pre><code class="lang-csharp hljs">public class AsciiParser</code></pre>
   </div>
-  <h3 id="methods">Methods
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Tools_DxflibTools_GetEnumDescription_System_Enum_.md&amp;value=---%0Auid%3A%20Dxflib.Tools.DxflibTools.GetEnumDescription(System.Enum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_IO_AsciiParser__ctor_Dxflib_DxfFile_.md&amp;value=---%0Auid%3A%20Dxflib.IO.AsciiParser.%23ctor(Dxflib.DxfFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Tools/DxflibTools.cs/#L28">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/IO/AsciiParser.cs/#L38">View Source</a>
   </span>
-  <a id="Dxflib_Tools_DxflibTools_GetEnumDescription_" data-uid="Dxflib.Tools.DxflibTools.GetEnumDescription*"></a>
-  <h4 id="Dxflib_Tools_DxflibTools_GetEnumDescription_System_Enum_" data-uid="Dxflib.Tools.DxflibTools.GetEnumDescription(System.Enum)">GetEnumDescription(Enum)</h4>
-  <div class="markdown level1 summary"><p>Get the description from an enumeration</p>
+  <a id="Dxflib_IO_AsciiParser__ctor_" data-uid="Dxflib.IO.AsciiParser.#ctor*"></a>
+  <h4 id="Dxflib_IO_AsciiParser__ctor_Dxflib_DxfFile_" data-uid="Dxflib.IO.AsciiParser.#ctor(Dxflib.DxfFile)">AsciiParser(DxfFile)</h4>
+  <div class="markdown level1 summary"><p>The main constructor. This constructor will set the target dxf file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetEnumDescription(Enum value)</code></pre>
+    <pre><code class="lang-csharp hljs">public AsciiParser(DxfFile dxfFile)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,29 +143,33 @@ library</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Enum</span></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The Enumeration that you want to get the description from</p>
+        <td><a class="xref" href="Dxflib.DxfFile.html">DxfFile</a></td>
+        <td><span class="parametername">dxfFile</span></td>
+        <td><p>The dxf file that data will be extracted from.
+All of the fields will be populated.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><p>The Description as a string</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_IO_AsciiParser_ParseFile.md&amp;value=---%0Auid%3A%20Dxflib.IO.AsciiParser.ParseFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/IO/AsciiParser.cs/#L44">View Source</a>
+  </span>
+  <a id="Dxflib_IO_AsciiParser_ParseFile_" data-uid="Dxflib.IO.AsciiParser.ParseFile*"></a>
+  <h4 id="Dxflib_IO_AsciiParser_ParseFile" data-uid="Dxflib.IO.AsciiParser.ParseFile">ParseFile()</h4>
+  <div class="markdown level1 summary"><p>This function will parse the file. It will populate all of the fields of the
+dxf file that was passed to the constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ParseFile()</code></pre>
+  </div>
 </article>
           </div>
           
@@ -172,10 +178,10 @@ library</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Tools_DxflibTools.md&amp;value=---%0Auid%3A%20Dxflib.Tools.DxflibTools%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_IO_AsciiParser.md&amp;value=---%0Auid%3A%20Dxflib.IO.AsciiParser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Tools/DxflibTools.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/IO/AsciiParser.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

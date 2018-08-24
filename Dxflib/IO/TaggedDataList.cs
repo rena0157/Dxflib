@@ -13,7 +13,11 @@ using System.Collections.Generic;
 
 namespace Dxflib.IO
 {
-
+    /// <summary>
+    /// The Tagged Data List class. A class that is a
+    /// wrapper for a <see cref="List{T}"/> where T
+    /// is <see cref="TaggedData"/>.
+    /// </summary>
     public class TaggedDataList
     {
         private readonly List<TaggedData> _list;

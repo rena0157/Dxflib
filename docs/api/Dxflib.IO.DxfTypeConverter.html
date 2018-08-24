@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class GeometryChangedHandlerArgs
+    <title>Class DxfTypeConverter
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class GeometryChangedHandlerArgs
+    <meta name="title" content="Class DxfTypeConverter
    ">
     <meta name="generator" content="docfx 2.38.1.0">
     
@@ -68,18 +68,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs">
+            <article class="content wrap" id="_content" data-uid="Dxflib.IO.DxfTypeConverter">
   
   
-  <h1 id="Dxflib_Geometry_GeometryChangedHandlerArgs" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs" class="text-break">Class GeometryChangedHandlerArgs
+  <h1 id="Dxflib_IO_DxfTypeConverter" data-uid="Dxflib.IO.DxfTypeConverter" class="text-break">Class DxfTypeConverter
   </h1>
-  <div class="markdown level0 summary"><p>The class that defines the event arguments</p>
+  <div class="markdown level0 summary"><p>This public static class has only one purpose, which is to return hold the
+<a class="xref" href="Dxflib.IO.DxfTypeConverter.html#Dxflib_IO_DxfTypeConverter_ConvertType_System_String_">ConvertType(String)</a> Function.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">GeometryChangedHandlerArgs</span></div>
+    <div class="level1"><span class="xref">DxfTypeConverter</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -105,63 +106,30 @@
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Dxflib.Geometry.html">Dxflib.Geometry</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dxflib.IO.html">Dxflib.IO</a></h6>
   <h6><strong>Assembly</strong>: Dxflib.dll</h6>
-  <h5 id="Dxflib_Geometry_GeometryChangedHandlerArgs_syntax">Syntax</h5>
+  <h5 id="Dxflib_IO_DxfTypeConverter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GeometryChangedHandlerArgs</code></pre>
+    <pre><code class="lang-csharp hljs">public static class DxfTypeConverter</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_System_Int32_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeometryChangedHandlerArgs.%23ctor(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_IO_DxfTypeConverter_ConvertType_System_String_.md&amp;value=---%0Auid%3A%20Dxflib.IO.DxfTypeConverter.ConvertType(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeometricEntityBase.cs/#L90">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/IO/DxfTypeConverter.cs/#L34">View Source</a>
   </span>
-  <a id="Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.#ctor*"></a>
-  <h4 id="Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_System_Int32_" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.#ctor(System.Int32)">GeometryChangedHandlerArgs(Int32)</h4>
-  <div class="markdown level1 summary"><p>The vertex ID that was changed in the geometry event</p>
+  <a id="Dxflib_IO_DxfTypeConverter_ConvertType_" data-uid="Dxflib.IO.DxfTypeConverter.ConvertType*"></a>
+  <h4 id="Dxflib_IO_DxfTypeConverter_ConvertType_System_String_" data-uid="Dxflib.IO.DxfTypeConverter.ConvertType(System.String)">ConvertType(String)</h4>
+  <div class="markdown level1 summary"><p>The Convert Type Function is used to get the correct AutoCAD
+Value type. This is consistent will the AutoCAD 2019 Standard.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GeometryChangedHandlerArgs(int vertexId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">vertexId</span></td>
-        <td><p>Vertex ID could be 0 or 1 for a geoline</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_System_String_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeometryChangedHandlerArgs.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeometricEntityBase.cs/#L80">View Source</a>
-  </span>
-  <a id="Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.#ctor*"></a>
-  <h4 id="Dxflib_Geometry_GeometryChangedHandlerArgs__ctor_System_String_" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.#ctor(System.String)">GeometryChangedHandlerArgs(String)</h4>
-  <div class="markdown level1 summary"><p>The name of the affected argument. Could be X, Y, Z etc..</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GeometryChangedHandlerArgs(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Type ConvertType(string groupCode)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,31 +143,13 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name that becomes the Name property in the class</p>
+        <td><span class="parametername">groupCode</span></td>
+        <td><p>The Group Code String</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeometryChangedHandlerArgs_Name.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeometryChangedHandlerArgs.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeometricEntityBase.cs/#L98">View Source</a>
-  </span>
-  <a id="Dxflib_Geometry_GeometryChangedHandlerArgs_Name_" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.Name*"></a>
-  <h4 id="Dxflib_Geometry_GeometryChangedHandlerArgs_Name" data-uid="Dxflib.Geometry.GeometryChangedHandlerArgs.Name">Name</h4>
-  <div class="markdown level1 summary"><p>The Name string</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -209,8 +159,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><span class="xref">System.Type</span></td>
+        <td><p>A <span class="xref">System.Type</span> that corresponds with the AutoCAD
+Type</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.InvalidCastException</span></td>
+        <td><p>Throws when a group code is not recognized.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -222,10 +190,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeometryChangedHandlerArgs.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeometryChangedHandlerArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_IO_DxfTypeConverter.md&amp;value=---%0Auid%3A%20Dxflib.IO.DxfTypeConverter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeometricEntityBase.cs/#L74" class="contribution-link">View Source</a>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/IO/DxfTypeConverter.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
