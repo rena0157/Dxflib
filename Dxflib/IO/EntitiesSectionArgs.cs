@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using Dxflib.Entities;
+using Dxflib.Entities.Hatch;
 
 namespace Dxflib.IO
 {
@@ -84,6 +85,11 @@ namespace Dxflib.IO
                         var lwPolyLineBuffer = new LwPolyLineBuffer();
                         lwPolyLineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new LwPolyLine(lwPolyLineBuffer));
+                        continue;
+                    case HatchCodes.StartMarker:
+                        var hatchBuffer = new HatchBuffer();
+                        hatchBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Hatch(hatchBuffer));
                         continue;
                     default:
                         continue;

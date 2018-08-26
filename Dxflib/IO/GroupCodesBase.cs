@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+// ReSharper disable ClassNeverInstantiated.Global
 namespace Dxflib.IO
 {
     /// <summary>
@@ -219,9 +220,15 @@ namespace Dxflib.IO
 
     /// <inheritdoc />
     /// <summary>
+    /// The HatchGroupCodes
     /// </summary>
     public class HatchCodes : GroupCodesBase
     {
+        /// <summary>
+        /// The Start Marker of the Hatch Entity
+        /// </summary>
+        public const string StartMarker = "HATCH";
+
         /// <summary>
         /// Hatch pattern name
         /// </summary>

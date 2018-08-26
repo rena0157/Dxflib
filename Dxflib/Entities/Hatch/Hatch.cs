@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-26-5:13 PM
+// Last Updated: 2018-08-26-5:52 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -25,6 +25,7 @@ namespace Dxflib.Entities.Hatch
             // Base Entity
             LayerName = hb.LayerName;
             Handle = hb.Handle;
+            EntityType = hb.EntityType;
 
             // Hatch Entity
             PatternName = hb.HatchPatternName;
@@ -75,12 +76,12 @@ namespace Dxflib.Entities.Hatch
         public double PatternAngle { get; }
 
         /// <summary>
-        /// The number of definition lines in the pattern
+        ///     The number of definition lines in the pattern
         /// </summary>
         public int PatternDefLinesCount { get; }
 
         /// <summary>
-        /// The Pattern Scale
+        ///     The Pattern Scale
         /// </summary>
         public double PatternScale { get; }
     }

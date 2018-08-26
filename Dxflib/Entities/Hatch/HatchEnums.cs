@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-26-4:50 PM
+// Last Updated: 2018-08-26-5:52 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -31,26 +31,26 @@ namespace Dxflib.Entities.Hatch
         /// <summary>
         ///     Hatch through entire area
         /// </summary>
-        Ignore,
+        Ignore
     }
 
     /// <summary>
-    /// Hatch Pattern Type. <see cref="HatchCodes.HatchPatternType"/>
+    ///     Hatch Pattern Type. <see cref="HatchCodes.HatchPatternType" />
     /// </summary>
     public enum HatchPatternType
     {
         /// <summary>
-        /// User Defined Hatch Pattern
+        ///     User Defined Hatch Pattern
         /// </summary>
         UserDefined,
 
         /// <summary>
-        /// A predefined Hatch Pattern
+        ///     A predefined Hatch Pattern
         /// </summary>
         Predefined,
 
         /// <summary>
-        /// A Custom Hatch Pattern
+        ///     A Custom Hatch Pattern
         /// </summary>
         Custom
     }
