@@ -203,6 +203,11 @@ namespace Dxflib.Entities
         [Description("LWPOLYLINE")] Lwpolyline,
 
         /// <summary>
+        /// 
+        /// </summary>
+        [Description("HATCH")] Hatch,
+
+        /// <summary>
         /// No specific Entity
         /// </summary>
         [Description("Not Set")] None
