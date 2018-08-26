@@ -31,7 +31,7 @@ namespace Dxflib.Entities.Hatch
         /// <summary>
         ///     Hatch through entire area
         /// </summary>
-        Ignore
+        Ignore,
     }
 
     /// <summary>

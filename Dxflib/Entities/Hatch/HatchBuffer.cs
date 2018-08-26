@@ -20,7 +20,22 @@ namespace Dxflib.Entities.Hatch
     /// </summary>
     public class HatchBuffer : EntityBuffer
     {
-        public HatchBuffer() { HatchPatternName = string.Empty; }
+        /// <inheritdoc />
+        /// <summary>
+        /// The Default Constructor that sets all values to their defaults
+        /// </summary>
+        public HatchBuffer()
+        {
+            HatchPatternName = string.Empty;
+            SolidFillFlag = false;
+            AssociativityFlag = false;
+            NumberOfLoops = 0;
+            HatchStyle = HatchStyles.Normal;
+            PatternType = HatchPatternType.Predefined;
+            PatternAngle = 0.0;
+            PatternScale = 0.0;
+            NumberOfPatternDefLines = 0;
+        }
 
         /// <summary>
         ///     <see cref="HatchCodes.HatchPatternName" />
