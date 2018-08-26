@@ -33,23 +33,23 @@ namespace Dxflib.Geometry
         public GeoPolyline(List<double> xValues,
             List<double> yValues, List<double> bulgeList, bool polylineFlag)
         {
-            // Throw Exception if the number of verticies does not match the 
+            // Throw Exception if the number of vertices does not match the 
             if (xValues.Count != yValues.Count)
-                throw new EntityException("There must be a matching number of verticies");
+                throw new EntityException("There must be a matching number of vertices");
 
-            // Initalize and preallocate the vertex list
+            // Initialize and preallocate the vertex list
             Vertices = new List<Vertex>(xValues.Capacity);
 
-            // Initalizing a preallicating the section list
-            SecionList = polylineFlag
+            // Initializing a pre-allocating the section list
+            SectionList = polylineFlag
                 ? new List<GeometricEntityBase>(Vertices.Capacity)
                 : new List<GeometricEntityBase>(Vertices.Capacity - 1);
 
-            // Place x and y into the verticies list
+            // Place x and y into the vertices list
             Vertices.AddRange(xValues.Select((t, vertexIndex)
                 => new Vertex(t, yValues[vertexIndex])));
 
-            // Iterate through all of the verticies and build either GeoArcs or GeoLines
+            // Iterate through all of the vertices and build either GeoArcs or GeoLines
             for (var vertexIndex = 0; vertexIndex < Vertices.Count; ++vertexIndex)
             {
                 var currentVertex = Vertices[vertexIndex];
@@ -60,27 +60,38 @@ namespace Dxflib.Geometry
                 {
                     var geoArc = new GeoArc(currentVertex, nextVertex, bulgeList[vertexIndex]);
                     geoArc.GeometryChanged += UpdateGeometry;
-                    SecionList.Add(geoArc);
+                    SectionList.Add(geoArc);
                 }
                 else
                 {
                     var geoLine = new GeoLine(currentVertex, nextVertex);
                     geoLine.GeometryChanged += UpdateGeometry;
-                    SecionList.Add(new GeoLine(currentVertex, nextVertex));
+                    SectionList.Add(new GeoLine(currentVertex, nextVertex));
                 }
 
 
                 if (!polylineFlag)
-                    SecionList.RemoveAt(SecionList.Count - 1);
+                    SectionList.RemoveAt(SectionList.Count - 1);
             }
 
             UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
         }
 
         /// <summary>
+        /// Default Constructor
+        /// </summary>
+        public GeoPolyline()
+        {
+            SectionList = new List<GeometricEntityBase>();
+            Vertices = new List<Vertex>();
+            Length = 0;
+            Area = 0;
+        }
+
+        /// <summary>
         /// The Sections
         /// </summary>
-        private List<GeometricEntityBase> SecionList { get; }
+        private List<GeometricEntityBase> SectionList { get; }
 
         /// <summary>
         /// The Vertices
@@ -98,6 +109,17 @@ namespace Dxflib.Geometry
         public double Area { get; private set; }
 
         /// <summary>
+        /// Add a section to the geo polyline
+        /// </summary>
+        /// <param name="section"></param>
+        public void Add(GeometricEntityBase section)
+        {
+            SectionList.Add(section);
+            UpdateGeometry(this, new GeometryChangedHandlerArgs("Update"));
+        }
+
+        /// <inheritdoc />
+        /// <summary>
         /// Override of the Update Geometry method from the GeometricEntityBase class
         /// </summary>
         /// <param name="sender">The object sender</param>
@@ -108,6 +130,7 @@ namespace Dxflib.Geometry
             Area = CalcArea();
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// The CalcLength function that calculates the total length of the polyline
         /// </summary>
@@ -115,7 +138,7 @@ namespace Dxflib.Geometry
         protected sealed override double CalcLength()
         {
             var sumLength = 0.0;
-            foreach (var entity in SecionList)
+            foreach (var entity in SectionList)
                 switch (entity.GeometryEntityType)
                 {
                     case GeometryEntityTypes.Vertex:
@@ -136,7 +159,7 @@ namespace Dxflib.Geometry
         private double CalcArea()
         {
             var sumArea = 0.0;
-            foreach ( var entity in SecionList )
+            foreach ( var entity in SectionList )
             {
                 switch ( entity.GeometryEntityType )
                 {
@@ -165,13 +188,13 @@ namespace Dxflib.Geometry
         private bool SubtractBulge(double bulge)
         {
             // Todo: Test this
-            if ( SecionList.Count < 2 )
+            if ( SectionList.Count < 2 )
                 return false;
-            var vec0 = SecionList[0].GeometryEntityType == GeometryEntityTypes.GeoArc 
-                ? ((GeoArc) SecionList[0]).ToVector() : ((GeoLine) SecionList[0]).ToVector();
+            var vec0 = SectionList[0].GeometryEntityType == GeometryEntityTypes.GeoArc 
+                ? ((GeoArc) SectionList[0]).ToVector() : ((GeoLine) SectionList[0]).ToVector();
 
-            var vec1 = SecionList[1].GeometryEntityType == GeometryEntityTypes.GeoArc 
-                ? ((GeoArc) SecionList[1]).ToVector() : ((GeoLine) SecionList[1]).ToVector();
+            var vec1 = SectionList[1].GeometryEntityType == GeometryEntityTypes.GeoArc 
+                ? ((GeoArc) SectionList[1]).ToVector() : ((GeoLine) SectionList[1]).ToVector();
 
             return vec0.CrossProduct(vec1).Z * bulge < 0;
         }

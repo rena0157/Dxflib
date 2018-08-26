@@ -54,4 +54,32 @@ namespace Dxflib.Entities.Hatch
         /// </summary>
         Custom
     }
+
+    // Boundary Data Objects ----------------------------
+
+    /// <summary>
+    /// Hatch Edge type. <see cref="HatchCodes.EdgeType"/>
+    /// </summary>
+    public enum EdgeTypes
+    {
+        /// <summary>
+        /// A line Edge Type. <see cref="Dxflib.Geometry.GeoLine"/>
+        /// </summary>
+        Line = 1,
+
+        /// <summary>
+        /// A Circular Arc. <see cref="Dxflib.Geometry.GeoArc"/>
+        /// </summary>
+        CircularArc = 2,
+
+        /// <summary>
+        /// 
+        /// </summary>
+        EllipticalArc = 3, // Todo Add this edge type information
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        Spline = 4 // Todo Add this edge type information
+    }
 }

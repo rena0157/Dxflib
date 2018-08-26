@@ -10,6 +10,7 @@
 // ============================================================
 
 using System;
+using Dxflib.Geometry;
 using Dxflib.IO;
 
 namespace Dxflib.Entities.Hatch
@@ -35,6 +36,7 @@ namespace Dxflib.Entities.Hatch
             PatternAngle = 0.0;
             PatternScale = 0.0;
             NumberOfPatternDefLines = 0;
+            Boundary = new GeoPolyline();
         }
 
         /// <summary>
@@ -81,6 +83,16 @@ namespace Dxflib.Entities.Hatch
         ///     <see cref="HatchCodes.HatchPatternScale" />
         /// </summary>
         public double PatternScale { get; private set; }
+
+        /// <summary>
+        /// <see cref="HatchCodes.NumberOfEdgesInBoundary"/>
+        /// </summary>
+        public int BoundaryEdgesCount { get; private set; }
+
+        /// <summary>
+        /// The Boundary of the Hatch
+        /// </summary>
+        public GeoPolyline Boundary { get; private set; }
 
         /// <inheritdoc />
         /// <summary>
@@ -166,12 +178,142 @@ namespace Dxflib.Entities.Hatch
                     case HatchCodes.HatchPatternScale:
                         PatternScale = double.Parse(currentData.Value);
                         continue;
+                    // Parsing the Boundary Data
+                    case HatchCodes.NumberOfEdgesInBoundary:
+                        BoundaryEdgesCount = int.Parse(currentData.Value);
+                        Boundary = ParseBoundary(list, ref currentIndex);
+                        continue;
                     default:
                         continue;
                 }
             }
+            return true;
+        }
 
-            return base.Parse(list, index);
+        /// <summary>
+        /// Parsing the Boundary Edge from edge Data
+        /// </summary>
+        /// <param name="list">The <see cref="TaggedDataList"/> list</param>
+        /// <param name="index">The current index</param>
+        /// <returns>A GeoPolyline</returns>
+        private static GeoPolyline ParseBoundary(TaggedDataList list, ref int index)
+        {
+            var geoPolyline = new GeoPolyline(); // The Geo Polyline to be returned
+            for ( ; index < list.Length; ++index )
+            {
+                var currentData = list.GetPair(index);
+
+                switch ( currentData.GroupCode )
+                {
+                    // Edge Types
+                    case HatchCodes.EdgeType:
+                        switch ( (EdgeTypes)int.Parse(currentData.Value) )
+                        {
+                            case EdgeTypes.Line:
+                                geoPolyline.Add(ParseLineEdge(list, ref index));
+                                break;
+                            case EdgeTypes.CircularArc:
+                                geoPolyline.Add(ParseCircularArcEdge(list, ref index));
+                                break;
+                            case EdgeTypes.EllipticalArc:
+                                break;
+                            case EdgeTypes.Spline:
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
+                        continue;
+
+                    // When to exit the loop
+                    case HatchCodes.SourceObjectsCount:
+                        --index;
+                        return geoPolyline;
+
+                    default:
+                        continue;
+                }
+            }
+            // This area of code should not be reachable
+            throw new ArgumentOutOfRangeException();
+        }
+
+        /// <summary>
+        /// Parse a geoline from a hatch boundary
+        /// </summary>
+        /// <param name="list">The <see cref="TaggedDataList"/> list</param>
+        /// <param name="index">The current index</param>
+        /// <returns>The GeoLine Parsed</returns>
+        private static GeoLine ParseLineEdge(TaggedDataList list, ref int index)
+        {
+            // All of the variables for the GeoLine
+            var x0 = 0.0;
+            var x1 = 0.0;
+            var y0 = 0.0;
+            // Iterate through the list
+            for ( ; index < list.Length; ++index )
+            {
+                var currentData = list.GetPair(index);
+
+                switch ( currentData.GroupCode )
+                {
+                    case GroupCodesBase.XPoint:
+                        x0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.XPointEnd:
+                        x1 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPoint:
+                        y0 = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPointEnd:
+                        var y1 = double.Parse(currentData.Value);
+                        // This is the last data point so return
+                        return new GeoLine(new Vertex(x0, y0), new Vertex(x1, y1));
+                    default:
+                        continue;
+                }
+            }
+            // this part of the code should never be reached
+            throw new ArgumentOutOfRangeException();
+        }
+
+        /// <summary>
+        /// Parse a <see cref="GeoArc"/> from the boundary data in the Hatch
+        /// </summary>
+        /// <param name="list">The Tagged Data List</param>
+        /// <param name="index">The current index</param>
+        /// <returns></returns>
+        private static GeoArc ParseCircularArcEdge(TaggedDataList list, ref int index)
+        {
+            var cpX = 0.0;
+            var cpY = 0.0;
+            var radius = 0.0;
+            var startAngle = 0.0;
+            for ( ; index < list.Length; ++index )
+            {
+                var currentData = list.GetPair(index);
+                switch ( currentData.GroupCode )
+                {
+                    case GroupCodesBase.XPoint:
+                        cpX = double.Parse(currentData.Value);
+                        continue;
+                    case GroupCodesBase.YPoint:
+                        cpY = double.Parse(currentData.Value);
+                        continue;
+                    case CircularArcCodes.Radius:
+                        radius = double.Parse(currentData.Value);
+                        continue;
+                    case CircularArcCodes.StartAngle:
+                        startAngle = double.Parse(currentData.Value);
+                        continue;
+                    case CircularArcCodes.EndAngle:
+                        var endAngle = double.Parse(currentData.Value);
+                        return new GeoArc(new Vertex(cpX, cpY), startAngle, endAngle, radius);
+                    default:
+                        continue;
+                }
+            }
+            throw new ArgumentOutOfRangeException();
         }
     }
 }

@@ -9,6 +9,8 @@
 // 
 // ============================================================
 
+using Dxflib.Geometry;
+
 namespace Dxflib.Entities.Hatch
 {
     /// <inheritdoc />
@@ -37,6 +39,9 @@ namespace Dxflib.Entities.Hatch
             PatternAngle = hb.PatternAngle;
             PatternDefLinesCount = hb.NumberOfPatternDefLines;
             PatternScale = hb.PatternScale;
+
+            // Boundary
+            Boundary = hb.Boundary;
         }
 
         /// <summary>
@@ -84,5 +89,10 @@ namespace Dxflib.Entities.Hatch
         ///     The Pattern Scale
         /// </summary>
         public double PatternScale { get; }
+
+        /// <summary>
+        /// The Boundary Path as a polyline
+        /// </summary>
+        public GeoPolyline Boundary { get; }
     }
 }

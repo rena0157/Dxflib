@@ -59,15 +59,6 @@ namespace Dxflib.Tests.Entities
         }
 
         [TestMethod]
-        public void StyleTest()
-        {
-            var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
-            Assert.IsTrue(hatches[0].Style == HatchStyles.Outer);
-            Assert.IsTrue(hatches[1].Style == HatchStyles.Outer);
-        }
-
-        [TestMethod]
         public void PatternTypeTest()
         {
             var file = new DxfFile(PathToFile);

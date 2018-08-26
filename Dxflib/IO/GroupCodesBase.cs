@@ -220,7 +220,7 @@ namespace Dxflib.IO
 
     /// <inheritdoc />
     /// <summary>
-    /// The HatchGroupCodes
+    /// The HatchGroupCodes. <see cref="Dxflib.Entities.Hatch"/>
     /// </summary>
     public class HatchCodes : GroupCodesBase
     {
@@ -281,5 +281,52 @@ namespace Dxflib.IO
         /// Number of Pattern Definition Lines
         /// </summary>
         public const string NumberOfPatternDefLines = " 78";
+
+        // Boundary Data -----------------------------
+
+        /// <summary>
+        /// Number of edges in this boundary path (only if boundary is not a polyline)
+        /// </summary>
+        public const string NumberOfEdgesInBoundary = " 93";
+
+        /// <summary>
+        /// Edge Type (Only if boundary is not a polyline)
+        /// 1 = Line
+        /// 2 = Circular Arc
+        /// 3 = Elliptical Arc
+        /// 4 = Spline
+        /// </summary>
+        public const string EdgeType = " 72";
+
+        /// <summary>
+        /// Number of source objects, <see cref="GroupCodesBase.SoftPointer"/>
+        /// </summary>
+        public const string SourceObjectsCount = " 97";
+    }
+
+    /// <summary>
+    /// Circular Arc Group Codes
+    /// </summary>
+    public class CircularArcCodes : GroupCodesBase
+    {
+        /// <summary>
+        /// The Radius of the Arc
+        /// </summary>
+        public const string Radius = " 40";
+
+        /// <summary>
+        /// The Starting Angle of the Arc (Degrees)
+        /// </summary>
+        public const string StartAngle = " 50";
+
+        /// <summary>
+        /// The Ending Angle of the Arc (Degrees)
+        /// </summary>
+        public const string EndAngle = " 51";
+
+        /// <summary>
+        /// True if the arc is counter clock wise
+        /// </summary>
+        public const string IsCounterClockWise = " 73";
     }
 }
