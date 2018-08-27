@@ -185,9 +185,14 @@ namespace Dxflib.Geometry
             return sumArea;
         }
 
+        /// <summary>
+        /// Private Function that is used to determine
+        /// if a bulge should be subtracted or added to an arc
+        /// </summary>
+        /// <param name="bulge">The Bulge Value</param>
+        /// <returns>True: The bulge should be subtracted</returns>
         private bool SubtractBulge(double bulge)
         {
-            // Todo: Test this
             if ( SectionList.Count < 2 )
                 return false;
             var vec0 = SectionList[0].GeometryEntityType == GeometryEntityTypes.GeoArc 

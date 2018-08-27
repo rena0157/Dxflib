@@ -28,6 +28,7 @@ namespace Dxflib.Tests.Entities
             var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             // This Hatch was drawn clockwise
             Assert.IsTrue(Math.Abs(hatches[1].Boundary.Length - 10.5040) < GeoMath.Tolerance);
+            Assert.IsTrue(Math.Abs(hatches[1].Boundary.Area - 7.5021) < GeoMath.Tolerance);
             // This Hatch was drawn Counter clockwise
             Assert.IsTrue(Math.Abs(hatches[2].Boundary.Length - 10.5040) < GeoMath.Tolerance);
         }

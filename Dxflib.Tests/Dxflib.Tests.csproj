@@ -57,6 +57,7 @@
     <Compile Include="Entities\LwPolyLineTests.cs" />
     <Compile Include="Entities\VertexTests.cs" />
     <Compile Include="Geometry\GeoArcTests.cs" />
+    <Compile Include="Geometry\GeoPolylineTests.cs" />
     <Compile Include="IO\TaggedDataTests.cs" />
     <Compile Include="IO\IOSpeedTests.cs" />
     <Compile Include="LinAlg\VectorTests.cs" />
