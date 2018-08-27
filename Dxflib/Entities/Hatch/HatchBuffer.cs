@@ -282,13 +282,14 @@ namespace Dxflib.Entities.Hatch
         /// </summary>
         /// <param name="list">The Tagged Data List</param>
         /// <param name="index">The current index</param>
-        /// <returns></returns>
+        /// <returns>A GeoArc</returns>
         private static GeoArc ParseCircularArcEdge(TaggedDataList list, ref int index)
         {
             var cpX = 0.0;
             var cpY = 0.0;
             var radius = 0.0;
             var startAngle = 0.0;
+            var endAngle = 0.0;
             for ( ; index < list.Length; ++index )
             {
                 var currentData = list.GetPair(index);
@@ -307,8 +308,24 @@ namespace Dxflib.Entities.Hatch
                         startAngle = double.Parse(currentData.Value);
                         continue;
                     case CircularArcCodes.EndAngle:
-                        var endAngle = double.Parse(currentData.Value);
-                        return new GeoArc(new Vertex(cpX, cpY), startAngle, endAngle, radius);
+                        endAngle = double.Parse(currentData.Value);
+                        continue;
+                    case CircularArcCodes.IsCounterClockWise:
+                        // Counter Clockwise Arc
+                        if ( currentData.Value.Contains("1") )
+                            return new GeoArc(
+                                new Vertex(cpX, cpY),
+                                GeoMath.DegToRad(startAngle),
+                                GeoMath.DegToRad(endAngle), radius);
+                        // AutoCAD not using Absolute angles when the
+                        // Arc is not counter clock wise
+                        startAngle -= 180;
+                        endAngle -= 180;
+                        // Clockwise Arc
+                        return new GeoArc(
+                            new Vertex(cpX, cpY), 
+                            GeoMath.DegToRad(startAngle), 
+                            GeoMath.DegToRad(endAngle), radius);
                     default:
                         continue;
                 }

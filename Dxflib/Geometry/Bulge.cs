@@ -30,6 +30,11 @@ namespace Dxflib.Geometry
             return 4 * Math.Atan(Math.Abs(bulgeValue));
         }
 
+        /// <summary>
+        /// Calculate the bulge of an arc from its angle
+        /// </summary>
+        /// <param name="value">The Angle</param>
+        /// <returns>A double that is the bulge of the arc</returns>
         public static double CalcBulge(double value) { return Math.Tan(value / 4); }
 
         /// <summary>
