@@ -170,19 +170,32 @@ namespace Dxflib.Entities.Hatch
                         }
 
                         continue;
+                    
                     // Pattern Angle
                     case HatchCodes.HatchPatternAngle:
                         PatternAngle = double.Parse(currentData.Value);
                         continue;
+                    
                     // Pattern Scale
                     case HatchCodes.HatchPatternScale:
                         PatternScale = double.Parse(currentData.Value);
                         continue;
+                    
                     // Parsing the Boundary Data
                     case HatchCodes.NumberOfEdgesInBoundary:
                         BoundaryEdgesCount = int.Parse(currentData.Value);
+
+                        // Set the boundary
                         Boundary = ParseBoundary(list, ref currentIndex);
+
+                        // Throw an exception if the number of objects does not match
+                        // what the file is saying
+                        if (Boundary.SectionCount != BoundaryEdgesCount)
+                            throw new DxfParseException(
+                                "Boundary Objects count do not match the file");
                         continue;
+                    
+                    // The default case
                     default:
                         continue;
                 }

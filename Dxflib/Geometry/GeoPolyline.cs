@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-27-8:26 PM
+// Last Updated: 2018-08-27-9:03 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -19,7 +19,9 @@ namespace Dxflib.Geometry
     /// <inheritdoc />
     /// <summary>
     ///     The GeoPolyline Class, which is a container of the GeoMetricEntityBase.
-    ///     This Object contains both GeoArcs and GeoLines
+    ///     This Object contains both <see cref="GeoArc"/>s and <see cref="GeoLine"/>s.
+    ///     This Object is essentially a wrapper over a <see cref="List{T}"/>
+    ///     where T is the <see cref="GeometricEntityBase"/> type.
     /// </summary>
     public class GeoPolyline : GeometricEntityBase
     {
@@ -113,6 +115,11 @@ namespace Dxflib.Geometry
         ///     True: The GeoPolyline was drawn counter clockwise
         /// </summary>
         private bool IsCounterClockWise { get; set; }
+
+        /// <summary>
+        ///     The Total number of sections in the section list
+        /// </summary>
+        public int SectionCount => SectionList.Count;
 
         /// <summary>
         ///     Add a section to the geo polyline
@@ -212,8 +219,8 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Function that calculates the total are of an arc including the
-        /// area that is occupied by a trapezoid under the arc
+        ///     Function that calculates the total are of an arc including the
+        ///     area that is occupied by a trapezoid under the arc
         /// </summary>
         /// <param name="arc">The arc</param>
         /// <returns>The Area of the Arc and Trapezoid</returns>
