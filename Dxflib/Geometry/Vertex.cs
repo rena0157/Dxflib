@@ -9,6 +9,10 @@
 // 
 // ============================================================
 
+using System;
+using System.Data.Common;
+using System.Runtime.CompilerServices;
+
 namespace Dxflib.Geometry
 {
     /// <inheritdoc />
@@ -74,6 +78,56 @@ namespace Dxflib.Geometry
                 _z = value;
                 OnGeometryChanged(new GeometryChangedHandlerArgs("Z"));
             }
+        }
+
+        /// <summary>
+        /// Returns true if the object can be cast to a vertex and
+        /// the points are the same.
+        /// </summary>
+        /// <param name="obj">The input object</param>
+        /// <returns>True if the vertices are the same point</returns>
+        public override bool Equals(object obj)
+        {
+            if ( obj == null )
+            {
+                return false;
+            }
+
+            if ( !( obj is Vertex vertex ) )
+            {
+                return false;
+            }
+
+            return Equals(vertex);
+        }
+
+        /// <summary>
+        /// Gets the hash of all the elements
+        /// </summary>
+        /// <returns></returns>
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = _x.GetHashCode();
+                hashCode = ( hashCode * 397 ) ^ _y.GetHashCode();
+                hashCode = ( hashCode * 397 ) ^ _z.GetHashCode();
+                return hashCode;
+            }
+        }
+
+        /// <summary>
+        /// Equals function override for a vertex input.
+        /// Two Vertices are Equal if all components (x, y, z) are the same
+        /// within the <see cref="GeoMath.Tolerance"/>.
+        /// </summary>
+        /// <param name="vertex">The Vertex to be compared to</param>
+        /// <returns>True if the vertices are the same point</returns>
+        public bool Equals(Vertex vertex)
+        {
+            return Math.Abs(X - vertex.X) < GeoMath.Tolerance && 
+                   Math.Abs(Y - vertex.Y) < GeoMath.Tolerance && 
+                   Math.Abs(Z - vertex.Z) < GeoMath.Tolerance;
         }
     }
 }
