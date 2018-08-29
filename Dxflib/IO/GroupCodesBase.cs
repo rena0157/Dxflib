@@ -304,6 +304,7 @@ namespace Dxflib.IO
         public const string SourceObjectsCount = " 97";
     }
 
+    /// <inheritdoc />
     /// <summary>
     /// Circular Arc Group Codes
     /// </summary>

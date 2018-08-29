@@ -10,6 +10,7 @@
 // ============================================================
 
 using System;
+using System.Collections.Generic;
 using Dxflib.Geometry;
 using Dxflib.IO;
 
@@ -36,6 +37,7 @@ namespace Dxflib.Entities.Hatch
             PatternAngle = 0.0;
             PatternScale = 0.0;
             NumberOfPatternDefLines = 0;
+            EntityReferenceList = new List<string>();
             Boundary = new GeoPolyline();
         }
 
@@ -93,6 +95,16 @@ namespace Dxflib.Entities.Hatch
         /// The Boundary of the Hatch
         /// </summary>
         public GeoPolyline Boundary { get; private set; }
+
+        /// <summary>
+        /// A list of <see cref="GroupCodesBase.SoftPointer"/>s to reference objects
+        /// </summary>
+        public List<string> EntityReferenceList { get; private set; }
+
+        /// <summary>
+        /// <see cref="HatchCodes.SourceObjectsCount"/>
+        /// </summary>
+        public int SourceObjectsCount { get; private set; }
 
         /// <inheritdoc />
         /// <summary>
@@ -185,6 +197,10 @@ namespace Dxflib.Entities.Hatch
                     case HatchCodes.NumberOfEdgesInBoundary:
                         BoundaryEdgesCount = int.Parse(currentData.Value);
 
+                        // If the polyline is associative then continue
+                        if (AssociativityFlag)
+                            continue;
+
                         // Set the boundary
                         Boundary = ParseBoundary(list, ref currentIndex);
 
@@ -195,6 +211,17 @@ namespace Dxflib.Entities.Hatch
                                 "Boundary Objects count do not match the file");
                         continue;
                     
+                    // Source Objects count
+                    case HatchCodes.SourceObjectsCount:
+                        SourceObjectsCount = int.Parse(currentData.Value);
+                        EntityReferenceList = new List<string>(SourceObjectsCount);
+                        break;
+                    
+                    // Source Object SoftPointers
+                    case GroupCodesBase.SoftPointer:
+                        if (SourceObjectsCount > 0)
+                            EntityReferenceList.Add(currentData.Value);
+                        break;
                     // The default case
                     default:
                         continue;
