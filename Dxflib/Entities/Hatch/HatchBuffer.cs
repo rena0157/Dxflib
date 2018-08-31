@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-26-5:00 PM
+// Last Updated: 2018-08-30-8:41 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -24,7 +24,7 @@ namespace Dxflib.Entities.Hatch
     {
         /// <inheritdoc />
         /// <summary>
-        /// The Default Constructor that sets all values to their defaults
+        ///     The Default Constructor that sets all values to their defaults
         /// </summary>
         public HatchBuffer()
         {
@@ -79,7 +79,7 @@ namespace Dxflib.Entities.Hatch
         /// <summary>
         ///     <see cref="HatchCodes.NumberOfPatternDefLines" />
         /// </summary>
-        public int NumberOfPatternDefLines { get; private set; }
+        public int NumberOfPatternDefLines { get; }
 
         /// <summary>
         ///     <see cref="HatchCodes.HatchPatternScale" />
@@ -87,22 +87,17 @@ namespace Dxflib.Entities.Hatch
         public double PatternScale { get; private set; }
 
         /// <summary>
-        /// <see cref="HatchCodes.NumberOfEdgesInBoundary"/>
+        ///     <see cref="HatchCodes.NumberOfEdgesInBoundary" />
         /// </summary>
         public int BoundaryEdgesCount { get; private set; }
 
         /// <summary>
-        /// The Boundary of the Hatch
+        ///     The Boundary of the Hatch
         /// </summary>
         public GeoPolyline Boundary { get; private set; }
 
         /// <summary>
-        /// A list of <see cref="GroupCodesBase.SoftPointer"/>s to reference objects
-        /// </summary>
-        public List<string> EntityReferenceList { get; private set; }
-
-        /// <summary>
-        /// <see cref="HatchCodes.SourceObjectsCount"/>
+        ///     <see cref="HatchCodes.SourceObjectsCount" />
         /// </summary>
         public int SourceObjectsCount { get; private set; }
 
@@ -182,23 +177,23 @@ namespace Dxflib.Entities.Hatch
                         }
 
                         continue;
-                    
+
                     // Pattern Angle
                     case HatchCodes.HatchPatternAngle:
                         PatternAngle = double.Parse(currentData.Value);
                         continue;
-                    
+
                     // Pattern Scale
                     case HatchCodes.HatchPatternScale:
                         PatternScale = double.Parse(currentData.Value);
                         continue;
-                    
+
                     // Parsing the Boundary Data
                     case HatchCodes.NumberOfEdgesInBoundary:
                         BoundaryEdgesCount = int.Parse(currentData.Value);
 
                         // If the polyline is associative then continue
-                        if (AssociativityFlag)
+                        if ( AssociativityFlag )
                             continue;
 
                         // Set the boundary
@@ -206,20 +201,20 @@ namespace Dxflib.Entities.Hatch
 
                         // Throw an exception if the number of objects does not match
                         // what the file is saying
-                        if (Boundary.SectionCount != BoundaryEdgesCount)
+                        if ( Boundary.SectionCount != BoundaryEdgesCount )
                             throw new DxfParseException(
                                 "Boundary Objects count do not match the file");
                         continue;
-                    
+
                     // Source Objects count
                     case HatchCodes.SourceObjectsCount:
                         SourceObjectsCount = int.Parse(currentData.Value);
                         EntityReferenceList = new List<string>(SourceObjectsCount);
                         break;
-                    
+
                     // Source Object SoftPointers
                     case GroupCodesBase.SoftPointer:
-                        if (SourceObjectsCount > 0)
+                        if ( SourceObjectsCount > 0 )
                             EntityReferenceList.Add(currentData.Value);
                         break;
                     // The default case
@@ -227,13 +222,14 @@ namespace Dxflib.Entities.Hatch
                         continue;
                 }
             }
+
             return true;
         }
 
         /// <summary>
-        /// Parsing the Boundary Edge from edge Data
+        ///     Parsing the Boundary Edge from edge Data
         /// </summary>
-        /// <param name="list">The <see cref="TaggedDataList"/> list</param>
+        /// <param name="list">The <see cref="TaggedDataList" /> list</param>
         /// <param name="index">The current index</param>
         /// <returns>A GeoPolyline</returns>
         private static GeoPolyline ParseBoundary(TaggedDataList list, ref int index)
@@ -247,7 +243,7 @@ namespace Dxflib.Entities.Hatch
                 {
                     // Edge Types
                     case HatchCodes.EdgeType:
-                        switch ( (EdgeTypes)int.Parse(currentData.Value) )
+                        switch ( (EdgeTypes) int.Parse(currentData.Value) )
                         {
                             case EdgeTypes.Line:
                                 geoPolyline.Add(ParseLineEdge(list, ref index));
@@ -262,6 +258,7 @@ namespace Dxflib.Entities.Hatch
                             default:
                                 throw new ArgumentOutOfRangeException();
                         }
+
                         continue;
 
                     // When to exit the loop
@@ -273,14 +270,15 @@ namespace Dxflib.Entities.Hatch
                         continue;
                 }
             }
+
             // This area of code should not be reachable
             throw new ArgumentOutOfRangeException();
         }
 
         /// <summary>
-        /// Parse a geoline from a hatch boundary
+        ///     Parse a geoline from a hatch boundary
         /// </summary>
-        /// <param name="list">The <see cref="TaggedDataList"/> list</param>
+        /// <param name="list">The <see cref="TaggedDataList" /> list</param>
         /// <param name="index">The current index</param>
         /// <returns>The GeoLine Parsed</returns>
         private static GeoLine ParseLineEdge(TaggedDataList list, ref int index)
@@ -313,12 +311,13 @@ namespace Dxflib.Entities.Hatch
                         continue;
                 }
             }
+
             // this part of the code should never be reached
             throw new ArgumentOutOfRangeException();
         }
 
         /// <summary>
-        /// Parse a <see cref="GeoArc"/> from the boundary data in the Hatch
+        ///     Parse a <see cref="GeoArc" /> from the boundary data in the Hatch
         /// </summary>
         /// <param name="list">The Tagged Data List</param>
         /// <param name="index">The current index</param>
@@ -363,13 +362,14 @@ namespace Dxflib.Entities.Hatch
                         endAngle -= 180;
                         // Clockwise Arc
                         return new GeoArc(
-                            new Vertex(cpX, cpY), 
-                            GeoMath.DegToRad(startAngle), 
+                            new Vertex(cpX, cpY),
+                            GeoMath.DegToRad(startAngle),
                             GeoMath.DegToRad(endAngle), radius);
                     default:
                         continue;
                 }
             }
+
             throw new ArgumentOutOfRangeException();
         }
     }

@@ -14,9 +14,14 @@ namespace Dxflib.Tests.Entities
         [TestMethod]
         public void LineBoundary()
         {
+            // Open File
             var file = new DxfFile(PathToFile);
+
+            // Get hatches - Note that Hatch is associative
             var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             var hatch = hatches[0];
+
+            // Test the boundary
             Assert.IsTrue(Math.Abs(hatch.Boundary.Length - 10) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(hatch.Boundary.Area - 6.2500) < GeoMath.Tolerance);
         }
@@ -24,7 +29,9 @@ namespace Dxflib.Tests.Entities
         [TestMethod]
         public void LineWithArcBoundary()
         {
+            // Open File
             var file = new DxfFile(PathToFile);
+            // Get Hatches - Note that Hatch is associative
             var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             // This Hatch was drawn clockwise
             Assert.IsTrue(Math.Abs(hatches[1].Boundary.Length - 10.5040) < GeoMath.Tolerance);

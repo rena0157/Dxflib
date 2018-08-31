@@ -9,6 +9,8 @@
 // 
 // ============================================================
 
+using System.Collections.Generic;
+using Dxflib.AcadEntities.Pointer;
 using Dxflib.Geometry;
 
 namespace Dxflib.Entities
@@ -26,14 +28,9 @@ namespace Dxflib.Entities
         ///     The Line Buffer that was filled
         ///     in the extraction process
         /// </param>
-        public Line(LineBuffer lineBuffer)
+        public Line(LineBuffer lineBuffer) : base(lineBuffer)
         {
-            // Setting up variables from the lineBuffer
-            EntityType = EntityTypes.Line;
-            Handle = lineBuffer.Handle;
-            LayerNameBf = lineBuffer.LayerName;
             Thickness = lineBuffer.Thickness;
-
             // Setting the GeoLine
             GLine = new GeoLine(new Vertex(lineBuffer.X0, lineBuffer.Y0),
                 new Vertex(lineBuffer.X1, lineBuffer.Y1));

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-03
-// Last Updated: 2018-08-23-8:28 PM
+// Last Updated: 2018-08-30-8:49 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -44,15 +44,12 @@ namespace Dxflib
             FileName = Path.GetFileName(PathToFile);
             DxfFileData = new TaggedDataList(fileReader.ReadFile());
 
-            // Read and parse the file
-            Entities = new List<Entity>();
-
             // The Main Parsing Calling Function
             var asciiParser = new AsciiParser(this);
             asciiParser.ParseFile();
 
             // Update the layer dictionary now that the Entities are all built
-            Layers.UpdateDictionary(Entities);
+            Layers.UpdateDictionary(Entities.Values);
         }
 
         #endregion
@@ -74,7 +71,7 @@ namespace Dxflib
         ///     The Entities property is a list of all the entities that were read from the file. The
         ///     <see cref="Entity" /> types can be changed into any other type of derived class.
         /// </summary>
-        public List<Entity> Entities { get; set; }
+        public EntityCollection Entities { get; set; }
 
         #endregion
 
@@ -98,10 +95,7 @@ namespace Dxflib
         /// <returns>A list of entities all members of the type <see cref="EntityTypes" /></returns>
         public List<T> GetEntitiesByType<T>(EntityTypes entityType)
         {
-            var returnList = new List<Entity>();
-            foreach ( var entity in Entities )
-                if ( entity.EntityType == entityType )
-                    returnList.Add(entity);
+            var returnList = Entities.Values.Where(entity => entity.EntityType == entityType).ToList();
 
             return returnList.Cast<T>().ToList();
         }

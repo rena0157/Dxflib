@@ -29,7 +29,7 @@ namespace Dxflib.AcadEntities.Pointer
         public string Handle { get; protected set; }
 
         /// <summary>
-        /// The Entity Reference
+        /// The Entity Reference, note that this value should not be null
         /// </summary>
         public virtual T RefEntity
         {
@@ -39,13 +39,19 @@ namespace Dxflib.AcadEntities.Pointer
                     throw new EntityPointerException("Entity is Null");
                 return _entity;
             }
-            set => _entity = value;
+            set
+            {
+                if (value == null)
+                    throw new EntityPointerException("Entity is Null");
+                _entity = value;
+            }
         }
 
         /// <summary>
         /// The type of the entity the object is pointing to
         /// </summary>
         public Type EntityType { get; }
+
     }
 
     /// <inheritdoc />

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-26-5:52 PM
+// Last Updated: 2018-08-30-8:38 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -19,16 +19,12 @@ namespace Dxflib.Entities.Hatch
     /// </summary>
     public class Hatch : Entity
     {
+        /// <inheritdoc />
         /// <summary>
         /// </summary>
         /// <param name="hb"></param>
-        public Hatch(HatchBuffer hb)
+        public Hatch(HatchBuffer hb) : base(hb)
         {
-            // Base Entity
-            LayerName = hb.LayerName;
-            Handle = hb.Handle;
-            EntityType = hb.EntityType;
-
             // Hatch Entity
             PatternName = hb.HatchPatternName;
             IsSolid = hb.SolidFillFlag;
@@ -41,7 +37,8 @@ namespace Dxflib.Entities.Hatch
             PatternScale = hb.PatternScale;
 
             // Boundary
-            Boundary = hb.Boundary;
+            if ( !IsAssociative )
+                Boundary = hb.Boundary;
         }
 
         /// <summary>
@@ -91,8 +88,35 @@ namespace Dxflib.Entities.Hatch
         public double PatternScale { get; }
 
         /// <summary>
-        /// The Boundary Path as a polyline
+        ///     The Boundary Path as a polyline
         /// </summary>
-        public GeoPolyline Boundary { get; }
+        public GeoPolyline Boundary { get; private set; }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// This function will build the <see cref="P:Dxflib.Entities.Hatch.Hatch.Boundary" />
+        /// of this hatch if it is <see cref="P:Dxflib.Entities.Hatch.Hatch.IsAssociative" />.
+        /// </summary>
+        public override void UpdateReferencedEntities()
+        {
+            if ( ReferencedEntities.Count > 1 )
+                Boundary = BuildBoundary();
+            else if ( ReferencedEntities.Count == 1 )
+                if ( ReferencedEntities[0].RefEntity is LwPolyLine polyline )
+                    Boundary = polyline.GPolyline;
+        }
+
+        // Build the Boundary if the number
+        // of boundary objects is greater than 1
+        // or in other words is not a polyline
+        private GeoPolyline BuildBoundary()
+        {
+            var geoPolyline = new GeoPolyline();
+            foreach ( var entityPointer in ReferencedEntities )
+                if ( entityPointer.RefEntity is Line line )
+                    geoPolyline.Add(line.GLine);
+
+            return geoPolyline;
+        }
     }
 }
