@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-09-01-6:42 PM
+// Last Updated: 2018-09-01-7:02 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -17,7 +17,7 @@ using Dxflib.LinAlg;
 namespace Dxflib.Geometry
 {
     /// <inheritdoc cref="GeoBase" />
-    /// <inheritdoc cref="IGeoLinear"/>
+    /// <inheritdoc cref="IGeoLinear" />
     /// <summary>
     ///     The GeoArc Class: Defines a Geometric Circular Arc.
     /// </summary>
@@ -38,7 +38,6 @@ namespace Dxflib.Geometry
     ///     3 vertices that the arc must pass though. The first and second vertex are the starting
     ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
     ///     the moving of one vertex the center arc length is usually chosen as the middle vertex.
-    ///
     ///     All of the set Properties in this class will cause the geometry of other properties
     ///     to be updated when they are set.
     /// </remarks>
@@ -46,22 +45,22 @@ namespace Dxflib.Geometry
     {
         #region PrivateFields
 
-        private Vertex _vertex0;         // The Starting Vertex
-        private Vertex _vertex1;         // The Ending Vertex
+        private Vertex _vertex0; // The Starting Vertex
+        private Vertex _vertex1; // The Ending Vertex
         private Vertex _arcMiddleVertex; // The Vertex At the mid point of the Arc
-        private Vertex _centerVertex;    // The Vertex at the Center of the Arc
-        private double _bulge;           // The Bulge of the Arc
-        private double _startAngle;      // The starting angle of the arc (Vertex0)
-        private double _endAngle;        // The ending angle of the arc (Vertex1)
-        private double _radius;          // The radius of the arc
+        private Vertex _centerVertex; // The Vertex at the Center of the Arc
+        private double _bulge; // The Bulge of the Arc
+        private double _startAngle; // The starting angle of the arc (Vertex0)
+        private double _endAngle; // The ending angle of the arc (Vertex1)
+        private double _radius; // The radius of the arc
 
         #endregion
 
         #region Constructors
 
         /// <summary>
-        ///     GeoArc from Starting Vertex (<paramref name="vertex0"/>)
-        ///     ending Vertex (<paramref name="vertex1"/>) and a bulge
+        ///     GeoArc from Starting Vertex (<paramref name="vertex0" />)
+        ///     ending Vertex (<paramref name="vertex1" />) and a bulge
         /// </summary>
         /// <param name="vertex0">First Vertex</param>
         /// <param name="vertex1">Second Vertex</param>
@@ -215,9 +214,9 @@ namespace Dxflib.Geometry
         ///     Area of the GeoArc
         /// </summary>
         /// <remarks>
-        ///     <see cref="Area"/> is defined as the geometric area
+        ///     <see cref="Area" /> is defined as the geometric area
         ///     between the arc and the segment that defines its chord.
-        ///     <see cref="GeoMath.ChordArea"/> is the function that is used
+        ///     <see cref="GeoMath.ChordArea" /> is the function that is used
         ///     to calculate the area of this class
         /// </remarks>
         public double Area { get; private set; }
@@ -226,7 +225,7 @@ namespace Dxflib.Geometry
         ///     Total Angle of the Arc (Radians)
         /// </summary>
         /// <remarks>
-        ///     Total angle = <see cref="EndAngle"/> - <see cref="StartAngle"/>
+        ///     Total angle = <see cref="EndAngle" /> - <see cref="StartAngle" />
         /// </remarks>
         public double Angle { get; private set; }
 
@@ -249,8 +248,8 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     Starting Angle is defined as the angle between two vectors:
-        ///     1. Vector that starts at <see cref="CenterVertex"/> and ends at <see cref="Vertex0"/>
-        ///     2. The <see cref="UnitVectors.XUnitVector"/>.
+        ///     1. Vector that starts at <see cref="CenterVertex" /> and ends at <see cref="Vertex0" />
+        ///     2. The <see cref="UnitVectors.XUnitVector" />.
         ///     This Angle is measured in radians
         /// </remarks>
         public double StartAngle
@@ -269,8 +268,8 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     Starting Angle is defined as the angle between two vectors:
-        ///     1. Vector that starts at <see cref="CenterVertex"/> and ends at <see cref="Vertex1"/>
-        ///     2. The <see cref="UnitVectors.XUnitVector"/>.
+        ///     1. Vector that starts at <see cref="CenterVertex" /> and ends at <see cref="Vertex1" />
+        ///     2. The <see cref="UnitVectors.XUnitVector" />.
         ///     This Angle is measured in radians
         /// </remarks>
         public double EndAngle
@@ -472,14 +471,16 @@ namespace Dxflib.Geometry
             base.OnPropertyChanged(propertyName);
         }
 
+        /// <inheritdoc />
         /// <summary>
-        ///     Converts this object to a <see cref="Vector" />.
-        ///     Where the <see cref="Vector.HeadVertex" /> and
-        ///     <see cref="Vector.TailVertex" /> correspond with
-        ///     the <see cref="Vertex0" /> and <see cref="Vertex1" />
+        ///     Converts this object to a <see cref="T:Dxflib.LinAlg.Vector" />.
+        ///     Where the <see cref="P:Dxflib.LinAlg.Vector.HeadVertex" /> and
+        ///     <see cref="P:Dxflib.LinAlg.Vector.TailVertex" /> correspond with
+        ///     the <see cref="P:Dxflib.Geometry.GeoArc.Vertex0" />
+        ///     and <see cref="P:Dxflib.Geometry.GeoArc.Vertex1" />
         ///     of this object respectively.
         /// </summary>
-        /// <returns>A new <see cref="Vector" /> Object</returns>
+        /// <returns>A new <see cref="T:Dxflib.LinAlg.Vector" /> Object</returns>
         public Vector ToVector() { return new Vector(_vertex0, _vertex1); }
 
         /// <summary>
@@ -618,6 +619,7 @@ namespace Dxflib.Geometry
 
             UpdateGeometry();
         }
+
         #endregion
     }
 }

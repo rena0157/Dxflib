@@ -100,6 +100,7 @@ namespace Dxflib.Geometry
 
         private void Vertex0OnPropertyChanged(object sender, PropertyChangedEventArgs e) { UpdateGeometry(string.Empty); }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Update the Geometry After Property Change
         /// </summary>
