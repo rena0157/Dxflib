@@ -9,16 +9,19 @@
 // 
 // ============================================================
 
+using System.Runtime.InteropServices.ComTypes;
 using Dxflib.LinAlg;
 
 namespace Dxflib.Geometry
 {
+    /// <inheritdoc cref="GeoBase" />
+    /// <inheritdoc cref="IGeoLinear"/>
     /// <summary>
     ///     A Geometric line. This line is different than a line that is
-    ///     inherienting the entity class. This line should only be used for geometric
+    ///     inheriting the entity class. This line should only be used for geometric
     ///     purposes
     /// </summary>
-    public class GeoLine : GeoBase
+    public class GeoLine : GeoBase, IGeoLinear
     {
         private Vertex _vertex0;
         private Vertex _vertex1;
@@ -48,7 +51,7 @@ namespace Dxflib.Geometry
 
         /// <summary>
         ///     The first Vertex. Note that when setting this property a GeometryChanged
-        ///     event will be broadcasted. Also changing this property will cause an update
+        ///     event will be broadcast. Also changing this property will cause an update
         ///     Geometry method to happen.
         /// </summary>
         public Vertex Vertex0
@@ -76,11 +79,13 @@ namespace Dxflib.Geometry
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     The total length of the polyline.
         /// </summary>
         public double Length { get; private set; }
 
+        /// <inheritdoc />
         /// <summary>
         ///     The Area of the GeoLine
         /// </summary>
@@ -98,6 +103,7 @@ namespace Dxflib.Geometry
         /// <returns>The Area of the line and the x axis</returns>
         private double CalcArea() { return GeoMath.TrapzArea(this); }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Updates the Geometry for this class
         /// </summary>
@@ -109,13 +115,13 @@ namespace Dxflib.Geometry
             Area = CalcArea();
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Convert this Geoline to a Vector
         /// </summary>
         /// <returns>A new Vector</returns>
         public Vector ToVector()
         {
-            // Todo: Test This
             return new Vector(this);
         }
     }
