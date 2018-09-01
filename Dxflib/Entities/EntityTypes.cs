@@ -18,9 +18,14 @@ namespace Dxflib.Entities
         [Description("LWPOLYLINE")] Lwpolyline,
 
         /// <summary>
-        /// 
+        /// <see cref="Dxflib.Entities.Hatch"/>
         /// </summary>
         [Description("HATCH")] Hatch,
+
+        /// <summary>
+        /// <see cref="Dxflib.Entities.CircularArc"/>
+        /// </summary>
+        [Description("ARC")] CircularArc,
 
         /// <summary>
         /// No specific Entity
