@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>0.3.0</Version>
+    <Authors>Adam Renaud</Authors>
+    <Description>A C# Dxf Library</Description>
+    <Copyright>Adam Renaud</Copyright>
+    <PackageLicenseUrl>https://github.com/rena0157/Dxflib/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rena0157/Dxflib</RepositoryUrl>
+    <PackageTags>Dxf</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
