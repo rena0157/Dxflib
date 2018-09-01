@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-09-01
-// Last Updated: 2018-09-01-9:35 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -73,7 +73,7 @@ namespace Dxflib.Entities
 
         /// <inheritdoc />
         /// <summary>
-        /// The Parse Function for the CircularArc Entity
+        ///     The Parse Function for the CircularArc Entity
         /// </summary>
         /// <param name="list">The Tagged Data list</param>
         /// <param name="index">The Current Index</param>
@@ -86,10 +86,10 @@ namespace Dxflib.Entities
             {
                 var currentData = list.GetPair(currentIndex);
 
-                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                if ( currentData.GroupCode == GroupCodesBase.EntityType )
                     break;
 
-                if (base.Parse(list, currentIndex))
+                if ( base.Parse(list, currentIndex) )
                     continue;
 
                 switch ( currentData.GroupCode )
@@ -101,7 +101,7 @@ namespace Dxflib.Entities
                     case GroupCodesBase.YPoint:
                         CenterPointY = double.Parse(currentData.Value);
                         continue;
-                    
+
                     case GroupCodesBase.ZPoint:
                         CenterPointZ = double.Parse(currentData.Value);
                         continue;
@@ -125,6 +125,7 @@ namespace Dxflib.Entities
                         continue;
                 }
             }
+
             return true;
         }
     }

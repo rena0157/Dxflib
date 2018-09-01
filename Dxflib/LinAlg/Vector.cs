@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-10
-// Last Updated: 2018-08-10-1:28 PM
+// Created: 2018-08-11
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -16,7 +16,7 @@ namespace Dxflib.LinAlg
 {
     /// <summary>
     ///     The Vector Class: Defines vector mathematics and functionality
-    ///     for the dxf library 
+    ///     for the dxf library
     /// </summary>
     public class Vector
     {
@@ -135,6 +135,11 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
+        ///     The 2D Slope of the vector (dY/dX)
+        /// </summary>
+        public double Slope => Y / X;
+
+        /// <summary>
         ///     Translate a vertex to a new point by its tail
         /// </summary>
         /// <param name="newTail">The new tail vertex</param>
@@ -142,14 +147,13 @@ namespace Dxflib.LinAlg
         {
             _vertex0 = newTail;
             _vertex1 = new Vertex(
-                    _vertex1.X + newTail.X,
-                    _vertex1.Y + newTail.Y,
-                    _vertex1.Z + newTail.Z);
+                _vertex1.X + newTail.X,
+                _vertex1.Y + newTail.Y,
+                _vertex1.Z + newTail.Z);
             UpdateGeometry(this, new GeometryChangedHandlerArgs("Update"));
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <param name="scaler"></param>
         public void Scale(double scaler)
@@ -159,11 +163,6 @@ namespace Dxflib.LinAlg
                 Y * scaler + TailVertex.Y,
                 Z * scaler + TailVertex.Z);
         }
-
-        /// <summary>
-        /// The 2D Slope of the vector (dY/dX)
-        /// </summary>
-        public double Slope => Y / X;
 
         /// <summary>
         ///     Rotate the vector about is tail
@@ -250,14 +249,14 @@ namespace Dxflib.LinAlg
         public double DotProduct(Vector other) { return other.X * X + other.Y * Y + other.Z * Z; }
 
         /// <summary>
-        /// The Angle between two vectors
+        ///     The Angle between two vectors
         /// </summary>
         /// <param name="vec0">Vector 1</param>
         /// <param name="vec1">Vector 2</param>
         /// <returns>The angle between two vectors in radians</returns>
         public static double AngleBetweenVectors(Vector vec0, Vector vec1)
         {
-            if (Math.Abs(vec0.Length) < GeoMath.Tolerance || Math.Abs(vec1.Length) < GeoMath.Tolerance)
+            if ( Math.Abs(vec0.Length) < GeoMath.Tolerance || Math.Abs(vec1.Length) < GeoMath.Tolerance )
                 throw new DivideByZeroException("Cannot Divide by zero (Angle Between Vectors)");
             return Math.Acos(vec0.DotProduct(vec1) / ( vec0.Length * vec1.Length ));
         }

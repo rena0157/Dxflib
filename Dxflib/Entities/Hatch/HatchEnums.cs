@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-26-5:52 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -58,27 +58,25 @@ namespace Dxflib.Entities.Hatch
     // Boundary Data Objects ----------------------------
 
     /// <summary>
-    /// Hatch Edge type. <see cref="HatchCodes.EdgeType"/>
+    ///     Hatch Edge type. <see cref="HatchCodes.EdgeType" />
     /// </summary>
     public enum EdgeTypes
     {
         /// <summary>
-        /// A line Edge Type. <see cref="Dxflib.Geometry.GeoLine"/>
+        ///     A line Edge Type. <see cref="Dxflib.Geometry.GeoLine" />
         /// </summary>
         Line = 1,
 
         /// <summary>
-        /// A Circular Arc. <see cref="Dxflib.Geometry.GeoArc"/>
+        ///     A Circular Arc. <see cref="Dxflib.Geometry.GeoArc" />
         /// </summary>
         CircularArc = 2,
 
         /// <summary>
-        /// 
         /// </summary>
         EllipticalArc = 3, // Todo Add this edge type information
-        
+
         /// <summary>
-        /// 
         /// </summary>
         Spline = 4 // Todo Add this edge type information
     }

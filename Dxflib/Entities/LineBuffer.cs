@@ -1,10 +1,10 @@
 ﻿// Dxflib
-// Line.cs
+// LineBuffer.cs
 // 
 // ============================================================
 // 
-// Created: 2018-08-04
-// Last Updated: 2018-08-05-8:41 AM
+// Created: 2018-08-07
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -21,7 +21,7 @@ namespace Dxflib.Entities
     {
         /// <inheritdoc />
         /// <summary>
-        /// Constructor that will return all values to their defaults
+        ///     Constructor that will return all values to their defaults
         /// </summary>
         public LineBuffer()
         {
@@ -33,27 +33,27 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        /// The Thickness of the <see cref="Line.Thickness"/>
+        ///     The Thickness of the <see cref="Line.Thickness" />
         /// </summary>
         public double Thickness { get; set; }
 
         /// <summary>
-        /// The X starting coordinate of the line
+        ///     The X starting coordinate of the line
         /// </summary>
         public double X0 { get; set; }
 
         /// <summary>
-        /// The X ending coordinate of the line
+        ///     The X ending coordinate of the line
         /// </summary>
         public double X1 { get; set; }
 
         /// <summary>
-        /// The Y starting coordinate of the line
+        ///     The Y starting coordinate of the line
         /// </summary>
         public double Y0 { get; set; }
 
         /// <summary>
-        /// The Y ending coordinate of the line
+        ///     The Y ending coordinate of the line
         /// </summary>
         public double Y1 { get; set; }
 
@@ -78,17 +78,18 @@ namespace Dxflib.Entities
 
             // Iterate through the file and extract data until the current line 
             // is an entity end marker
-            for (var currentIndex = index + 1; 
-                currentIndex < list.Length; ++currentIndex)
+            for ( var currentIndex = index + 1;
+                currentIndex < list.Length;
+                ++currentIndex )
             {
                 // The current data is set
                 var currentData = list.GetPair(currentIndex);
 
-                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                if ( currentData.GroupCode == GroupCodesBase.EntityType )
                     break;
 
                 // Check to see if the entity bass class can parse first
-                if (base.Parse(list, currentIndex))
+                if ( base.Parse(list, currentIndex) )
                     continue;
 
                 // If not then parse here
@@ -114,6 +115,7 @@ namespace Dxflib.Entities
                         continue;
                 }
             }
+
             return true;
         }
     }

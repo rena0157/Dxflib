@@ -1,4 +1,15 @@
-﻿using System.ComponentModel;
+﻿// Dxflib
+// EntityTypes.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-30
+// Last Updated: 2018-09-01-1:09 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+using System.ComponentModel;
 
 namespace Dxflib.Entities
 {
@@ -8,27 +19,27 @@ namespace Dxflib.Entities
     public enum EntityTypes
     {
         /// <summary>
-        /// <see cref="Dxflib.Entities.Line"/>
+        ///     <see cref="Dxflib.Entities.Line" />
         /// </summary>
         [Description("LINE")] Line,
 
         /// <summary>
-        /// <see cref="Dxflib.Entities.LwPolyLine"/>
+        ///     <see cref="Dxflib.Entities.LwPolyLine" />
         /// </summary>
         [Description("LWPOLYLINE")] Lwpolyline,
 
         /// <summary>
-        /// <see cref="Dxflib.Entities.Hatch"/>
+        ///     <see cref="Dxflib.Entities.Hatch" />
         /// </summary>
         [Description("HATCH")] Hatch,
 
         /// <summary>
-        /// <see cref="Dxflib.Entities.CircularArc"/>
+        ///     <see cref="Dxflib.Entities.CircularArc" />
         /// </summary>
         [Description("ARC")] CircularArc,
 
         /// <summary>
-        /// No specific Entity
+        ///     No specific Entity
         /// </summary>
         [Description("Not Set")] None
     }

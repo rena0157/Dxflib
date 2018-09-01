@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-07-11:06 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -15,13 +15,13 @@ using System.ComponentModel;
 namespace Dxflib.Tools
 {
     /// <summary>
-    /// General Static Class that holds all kinds of different tools for the
-    /// library
+    ///     General Static Class that holds all kinds of different tools for the
+    ///     library
     /// </summary>
     public static class DxflibTools
     {
         /// <summary>
-        /// Get the description from an enumeration
+        ///     Get the description from an enumeration
         /// </summary>
         /// <param name="value">The Enumeration that you want to get the description from</param>
         /// <returns>The Description as a string</returns>

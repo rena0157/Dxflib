@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-08-30-8:38 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -95,8 +95,8 @@ namespace Dxflib.Entities.Hatch
 
         /// <inheritdoc />
         /// <summary>
-        /// This function will build the <see cref="P:Dxflib.Entities.Hatch.Hatch.Boundary" />
-        /// of this hatch if it is <see cref="P:Dxflib.Entities.Hatch.Hatch.IsAssociative" />.
+        ///     This function will build the <see cref="P:Dxflib.Entities.Hatch.Hatch.Boundary" />
+        ///     of this hatch if it is <see cref="P:Dxflib.Entities.Hatch.Hatch.IsAssociative" />.
         /// </summary>
         public override void UpdateReferencedEntities()
         {
@@ -114,7 +114,6 @@ namespace Dxflib.Entities.Hatch
         {
             var geoPolyline = new GeoPolyline();
             foreach ( var entityPointer in ReferencedEntities )
-            {
                 switch ( entityPointer.RefEntity )
                 {
                     case Line line:
@@ -126,7 +125,6 @@ namespace Dxflib.Entities.Hatch
                     default:
                         throw new EntityPointerException("Pointer Type Not Recognized");
                 }
-            }
             return geoPolyline;
         }
     }

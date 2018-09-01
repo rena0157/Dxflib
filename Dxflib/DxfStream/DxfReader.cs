@@ -4,12 +4,10 @@
 // ============================================================
 // 
 // Created: 2018-08-03
-// Last Updated: 2018-08-03-7:04 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
-// 
-// Purpose:
 
 using System;
 using System.IO;
@@ -17,7 +15,7 @@ using System.IO;
 namespace Dxflib.DxfStream
 {
     /// <summary>
-    /// The DxfReader class that reads a Dxf file and returns a string list
+    ///     The DxfReader class that reads a Dxf file and returns a string list
     /// </summary>
     public class DxfReader
     {
@@ -26,10 +24,7 @@ namespace Dxflib.DxfStream
         ///     The file contents can be read using the readfile method
         /// </summary>
         /// <param name="pathToFile"></param>
-        public DxfReader(string pathToFile)
-        {
-            PathToFile = pathToFile;
-        }
+        public DxfReader(string pathToFile) { PathToFile = pathToFile; }
 
         /// <summary>
         ///     The Path to the file on the disk
@@ -43,11 +38,11 @@ namespace Dxflib.DxfStream
         public string[] ReadFile()
         {
             // Check if the file exists
-            if (!File.Exists(PathToFile))
+            if ( !File.Exists(PathToFile) )
                 throw new DxfStreamException("File does not exist or was not found");
 
             // make sure that the file is a dxf file
-            if (Path.GetExtension(PathToFile) != ".dxf")
+            if ( Path.GetExtension(PathToFile) != ".dxf" )
                 throw new DxfStreamException("The file extension must be .dxf");
 
             // The file stream and stream reader that is used to access the file system

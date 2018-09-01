@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-27-9:03 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -19,9 +19,9 @@ namespace Dxflib.Geometry
     /// <inheritdoc />
     /// <summary>
     ///     The GeoPolyline Class, which is a container of the GeoMetricEntityBase.
-    ///     This Object contains both <see cref="GeoArc"/>s and <see cref="GeoLine"/>s.
-    ///     This Object is essentially a wrapper over a <see cref="List{T}"/>
-    ///     where T is the <see cref="GeometricEntityBase"/> type.
+    ///     This Object contains both <see cref="GeoArc" />s and <see cref="GeoLine" />s.
+    ///     This Object is essentially a wrapper over a <see cref="List{T}" />
+    ///     where T is the <see cref="GeometricEntityBase" /> type.
     /// </summary>
     public class GeoPolyline : GeometricEntityBase
     {

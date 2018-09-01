@@ -1,4 +1,15 @@
-﻿namespace Dxflib.Entities
+﻿// Dxflib
+// LayerChangedHandlerArgs.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-30
+// Last Updated: 2018-09-01-1:09 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+namespace Dxflib.Entities
 {
     /// <summary>
     ///     Handler Arguments for the LayerChanged Event

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-30
-// Last Updated: 2018-08-30-8:42 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -45,19 +45,6 @@ namespace Dxflib.AcadEntities
             _dictionary = new Dictionary<string, Entity>();
             foreach ( var entity in entities )
                 _dictionary.Add(entity.Handle, entity);
-        }
-
-        /// <summary>
-        /// Returns a list of entities that match the type given
-        /// </summary>
-        /// <typeparam name="T">The return type of the entities</typeparam>
-        /// <param name="entityType">The entity type</param>
-        /// <returns>A list of entities</returns>
-        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
-        {
-            var returnList = _dictionary.Values.Where(entity => entity.EntityType == entityType).ToList();
-
-            return returnList.Cast<T>().ToList();
         }
 
         /// <inheritdoc />
@@ -169,5 +156,18 @@ namespace Dxflib.AcadEntities
         /// <summary>
         /// </summary>
         public ICollection<Entity> Values => _dictionary.Values;
+
+        /// <summary>
+        ///     Returns a list of entities that match the type given
+        /// </summary>
+        /// <typeparam name="T">The return type of the entities</typeparam>
+        /// <param name="entityType">The entity type</param>
+        /// <returns>A list of entities</returns>
+        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
+        {
+            var returnList = _dictionary.Values.Where(entity => entity.EntityType == entityType).ToList();
+
+            return returnList.Cast<T>().ToList();
+        }
     }
 }

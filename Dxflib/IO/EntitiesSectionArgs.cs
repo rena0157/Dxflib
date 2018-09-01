@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-21
-// Last Updated: 2018-08-23-8:42 PM
+// Created: 2018-08-26
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -22,7 +22,6 @@ namespace Dxflib.IO
     /// </summary>
     public class EntitiesSectionArgs : FileSectionBase
     {
-
         /// <inheritdoc />
         /// <summary>
         ///     The Main Constructor for the section arguments class.
@@ -81,7 +80,7 @@ namespace Dxflib.IO
                         lineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Line(lineBuffer));
                         continue;
-                    
+
                     case LwPolylineCodes.StartMarker:
                         var lwPolyLineBuffer = new LwPolyLineBuffer();
                         lwPolyLineBuffer.Parse(DataList, currentIndex);
@@ -93,7 +92,7 @@ namespace Dxflib.IO
                         hatchBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Hatch(hatchBuffer));
                         continue;
-                    
+
                     case CircularArcCodes.StartMarker:
                         var arcBuffer = new CircularArcBuffer();
                         arcBuffer.Parse(DataList, currentIndex);

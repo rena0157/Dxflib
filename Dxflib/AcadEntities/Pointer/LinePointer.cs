@@ -1,4 +1,15 @@
-﻿using Dxflib.Entities;
+﻿// Dxflib
+// LinePointer.cs
+// 
+// ============================================================
+// 
+// Created: 2018-08-28
+// Last Updated: 2018-09-01-1:09 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+using Dxflib.Entities;
 
 namespace Dxflib.AcadEntities.Pointer
 {
@@ -11,9 +22,7 @@ namespace Dxflib.AcadEntities.Pointer
         /// <summary>
         /// </summary>
         /// <param name="handle"></param>
-        public LinePointer(string handle) : base(handle)
-        {
-        }
+        public LinePointer(string handle) : base(handle) { }
 
         /// <inheritdoc />
         /// <summary>

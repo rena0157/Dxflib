@@ -4,13 +4,11 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-07-11:05 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
-using System.Collections.Generic;
-using Dxflib.AcadEntities.Pointer;
 using Dxflib.Geometry;
 
 namespace Dxflib.Entities
@@ -22,7 +20,7 @@ namespace Dxflib.Entities
     public class Line : Entity
     {
         /// <summary>
-        ///     Extraction Constructor, requires filling out of an <see cref="EntityBuffer"/>
+        ///     Extraction Constructor, requires filling out of an <see cref="EntityBuffer" />
         /// </summary>
         /// <param name="lineBuffer">
         ///     The Line Buffer that was filled
@@ -37,7 +35,7 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     The <see cref="GeoLine"/> of the Line, which
+        ///     The <see cref="GeoLine" /> of the Line, which
         ///     is a sort of geometric backing type for the line
         /// </summary>
         public GeoLine GLine { get; }

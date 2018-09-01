@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-09-01
-// Last Updated: 2018-09-01-9:39 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -15,7 +15,7 @@ namespace Dxflib.Entities
 {
     /// <inheritdoc />
     /// <summary>
-    /// The Circular Arc Entity
+    ///     The Circular Arc Entity
     /// </summary>
     public class CircularArc : Entity
     {
@@ -40,7 +40,7 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        /// The Thickness of the Arc
+        ///     The Thickness of the Arc
         /// </summary>
         public double Thickness { get; }
 
@@ -55,47 +55,47 @@ namespace Dxflib.Entities
         public Vertex MiddleVertex => GeometricArc.MiddleVertex;
 
         /// <summary>
-        /// The Starting Vertex
+        ///     The Starting Vertex
         /// </summary>
         public Vertex StartingVertex => GeometricArc.Vertex0;
 
         /// <summary>
-        /// The Ending Vertex
+        ///     The Ending Vertex
         /// </summary>
         public Vertex EndingVertex => GeometricArc.Vertex1;
 
         /// <summary>
-        /// The Starting Angle of the Arc
+        ///     The Starting Angle of the Arc
         /// </summary>
         public double StartAngle => GeometricArc.StartAngle;
 
         /// <summary>
-        /// The End Angle of the Arc
+        ///     The End Angle of the Arc
         /// </summary>
         public double EndAngle => GeometricArc.EndAngle;
 
         /// <summary>
-        /// The Radius of the Arc
+        ///     The Radius of the Arc
         /// </summary>
         public double Radius => GeometricArc.Radius;
 
         /// <summary>
-        /// The Arc Length of the Arc
+        ///     The Arc Length of the Arc
         /// </summary>
         public double Length => GeometricArc.Length;
 
         /// <summary>
-        /// The Area of the Arc
+        ///     The Area of the Arc
         /// </summary>
         public double Area => GeometricArc.Area;
 
         /// <summary>
-        /// The Bulge of the Arc
+        ///     The Bulge of the Arc
         /// </summary>
         public double Bulge => GeometricArc.BulgeValue;
 
         /// <summary>
-        /// The Geometric Arc
+        ///     The Geometric Arc
         /// </summary>
         public GeoArc GeometricArc { get; }
     }

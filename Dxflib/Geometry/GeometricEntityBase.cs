@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-05-8:05 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -21,15 +21,15 @@ namespace Dxflib.Geometry
     public abstract class GeometricEntityBase
     {
         /// <summary>
+        ///     The entity type
+        /// </summary>
+        public GeometryEntityTypes GeometryEntityType { get; protected set; }
+
+        /// <summary>
         ///     The Geometry changed event that alerts subscribers that they might need
         ///     to update their geometry.
         /// </summary>
         public event GeometryChangedHandler GeometryChanged;
-
-        /// <summary>
-        /// The entity type
-        /// </summary>
-        public GeometryEntityTypes GeometryEntityType { get; protected set; }
 
         /// <summary>
         ///     Base class Invocation of the Geometry changed event
@@ -41,24 +41,18 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Protected Virtual void function that should define how the geometry entity
-        /// deals with geometry update
+        ///     Protected Virtual void function that should define how the geometry entity
+        ///     deals with geometry update
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
-        {
-
-        }
+        protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args) { }
 
         /// <summary>
-        /// Calculating the length of the geometric entity
+        ///     Calculating the length of the geometric entity
         /// </summary>
         /// <returns>In the base entity it returns 0</returns>
-        protected virtual double CalcLength()
-        {
-            return 0;
-        }
+        protected virtual double CalcLength() { return 0; }
     }
 
     /// <summary>
@@ -77,20 +71,14 @@ namespace Dxflib.Geometry
         ///     The name of the affected argument. Could be X, Y, Z etc..
         /// </summary>
         /// <param name="name">The name that becomes the Name property in the class</param>
-        public GeometryChangedHandlerArgs(string name)
-        {
-            Name = name;
-        }
+        public GeometryChangedHandlerArgs(string name) { Name = name; }
 
         /// <summary>
         ///     The vertex ID that was changed in the geometry event
         /// </summary>
         /// <param name="vertexId">Vertex ID could be 0 or 1 for a geoline</param>
         // ReSharper disable once UnusedParameter.Local
-        public GeometryChangedHandlerArgs(int vertexId)
-        {
-            Name = "";
-        }
+        public GeometryChangedHandlerArgs(int vertexId) { Name = ""; }
 
         /// <summary>
         ///     The Name string
@@ -99,22 +87,22 @@ namespace Dxflib.Geometry
     }
 
     /// <summary>
-    /// The different geometry entity types
+    ///     The different geometry entity types
     /// </summary>
     public enum GeometryEntityTypes
     {
         /// <summary>
-        /// <see cref="Geometry.Vertex"/>
+        ///     <see cref="Geometry.Vertex" />
         /// </summary>
         Vertex,
 
         /// <summary>
-        /// <see cref="Dxflib.Geometry.GeoLine"/>
+        ///     <see cref="Dxflib.Geometry.GeoLine" />
         /// </summary>
         GeoLine,
 
         /// <summary>
-        /// <see cref="Dxflib.Geometry.GeoArc"/>
+        ///     <see cref="Dxflib.Geometry.GeoArc" />
         /// </summary>
         GeoArc
     }

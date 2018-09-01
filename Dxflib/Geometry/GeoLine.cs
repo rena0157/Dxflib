@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-05-7:59 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -77,29 +77,29 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Overrided CalcLength Function
-        /// </summary>
-        /// <returns></returns>
-        protected sealed override double CalcLength() => GeoMath.Distance(Vertex0, Vertex1);
-
-        /// <summary>
-        /// Calculate the total area underneath this line and the x-axis
-        /// </summary>
-        /// <returns>The Area of the line and the x axis</returns>
-        private double CalcArea() => GeoMath.TrapzArea(this);
-
-        /// <summary>
         ///     The total length of the polyline.
         /// </summary>
         public double Length { get; private set; }
 
         /// <summary>
-        /// The Area of the GeoLine
+        ///     The Area of the GeoLine
         /// </summary>
         public double Area { get; private set; }
 
         /// <summary>
-        /// Updates the Geometry for this class
+        ///     Overrided CalcLength Function
+        /// </summary>
+        /// <returns></returns>
+        protected sealed override double CalcLength() { return GeoMath.Distance(Vertex0, Vertex1); }
+
+        /// <summary>
+        ///     Calculate the total area underneath this line and the x-axis
+        /// </summary>
+        /// <returns>The Area of the line and the x axis</returns>
+        private double CalcArea() { return GeoMath.TrapzArea(this); }
+
+        /// <summary>
+        ///     Updates the Geometry for this class
         /// </summary>
         /// <param name="sender">The sending object</param>
         /// <param name="args"></param>
@@ -110,7 +110,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        /// Convert this Geoline to a Vector
+        ///     Convert this Geoline to a Vector
         /// </summary>
         /// <returns>A new Vector</returns>
         public Vector ToVector()
