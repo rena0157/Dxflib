@@ -13,6 +13,260 @@ references:
   commentId: N:Dxflib.AcadEntities
   fullName: Dxflib.AcadEntities
   nameWithType: Dxflib.AcadEntities
+- uid: Dxflib.AcadEntities.EntityCollection
+  name: EntityCollection
+  href: api/Dxflib.AcadEntities.EntityCollection.html
+  commentId: T:Dxflib.AcadEntities.EntityCollection
+  fullName: Dxflib.AcadEntities.EntityCollection
+  nameWithType: EntityCollection
+- uid: Dxflib.AcadEntities.EntityCollection.#ctor(System.Collections.Generic.IReadOnlyCollection{Dxflib.Entities.Entity})
+  name: EntityCollection(IReadOnlyCollection<Entity>)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection__ctor_System_Collections_Generic_IReadOnlyCollection_Dxflib_Entities_Entity__
+  commentId: M:Dxflib.AcadEntities.EntityCollection.#ctor(System.Collections.Generic.IReadOnlyCollection{Dxflib.Entities.Entity})
+  name.vb: EntityCollection(IReadOnlyCollection(Of Entity))
+  fullName: Dxflib.AcadEntities.EntityCollection.EntityCollection(System.Collections.Generic.IReadOnlyCollection<Dxflib.Entities.Entity>)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.EntityCollection(System.Collections.Generic.IReadOnlyCollection(Of Dxflib.Entities.Entity))
+  nameWithType: EntityCollection.EntityCollection(IReadOnlyCollection<Entity>)
+  nameWithType.vb: EntityCollection.EntityCollection(IReadOnlyCollection(Of Entity))
+- uid: Dxflib.AcadEntities.EntityCollection.#ctor*
+  name: EntityCollection
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection__ctor_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.#ctor
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.EntityCollection
+  nameWithType: EntityCollection.EntityCollection
+- uid: Dxflib.AcadEntities.EntityCollection.Add(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name: Add(KeyValuePair<String, Entity>)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Add_System_Collections_Generic_KeyValuePair_System_String_Dxflib_Entities_Entity__
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Add(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name.vb: Add(KeyValuePair(Of String, Entity))
+  fullName: Dxflib.AcadEntities.EntityCollection.Add(System.Collections.Generic.KeyValuePair<System.String, Dxflib.Entities.Entity>)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.Add(System.Collections.Generic.KeyValuePair(Of System.String, Dxflib.Entities.Entity))
+  nameWithType: EntityCollection.Add(KeyValuePair<String, Entity>)
+  nameWithType.vb: EntityCollection.Add(KeyValuePair(Of String, Entity))
+- uid: Dxflib.AcadEntities.EntityCollection.Add(System.String,Dxflib.Entities.Entity)
+  name: Add(String, Entity)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Add_System_String_Dxflib_Entities_Entity_
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Add(System.String,Dxflib.Entities.Entity)
+  fullName: Dxflib.AcadEntities.EntityCollection.Add(System.String, Dxflib.Entities.Entity)
+  nameWithType: EntityCollection.Add(String, Entity)
+- uid: Dxflib.AcadEntities.EntityCollection.Add*
+  name: Add
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Add_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Add
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Add
+  nameWithType: EntityCollection.Add
+- uid: Dxflib.AcadEntities.EntityCollection.Clear
+  name: Clear()
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Clear
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Clear
+  fullName: Dxflib.AcadEntities.EntityCollection.Clear()
+  nameWithType: EntityCollection.Clear()
+- uid: Dxflib.AcadEntities.EntityCollection.Clear*
+  name: Clear
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Clear_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Clear
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Clear
+  nameWithType: EntityCollection.Clear
+- uid: Dxflib.AcadEntities.EntityCollection.Contains(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name: Contains(KeyValuePair<String, Entity>)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Contains_System_Collections_Generic_KeyValuePair_System_String_Dxflib_Entities_Entity__
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Contains(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name.vb: Contains(KeyValuePair(Of String, Entity))
+  fullName: Dxflib.AcadEntities.EntityCollection.Contains(System.Collections.Generic.KeyValuePair<System.String, Dxflib.Entities.Entity>)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.Contains(System.Collections.Generic.KeyValuePair(Of System.String, Dxflib.Entities.Entity))
+  nameWithType: EntityCollection.Contains(KeyValuePair<String, Entity>)
+  nameWithType.vb: EntityCollection.Contains(KeyValuePair(Of String, Entity))
+- uid: Dxflib.AcadEntities.EntityCollection.Contains*
+  name: Contains
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Contains_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Contains
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Contains
+  nameWithType: EntityCollection.Contains
+- uid: Dxflib.AcadEntities.EntityCollection.ContainsKey(System.String)
+  name: ContainsKey(String)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_ContainsKey_System_String_
+  commentId: M:Dxflib.AcadEntities.EntityCollection.ContainsKey(System.String)
+  fullName: Dxflib.AcadEntities.EntityCollection.ContainsKey(System.String)
+  nameWithType: EntityCollection.ContainsKey(String)
+- uid: Dxflib.AcadEntities.EntityCollection.ContainsKey*
+  name: ContainsKey
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_ContainsKey_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.ContainsKey
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.ContainsKey
+  nameWithType: EntityCollection.ContainsKey
+- uid: Dxflib.AcadEntities.EntityCollection.CopyTo(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity}[],System.Int32)
+  name: CopyTo(KeyValuePair<String, Entity>[], Int32)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_CopyTo_System_Collections_Generic_KeyValuePair_System_String_Dxflib_Entities_Entity____System_Int32_
+  commentId: M:Dxflib.AcadEntities.EntityCollection.CopyTo(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity}[],System.Int32)
+  name.vb: CopyTo(KeyValuePair(Of String, Entity)(), Int32)
+  fullName: Dxflib.AcadEntities.EntityCollection.CopyTo(System.Collections.Generic.KeyValuePair<System.String, Dxflib.Entities.Entity>[], System.Int32)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.CopyTo(System.Collections.Generic.KeyValuePair(Of System.String, Dxflib.Entities.Entity)(), System.Int32)
+  nameWithType: EntityCollection.CopyTo(KeyValuePair<String, Entity>[], Int32)
+  nameWithType.vb: EntityCollection.CopyTo(KeyValuePair(Of String, Entity)(), Int32)
+- uid: Dxflib.AcadEntities.EntityCollection.CopyTo*
+  name: CopyTo
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_CopyTo_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.CopyTo
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.CopyTo
+  nameWithType: EntityCollection.CopyTo
+- uid: Dxflib.AcadEntities.EntityCollection.Count
+  name: Count
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Count
+  commentId: P:Dxflib.AcadEntities.EntityCollection.Count
+  fullName: Dxflib.AcadEntities.EntityCollection.Count
+  nameWithType: EntityCollection.Count
+- uid: Dxflib.AcadEntities.EntityCollection.Count*
+  name: Count
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Count_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Count
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Count
+  nameWithType: EntityCollection.Count
+- uid: Dxflib.AcadEntities.EntityCollection.GetEntitiesByType*
+  name: GetEntitiesByType
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_GetEntitiesByType_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.GetEntitiesByType
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.GetEntitiesByType
+  nameWithType: EntityCollection.GetEntitiesByType
+- uid: Dxflib.AcadEntities.EntityCollection.GetEntitiesByType``1(Dxflib.Entities.EntityTypes)
+  name: GetEntitiesByType<T>(EntityTypes)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_GetEntitiesByType__1_Dxflib_Entities_EntityTypes_
+  commentId: M:Dxflib.AcadEntities.EntityCollection.GetEntitiesByType``1(Dxflib.Entities.EntityTypes)
+  name.vb: GetEntitiesByType(Of T)(EntityTypes)
+  fullName: Dxflib.AcadEntities.EntityCollection.GetEntitiesByType<T>(Dxflib.Entities.EntityTypes)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.GetEntitiesByType(Of T)(Dxflib.Entities.EntityTypes)
+  nameWithType: EntityCollection.GetEntitiesByType<T>(EntityTypes)
+  nameWithType.vb: EntityCollection.GetEntitiesByType(Of T)(EntityTypes)
+- uid: Dxflib.AcadEntities.EntityCollection.GetEnumerator
+  name: GetEnumerator()
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_GetEnumerator
+  commentId: M:Dxflib.AcadEntities.EntityCollection.GetEnumerator
+  fullName: Dxflib.AcadEntities.EntityCollection.GetEnumerator()
+  nameWithType: EntityCollection.GetEnumerator()
+- uid: Dxflib.AcadEntities.EntityCollection.GetEnumerator*
+  name: GetEnumerator
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_GetEnumerator_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.GetEnumerator
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.GetEnumerator
+  nameWithType: EntityCollection.GetEnumerator
+- uid: Dxflib.AcadEntities.EntityCollection.IsReadOnly
+  name: IsReadOnly
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_IsReadOnly
+  commentId: P:Dxflib.AcadEntities.EntityCollection.IsReadOnly
+  fullName: Dxflib.AcadEntities.EntityCollection.IsReadOnly
+  nameWithType: EntityCollection.IsReadOnly
+- uid: Dxflib.AcadEntities.EntityCollection.IsReadOnly*
+  name: IsReadOnly
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_IsReadOnly_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.IsReadOnly
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.IsReadOnly
+  nameWithType: EntityCollection.IsReadOnly
+- uid: Dxflib.AcadEntities.EntityCollection.Item(System.String)
+  name: Item[String]
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Item_System_String_
+  commentId: P:Dxflib.AcadEntities.EntityCollection.Item(System.String)
+  name.vb: Item(String)
+  fullName: Dxflib.AcadEntities.EntityCollection.Item[System.String]
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.Item(System.String)
+  nameWithType: EntityCollection.Item[String]
+  nameWithType.vb: EntityCollection.Item(String)
+- uid: Dxflib.AcadEntities.EntityCollection.Item*
+  name: Item
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Item_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Item
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Item
+  nameWithType: EntityCollection.Item
+- uid: Dxflib.AcadEntities.EntityCollection.Keys
+  name: Keys
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Keys
+  commentId: P:Dxflib.AcadEntities.EntityCollection.Keys
+  fullName: Dxflib.AcadEntities.EntityCollection.Keys
+  nameWithType: EntityCollection.Keys
+- uid: Dxflib.AcadEntities.EntityCollection.Keys*
+  name: Keys
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Keys_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Keys
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Keys
+  nameWithType: EntityCollection.Keys
+- uid: Dxflib.AcadEntities.EntityCollection.Remove(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name: Remove(KeyValuePair<String, Entity>)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Remove_System_Collections_Generic_KeyValuePair_System_String_Dxflib_Entities_Entity__
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Remove(System.Collections.Generic.KeyValuePair{System.String,Dxflib.Entities.Entity})
+  name.vb: Remove(KeyValuePair(Of String, Entity))
+  fullName: Dxflib.AcadEntities.EntityCollection.Remove(System.Collections.Generic.KeyValuePair<System.String, Dxflib.Entities.Entity>)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.Remove(System.Collections.Generic.KeyValuePair(Of System.String, Dxflib.Entities.Entity))
+  nameWithType: EntityCollection.Remove(KeyValuePair<String, Entity>)
+  nameWithType.vb: EntityCollection.Remove(KeyValuePair(Of String, Entity))
+- uid: Dxflib.AcadEntities.EntityCollection.Remove(System.String)
+  name: Remove(String)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Remove_System_String_
+  commentId: M:Dxflib.AcadEntities.EntityCollection.Remove(System.String)
+  fullName: Dxflib.AcadEntities.EntityCollection.Remove(System.String)
+  nameWithType: EntityCollection.Remove(String)
+- uid: Dxflib.AcadEntities.EntityCollection.Remove*
+  name: Remove
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Remove_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Remove
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Remove
+  nameWithType: EntityCollection.Remove
+- uid: Dxflib.AcadEntities.EntityCollection.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Dxflib.AcadEntities.EntityCollection.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Dxflib.AcadEntities.EntityCollection.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: EntityCollection.IEnumerable.GetEnumerator()
+  nameWithType.vb: EntityCollection.System.Collections.IEnumerable.GetEnumerator()
+- uid: Dxflib.AcadEntities.EntityCollection.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Dxflib.AcadEntities.EntityCollection.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: EntityCollection.IEnumerable.GetEnumerator
+  nameWithType.vb: EntityCollection.System.Collections.IEnumerable.GetEnumerator
+- uid: Dxflib.AcadEntities.EntityCollection.TryGetValue(System.String,Dxflib.Entities.Entity@)
+  name: TryGetValue(String, out Entity)
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_TryGetValue_System_String_Dxflib_Entities_Entity__
+  commentId: M:Dxflib.AcadEntities.EntityCollection.TryGetValue(System.String,Dxflib.Entities.Entity@)
+  name.vb: TryGetValue(String, ByRef Entity)
+  fullName: Dxflib.AcadEntities.EntityCollection.TryGetValue(System.String, out Dxflib.Entities.Entity)
+  fullName.vb: Dxflib.AcadEntities.EntityCollection.TryGetValue(System.String, ByRef Dxflib.Entities.Entity)
+  nameWithType: EntityCollection.TryGetValue(String, out Entity)
+  nameWithType.vb: EntityCollection.TryGetValue(String, ByRef Entity)
+- uid: Dxflib.AcadEntities.EntityCollection.TryGetValue*
+  name: TryGetValue
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_TryGetValue_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.TryGetValue
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.TryGetValue
+  nameWithType: EntityCollection.TryGetValue
+- uid: Dxflib.AcadEntities.EntityCollection.Values
+  name: Values
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Values
+  commentId: P:Dxflib.AcadEntities.EntityCollection.Values
+  fullName: Dxflib.AcadEntities.EntityCollection.Values
+  nameWithType: EntityCollection.Values
+- uid: Dxflib.AcadEntities.EntityCollection.Values*
+  name: Values
+  href: api/Dxflib.AcadEntities.EntityCollection.html#Dxflib_AcadEntities_EntityCollection_Values_
+  commentId: Overload:Dxflib.AcadEntities.EntityCollection.Values
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.EntityCollection.Values
+  nameWithType: EntityCollection.Values
 - uid: Dxflib.AcadEntities.Layer
   name: Layer
   href: api/Dxflib.AcadEntities.Layer.html
@@ -325,6 +579,199 @@ references:
   isSpec: "True"
   fullName: Dxflib.AcadEntities.LayerException.Message
   nameWithType: LayerException.Message
+- uid: Dxflib.AcadEntities.Pointer
+  name: Dxflib.AcadEntities.Pointer
+  href: api/Dxflib.AcadEntities.Pointer.html
+  commentId: N:Dxflib.AcadEntities.Pointer
+  fullName: Dxflib.AcadEntities.Pointer
+  nameWithType: Dxflib.AcadEntities.Pointer
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1
+  name: EntityPointer<T>
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html
+  commentId: T:Dxflib.AcadEntities.Pointer.EntityPointer`1
+  name.vb: EntityPointer(Of T)
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T)
+  nameWithType: EntityPointer<T>
+  nameWithType.vb: EntityPointer(Of T)
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.#ctor(System.String)
+  name: EntityPointer(String)
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1__ctor_System_String_
+  commentId: M:Dxflib.AcadEntities.Pointer.EntityPointer`1.#ctor(System.String)
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.EntityPointer(System.String)
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).EntityPointer(System.String)
+  nameWithType: EntityPointer<T>.EntityPointer(String)
+  nameWithType.vb: EntityPointer(Of T).EntityPointer(String)
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.#ctor*
+  name: EntityPointer
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1__ctor_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointer`1.#ctor
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.EntityPointer
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).EntityPointer
+  nameWithType: EntityPointer<T>.EntityPointer
+  nameWithType.vb: EntityPointer(Of T).EntityPointer
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1._entity
+  name: _entity
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1__entity
+  commentId: F:Dxflib.AcadEntities.Pointer.EntityPointer`1._entity
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>._entity
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T)._entity
+  nameWithType: EntityPointer<T>._entity
+  nameWithType.vb: EntityPointer(Of T)._entity
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.EntityType
+  name: EntityType
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_EntityType
+  commentId: P:Dxflib.AcadEntities.Pointer.EntityPointer`1.EntityType
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.EntityType
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).EntityType
+  nameWithType: EntityPointer<T>.EntityType
+  nameWithType.vb: EntityPointer(Of T).EntityType
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.EntityType*
+  name: EntityType
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_EntityType_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointer`1.EntityType
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.EntityType
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).EntityType
+  nameWithType: EntityPointer<T>.EntityType
+  nameWithType.vb: EntityPointer(Of T).EntityType
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.Handle
+  name: Handle
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_Handle
+  commentId: P:Dxflib.AcadEntities.Pointer.EntityPointer`1.Handle
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.Handle
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).Handle
+  nameWithType: EntityPointer<T>.Handle
+  nameWithType.vb: EntityPointer(Of T).Handle
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.Handle*
+  name: Handle
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_Handle_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointer`1.Handle
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.Handle
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).Handle
+  nameWithType: EntityPointer<T>.Handle
+  nameWithType.vb: EntityPointer(Of T).Handle
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.RefEntity
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_RefEntity
+  commentId: P:Dxflib.AcadEntities.Pointer.EntityPointer`1.RefEntity
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.RefEntity
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).RefEntity
+  nameWithType: EntityPointer<T>.RefEntity
+  nameWithType.vb: EntityPointer(Of T).RefEntity
+- uid: Dxflib.AcadEntities.Pointer.EntityPointer`1.RefEntity*
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointer-1.html#Dxflib_AcadEntities_Pointer_EntityPointer_1_RefEntity_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointer`1.RefEntity
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointer<T>.RefEntity
+  fullName.vb: Dxflib.AcadEntities.Pointer.EntityPointer(Of T).RefEntity
+  nameWithType: EntityPointer<T>.RefEntity
+  nameWithType.vb: EntityPointer(Of T).RefEntity
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException
+  name: EntityPointerException
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html
+  commentId: T:Dxflib.AcadEntities.Pointer.EntityPointerException
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException
+  nameWithType: EntityPointerException
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor
+  name: EntityPointerException()
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html#Dxflib_AcadEntities_Pointer_EntityPointerException__ctor
+  commentId: M:Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException.EntityPointerException()
+  nameWithType: EntityPointerException.EntityPointerException()
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor(System.String)
+  name: EntityPointerException(String)
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html#Dxflib_AcadEntities_Pointer_EntityPointerException__ctor_System_String_
+  commentId: M:Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor(System.String)
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException.EntityPointerException(System.String)
+  nameWithType: EntityPointerException.EntityPointerException(String)
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor*
+  name: EntityPointerException
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html#Dxflib_AcadEntities_Pointer_EntityPointerException__ctor_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointerException.#ctor
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException.EntityPointerException
+  nameWithType: EntityPointerException.EntityPointerException
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException.Message
+  name: Message
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html#Dxflib_AcadEntities_Pointer_EntityPointerException_Message
+  commentId: P:Dxflib.AcadEntities.Pointer.EntityPointerException.Message
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException.Message
+  nameWithType: EntityPointerException.Message
+- uid: Dxflib.AcadEntities.Pointer.EntityPointerException.Message*
+  name: Message
+  href: api/Dxflib.AcadEntities.Pointer.EntityPointerException.html#Dxflib_AcadEntities_Pointer_EntityPointerException_Message_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.EntityPointerException.Message
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.EntityPointerException.Message
+  nameWithType: EntityPointerException.Message
+- uid: Dxflib.AcadEntities.Pointer.LinePointer
+  name: LinePointer
+  href: api/Dxflib.AcadEntities.Pointer.LinePointer.html
+  commentId: T:Dxflib.AcadEntities.Pointer.LinePointer
+  fullName: Dxflib.AcadEntities.Pointer.LinePointer
+  nameWithType: LinePointer
+- uid: Dxflib.AcadEntities.Pointer.LinePointer.#ctor(System.String)
+  name: LinePointer(String)
+  href: api/Dxflib.AcadEntities.Pointer.LinePointer.html#Dxflib_AcadEntities_Pointer_LinePointer__ctor_System_String_
+  commentId: M:Dxflib.AcadEntities.Pointer.LinePointer.#ctor(System.String)
+  fullName: Dxflib.AcadEntities.Pointer.LinePointer.LinePointer(System.String)
+  nameWithType: LinePointer.LinePointer(String)
+- uid: Dxflib.AcadEntities.Pointer.LinePointer.#ctor*
+  name: LinePointer
+  href: api/Dxflib.AcadEntities.Pointer.LinePointer.html#Dxflib_AcadEntities_Pointer_LinePointer__ctor_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.LinePointer.#ctor
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.LinePointer.LinePointer
+  nameWithType: LinePointer.LinePointer
+- uid: Dxflib.AcadEntities.Pointer.LinePointer.RefEntity
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.LinePointer.html#Dxflib_AcadEntities_Pointer_LinePointer_RefEntity
+  commentId: P:Dxflib.AcadEntities.Pointer.LinePointer.RefEntity
+  fullName: Dxflib.AcadEntities.Pointer.LinePointer.RefEntity
+  nameWithType: LinePointer.RefEntity
+- uid: Dxflib.AcadEntities.Pointer.LinePointer.RefEntity*
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.LinePointer.html#Dxflib_AcadEntities_Pointer_LinePointer_RefEntity_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.LinePointer.RefEntity
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.LinePointer.RefEntity
+  nameWithType: LinePointer.RefEntity
+- uid: Dxflib.AcadEntities.Pointer.LwPolyLinePointer
+  name: LwPolyLinePointer
+  href: api/Dxflib.AcadEntities.Pointer.LwPolyLinePointer.html
+  commentId: T:Dxflib.AcadEntities.Pointer.LwPolyLinePointer
+  fullName: Dxflib.AcadEntities.Pointer.LwPolyLinePointer
+  nameWithType: LwPolyLinePointer
+- uid: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.#ctor(System.String)
+  name: LwPolyLinePointer(String)
+  href: api/Dxflib.AcadEntities.Pointer.LwPolyLinePointer.html#Dxflib_AcadEntities_Pointer_LwPolyLinePointer__ctor_System_String_
+  commentId: M:Dxflib.AcadEntities.Pointer.LwPolyLinePointer.#ctor(System.String)
+  fullName: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.LwPolyLinePointer(System.String)
+  nameWithType: LwPolyLinePointer.LwPolyLinePointer(String)
+- uid: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.#ctor*
+  name: LwPolyLinePointer
+  href: api/Dxflib.AcadEntities.Pointer.LwPolyLinePointer.html#Dxflib_AcadEntities_Pointer_LwPolyLinePointer__ctor_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.LwPolyLinePointer.#ctor
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.LwPolyLinePointer
+  nameWithType: LwPolyLinePointer.LwPolyLinePointer
+- uid: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.LwPolyLinePointer.html#Dxflib_AcadEntities_Pointer_LwPolyLinePointer_RefEntity
+  commentId: P:Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity
+  fullName: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity
+  nameWithType: LwPolyLinePointer.RefEntity
+- uid: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity*
+  name: RefEntity
+  href: api/Dxflib.AcadEntities.Pointer.LwPolyLinePointer.html#Dxflib_AcadEntities_Pointer_LwPolyLinePointer_RefEntity_
+  commentId: Overload:Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity
+  isSpec: "True"
+  fullName: Dxflib.AcadEntities.Pointer.LwPolyLinePointer.RefEntity
+  nameWithType: LwPolyLinePointer.RefEntity
 - uid: Dxflib.DxfFile
   name: DxfFile
   href: api/Dxflib.DxfFile.html
@@ -409,22 +856,6 @@ references:
   isSpec: "True"
   fullName: Dxflib.DxfFile.FileName
   nameWithType: DxfFile.FileName
-- uid: Dxflib.DxfFile.GetEntitiesByType*
-  name: GetEntitiesByType
-  href: api/Dxflib.DxfFile.html#Dxflib_DxfFile_GetEntitiesByType_
-  commentId: Overload:Dxflib.DxfFile.GetEntitiesByType
-  isSpec: "True"
-  fullName: Dxflib.DxfFile.GetEntitiesByType
-  nameWithType: DxfFile.GetEntitiesByType
-- uid: Dxflib.DxfFile.GetEntitiesByType``1(Dxflib.Entities.EntityTypes)
-  name: GetEntitiesByType<T>(EntityTypes)
-  href: api/Dxflib.DxfFile.html#Dxflib_DxfFile_GetEntitiesByType__1_Dxflib_Entities_EntityTypes_
-  commentId: M:Dxflib.DxfFile.GetEntitiesByType``1(Dxflib.Entities.EntityTypes)
-  name.vb: GetEntitiesByType(Of T)(EntityTypes)
-  fullName: Dxflib.DxfFile.GetEntitiesByType<T>(Dxflib.Entities.EntityTypes)
-  fullName.vb: Dxflib.DxfFile.GetEntitiesByType(Of T)(Dxflib.Entities.EntityTypes)
-  nameWithType: DxfFile.GetEntitiesByType<T>(EntityTypes)
-  nameWithType.vb: DxfFile.GetEntitiesByType(Of T)(EntityTypes)
 - uid: Dxflib.DxfFile.LastSavedBy
   name: LastSavedBy
   href: api/Dxflib.DxfFile.html#Dxflib_DxfFile_LastSavedBy
@@ -559,12 +990,323 @@ references:
   commentId: N:Dxflib.Entities
   fullName: Dxflib.Entities
   nameWithType: Dxflib.Entities
+- uid: Dxflib.Entities.CircularArc
+  name: CircularArc
+  href: api/Dxflib.Entities.CircularArc.html
+  commentId: T:Dxflib.Entities.CircularArc
+  fullName: Dxflib.Entities.CircularArc
+  nameWithType: CircularArc
+- uid: Dxflib.Entities.CircularArc.#ctor(Dxflib.Entities.CircularArcBuffer)
+  name: CircularArc(CircularArcBuffer)
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc__ctor_Dxflib_Entities_CircularArcBuffer_
+  commentId: M:Dxflib.Entities.CircularArc.#ctor(Dxflib.Entities.CircularArcBuffer)
+  fullName: Dxflib.Entities.CircularArc.CircularArc(Dxflib.Entities.CircularArcBuffer)
+  nameWithType: CircularArc.CircularArc(CircularArcBuffer)
+- uid: Dxflib.Entities.CircularArc.#ctor*
+  name: CircularArc
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc__ctor_
+  commentId: Overload:Dxflib.Entities.CircularArc.#ctor
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.CircularArc
+  nameWithType: CircularArc.CircularArc
+- uid: Dxflib.Entities.CircularArc.Area
+  name: Area
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Area
+  commentId: P:Dxflib.Entities.CircularArc.Area
+  fullName: Dxflib.Entities.CircularArc.Area
+  nameWithType: CircularArc.Area
+- uid: Dxflib.Entities.CircularArc.Area*
+  name: Area
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Area_
+  commentId: Overload:Dxflib.Entities.CircularArc.Area
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.Area
+  nameWithType: CircularArc.Area
+- uid: Dxflib.Entities.CircularArc.Bulge
+  name: Bulge
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Bulge
+  commentId: P:Dxflib.Entities.CircularArc.Bulge
+  fullName: Dxflib.Entities.CircularArc.Bulge
+  nameWithType: CircularArc.Bulge
+- uid: Dxflib.Entities.CircularArc.Bulge*
+  name: Bulge
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Bulge_
+  commentId: Overload:Dxflib.Entities.CircularArc.Bulge
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.Bulge
+  nameWithType: CircularArc.Bulge
+- uid: Dxflib.Entities.CircularArc.CenterPoint
+  name: CenterPoint
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_CenterPoint
+  commentId: P:Dxflib.Entities.CircularArc.CenterPoint
+  fullName: Dxflib.Entities.CircularArc.CenterPoint
+  nameWithType: CircularArc.CenterPoint
+- uid: Dxflib.Entities.CircularArc.CenterPoint*
+  name: CenterPoint
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_CenterPoint_
+  commentId: Overload:Dxflib.Entities.CircularArc.CenterPoint
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.CenterPoint
+  nameWithType: CircularArc.CenterPoint
+- uid: Dxflib.Entities.CircularArc.EndAngle
+  name: EndAngle
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_EndAngle
+  commentId: P:Dxflib.Entities.CircularArc.EndAngle
+  fullName: Dxflib.Entities.CircularArc.EndAngle
+  nameWithType: CircularArc.EndAngle
+- uid: Dxflib.Entities.CircularArc.EndAngle*
+  name: EndAngle
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_EndAngle_
+  commentId: Overload:Dxflib.Entities.CircularArc.EndAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.EndAngle
+  nameWithType: CircularArc.EndAngle
+- uid: Dxflib.Entities.CircularArc.EndingVertex
+  name: EndingVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_EndingVertex
+  commentId: P:Dxflib.Entities.CircularArc.EndingVertex
+  fullName: Dxflib.Entities.CircularArc.EndingVertex
+  nameWithType: CircularArc.EndingVertex
+- uid: Dxflib.Entities.CircularArc.EndingVertex*
+  name: EndingVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_EndingVertex_
+  commentId: Overload:Dxflib.Entities.CircularArc.EndingVertex
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.EndingVertex
+  nameWithType: CircularArc.EndingVertex
+- uid: Dxflib.Entities.CircularArc.GeometricArc
+  name: GeometricArc
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_GeometricArc
+  commentId: P:Dxflib.Entities.CircularArc.GeometricArc
+  fullName: Dxflib.Entities.CircularArc.GeometricArc
+  nameWithType: CircularArc.GeometricArc
+- uid: Dxflib.Entities.CircularArc.GeometricArc*
+  name: GeometricArc
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_GeometricArc_
+  commentId: Overload:Dxflib.Entities.CircularArc.GeometricArc
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.GeometricArc
+  nameWithType: CircularArc.GeometricArc
+- uid: Dxflib.Entities.CircularArc.Length
+  name: Length
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Length
+  commentId: P:Dxflib.Entities.CircularArc.Length
+  fullName: Dxflib.Entities.CircularArc.Length
+  nameWithType: CircularArc.Length
+- uid: Dxflib.Entities.CircularArc.Length*
+  name: Length
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Length_
+  commentId: Overload:Dxflib.Entities.CircularArc.Length
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.Length
+  nameWithType: CircularArc.Length
+- uid: Dxflib.Entities.CircularArc.MiddleVertex
+  name: MiddleVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_MiddleVertex
+  commentId: P:Dxflib.Entities.CircularArc.MiddleVertex
+  fullName: Dxflib.Entities.CircularArc.MiddleVertex
+  nameWithType: CircularArc.MiddleVertex
+- uid: Dxflib.Entities.CircularArc.MiddleVertex*
+  name: MiddleVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_MiddleVertex_
+  commentId: Overload:Dxflib.Entities.CircularArc.MiddleVertex
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.MiddleVertex
+  nameWithType: CircularArc.MiddleVertex
+- uid: Dxflib.Entities.CircularArc.Radius
+  name: Radius
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Radius
+  commentId: P:Dxflib.Entities.CircularArc.Radius
+  fullName: Dxflib.Entities.CircularArc.Radius
+  nameWithType: CircularArc.Radius
+- uid: Dxflib.Entities.CircularArc.Radius*
+  name: Radius
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Radius_
+  commentId: Overload:Dxflib.Entities.CircularArc.Radius
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.Radius
+  nameWithType: CircularArc.Radius
+- uid: Dxflib.Entities.CircularArc.StartAngle
+  name: StartAngle
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_StartAngle
+  commentId: P:Dxflib.Entities.CircularArc.StartAngle
+  fullName: Dxflib.Entities.CircularArc.StartAngle
+  nameWithType: CircularArc.StartAngle
+- uid: Dxflib.Entities.CircularArc.StartAngle*
+  name: StartAngle
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_StartAngle_
+  commentId: Overload:Dxflib.Entities.CircularArc.StartAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.StartAngle
+  nameWithType: CircularArc.StartAngle
+- uid: Dxflib.Entities.CircularArc.StartingVertex
+  name: StartingVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_StartingVertex
+  commentId: P:Dxflib.Entities.CircularArc.StartingVertex
+  fullName: Dxflib.Entities.CircularArc.StartingVertex
+  nameWithType: CircularArc.StartingVertex
+- uid: Dxflib.Entities.CircularArc.StartingVertex*
+  name: StartingVertex
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_StartingVertex_
+  commentId: Overload:Dxflib.Entities.CircularArc.StartingVertex
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.StartingVertex
+  nameWithType: CircularArc.StartingVertex
+- uid: Dxflib.Entities.CircularArc.Thickness
+  name: Thickness
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Thickness
+  commentId: P:Dxflib.Entities.CircularArc.Thickness
+  fullName: Dxflib.Entities.CircularArc.Thickness
+  nameWithType: CircularArc.Thickness
+- uid: Dxflib.Entities.CircularArc.Thickness*
+  name: Thickness
+  href: api/Dxflib.Entities.CircularArc.html#Dxflib_Entities_CircularArc_Thickness_
+  commentId: Overload:Dxflib.Entities.CircularArc.Thickness
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArc.Thickness
+  nameWithType: CircularArc.Thickness
+- uid: Dxflib.Entities.CircularArcBuffer
+  name: CircularArcBuffer
+  href: api/Dxflib.Entities.CircularArcBuffer.html
+  commentId: T:Dxflib.Entities.CircularArcBuffer
+  fullName: Dxflib.Entities.CircularArcBuffer
+  nameWithType: CircularArcBuffer
+- uid: Dxflib.Entities.CircularArcBuffer.#ctor
+  name: CircularArcBuffer()
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer__ctor
+  commentId: M:Dxflib.Entities.CircularArcBuffer.#ctor
+  fullName: Dxflib.Entities.CircularArcBuffer.CircularArcBuffer()
+  nameWithType: CircularArcBuffer.CircularArcBuffer()
+- uid: Dxflib.Entities.CircularArcBuffer.#ctor*
+  name: CircularArcBuffer
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer__ctor_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.#ctor
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.CircularArcBuffer
+  nameWithType: CircularArcBuffer.CircularArcBuffer
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointX
+  name: CenterPointX
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointX
+  commentId: P:Dxflib.Entities.CircularArcBuffer.CenterPointX
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointX
+  nameWithType: CircularArcBuffer.CenterPointX
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointX*
+  name: CenterPointX
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointX_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.CenterPointX
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointX
+  nameWithType: CircularArcBuffer.CenterPointX
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointY
+  name: CenterPointY
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointY
+  commentId: P:Dxflib.Entities.CircularArcBuffer.CenterPointY
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointY
+  nameWithType: CircularArcBuffer.CenterPointY
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointY*
+  name: CenterPointY
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointY_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.CenterPointY
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointY
+  nameWithType: CircularArcBuffer.CenterPointY
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointZ
+  name: CenterPointZ
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointZ
+  commentId: P:Dxflib.Entities.CircularArcBuffer.CenterPointZ
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointZ
+  nameWithType: CircularArcBuffer.CenterPointZ
+- uid: Dxflib.Entities.CircularArcBuffer.CenterPointZ*
+  name: CenterPointZ
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_CenterPointZ_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.CenterPointZ
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.CenterPointZ
+  nameWithType: CircularArcBuffer.CenterPointZ
+- uid: Dxflib.Entities.CircularArcBuffer.EndAngle
+  name: EndAngle
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_EndAngle
+  commentId: P:Dxflib.Entities.CircularArcBuffer.EndAngle
+  fullName: Dxflib.Entities.CircularArcBuffer.EndAngle
+  nameWithType: CircularArcBuffer.EndAngle
+- uid: Dxflib.Entities.CircularArcBuffer.EndAngle*
+  name: EndAngle
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_EndAngle_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.EndAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.EndAngle
+  nameWithType: CircularArcBuffer.EndAngle
+- uid: Dxflib.Entities.CircularArcBuffer.Parse(Dxflib.IO.TaggedDataList,System.Int32)
+  name: Parse(TaggedDataList, Int32)
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Parse_Dxflib_IO_TaggedDataList_System_Int32_
+  commentId: M:Dxflib.Entities.CircularArcBuffer.Parse(Dxflib.IO.TaggedDataList,System.Int32)
+  fullName: Dxflib.Entities.CircularArcBuffer.Parse(Dxflib.IO.TaggedDataList, System.Int32)
+  nameWithType: CircularArcBuffer.Parse(TaggedDataList, Int32)
+- uid: Dxflib.Entities.CircularArcBuffer.Parse*
+  name: Parse
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Parse_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.Parse
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.Parse
+  nameWithType: CircularArcBuffer.Parse
+- uid: Dxflib.Entities.CircularArcBuffer.Radius
+  name: Radius
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Radius
+  commentId: P:Dxflib.Entities.CircularArcBuffer.Radius
+  fullName: Dxflib.Entities.CircularArcBuffer.Radius
+  nameWithType: CircularArcBuffer.Radius
+- uid: Dxflib.Entities.CircularArcBuffer.Radius*
+  name: Radius
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Radius_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.Radius
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.Radius
+  nameWithType: CircularArcBuffer.Radius
+- uid: Dxflib.Entities.CircularArcBuffer.StartAngle
+  name: StartAngle
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_StartAngle
+  commentId: P:Dxflib.Entities.CircularArcBuffer.StartAngle
+  fullName: Dxflib.Entities.CircularArcBuffer.StartAngle
+  nameWithType: CircularArcBuffer.StartAngle
+- uid: Dxflib.Entities.CircularArcBuffer.StartAngle*
+  name: StartAngle
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_StartAngle_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.StartAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.StartAngle
+  nameWithType: CircularArcBuffer.StartAngle
+- uid: Dxflib.Entities.CircularArcBuffer.Thickness
+  name: Thickness
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Thickness
+  commentId: P:Dxflib.Entities.CircularArcBuffer.Thickness
+  fullName: Dxflib.Entities.CircularArcBuffer.Thickness
+  nameWithType: CircularArcBuffer.Thickness
+- uid: Dxflib.Entities.CircularArcBuffer.Thickness*
+  name: Thickness
+  href: api/Dxflib.Entities.CircularArcBuffer.html#Dxflib_Entities_CircularArcBuffer_Thickness_
+  commentId: Overload:Dxflib.Entities.CircularArcBuffer.Thickness
+  isSpec: "True"
+  fullName: Dxflib.Entities.CircularArcBuffer.Thickness
+  nameWithType: CircularArcBuffer.Thickness
 - uid: Dxflib.Entities.Entity
   name: Entity
   href: api/Dxflib.Entities.Entity.html
   commentId: T:Dxflib.Entities.Entity
   fullName: Dxflib.Entities.Entity
   nameWithType: Entity
+- uid: Dxflib.Entities.Entity.#ctor(Dxflib.Entities.EntityBuffer)
+  name: Entity(EntityBuffer)
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity__ctor_Dxflib_Entities_EntityBuffer_
+  commentId: M:Dxflib.Entities.Entity.#ctor(Dxflib.Entities.EntityBuffer)
+  fullName: Dxflib.Entities.Entity.Entity(Dxflib.Entities.EntityBuffer)
+  nameWithType: Entity.Entity(EntityBuffer)
+- uid: Dxflib.Entities.Entity.#ctor*
+  name: Entity
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity__ctor_
+  commentId: Overload:Dxflib.Entities.Entity.#ctor
+  isSpec: "True"
+  fullName: Dxflib.Entities.Entity.Entity
+  nameWithType: Entity.Entity
 - uid: Dxflib.Entities.Entity.EntityType
   name: EntityType
   href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_EntityType
@@ -584,6 +1326,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.Entity.Handle
   nameWithType: Entity.Handle
+- uid: Dxflib.Entities.Entity.HasReferencedEntities
+  name: HasReferencedEntities
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_HasReferencedEntities
+  commentId: P:Dxflib.Entities.Entity.HasReferencedEntities
+  fullName: Dxflib.Entities.Entity.HasReferencedEntities
+  nameWithType: Entity.HasReferencedEntities
+- uid: Dxflib.Entities.Entity.HasReferencedEntities*
+  name: HasReferencedEntities
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_HasReferencedEntities_
+  commentId: Overload:Dxflib.Entities.Entity.HasReferencedEntities
+  isSpec: "True"
+  fullName: Dxflib.Entities.Entity.HasReferencedEntities
+  nameWithType: Entity.HasReferencedEntities
 - uid: Dxflib.Entities.Entity.LayerChanged
   name: LayerChanged
   href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_LayerChanged
@@ -603,12 +1358,6 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.Entity.LayerName
   nameWithType: Entity.LayerName
-- uid: Dxflib.Entities.Entity.LayerNameBf
-  name: LayerNameBf
-  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_LayerNameBf
-  commentId: F:Dxflib.Entities.Entity.LayerNameBf
-  fullName: Dxflib.Entities.Entity.LayerNameBf
-  nameWithType: Entity.LayerNameBf
 - uid: Dxflib.Entities.Entity.OnLayerChanged(Dxflib.Entities.LayerChangedHandlerArgs)
   name: OnLayerChanged(LayerChangedHandlerArgs)
   href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_OnLayerChanged_Dxflib_Entities_LayerChangedHandlerArgs_
@@ -622,6 +1371,32 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.Entity.OnLayerChanged
   nameWithType: Entity.OnLayerChanged
+- uid: Dxflib.Entities.Entity.ReferencedEntities
+  name: ReferencedEntities
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_ReferencedEntities
+  commentId: P:Dxflib.Entities.Entity.ReferencedEntities
+  fullName: Dxflib.Entities.Entity.ReferencedEntities
+  nameWithType: Entity.ReferencedEntities
+- uid: Dxflib.Entities.Entity.ReferencedEntities*
+  name: ReferencedEntities
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_ReferencedEntities_
+  commentId: Overload:Dxflib.Entities.Entity.ReferencedEntities
+  isSpec: "True"
+  fullName: Dxflib.Entities.Entity.ReferencedEntities
+  nameWithType: Entity.ReferencedEntities
+- uid: Dxflib.Entities.Entity.UpdateReferencedEntities
+  name: UpdateReferencedEntities()
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_UpdateReferencedEntities
+  commentId: M:Dxflib.Entities.Entity.UpdateReferencedEntities
+  fullName: Dxflib.Entities.Entity.UpdateReferencedEntities()
+  nameWithType: Entity.UpdateReferencedEntities()
+- uid: Dxflib.Entities.Entity.UpdateReferencedEntities*
+  name: UpdateReferencedEntities
+  href: api/Dxflib.Entities.Entity.html#Dxflib_Entities_Entity_UpdateReferencedEntities_
+  commentId: Overload:Dxflib.Entities.Entity.UpdateReferencedEntities
+  isSpec: "True"
+  fullName: Dxflib.Entities.Entity.UpdateReferencedEntities
+  nameWithType: Entity.UpdateReferencedEntities
 - uid: Dxflib.Entities.EntityBuffer
   name: EntityBuffer
   href: api/Dxflib.Entities.EntityBuffer.html
@@ -641,6 +1416,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Entities.EntityBuffer.EntityBuffer
   nameWithType: EntityBuffer.EntityBuffer
+- uid: Dxflib.Entities.EntityBuffer.EntityReferenceList
+  name: EntityReferenceList
+  href: api/Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_EntityReferenceList
+  commentId: P:Dxflib.Entities.EntityBuffer.EntityReferenceList
+  fullName: Dxflib.Entities.EntityBuffer.EntityReferenceList
+  nameWithType: EntityBuffer.EntityReferenceList
+- uid: Dxflib.Entities.EntityBuffer.EntityReferenceList*
+  name: EntityReferenceList
+  href: api/Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_EntityReferenceList_
+  commentId: Overload:Dxflib.Entities.EntityBuffer.EntityReferenceList
+  isSpec: "True"
+  fullName: Dxflib.Entities.EntityBuffer.EntityReferenceList
+  nameWithType: EntityBuffer.EntityReferenceList
 - uid: Dxflib.Entities.EntityBuffer.EntityType
   name: EntityType
   href: api/Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_EntityType
@@ -730,6 +1518,18 @@ references:
   commentId: T:Dxflib.Entities.EntityTypes
   fullName: Dxflib.Entities.EntityTypes
   nameWithType: EntityTypes
+- uid: Dxflib.Entities.EntityTypes.CircularArc
+  name: CircularArc
+  href: api/Dxflib.Entities.EntityTypes.html#Dxflib_Entities_EntityTypes_CircularArc
+  commentId: F:Dxflib.Entities.EntityTypes.CircularArc
+  fullName: Dxflib.Entities.EntityTypes.CircularArc
+  nameWithType: EntityTypes.CircularArc
+- uid: Dxflib.Entities.EntityTypes.Hatch
+  name: Hatch
+  href: api/Dxflib.Entities.EntityTypes.html#Dxflib_Entities_EntityTypes_Hatch
+  commentId: F:Dxflib.Entities.EntityTypes.Hatch
+  fullName: Dxflib.Entities.EntityTypes.Hatch
+  nameWithType: EntityTypes.Hatch
 - uid: Dxflib.Entities.EntityTypes.Line
   name: Line
   href: api/Dxflib.Entities.EntityTypes.html#Dxflib_Entities_EntityTypes_Line
@@ -748,25 +1548,440 @@ references:
   commentId: F:Dxflib.Entities.EntityTypes.None
   fullName: Dxflib.Entities.EntityTypes.None
   nameWithType: EntityTypes.None
-- uid: Dxflib.Entities.HatchBuffer
-  name: HatchBuffer
-  href: api/Dxflib.Entities.HatchBuffer.html
-  commentId: T:Dxflib.Entities.HatchBuffer
-  fullName: Dxflib.Entities.HatchBuffer
-  nameWithType: HatchBuffer
-- uid: Dxflib.Entities.HatchBuffer.#ctor
-  name: HatchBuffer()
-  href: api/Dxflib.Entities.HatchBuffer.html#Dxflib_Entities_HatchBuffer__ctor
-  commentId: M:Dxflib.Entities.HatchBuffer.#ctor
-  fullName: Dxflib.Entities.HatchBuffer.HatchBuffer()
-  nameWithType: HatchBuffer.HatchBuffer()
-- uid: Dxflib.Entities.HatchBuffer.#ctor*
-  name: HatchBuffer
-  href: api/Dxflib.Entities.HatchBuffer.html#Dxflib_Entities_HatchBuffer__ctor_
-  commentId: Overload:Dxflib.Entities.HatchBuffer.#ctor
+- uid: Dxflib.Entities.Hatch
+  name: Dxflib.Entities.Hatch
+  href: api/Dxflib.Entities.Hatch.html
+  commentId: N:Dxflib.Entities.Hatch
+  fullName: Dxflib.Entities.Hatch
+  nameWithType: Dxflib.Entities.Hatch
+- uid: Dxflib.Entities.Hatch.EdgeTypes
+  name: EdgeTypes
+  href: api/Dxflib.Entities.Hatch.EdgeTypes.html
+  commentId: T:Dxflib.Entities.Hatch.EdgeTypes
+  fullName: Dxflib.Entities.Hatch.EdgeTypes
+  nameWithType: EdgeTypes
+- uid: Dxflib.Entities.Hatch.EdgeTypes.CircularArc
+  name: CircularArc
+  href: api/Dxflib.Entities.Hatch.EdgeTypes.html#Dxflib_Entities_Hatch_EdgeTypes_CircularArc
+  commentId: F:Dxflib.Entities.Hatch.EdgeTypes.CircularArc
+  fullName: Dxflib.Entities.Hatch.EdgeTypes.CircularArc
+  nameWithType: EdgeTypes.CircularArc
+- uid: Dxflib.Entities.Hatch.EdgeTypes.EllipticalArc
+  name: EllipticalArc
+  href: api/Dxflib.Entities.Hatch.EdgeTypes.html#Dxflib_Entities_Hatch_EdgeTypes_EllipticalArc
+  commentId: F:Dxflib.Entities.Hatch.EdgeTypes.EllipticalArc
+  fullName: Dxflib.Entities.Hatch.EdgeTypes.EllipticalArc
+  nameWithType: EdgeTypes.EllipticalArc
+- uid: Dxflib.Entities.Hatch.EdgeTypes.Line
+  name: Line
+  href: api/Dxflib.Entities.Hatch.EdgeTypes.html#Dxflib_Entities_Hatch_EdgeTypes_Line
+  commentId: F:Dxflib.Entities.Hatch.EdgeTypes.Line
+  fullName: Dxflib.Entities.Hatch.EdgeTypes.Line
+  nameWithType: EdgeTypes.Line
+- uid: Dxflib.Entities.Hatch.EdgeTypes.Spline
+  name: Spline
+  href: api/Dxflib.Entities.Hatch.EdgeTypes.html#Dxflib_Entities_Hatch_EdgeTypes_Spline
+  commentId: F:Dxflib.Entities.Hatch.EdgeTypes.Spline
+  fullName: Dxflib.Entities.Hatch.EdgeTypes.Spline
+  nameWithType: EdgeTypes.Spline
+- uid: Dxflib.Entities.Hatch.Hatch
+  name: Hatch
+  href: api/Dxflib.Entities.Hatch.Hatch.html
+  commentId: T:Dxflib.Entities.Hatch.Hatch
+  fullName: Dxflib.Entities.Hatch.Hatch
+  nameWithType: Hatch
+- uid: Dxflib.Entities.Hatch.Hatch.#ctor(Dxflib.Entities.Hatch.HatchBuffer)
+  name: Hatch(HatchBuffer)
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch__ctor_Dxflib_Entities_Hatch_HatchBuffer_
+  commentId: M:Dxflib.Entities.Hatch.Hatch.#ctor(Dxflib.Entities.Hatch.HatchBuffer)
+  fullName: Dxflib.Entities.Hatch.Hatch.Hatch(Dxflib.Entities.Hatch.HatchBuffer)
+  nameWithType: Hatch.Hatch(HatchBuffer)
+- uid: Dxflib.Entities.Hatch.Hatch.#ctor*
+  name: Hatch
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch__ctor_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.#ctor
   isSpec: "True"
-  fullName: Dxflib.Entities.HatchBuffer.HatchBuffer
+  fullName: Dxflib.Entities.Hatch.Hatch.Hatch
+  nameWithType: Hatch.Hatch
+- uid: Dxflib.Entities.Hatch.Hatch.Boundary
+  name: Boundary
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_Boundary
+  commentId: P:Dxflib.Entities.Hatch.Hatch.Boundary
+  fullName: Dxflib.Entities.Hatch.Hatch.Boundary
+  nameWithType: Hatch.Boundary
+- uid: Dxflib.Entities.Hatch.Hatch.Boundary*
+  name: Boundary
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_Boundary_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.Boundary
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.Boundary
+  nameWithType: Hatch.Boundary
+- uid: Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount
+  name: BoundaryLoopsCount
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_BoundaryLoopsCount
+  commentId: P:Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount
+  fullName: Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount
+  nameWithType: Hatch.BoundaryLoopsCount
+- uid: Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount*
+  name: BoundaryLoopsCount
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_BoundaryLoopsCount_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.BoundaryLoopsCount
+  nameWithType: Hatch.BoundaryLoopsCount
+- uid: Dxflib.Entities.Hatch.Hatch.IsAssociative
+  name: IsAssociative
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_IsAssociative
+  commentId: P:Dxflib.Entities.Hatch.Hatch.IsAssociative
+  fullName: Dxflib.Entities.Hatch.Hatch.IsAssociative
+  nameWithType: Hatch.IsAssociative
+- uid: Dxflib.Entities.Hatch.Hatch.IsAssociative*
+  name: IsAssociative
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_IsAssociative_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.IsAssociative
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.IsAssociative
+  nameWithType: Hatch.IsAssociative
+- uid: Dxflib.Entities.Hatch.Hatch.IsSolid
+  name: IsSolid
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_IsSolid
+  commentId: P:Dxflib.Entities.Hatch.Hatch.IsSolid
+  fullName: Dxflib.Entities.Hatch.Hatch.IsSolid
+  nameWithType: Hatch.IsSolid
+- uid: Dxflib.Entities.Hatch.Hatch.IsSolid*
+  name: IsSolid
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_IsSolid_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.IsSolid
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.IsSolid
+  nameWithType: Hatch.IsSolid
+- uid: Dxflib.Entities.Hatch.Hatch.PatternAngle
+  name: PatternAngle
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternAngle
+  commentId: P:Dxflib.Entities.Hatch.Hatch.PatternAngle
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternAngle
+  nameWithType: Hatch.PatternAngle
+- uid: Dxflib.Entities.Hatch.Hatch.PatternAngle*
+  name: PatternAngle
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternAngle_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.PatternAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternAngle
+  nameWithType: Hatch.PatternAngle
+- uid: Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount
+  name: PatternDefLinesCount
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternDefLinesCount
+  commentId: P:Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount
+  nameWithType: Hatch.PatternDefLinesCount
+- uid: Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount*
+  name: PatternDefLinesCount
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternDefLinesCount_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternDefLinesCount
+  nameWithType: Hatch.PatternDefLinesCount
+- uid: Dxflib.Entities.Hatch.Hatch.PatternName
+  name: PatternName
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternName
+  commentId: P:Dxflib.Entities.Hatch.Hatch.PatternName
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternName
+  nameWithType: Hatch.PatternName
+- uid: Dxflib.Entities.Hatch.Hatch.PatternName*
+  name: PatternName
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternName_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.PatternName
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternName
+  nameWithType: Hatch.PatternName
+- uid: Dxflib.Entities.Hatch.Hatch.PatternScale
+  name: PatternScale
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternScale
+  commentId: P:Dxflib.Entities.Hatch.Hatch.PatternScale
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternScale
+  nameWithType: Hatch.PatternScale
+- uid: Dxflib.Entities.Hatch.Hatch.PatternScale*
+  name: PatternScale
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternScale_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.PatternScale
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternScale
+  nameWithType: Hatch.PatternScale
+- uid: Dxflib.Entities.Hatch.Hatch.PatternType
+  name: PatternType
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternType
+  commentId: P:Dxflib.Entities.Hatch.Hatch.PatternType
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternType
+  nameWithType: Hatch.PatternType
+- uid: Dxflib.Entities.Hatch.Hatch.PatternType*
+  name: PatternType
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_PatternType_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.PatternType
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.PatternType
+  nameWithType: Hatch.PatternType
+- uid: Dxflib.Entities.Hatch.Hatch.Style
+  name: Style
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_Style
+  commentId: P:Dxflib.Entities.Hatch.Hatch.Style
+  fullName: Dxflib.Entities.Hatch.Hatch.Style
+  nameWithType: Hatch.Style
+- uid: Dxflib.Entities.Hatch.Hatch.Style*
+  name: Style
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_Style_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.Style
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.Style
+  nameWithType: Hatch.Style
+- uid: Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities
+  name: UpdateReferencedEntities()
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_UpdateReferencedEntities
+  commentId: M:Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities
+  fullName: Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities()
+  nameWithType: Hatch.UpdateReferencedEntities()
+- uid: Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities*
+  name: UpdateReferencedEntities
+  href: api/Dxflib.Entities.Hatch.Hatch.html#Dxflib_Entities_Hatch_Hatch_UpdateReferencedEntities_
+  commentId: Overload:Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.Hatch.UpdateReferencedEntities
+  nameWithType: Hatch.UpdateReferencedEntities
+- uid: Dxflib.Entities.Hatch.HatchBuffer
+  name: HatchBuffer
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html
+  commentId: T:Dxflib.Entities.Hatch.HatchBuffer
+  fullName: Dxflib.Entities.Hatch.HatchBuffer
+  nameWithType: HatchBuffer
+- uid: Dxflib.Entities.Hatch.HatchBuffer.#ctor
+  name: HatchBuffer()
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer__ctor
+  commentId: M:Dxflib.Entities.Hatch.HatchBuffer.#ctor
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchBuffer()
+  nameWithType: HatchBuffer.HatchBuffer()
+- uid: Dxflib.Entities.Hatch.HatchBuffer.#ctor*
+  name: HatchBuffer
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer__ctor_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.#ctor
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchBuffer
   nameWithType: HatchBuffer.HatchBuffer
+- uid: Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag
+  name: AssociativityFlag
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_AssociativityFlag
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag
+  nameWithType: HatchBuffer.AssociativityFlag
+- uid: Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag*
+  name: AssociativityFlag
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_AssociativityFlag_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.AssociativityFlag
+  nameWithType: HatchBuffer.AssociativityFlag
+- uid: Dxflib.Entities.Hatch.HatchBuffer.Boundary
+  name: Boundary
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_Boundary
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.Boundary
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.Boundary
+  nameWithType: HatchBuffer.Boundary
+- uid: Dxflib.Entities.Hatch.HatchBuffer.Boundary*
+  name: Boundary
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_Boundary_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.Boundary
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.Boundary
+  nameWithType: HatchBuffer.Boundary
+- uid: Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount
+  name: BoundaryEdgesCount
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_BoundaryEdgesCount
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount
+  nameWithType: HatchBuffer.BoundaryEdgesCount
+- uid: Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount*
+  name: BoundaryEdgesCount
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_BoundaryEdgesCount_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.BoundaryEdgesCount
+  nameWithType: HatchBuffer.BoundaryEdgesCount
+- uid: Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName
+  name: HatchPatternName
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_HatchPatternName
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName
+  nameWithType: HatchBuffer.HatchPatternName
+- uid: Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName*
+  name: HatchPatternName
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_HatchPatternName_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchPatternName
+  nameWithType: HatchBuffer.HatchPatternName
+- uid: Dxflib.Entities.Hatch.HatchBuffer.HatchStyle
+  name: HatchStyle
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_HatchStyle
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.HatchStyle
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchStyle
+  nameWithType: HatchBuffer.HatchStyle
+- uid: Dxflib.Entities.Hatch.HatchBuffer.HatchStyle*
+  name: HatchStyle
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_HatchStyle_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.HatchStyle
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.HatchStyle
+  nameWithType: HatchBuffer.HatchStyle
+- uid: Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops
+  name: NumberOfLoops
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_NumberOfLoops
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops
+  nameWithType: HatchBuffer.NumberOfLoops
+- uid: Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops*
+  name: NumberOfLoops
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_NumberOfLoops_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.NumberOfLoops
+  nameWithType: HatchBuffer.NumberOfLoops
+- uid: Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines
+  name: NumberOfPatternDefLines
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_NumberOfPatternDefLines
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines
+  nameWithType: HatchBuffer.NumberOfPatternDefLines
+- uid: Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines*
+  name: NumberOfPatternDefLines
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_NumberOfPatternDefLines_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.NumberOfPatternDefLines
+  nameWithType: HatchBuffer.NumberOfPatternDefLines
+- uid: Dxflib.Entities.Hatch.HatchBuffer.Parse(Dxflib.IO.TaggedDataList,System.Int32)
+  name: Parse(TaggedDataList, Int32)
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_Parse_Dxflib_IO_TaggedDataList_System_Int32_
+  commentId: M:Dxflib.Entities.Hatch.HatchBuffer.Parse(Dxflib.IO.TaggedDataList,System.Int32)
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.Parse(Dxflib.IO.TaggedDataList, System.Int32)
+  nameWithType: HatchBuffer.Parse(TaggedDataList, Int32)
+- uid: Dxflib.Entities.Hatch.HatchBuffer.Parse*
+  name: Parse
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_Parse_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.Parse
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.Parse
+  nameWithType: HatchBuffer.Parse
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternAngle
+  name: PatternAngle
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternAngle
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.PatternAngle
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternAngle
+  nameWithType: HatchBuffer.PatternAngle
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternAngle*
+  name: PatternAngle
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternAngle_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.PatternAngle
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternAngle
+  nameWithType: HatchBuffer.PatternAngle
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternScale
+  name: PatternScale
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternScale
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.PatternScale
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternScale
+  nameWithType: HatchBuffer.PatternScale
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternScale*
+  name: PatternScale
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternScale_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.PatternScale
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternScale
+  nameWithType: HatchBuffer.PatternScale
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternType
+  name: PatternType
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternType
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.PatternType
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternType
+  nameWithType: HatchBuffer.PatternType
+- uid: Dxflib.Entities.Hatch.HatchBuffer.PatternType*
+  name: PatternType
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_PatternType_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.PatternType
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.PatternType
+  nameWithType: HatchBuffer.PatternType
+- uid: Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag
+  name: SolidFillFlag
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_SolidFillFlag
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag
+  nameWithType: HatchBuffer.SolidFillFlag
+- uid: Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag*
+  name: SolidFillFlag
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_SolidFillFlag_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.SolidFillFlag
+  nameWithType: HatchBuffer.SolidFillFlag
+- uid: Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount
+  name: SourceObjectsCount
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_SourceObjectsCount
+  commentId: P:Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount
+  nameWithType: HatchBuffer.SourceObjectsCount
+- uid: Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount*
+  name: SourceObjectsCount
+  href: api/Dxflib.Entities.Hatch.HatchBuffer.html#Dxflib_Entities_Hatch_HatchBuffer_SourceObjectsCount_
+  commentId: Overload:Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount
+  isSpec: "True"
+  fullName: Dxflib.Entities.Hatch.HatchBuffer.SourceObjectsCount
+  nameWithType: HatchBuffer.SourceObjectsCount
+- uid: Dxflib.Entities.Hatch.HatchPatternType
+  name: HatchPatternType
+  href: api/Dxflib.Entities.Hatch.HatchPatternType.html
+  commentId: T:Dxflib.Entities.Hatch.HatchPatternType
+  fullName: Dxflib.Entities.Hatch.HatchPatternType
+  nameWithType: HatchPatternType
+- uid: Dxflib.Entities.Hatch.HatchPatternType.Custom
+  name: Custom
+  href: api/Dxflib.Entities.Hatch.HatchPatternType.html#Dxflib_Entities_Hatch_HatchPatternType_Custom
+  commentId: F:Dxflib.Entities.Hatch.HatchPatternType.Custom
+  fullName: Dxflib.Entities.Hatch.HatchPatternType.Custom
+  nameWithType: HatchPatternType.Custom
+- uid: Dxflib.Entities.Hatch.HatchPatternType.Predefined
+  name: Predefined
+  href: api/Dxflib.Entities.Hatch.HatchPatternType.html#Dxflib_Entities_Hatch_HatchPatternType_Predefined
+  commentId: F:Dxflib.Entities.Hatch.HatchPatternType.Predefined
+  fullName: Dxflib.Entities.Hatch.HatchPatternType.Predefined
+  nameWithType: HatchPatternType.Predefined
+- uid: Dxflib.Entities.Hatch.HatchPatternType.UserDefined
+  name: UserDefined
+  href: api/Dxflib.Entities.Hatch.HatchPatternType.html#Dxflib_Entities_Hatch_HatchPatternType_UserDefined
+  commentId: F:Dxflib.Entities.Hatch.HatchPatternType.UserDefined
+  fullName: Dxflib.Entities.Hatch.HatchPatternType.UserDefined
+  nameWithType: HatchPatternType.UserDefined
+- uid: Dxflib.Entities.Hatch.HatchStyles
+  name: HatchStyles
+  href: api/Dxflib.Entities.Hatch.HatchStyles.html
+  commentId: T:Dxflib.Entities.Hatch.HatchStyles
+  fullName: Dxflib.Entities.Hatch.HatchStyles
+  nameWithType: HatchStyles
+- uid: Dxflib.Entities.Hatch.HatchStyles.Ignore
+  name: Ignore
+  href: api/Dxflib.Entities.Hatch.HatchStyles.html#Dxflib_Entities_Hatch_HatchStyles_Ignore
+  commentId: F:Dxflib.Entities.Hatch.HatchStyles.Ignore
+  fullName: Dxflib.Entities.Hatch.HatchStyles.Ignore
+  nameWithType: HatchStyles.Ignore
+- uid: Dxflib.Entities.Hatch.HatchStyles.Normal
+  name: Normal
+  href: api/Dxflib.Entities.Hatch.HatchStyles.html#Dxflib_Entities_Hatch_HatchStyles_Normal
+  commentId: F:Dxflib.Entities.Hatch.HatchStyles.Normal
+  fullName: Dxflib.Entities.Hatch.HatchStyles.Normal
+  nameWithType: HatchStyles.Normal
+- uid: Dxflib.Entities.Hatch.HatchStyles.Outer
+  name: Outer
+  href: api/Dxflib.Entities.Hatch.HatchStyles.html#Dxflib_Entities_Hatch_HatchStyles_Outer
+  commentId: F:Dxflib.Entities.Hatch.HatchStyles.Outer
+  fullName: Dxflib.Entities.Hatch.HatchStyles.Outer
+  nameWithType: HatchStyles.Outer
 - uid: Dxflib.Entities.LayerChangedHandler
   name: LayerChangedHandler
   href: api/Dxflib.Entities.LayerChangedHandler.html
@@ -1801,6 +3016,12 @@ references:
   commentId: T:Dxflib.Geometry.GeoPolyline
   fullName: Dxflib.Geometry.GeoPolyline
   nameWithType: GeoPolyline
+- uid: Dxflib.Geometry.GeoPolyline.#ctor
+  name: GeoPolyline()
+  href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline__ctor
+  commentId: M:Dxflib.Geometry.GeoPolyline.#ctor
+  fullName: Dxflib.Geometry.GeoPolyline.GeoPolyline()
+  nameWithType: GeoPolyline.GeoPolyline()
 - uid: Dxflib.Geometry.GeoPolyline.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)
   name: GeoPolyline(List<Double>, List<Double>, List<Double>, Boolean)
   href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline__ctor_System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Boolean_
@@ -1817,6 +3038,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.GeoPolyline.GeoPolyline
   nameWithType: GeoPolyline.GeoPolyline
+- uid: Dxflib.Geometry.GeoPolyline.Add(Dxflib.Geometry.GeometricEntityBase)
+  name: Add(GeometricEntityBase)
+  href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_Add_Dxflib_Geometry_GeometricEntityBase_
+  commentId: M:Dxflib.Geometry.GeoPolyline.Add(Dxflib.Geometry.GeometricEntityBase)
+  fullName: Dxflib.Geometry.GeoPolyline.Add(Dxflib.Geometry.GeometricEntityBase)
+  nameWithType: GeoPolyline.Add(GeometricEntityBase)
+- uid: Dxflib.Geometry.GeoPolyline.Add*
+  name: Add
+  href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_Add_
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.Add
+  isSpec: "True"
+  fullName: Dxflib.Geometry.GeoPolyline.Add
+  nameWithType: GeoPolyline.Add
 - uid: Dxflib.Geometry.GeoPolyline.Area
   name: Area
   href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_Area
@@ -1856,6 +3090,19 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.GeoPolyline.Length
   nameWithType: GeoPolyline.Length
+- uid: Dxflib.Geometry.GeoPolyline.SectionCount
+  name: SectionCount
+  href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_SectionCount
+  commentId: P:Dxflib.Geometry.GeoPolyline.SectionCount
+  fullName: Dxflib.Geometry.GeoPolyline.SectionCount
+  nameWithType: GeoPolyline.SectionCount
+- uid: Dxflib.Geometry.GeoPolyline.SectionCount*
+  name: SectionCount
+  href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_SectionCount_
+  commentId: Overload:Dxflib.Geometry.GeoPolyline.SectionCount
+  isSpec: "True"
+  fullName: Dxflib.Geometry.GeoPolyline.SectionCount
+  nameWithType: GeoPolyline.SectionCount
 - uid: Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)
   name: UpdateGeometry(Object, GeometryChangedHandlerArgs)
   href: api/Dxflib.Geometry.GeoPolyline.html#Dxflib_Geometry_GeoPolyline_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_
@@ -1888,6 +3135,38 @@ references:
   isSpec: "True"
   fullName: Dxflib.Geometry.Vertex.Vertex
   nameWithType: Vertex.Vertex
+- uid: Dxflib.Geometry.Vertex.Equals(Dxflib.Geometry.Vertex)
+  name: Equals(Vertex)
+  href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_Equals_Dxflib_Geometry_Vertex_
+  commentId: M:Dxflib.Geometry.Vertex.Equals(Dxflib.Geometry.Vertex)
+  fullName: Dxflib.Geometry.Vertex.Equals(Dxflib.Geometry.Vertex)
+  nameWithType: Vertex.Equals(Vertex)
+- uid: Dxflib.Geometry.Vertex.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_Equals_System_Object_
+  commentId: M:Dxflib.Geometry.Vertex.Equals(System.Object)
+  fullName: Dxflib.Geometry.Vertex.Equals(System.Object)
+  nameWithType: Vertex.Equals(Object)
+- uid: Dxflib.Geometry.Vertex.Equals*
+  name: Equals
+  href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_Equals_
+  commentId: Overload:Dxflib.Geometry.Vertex.Equals
+  isSpec: "True"
+  fullName: Dxflib.Geometry.Vertex.Equals
+  nameWithType: Vertex.Equals
+- uid: Dxflib.Geometry.Vertex.GetHashCode
+  name: GetHashCode()
+  href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_GetHashCode
+  commentId: M:Dxflib.Geometry.Vertex.GetHashCode
+  fullName: Dxflib.Geometry.Vertex.GetHashCode()
+  nameWithType: Vertex.GetHashCode()
+- uid: Dxflib.Geometry.Vertex.GetHashCode*
+  name: GetHashCode
+  href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_GetHashCode_
+  commentId: Overload:Dxflib.Geometry.Vertex.GetHashCode
+  isSpec: "True"
+  fullName: Dxflib.Geometry.Vertex.GetHashCode
+  nameWithType: Vertex.GetHashCode
 - uid: Dxflib.Geometry.Vertex.X
   name: X
   href: api/Dxflib.Geometry.Vertex.html#Dxflib_Geometry_Vertex_X
@@ -2063,6 +3342,86 @@ references:
   isSpec: "True"
   fullName: Dxflib.IO.AutoCadVersionVar.ParseAutoCadVersion
   nameWithType: AutoCadVersionVar.ParseAutoCadVersion
+- uid: Dxflib.IO.CircularArcCodes
+  name: CircularArcCodes
+  href: api/Dxflib.IO.CircularArcCodes.html
+  commentId: T:Dxflib.IO.CircularArcCodes
+  fullName: Dxflib.IO.CircularArcCodes
+  nameWithType: CircularArcCodes
+- uid: Dxflib.IO.CircularArcCodes.EndAngle
+  name: EndAngle
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_EndAngle
+  commentId: F:Dxflib.IO.CircularArcCodes.EndAngle
+  fullName: Dxflib.IO.CircularArcCodes.EndAngle
+  nameWithType: CircularArcCodes.EndAngle
+- uid: Dxflib.IO.CircularArcCodes.IsCounterClockWise
+  name: IsCounterClockWise
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_IsCounterClockWise
+  commentId: F:Dxflib.IO.CircularArcCodes.IsCounterClockWise
+  fullName: Dxflib.IO.CircularArcCodes.IsCounterClockWise
+  nameWithType: CircularArcCodes.IsCounterClockWise
+- uid: Dxflib.IO.CircularArcCodes.Radius
+  name: Radius
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_Radius
+  commentId: F:Dxflib.IO.CircularArcCodes.Radius
+  fullName: Dxflib.IO.CircularArcCodes.Radius
+  nameWithType: CircularArcCodes.Radius
+- uid: Dxflib.IO.CircularArcCodes.StartAngle
+  name: StartAngle
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_StartAngle
+  commentId: F:Dxflib.IO.CircularArcCodes.StartAngle
+  fullName: Dxflib.IO.CircularArcCodes.StartAngle
+  nameWithType: CircularArcCodes.StartAngle
+- uid: Dxflib.IO.CircularArcCodes.StartMarker
+  name: StartMarker
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_StartMarker
+  commentId: F:Dxflib.IO.CircularArcCodes.StartMarker
+  fullName: Dxflib.IO.CircularArcCodes.StartMarker
+  nameWithType: CircularArcCodes.StartMarker
+- uid: Dxflib.IO.CircularArcCodes.Thickness
+  name: Thickness
+  href: api/Dxflib.IO.CircularArcCodes.html#Dxflib_IO_CircularArcCodes_Thickness
+  commentId: F:Dxflib.IO.CircularArcCodes.Thickness
+  fullName: Dxflib.IO.CircularArcCodes.Thickness
+  nameWithType: CircularArcCodes.Thickness
+- uid: Dxflib.IO.DxfParseException
+  name: DxfParseException
+  href: api/Dxflib.IO.DxfParseException.html
+  commentId: T:Dxflib.IO.DxfParseException
+  fullName: Dxflib.IO.DxfParseException
+  nameWithType: DxfParseException
+- uid: Dxflib.IO.DxfParseException.#ctor
+  name: DxfParseException()
+  href: api/Dxflib.IO.DxfParseException.html#Dxflib_IO_DxfParseException__ctor
+  commentId: M:Dxflib.IO.DxfParseException.#ctor
+  fullName: Dxflib.IO.DxfParseException.DxfParseException()
+  nameWithType: DxfParseException.DxfParseException()
+- uid: Dxflib.IO.DxfParseException.#ctor(System.String)
+  name: DxfParseException(String)
+  href: api/Dxflib.IO.DxfParseException.html#Dxflib_IO_DxfParseException__ctor_System_String_
+  commentId: M:Dxflib.IO.DxfParseException.#ctor(System.String)
+  fullName: Dxflib.IO.DxfParseException.DxfParseException(System.String)
+  nameWithType: DxfParseException.DxfParseException(String)
+- uid: Dxflib.IO.DxfParseException.#ctor*
+  name: DxfParseException
+  href: api/Dxflib.IO.DxfParseException.html#Dxflib_IO_DxfParseException__ctor_
+  commentId: Overload:Dxflib.IO.DxfParseException.#ctor
+  isSpec: "True"
+  fullName: Dxflib.IO.DxfParseException.DxfParseException
+  nameWithType: DxfParseException.DxfParseException
+- uid: Dxflib.IO.DxfParseException.Message
+  name: Message
+  href: api/Dxflib.IO.DxfParseException.html#Dxflib_IO_DxfParseException_Message
+  commentId: P:Dxflib.IO.DxfParseException.Message
+  fullName: Dxflib.IO.DxfParseException.Message
+  nameWithType: DxfParseException.Message
+- uid: Dxflib.IO.DxfParseException.Message*
+  name: Message
+  href: api/Dxflib.IO.DxfParseException.html#Dxflib_IO_DxfParseException_Message_
+  commentId: Overload:Dxflib.IO.DxfParseException.Message
+  isSpec: "True"
+  fullName: Dxflib.IO.DxfParseException.Message
+  nameWithType: DxfParseException.Message
 - uid: Dxflib.IO.DxfTypeConverter
   name: DxfTypeConverter
   href: api/Dxflib.IO.DxfTypeConverter.html
@@ -2473,6 +3832,90 @@ references:
   commentId: F:Dxflib.IO.GroupCodesBase.ZPointEnd
   fullName: Dxflib.IO.GroupCodesBase.ZPointEnd
   nameWithType: GroupCodesBase.ZPointEnd
+- uid: Dxflib.IO.HatchCodes
+  name: HatchCodes
+  href: api/Dxflib.IO.HatchCodes.html
+  commentId: T:Dxflib.IO.HatchCodes
+  fullName: Dxflib.IO.HatchCodes
+  nameWithType: HatchCodes
+- uid: Dxflib.IO.HatchCodes.AssociativityFlag
+  name: AssociativityFlag
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_AssociativityFlag
+  commentId: F:Dxflib.IO.HatchCodes.AssociativityFlag
+  fullName: Dxflib.IO.HatchCodes.AssociativityFlag
+  nameWithType: HatchCodes.AssociativityFlag
+- uid: Dxflib.IO.HatchCodes.EdgeType
+  name: EdgeType
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_EdgeType
+  commentId: F:Dxflib.IO.HatchCodes.EdgeType
+  fullName: Dxflib.IO.HatchCodes.EdgeType
+  nameWithType: HatchCodes.EdgeType
+- uid: Dxflib.IO.HatchCodes.HatchPatternAngle
+  name: HatchPatternAngle
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_HatchPatternAngle
+  commentId: F:Dxflib.IO.HatchCodes.HatchPatternAngle
+  fullName: Dxflib.IO.HatchCodes.HatchPatternAngle
+  nameWithType: HatchCodes.HatchPatternAngle
+- uid: Dxflib.IO.HatchCodes.HatchPatternName
+  name: HatchPatternName
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_HatchPatternName
+  commentId: F:Dxflib.IO.HatchCodes.HatchPatternName
+  fullName: Dxflib.IO.HatchCodes.HatchPatternName
+  nameWithType: HatchCodes.HatchPatternName
+- uid: Dxflib.IO.HatchCodes.HatchPatternScale
+  name: HatchPatternScale
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_HatchPatternScale
+  commentId: F:Dxflib.IO.HatchCodes.HatchPatternScale
+  fullName: Dxflib.IO.HatchCodes.HatchPatternScale
+  nameWithType: HatchCodes.HatchPatternScale
+- uid: Dxflib.IO.HatchCodes.HatchPatternType
+  name: HatchPatternType
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_HatchPatternType
+  commentId: F:Dxflib.IO.HatchCodes.HatchPatternType
+  fullName: Dxflib.IO.HatchCodes.HatchPatternType
+  nameWithType: HatchCodes.HatchPatternType
+- uid: Dxflib.IO.HatchCodes.HatchStyle
+  name: HatchStyle
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_HatchStyle
+  commentId: F:Dxflib.IO.HatchCodes.HatchStyle
+  fullName: Dxflib.IO.HatchCodes.HatchStyle
+  nameWithType: HatchCodes.HatchStyle
+- uid: Dxflib.IO.HatchCodes.NumberOfBoundaryLoops
+  name: NumberOfBoundaryLoops
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_NumberOfBoundaryLoops
+  commentId: F:Dxflib.IO.HatchCodes.NumberOfBoundaryLoops
+  fullName: Dxflib.IO.HatchCodes.NumberOfBoundaryLoops
+  nameWithType: HatchCodes.NumberOfBoundaryLoops
+- uid: Dxflib.IO.HatchCodes.NumberOfEdgesInBoundary
+  name: NumberOfEdgesInBoundary
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_NumberOfEdgesInBoundary
+  commentId: F:Dxflib.IO.HatchCodes.NumberOfEdgesInBoundary
+  fullName: Dxflib.IO.HatchCodes.NumberOfEdgesInBoundary
+  nameWithType: HatchCodes.NumberOfEdgesInBoundary
+- uid: Dxflib.IO.HatchCodes.NumberOfPatternDefLines
+  name: NumberOfPatternDefLines
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_NumberOfPatternDefLines
+  commentId: F:Dxflib.IO.HatchCodes.NumberOfPatternDefLines
+  fullName: Dxflib.IO.HatchCodes.NumberOfPatternDefLines
+  nameWithType: HatchCodes.NumberOfPatternDefLines
+- uid: Dxflib.IO.HatchCodes.SolidFillFlag
+  name: SolidFillFlag
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_SolidFillFlag
+  commentId: F:Dxflib.IO.HatchCodes.SolidFillFlag
+  fullName: Dxflib.IO.HatchCodes.SolidFillFlag
+  nameWithType: HatchCodes.SolidFillFlag
+- uid: Dxflib.IO.HatchCodes.SourceObjectsCount
+  name: SourceObjectsCount
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_SourceObjectsCount
+  commentId: F:Dxflib.IO.HatchCodes.SourceObjectsCount
+  fullName: Dxflib.IO.HatchCodes.SourceObjectsCount
+  nameWithType: HatchCodes.SourceObjectsCount
+- uid: Dxflib.IO.HatchCodes.StartMarker
+  name: StartMarker
+  href: api/Dxflib.IO.HatchCodes.html#Dxflib_IO_HatchCodes_StartMarker
+  commentId: F:Dxflib.IO.HatchCodes.StartMarker
+  fullName: Dxflib.IO.HatchCodes.StartMarker
+  nameWithType: HatchCodes.StartMarker
 - uid: Dxflib.IO.HeaderSectionArgs
   name: HeaderSectionArgs
   href: api/Dxflib.IO.HeaderSectionArgs.html

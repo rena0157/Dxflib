@@ -74,7 +74,9 @@
   <h1 id="Dxflib_Geometry_GeoPolyline" data-uid="Dxflib.Geometry.GeoPolyline" class="text-break">Class GeoPolyline
   </h1>
   <div class="markdown level0 summary"><p>The GeoPolyline Class, which is a container of the GeoMetricEntityBase.
-This Object contains both GeoArcs and GeoLines</p>
+This Object contains both <a class="xref" href="Dxflib.Geometry.GeoArc.html">GeoArc</a>s and <a class="xref" href="Dxflib.Geometry.GeoLine.html">GeoLine</a>s.
+This Object is essentially a wrapper over a <span class="xref">System.Collections.Generic.List&lt;T&gt;</span>
+where T is the <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html">GeometricEntityBase</a> type.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -86,10 +88,10 @@ This Object contains both GeoArcs and GeoLines</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryChanged">GeometricEntityBase.GeometryChanged</a>
+      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryEntityType">GeometricEntityBase.GeometryEntityType</a>
     </div>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryEntityType">GeometricEntityBase.GeometryEntityType</a>
+      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryChanged">GeometricEntityBase.GeometryChanged</a>
     </div>
     <div>
       <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_OnGeometryChanged_Dxflib_Geometry_GeometryChangedHandlerArgs_">GeometricEntityBase.OnGeometryChanged(GeometryChangedHandlerArgs)</a>
@@ -126,10 +128,26 @@ This Object contains both GeoArcs and GeoLines</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline__ctor.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L85">View Source</a>
+  </span>
+  <a id="Dxflib_Geometry_GeoPolyline__ctor_" data-uid="Dxflib.Geometry.GeoPolyline.#ctor*"></a>
+  <h4 id="Dxflib_Geometry_GeoPolyline__ctor" data-uid="Dxflib.Geometry.GeoPolyline.#ctor">GeoPolyline()</h4>
+  <div class="markdown level1 summary"><p>Default Constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GeoPolyline()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline__ctor_System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Boolean_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.%23ctor(System.Collections.Generic.List%7BSystem.Double%7D%2CSystem.Collections.Generic.List%7BSystem.Double%7D%2CSystem.Collections.Generic.List%7BSystem.Double%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L33">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L35">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoPolyline__ctor_" data-uid="Dxflib.Geometry.GeoPolyline.#ctor*"></a>
   <h4 id="Dxflib_Geometry_GeoPolyline__ctor_System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Collections_Generic_List_System_Double__System_Boolean_" data-uid="Dxflib.Geometry.GeoPolyline.#ctor(System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Collections.Generic.List{System.Double},System.Boolean)">GeoPolyline(List&lt;Double&gt;, List&lt;Double&gt;, List&lt;Double&gt;, Boolean)</h4>
@@ -183,7 +201,7 @@ This Object contains both GeoArcs and GeoLines</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_Area.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.Area%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L98">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L112">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoPolyline_Area_" data-uid="Dxflib.Geometry.GeoPolyline.Area*"></a>
   <h4 id="Dxflib_Geometry_GeoPolyline_Area" data-uid="Dxflib.Geometry.GeoPolyline.Area">Area</h4>
@@ -214,7 +232,7 @@ This Object contains both GeoArcs and GeoLines</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_Length.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L93">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L107">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoPolyline_Length_" data-uid="Dxflib.Geometry.GeoPolyline.Length*"></a>
   <h4 id="Dxflib_Geometry_GeoPolyline_Length" data-uid="Dxflib.Geometry.GeoPolyline.Length">Length</h4>
@@ -240,14 +258,78 @@ This Object contains both GeoArcs and GeoLines</p>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_SectionCount.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.SectionCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L122">View Source</a>
+  </span>
+  <a id="Dxflib_Geometry_GeoPolyline_SectionCount_" data-uid="Dxflib.Geometry.GeoPolyline.SectionCount*"></a>
+  <h4 id="Dxflib_Geometry_GeoPolyline_SectionCount" data-uid="Dxflib.Geometry.GeoPolyline.SectionCount">SectionCount</h4>
+  <div class="markdown level1 summary"><p>The Total number of sections in the section list</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SectionCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_Add_Dxflib_Geometry_GeometricEntityBase_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.Add(Dxflib.Geometry.GeometricEntityBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L128">View Source</a>
+  </span>
+  <a id="Dxflib_Geometry_GeoPolyline_Add_" data-uid="Dxflib.Geometry.GeoPolyline.Add*"></a>
+  <h4 id="Dxflib_Geometry_GeoPolyline_Add_Dxflib_Geometry_GeometricEntityBase_" data-uid="Dxflib.Geometry.GeoPolyline.Add(Dxflib.Geometry.GeometricEntityBase)">Add(GeometricEntityBase)</h4>
+  <div class="markdown level1 summary"><p>Add a section to the geo polyline</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(GeometricEntityBase section)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html">GeometricEntityBase</a></td>
+        <td><span class="parametername">section</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_CalcLength.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.CalcLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L115">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L175">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoPolyline_CalcLength_" data-uid="Dxflib.Geometry.GeoPolyline.CalcLength*"></a>
   <h4 id="Dxflib_Geometry_GeoPolyline_CalcLength" data-uid="Dxflib.Geometry.GeoPolyline.CalcLength">CalcLength()</h4>
@@ -281,7 +363,7 @@ This Object contains both GeoArcs and GeoLines</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object%2CDxflib.Geometry.GeometryChangedHandlerArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L105">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L163">View Source</a>
   </span>
   <a id="Dxflib_Geometry_GeoPolyline_UpdateGeometry_" data-uid="Dxflib.Geometry.GeoPolyline.UpdateGeometry*"></a>
   <h4 id="Dxflib_Geometry_GeoPolyline_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_" data-uid="Dxflib.Geometry.GeoPolyline.UpdateGeometry(System.Object,Dxflib.Geometry.GeometryChangedHandlerArgs)">UpdateGeometry(Object, GeometryChangedHandlerArgs)</h4>
@@ -329,7 +411,7 @@ This Object contains both GeoArcs and GeoLines</p>
                     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_GeoPolyline.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.GeoPolyline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/GeoPolyline.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
