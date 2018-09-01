@@ -4,21 +4,23 @@
 // ============================================================
 // 
 // Created: 2018-08-11
-// Last Updated: 2018-09-01-1:09 PM
+// Last Updated: 2018-09-01-6:23 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
 using System;
+using System.ComponentModel;
 using Dxflib.Geometry;
 
 namespace Dxflib.LinAlg
 {
+    /// <inheritdoc />
     /// <summary>
     ///     The Vector Class: Defines vector mathematics and functionality
     ///     for the dxf library
     /// </summary>
-    public class Vector
+    public class Vector : GeoBase
     {
         private Vertex _vertex0;
         private Vertex _vertex1;
@@ -30,21 +32,16 @@ namespace Dxflib.LinAlg
         {
             _vertex0 = new Vertex(0, 0);
             _vertex1 = new Vertex(1, 1, 1);
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
+            UpdateGeometry();
             SubscribeToEvents();
         }
 
+        /// <inheritdoc />
         /// <summary>
         ///     Constructor from another vector
         /// </summary>
         /// <param name="other"></param>
-        public Vector(Vector other)
-        {
-            _vertex0 = new Vertex(other.TailVertex.X, other.TailVertex.Y, other.TailVertex.Z);
-            _vertex1 = new Vertex(other.HeadVertex.X, other.HeadVertex.Y, other.HeadVertex.Z);
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
-            SubscribeToEvents();
-        }
+        public Vector(Vector other) : this(other.TailVertex, other.HeadVertex) { }
 
         /// <summary>
         ///     PositionVector Constructor: This will create a vector with its tail
@@ -56,7 +53,7 @@ namespace Dxflib.LinAlg
         {
             _vertex0 = startingVertex;
             _vertex1 = endingVertex;
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
+            UpdateGeometry();
             SubscribeToEvents();
         }
 
@@ -70,21 +67,16 @@ namespace Dxflib.LinAlg
         {
             _vertex0 = new Vertex(0, 0);
             _vertex1 = new Vertex(xComponent, yComponent, zComponent);
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
+            UpdateGeometry();
             SubscribeToEvents();
         }
 
+        /// <inheritdoc />
         /// <summary>
+        ///     Constructor from a line
         /// </summary>
         /// <param name="line"></param>
-        public Vector(GeoLine line)
-        {
-            // Todo: Test this
-            _vertex0 = new Vertex(line.Vertex0.X, line.Vertex0.Y, line.Vertex0.Z);
-            _vertex1 = new Vertex(line.Vertex1.X, line.Vertex1.Y, line.Vertex1.Z);
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build"));
-            SubscribeToEvents();
-        }
+        public Vector(GeoLine line) : this(line.Vertex0, line.Vertex1) { }
 
         /// <summary>
         ///     The vector's x component
@@ -102,7 +94,7 @@ namespace Dxflib.LinAlg
         public double Z { get; private set; }
 
         /// <summary>
-        ///     The vector's lenght or magnitude
+        ///     The vector's length or magnitude
         /// </summary>
         public double Length { get; private set; }
 
@@ -115,8 +107,8 @@ namespace Dxflib.LinAlg
             set
             {
                 _vertex1 = value;
-                OnGeometryChanged(this, EventArgs.Empty);
-                UpdateGeometry(this, new GeometryChangedHandlerArgs(1));
+                UpdateGeometry();
+                OnPropertyChanged();
             }
         }
 
@@ -129,8 +121,8 @@ namespace Dxflib.LinAlg
             set
             {
                 _vertex0 = value;
-                OnGeometryChanged(this, EventArgs.Empty);
-                UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
+                UpdateGeometry();
+                OnPropertyChanged();
             }
         }
 
@@ -150,7 +142,7 @@ namespace Dxflib.LinAlg
                 _vertex1.X + newTail.X,
                 _vertex1.Y + newTail.Y,
                 _vertex1.Z + newTail.Z);
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Update"));
+            UpdateGeometry();
         }
 
         /// <summary>
@@ -198,15 +190,10 @@ namespace Dxflib.LinAlg
         }
 
         /// <summary>
-        ///     The event when ever one of the vertexes change or if one of the components change
+        ///     Update the Geometry of the Vector
         /// </summary>
-        public event EventHandler GeometryChanged;
-
-        /// <summary>
-        /// </summary>
-        /// <param name="sender">The sending object</param>
-        /// <param name="args">Some arguments</param>
-        private void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        /// <param name="command"></param>
+        protected sealed override void UpdateGeometry(string command = "")
         {
             X = _vertex1.X - _vertex0.X;
             Y = _vertex1.Y - _vertex0.Y;
@@ -219,16 +206,11 @@ namespace Dxflib.LinAlg
         /// </summary>
         private void SubscribeToEvents()
         {
-            _vertex0.GeometryChanged += UpdateGeometry;
-            _vertex1.GeometryChanged += UpdateGeometry;
+            _vertex0.PropertyChanged += VertexOnPropertyChanged;
+            _vertex1.PropertyChanged += VertexOnPropertyChanged;
         }
 
-        /// <summary>
-        ///     On Geometry Changed invocation
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void OnGeometryChanged(object sender, EventArgs args) { GeometryChanged?.Invoke(sender, args); }
+        private void VertexOnPropertyChanged(object sender, PropertyChangedEventArgs e) { UpdateGeometry(); }
 
         /// <summary>
         ///     Creates a new vector that is the unit vector of this vector

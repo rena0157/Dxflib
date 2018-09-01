@@ -78,7 +78,7 @@ namespace Dxflib.Tests.Geometry
                 new Vertex(7, 2.5)    // Vertex3
             };
 
-            GeometricEntityBase[] sections =
+            GeoBase[] sections =
             {
                 new GeoLine(vertices[0], vertices[1]),
                 new GeoLine(vertices[1], vertices[2]),

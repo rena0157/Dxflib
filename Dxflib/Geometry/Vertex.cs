@@ -10,6 +10,9 @@
 // ============================================================
 
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Dxflib.Annotations;
 
 namespace Dxflib.Geometry
 {
@@ -17,7 +20,7 @@ namespace Dxflib.Geometry
     /// <summary>
     ///     The Vertex Class
     /// </summary>
-    public class Vertex : GeometricEntityBase
+    public class Vertex : GeoBase
     {
         private double _x;
         private double _y;
@@ -46,7 +49,7 @@ namespace Dxflib.Geometry
             set
             {
                 _x = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("X"));
+                OnPropertyChanged();
             }
         }
 
@@ -60,7 +63,7 @@ namespace Dxflib.Geometry
             set
             {
                 _y = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Y"));
+                OnPropertyChanged();
             }
         }
 
@@ -74,7 +77,7 @@ namespace Dxflib.Geometry
             set
             {
                 _z = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Z"));
+                OnPropertyChanged();
             }
         }
 

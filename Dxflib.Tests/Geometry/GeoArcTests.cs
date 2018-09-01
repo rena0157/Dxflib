@@ -100,19 +100,6 @@ namespace Dxflib.Tests.Geometry
         }
 
         [TestMethod]
-        public void Angle_VertexVertexBulge_Changing()
-        {
-            var vertex0 = new Vertex(0, 2);
-            var vertex1 = new Vertex(2, 2);
-            const double bulgeValue = -0.5;
-            var testArc = new GeoArc(vertex0, vertex1, bulgeValue);
-
-            testArc.Angle = GeoMath.DegToRad(130);
-            Assert.IsTrue(Math.Abs(testArc.Angle - GeoMath.DegToRad(130)) < GeoMath.Tolerance);
-            Assert.IsTrue(Math.Abs(testArc.Area - 1.1741) < GeoMath.Tolerance);
-        }
-
-        [TestMethod]
         public void MiddleVertexTest()
         {
             var vertex0 = new Vertex(0, 2);
@@ -162,6 +149,7 @@ namespace Dxflib.Tests.Geometry
             var centerVertex = new Vertex(1.0, 1.25);
             var startAngle = GeoMath.DegToRad(36.8699);
             var endAngle = GeoMath.DegToRad(143.1301);
+
             var radius = 1.25;
             var testArc = new GeoArc(centerVertex, startAngle, endAngle, radius);
 
@@ -208,20 +196,6 @@ namespace Dxflib.Tests.Geometry
             testArc.EndAngle = GeoMath.DegToRad(200);
             Assert.IsTrue(Math.Abs(testArc.Vertex1.X - -0.1746) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(testArc.Vertex1.Y - 0.8225) < GeoMath.Tolerance);
-        }
-
-        [TestMethod]
-        public void Angle_CaarTest_Changing()
-        {
-            var centerVertex = new Vertex(1.0, 1.25);
-            var startAngle = GeoMath.DegToRad(36.8699);
-            var endAngle = GeoMath.DegToRad(143.1301);
-            var radius = 1.25;
-            var testArc = new GeoArc(centerVertex, startAngle, endAngle, radius);
-
-            testArc.Angle = GeoMath.DegToRad(138.1301);
-            Assert.IsTrue(Math.Abs(testArc.Vertex1.X - -0.2452) < GeoMath.Tolerance);
-            Assert.IsTrue(Math.Abs(testArc.Vertex1.Y - 1.3589) < GeoMath.Tolerance);
         }
 
         [TestMethod]
