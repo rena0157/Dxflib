@@ -81,16 +81,25 @@ namespace Dxflib.IO
                         lineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Line(lineBuffer));
                         continue;
+                    
                     case LwPolylineCodes.StartMarker:
                         var lwPolyLineBuffer = new LwPolyLineBuffer();
                         lwPolyLineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new LwPolyLine(lwPolyLineBuffer));
                         continue;
+
                     case HatchCodes.StartMarker:
                         var hatchBuffer = new HatchBuffer();
                         hatchBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Hatch(hatchBuffer));
                         continue;
+                    
+                    case CircularArcCodes.StartMarker:
+                        var arcBuffer = new CircularArcBuffer();
+                        arcBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new CircularArc(arcBuffer));
+                        continue;
+
                     default:
                         continue;
                 }

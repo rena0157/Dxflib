@@ -306,10 +306,20 @@ namespace Dxflib.IO
 
     /// <inheritdoc />
     /// <summary>
-    /// Circular Arc Group Codes
+    /// Circular Arc Group Codes.
     /// </summary>
     public class CircularArcCodes : GroupCodesBase
     {
+        /// <summary>
+        /// The Start Marker of the Arc Entity
+        /// </summary>
+        public const string StartMarker = "ARC";
+
+        /// <summary>
+        /// Thickness (optional; default = 0)
+        /// </summary>
+        public const string Thickness = " 39";
+
         /// <summary>
         /// The Radius of the Arc
         /// </summary>
