@@ -33,8 +33,8 @@ namespace Dxflib.Entities
             EntityType = EntityTypes.CircularArc;
             _geoArc = new GeoArc(
                 new Vertex(ab.CenterPointX, ab.CenterPointY, ab.CenterPointZ),
-                ab.StartAngle,
-                ab.EndAngle,
+                GeoMath.DegToRad(ab.StartAngle),
+                GeoMath.DegToRad(ab.EndAngle),
                 ab.Radius
             );
             Thickness = ab.Thickness;

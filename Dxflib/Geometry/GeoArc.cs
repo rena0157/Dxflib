@@ -171,7 +171,7 @@ namespace Dxflib.Geometry
         public double Area { get; private set; }
 
         /// <summary>
-        ///     The Starting Angle of the arc
+        ///     The Starting Angle of the arc (Radians)
         /// </summary>
         /// <remarks>
         ///     On Changing this property <see cref="Vertex0" />
@@ -192,7 +192,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        ///     The Ending Angle of the arc
+        ///     The Ending Angle of the arc (Radians)
         /// </summary>
         /// <remarks>
         ///     On Changing this property <see cref="Vertex1" />

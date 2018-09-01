@@ -53,6 +53,7 @@
     <Compile Include="Entities\GeneralEntitiesTests.cs" />
     <Compile Include="Entities\HatchTests.cs" />
     <Compile Include="Entities\Hatch_BoundaryTests.cs" />
+    <Compile Include="Entities\CircularArcTests.cs" />
     <Compile Include="Geometry\GeoLineTests.cs" />
     <Compile Include="Entities\LineTests.cs" />
     <Compile Include="Entities\LwPolyLineTests.cs" />
