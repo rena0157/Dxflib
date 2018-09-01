@@ -34,7 +34,8 @@ namespace Dxflib.Geometry
         /// <param name="bulgeList">A List of Bulges</param>
         /// <param name="polylineFlag">The isClosed Property of a polyline</param>
         public GeoPolyline(List<double> xValues,
-            List<double> yValues, List<double> bulgeList, bool polylineFlag)
+            IReadOnlyList<double> yValues, IReadOnlyList<double> bulgeList, 
+            bool polylineFlag)
         {
             // Throw Exception if the number of vertices does not match the 
             if ( xValues.Count != yValues.Count )
@@ -169,9 +170,7 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     Override of the Update Geometry method from the GeoBase class
         /// </summary>
-        /// <param name="sender">The object sender</param>
-        /// <param name="args">The Arguments</param>
-        protected sealed override void UpdateGeometry(string command)
+        protected sealed override void UpdateGeometry(string command = "")
         {
             IsCounterClockWise = IsCounterClockWiseCalc();
             Length = CalcLength();
