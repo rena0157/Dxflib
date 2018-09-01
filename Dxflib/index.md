@@ -46,7 +46,7 @@ organizing information.
 The goal of the development for the dxf library is to provide a programming interface in the 
 .NET framework for the DXF platform. Development for the library has started in many different 
 forms and has been written and rewritten in many different languages. I started developing the 
-library in python, then it moved to rust, then C++, and not C#. I started developing the library 
+library in python, then it moved to rust, then C++, and now C#. I started developing the library 
 to help me at my job where I was a drafts person. I found that during drafting there is often 
 very repetative tasks that ought to be done by a computer. I know that AutoCAD has its own 
 .NET framework that is infinitely more up-to-date than this library, but it requires a premium
