@@ -21,9 +21,9 @@ namespace Dxflib.Geometry
     ///     The GeoPolyline Class, which is a container of the GeoMetricEntityBase.
     ///     This Object contains both <see cref="GeoArc" />s and <see cref="GeoLine" />s.
     ///     This Object is essentially a wrapper over a <see cref="List{T}" />
-    ///     where T is the <see cref="GeometricEntityBase" /> type.
+    ///     where T is the <see cref="GeoBase" /> type.
     /// </summary>
-    public class GeoPolyline : GeometricEntityBase
+    public class GeoPolyline : GeoBase
     {
         /// <summary>
         ///     The Main GeoPolyLine Constructor
@@ -44,8 +44,8 @@ namespace Dxflib.Geometry
 
             // Initializing a pre-allocating the section list
             SectionList = polylineFlag
-                ? new List<GeometricEntityBase>(Vertices.Capacity)
-                : new List<GeometricEntityBase>(Vertices.Capacity - 1);
+                ? new List<GeoBase>(Vertices.Capacity)
+                : new List<GeoBase>(Vertices.Capacity - 1);
 
             // Place x and y into the vertices list
             Vertices.AddRange(xValues.Select((t, vertexIndex)
@@ -84,7 +84,7 @@ namespace Dxflib.Geometry
         /// </summary>
         public GeoPolyline()
         {
-            SectionList = new List<GeometricEntityBase>();
+            SectionList = new List<GeoBase>();
             Vertices = new List<Vertex>();
             Length = 0;
             Area = 0;
@@ -94,7 +94,7 @@ namespace Dxflib.Geometry
         /// <summary>
         ///     The Sections
         /// </summary>
-        private List<GeometricEntityBase> SectionList { get; }
+        private List<GeoBase> SectionList { get; }
 
         /// <summary>
         ///     The Vertices
@@ -125,7 +125,7 @@ namespace Dxflib.Geometry
         ///     Add a section to the geo polyline
         /// </summary>
         /// <param name="section"></param>
-        public void Add(GeometricEntityBase section)
+        public void Add(GeoBase section)
         {
             // if the section is the right type and
             // is connected to the other sections
@@ -156,7 +156,7 @@ namespace Dxflib.Geometry
 
         /// <inheritdoc />
         /// <summary>
-        ///     Override of the Update Geometry method from the GeometricEntityBase class
+        ///     Override of the Update Geometry method from the GeoBase class
         /// </summary>
         /// <param name="sender">The object sender</param>
         /// <param name="args">The Arguments</param>
@@ -167,12 +167,11 @@ namespace Dxflib.Geometry
             Area = CalcArea();
         }
 
-        /// <inheritdoc />
         /// <summary>
         ///     The CalcLength function that calculates the total length of the polyline
         /// </summary>
         /// <returns>The Total length of all sections</returns>
-        protected sealed override double CalcLength()
+        private double CalcLength()
         {
             var sumLength = 0.0;
             foreach ( var entity in SectionList )

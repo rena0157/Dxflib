@@ -1,5 +1,5 @@
 ﻿// Dxflib
-// GeometricEntityBase.cs
+// GeoBase.cs
 // 
 // ============================================================
 // 
@@ -18,7 +18,7 @@ namespace Dxflib.Geometry
     ///     Occurs when there is a geometry change to alert parent classes
     ///     that they might need to update their geometry
     /// </summary>
-    public abstract class GeometricEntityBase
+    public abstract class GeoBase
     {
         /// <summary>
         ///     The entity type
@@ -47,12 +47,6 @@ namespace Dxflib.Geometry
         /// <param name="sender"></param>
         /// <param name="args"></param>
         protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args) { }
-
-        /// <summary>
-        ///     Calculating the length of the geometric entity
-        /// </summary>
-        /// <returns>In the base entity it returns 0</returns>
-        protected virtual double CalcLength() { return 0; }
     }
 
     /// <summary>

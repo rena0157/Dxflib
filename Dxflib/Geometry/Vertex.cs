@@ -17,7 +17,7 @@ namespace Dxflib.Geometry
     /// <summary>
     ///     The Vertex Class
     /// </summary>
-    public class Vertex : GeometricEntityBase
+    public class Vertex : GeoBase
     {
         private double _x;
         private double _y;

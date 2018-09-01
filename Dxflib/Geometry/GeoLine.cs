@@ -18,7 +18,7 @@ namespace Dxflib.Geometry
     ///     inherienting the entity class. This line should only be used for geometric
     ///     purposes
     /// </summary>
-    public class GeoLine : GeometricEntityBase
+    public class GeoLine : GeoBase
     {
         private Vertex _vertex0;
         private Vertex _vertex1;
@@ -87,10 +87,10 @@ namespace Dxflib.Geometry
         public double Area { get; private set; }
 
         /// <summary>
-        ///     Overrided CalcLength Function
+        ///     CalcLength Function
         /// </summary>
         /// <returns></returns>
-        protected sealed override double CalcLength() { return GeoMath.Distance(Vertex0, Vertex1); }
+        private double CalcLength() { return GeoMath.Distance(Vertex0, Vertex1); }
 
         /// <summary>
         ///     Calculate the total area underneath this line and the x-axis

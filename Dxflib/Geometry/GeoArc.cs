@@ -34,7 +34,7 @@ namespace Dxflib.Geometry
     ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
     ///     the moving of one vertex the center arc length is usually chosen as the middle vertex.
     /// </summary>
-    public class GeoArc : GeometricEntityBase
+    public class GeoArc : GeoBase
     {
         #region PrivateFields
 
@@ -151,7 +151,7 @@ namespace Dxflib.Geometry
         ///     using <see cref="CalcPointOnArc" /> with the new Radius Given
         ///     and the same center point.
         ///     Also, When this property is change the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" />
+        ///     <see cref="GeoBase.GeometryChanged" />
         ///     Event will be thrown.
         /// </remarks>
         public double Radius
@@ -178,7 +178,7 @@ namespace Dxflib.Geometry
         ///     will be updated using <see cref="CalcPointOnArc" /> with
         ///     the new angle given.
         ///     Also, when this property is changed the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public double StartAngle
         {
@@ -196,7 +196,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On Changing this property <see cref="Vertex1" />
-        ///     will change and the <see cref="GeometricEntityBase.GeometryChanged" /> with the
+        ///     will change and the <see cref="GeoBase.GeometryChanged" /> with the
         ///     given new angle
         ///     event will fire.
         /// </remarks>
@@ -216,7 +216,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On changing the property the GeoArc will update and the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public Vertex Vertex0
         {
@@ -234,7 +234,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public Vertex Vertex1
         {
@@ -252,7 +252,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public Vertex CenterVertex
         {
@@ -272,7 +272,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public Vertex MiddleVertex
         {
@@ -290,7 +290,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <remarks>
         ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeometricEntityBase.GeometryChanged" /> event will fire.
+        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
         /// </remarks>
         public double BulgeValue
         {
