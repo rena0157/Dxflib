@@ -71,6 +71,40 @@
 
 <p>This is the change log file that will contain all of the information regarding
 releases of the software. The list will be a decending list from newest to oldest releases.</p>
+<h2 id="version-030-2018-09-01">Version 0.3.0 [2018-09-01]</h2>
+<ul>
+<li>Added the Hatch Entity and associated buffer classes
+<ul>
+<li>Added Hatch Styles Enum</li>
+<li>Added Hatch Pattern Types Enum</li>
+<li>Added Hatch Boundary object types Enum</li>
+</ul>
+</li>
+<li>Added the CircularArc Entity and associated buffer classes</li>
+<li>Created a base constructor for the entitybase class that should simplify futher entity creation</li>
+<li>Reorganized some of the classes into different files for the entity class</li>
+<li>Added the EntitiesCollection Class</li>
+<li>Changed the Entities List to an EntitiesCollection object that will add more specialization to the collection
+<ul>
+<li>Moved the GetEntitiesByType Function to the Entities Property in the DxfFile Class</li>
+</ul>
+</li>
+<li>Added the EntityPointer Class
+<ul>
+<li>All entities now have the ability to point to other entities (Entity References). This is currently being used in the hatch.</li>
+</ul>
+</li>
+<li>Added the LinePointer Class: A class that allows another Entity to point to a Line Entity</li>
+<li>Added the LwpolylinePointer Class: A class that allows another Entity to point to an lwpolyline</li>
+<li>Added some more logic to the GeoPolyline class that can now account for both counterclockwise and clockwise section creation
+<ul>
+<li>Added isCounterClockwise Property to the GeoPolyline</li>
+</ul>
+</li>
+<li>Added Equals override to the Vertex Class, now you can compare verticies using this function</li>
+<li>Added GetHashCode to the Vertex Class</li>
+<li>Added Parse Exception Class</li>
+</ul>
 <h2 id="version-020">Version 0.2.0</h2>
 <ul>
 <li>Updated the parsing engine

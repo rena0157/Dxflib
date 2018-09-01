@@ -3,10 +3,15 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/310014992d7743078a5d2d57e79ce44c)](https://www.codacy.com/project/muckanee/Dxflib/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rena0157/Dxflib&amp;utm_campaign=Badge_Grade_Dashboard)
 
 ### Introduction
-This is one of many DXF librarys that is avalible here on Github. This library serves a dual purpose:
-one is to help me learn the .NET framework and the second is in the future I hope that this library
-will be the backend for an AutoCAD Drafting companion application. This Drafting companion application
-will help drafters with the more repetative task without needing to learn lisp.
+This is one of many DXF librarys that is avalible here on Github. It can be used currently to extract and read information from 
+a dxf file. One of the main focuses however besides being able to read and write a file is to be able to calculate all of the geometry
+of the entities in the file. Also, this library is designed to be flexible, in other words if a property is changed in an entity all the
+geometry will be updated along will the geometry of all entities that are linking to the object. 
+
+#### Goals of this Library
+- read and write all of the entities in the Dxf format
+- flexible geometry based entities that can be updated real time without writing and re reading the file.
+- Speed, this library should be really fast.
 
 Check out my website for the application on github-pages: [DXF Site](https://rena0157.github.io/Dxflib/)
 
@@ -46,7 +51,7 @@ foreach (var entity in layer.GetAllEntities())
 }
 
 // Geometry was originally calc. duing extraction
-var lines = GetEntitiesByType<Line>(Line);
+var lines = dxfFile.Entities.GetEntitiesByType<Line>(EntityTypes.Line);
 
 // When a GeometryChange event is called Geometry will Automatically update
 lines[0].Vertex = new Vertex(0, 1); // GeometryChanged Event will be called at the Vertex Entity
@@ -55,10 +60,11 @@ lines[0].Vertex = new Vertex(0, 1); // GeometryChanged Event will be called at t
 ### Currently Supported Entities
 - LINE
 - LWPOLYLINE
+- HATCH
+- ARC
 
 ### Future Development
 Future development includes adding these other entities (in order of importance):
-- HATCH
 - TEXT
 - MTEXT
 - ARC
