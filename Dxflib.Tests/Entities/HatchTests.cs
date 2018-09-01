@@ -26,7 +26,7 @@ namespace Dxflib.Tests.Entities
         public void PatternNameTest_Get()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(hatches[0].PatternName == "SOLID");
             Assert.IsTrue(hatches[1].PatternName == "ANSI31");
         }
@@ -35,7 +35,7 @@ namespace Dxflib.Tests.Entities
         public void IsSolidTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(hatches[0].IsSolid);
             Assert.IsFalse(hatches[1].IsSolid);
         }
@@ -44,7 +44,7 @@ namespace Dxflib.Tests.Entities
         public void IsAssociativeTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(!hatches[0].IsAssociative);
             Assert.IsTrue(hatches[1].IsAssociative);
         }
@@ -53,7 +53,7 @@ namespace Dxflib.Tests.Entities
         public void BoundaryLoopsCountTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(hatches[0].BoundaryLoopsCount == 1);
             Assert.IsTrue(hatches[1].BoundaryLoopsCount == 1);
         }
@@ -62,7 +62,7 @@ namespace Dxflib.Tests.Entities
         public void PatternTypeTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(hatches[0].PatternType == HatchPatternType.Predefined);
         }
 
@@ -70,7 +70,7 @@ namespace Dxflib.Tests.Entities
         public void PatternAngleTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(Math.Abs(hatches[1].PatternAngle - 194) < GeoMath.Tolerance);
         }
 
@@ -78,7 +78,7 @@ namespace Dxflib.Tests.Entities
         public void PatternScaleTest()
         {
             var file = new DxfFile(PathToFile);
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             Assert.IsTrue(Math.Abs(hatches[1].PatternScale - 1) < GeoMath.Tolerance);
         }
     }

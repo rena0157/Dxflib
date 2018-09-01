@@ -87,19 +87,6 @@ namespace Dxflib
         /// </summary>
         public string FileName { get; }
 
-        /// <summary>
-        ///     Get Entities by Entity Type returns a list of entities
-        ///     by the type that was selected. See <see cref="Entity" />.
-        /// </summary>
-        /// <param name="entityType">The <see cref="EntityTypes" /> that will be placed into the list</param>
-        /// <returns>A list of entities all members of the type <see cref="EntityTypes" /></returns>
-        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
-        {
-            var returnList = Entities.Values.Where(entity => entity.EntityType == entityType).ToList();
-
-            return returnList.Cast<T>().ToList();
-        }
-
         #endregion
 
         #region HeaderProperties

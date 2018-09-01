@@ -18,7 +18,7 @@ namespace Dxflib.Tests.Entities
             var file = new DxfFile(PathToFile);
 
             // Get hatches - Note that Hatch is associative
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             var hatch = hatches[0];
 
             // Test the boundary
@@ -32,7 +32,7 @@ namespace Dxflib.Tests.Entities
             // Open File
             var file = new DxfFile(PathToFile);
             // Get Hatches - Note that Hatch is associative
-            var hatches = file.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
+            var hatches = file.Entities.GetEntitiesByType<Hatch>(EntityTypes.Hatch);
             // This Hatch was drawn clockwise
             Assert.IsTrue(Math.Abs(hatches[1].Boundary.Length - 10.5040) < GeoMath.Tolerance);
             Assert.IsTrue(Math.Abs(hatches[1].Boundary.Area - 7.5021) < GeoMath.Tolerance);
