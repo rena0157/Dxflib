@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using Dxflib.Entities;
 
@@ -61,13 +62,13 @@ namespace Dxflib.Geometry
                 if ( Math.Abs(bulgeList[vertexIndex] - Bulge.BulgeNull) > GeoMath.Tolerance )
                 {
                     var geoArc = new GeoArc(currentVertex, nextVertex, bulgeList[vertexIndex]);
-                    geoArc.GeometryChanged += UpdateGeometry;
+                    geoArc.PropertyChanged += GeoArcOnPropertyChanged;
                     SectionList.Add(geoArc);
                 }
                 else
                 {
                     var geoLine = new GeoLine(currentVertex, nextVertex);
-                    geoLine.GeometryChanged += UpdateGeometry;
+                    geoLine.PropertyChanged += GeoLineOnPropertyChanged;
                     SectionList.Add(new GeoLine(currentVertex, nextVertex));
                 }
 
@@ -76,7 +77,17 @@ namespace Dxflib.Geometry
                     SectionList.RemoveAt(SectionList.Count - 1);
             }
 
-            UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
+            UpdateGeometry(string.Empty);
+        }
+
+        private void GeoLineOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            UpdateGeometry(string.Empty);
+        }
+
+        private void GeoArcOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            UpdateGeometry(string.Empty);
         }
 
         /// <summary>
@@ -160,7 +171,7 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <param name="sender">The object sender</param>
         /// <param name="args">The Arguments</param>
-        protected sealed override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
+        protected sealed override void UpdateGeometry(string command)
         {
             IsCounterClockWise = IsCounterClockWiseCalc();
             Length = CalcLength();

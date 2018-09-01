@@ -4,20 +4,25 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-09-01-1:09 PM
+// Last Updated: 2018-09-01-6:42 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Dxflib.LinAlg;
 
 namespace Dxflib.Geometry
 {
-    /// <inheritdoc />
+    /// <inheritdoc cref="GeoBase" />
+    /// <inheritdoc cref="IGeoLinear"/>
     /// <summary>
-    ///     The GeoArc Class, a class that defines an arc. Note that
-    ///     an arc can be defined in more than one way. If this GeoArc is a
+    ///     The GeoArc Class: Defines a Geometric Circular Arc.
+    /// </summary>
+    /// <remarks>
+    ///     Note that an arc can be defined in more than one way. If this GeoArc is a
     ///     part of an LwPolyLine then is defined using a bulge. If it is
     ///     alone then it is defined using a radius.
     ///     Note that there are 3 distinct ways to construct an Arc
@@ -33,27 +38,30 @@ namespace Dxflib.Geometry
     ///     3 vertices that the arc must pass though. The first and second vertex are the starting
     ///     and ending vertices. The middle vertex can be any vertex that is on the arc. During
     ///     the moving of one vertex the center arc length is usually chosen as the middle vertex.
-    /// </summary>
-    public class GeoArc : GeoBase
+    ///
+    ///     All of the set Properties in this class will cause the geometry of other properties
+    ///     to be updated when they are set.
+    /// </remarks>
+    public class GeoArc : GeoBase, IGeoLinear
     {
         #region PrivateFields
 
-        private double _angle;
-        private Vertex _arcMiddleVertex;
-        private double _bulge;
-        private Vertex _centerVertex;
-        private double _endAngle;
-        private double _radius;
-        private double _startAngle;
-        private Vertex _vertex0;
-        private Vertex _vertex1;
+        private Vertex _vertex0;         // The Starting Vertex
+        private Vertex _vertex1;         // The Ending Vertex
+        private Vertex _arcMiddleVertex; // The Vertex At the mid point of the Arc
+        private Vertex _centerVertex;    // The Vertex at the Center of the Arc
+        private double _bulge;           // The Bulge of the Arc
+        private double _startAngle;      // The starting angle of the arc (Vertex0)
+        private double _endAngle;        // The ending angle of the arc (Vertex1)
+        private double _radius;          // The radius of the arc
 
         #endregion
 
         #region Constructors
 
         /// <summary>
-        ///     GeoArc Constructor: Vertex, Vertex and Bulge (VVB)
+        ///     GeoArc from Starting Vertex (<paramref name="vertex0"/>)
+        ///     ending Vertex (<paramref name="vertex1"/>) and a bulge
         /// </summary>
         /// <param name="vertex0">First Vertex</param>
         /// <param name="vertex1">Second Vertex</param>
@@ -62,17 +70,39 @@ namespace Dxflib.Geometry
         {
             // Set type
             GeometryEntityType = GeometryEntityTypes.GeoArc;
-
             // Set Variables
+            // Vertex0
             _vertex0 = vertex0;
-            _vertex0.GeometryChanged += OnVertexPropertyChanged;
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+            // Vertex1
             _vertex1 = vertex1;
-            _vertex1.GeometryChanged += OnVertexPropertyChanged;
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+            // Bulge
             _bulge = bulge;
+            // Angle
+            Angle = Bulge.Angle(BulgeValue);
+            // Radius
+            _radius = Bulge.Radius(Vertex0, Vertex1, Angle);
+            // Center Vertex
+            _centerVertex = CalcCenterVertex(Vertex0, Vertex1, BulgeValue);
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+            // Start Angle
+            _startAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, Vertex0), UnitVectors.XUnitVector
+            );
+            // End Angle
+            _endAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, Vertex1), UnitVectors.XUnitVector
+            );
+            // Middle Vertex
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
 
             // Calculate Geometry
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildVVB"));
+            Length = CalcLength();
+            Area = CalcArea();
         }
+
 
         /// <summary>
         ///     GeoArc Constructor: Center Vertex, Starting Angle, Ending Angle and Radius (CAAR)
@@ -85,16 +115,39 @@ namespace Dxflib.Geometry
         {
             // Set Type
             GeometryEntityType = GeometryEntityTypes.GeoArc;
-
-            // Set Variables from Constructor 
+            // Center Vertex
             _centerVertex = centerVertex;
-            _centerVertex.GeometryChanged += OnVertexPropertyChanged;
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+
+            // Start Angle
             _startAngle = startAngle;
+
+            // End Angle
             _endAngle = endAngle;
+
+            // Radius
             _radius = radius;
 
-            // Calculate Geometry
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildCAAR"));
+            // Angle
+            Angle = EndAngle - StartAngle;
+
+            // Bulge
+            _bulge = Bulge.CalcBulge(Angle);
+
+            // Vertex0
+            _vertex0 = CalcPointOnArc(CenterVertex, StartAngle, Radius);
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+
+            // Vertex1
+            _vertex1 = CalcPointOnArc(CenterVertex, EndAngle, Radius);
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+
+            // Middle Vertex
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+
+            Length = CalcLength();
+            Area = CalcArea();
         }
 
         /// <summary>
@@ -107,78 +160,98 @@ namespace Dxflib.Geometry
         /// <param name="vertex1">The Ending Vertex</param>
         public GeoArc(Vertex vertex0, Vertex middleVertex, Vertex vertex1)
         {
+            // Vertex 0
             _vertex0 = vertex0;
-            _arcMiddleVertex = middleVertex;
-            _vertex1 = vertex1;
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
 
-            UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
+            // Middle Vertex
+            _arcMiddleVertex = middleVertex;
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+
+            // Vertex 1
+            _vertex1 = vertex1;
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+
+            // Center Vertex
+            _centerVertex = CalcCenterVertex(Vertex0, MiddleVertex, Vertex1);
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+
+            // Starting Angle
+            _startAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, vertex0), UnitVectors.XUnitVector
+            );
+
+            // Ending Angle
+            _endAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, Vertex1), UnitVectors.XUnitVector
+            );
+
+            // Total Angle
+            Angle = EndAngle - StartAngle;
+
+            // Bulge
+            _bulge = Bulge.CalcBulge(Angle);
+
+            // Radius
+            _radius = GeoMath.Distance(CenterVertex, vertex0);
+
+            // Geometric Properties
+            Length = CalcLength();
+            Area = CalcArea();
         }
 
         #endregion
 
         #region Properties
 
+        /// <inheritdoc />
         /// <summary>
-        ///     The Length of the GeoArc
+        ///     Arc Length of the GeoArc
         /// </summary>
         public double Length { get; private set; }
 
+        /// <inheritdoc />
         /// <summary>
-        ///     The Total Angle of the Arc
+        ///     Area of the GeoArc
         /// </summary>
         /// <remarks>
-        ///     On Changing this value <see cref="Vertex1" />
-        ///     will be moved to a new location that corresponds with the
-        ///     new total angle.
+        ///     <see cref="Area"/> is defined as the geometric area
+        ///     between the arc and the segment that defines its chord.
+        ///     <see cref="GeoMath.ChordArea"/> is the function that is used
+        ///     to calculate the area of this class
         /// </remarks>
-        public double Angle
-        {
-            get => _angle;
-            set
-            {
-                _angle = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Angle"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Angle"));
-            }
-        }
+        public double Area { get; private set; }
+
+        /// <summary>
+        ///     Total Angle of the Arc (Radians)
+        /// </summary>
+        /// <remarks>
+        ///     Total angle = <see cref="EndAngle"/> - <see cref="StartAngle"/>
+        /// </remarks>
+        public double Angle { get; private set; }
 
         /// <summary>
         ///     The Radius of the Arc
         /// </summary>
-        /// <remarks>
-        ///     On Changing this property <see cref="Vertex0" />
-        ///     and <see cref="Vertex1" /> will be recalculated
-        ///     using <see cref="CalcPointOnArc" /> with the new Radius Given
-        ///     and the same center point.
-        ///     Also, When this property is change the
-        ///     <see cref="GeoBase.GeometryChanged" />
-        ///     Event will be thrown.
-        /// </remarks>
         public double Radius
         {
             get => _radius;
             set
             {
                 _radius = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Radius"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Radius"));
+                RadiusOnPropertyChanged();
+                OnPropertyChanged();
             }
         }
-
-        /// <summary>
-        ///     The Area of the GeoArc
-        /// </summary>
-        public double Area { get; private set; }
 
         /// <summary>
         ///     The Starting Angle of the arc (Radians)
         /// </summary>
         /// <remarks>
-        ///     On Changing this property <see cref="Vertex0" />
-        ///     will be updated using <see cref="CalcPointOnArc" /> with
-        ///     the new angle given.
-        ///     Also, when this property is changed the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
+        ///     Starting Angle is defined as the angle between two vectors:
+        ///     1. Vector that starts at <see cref="CenterVertex"/> and ends at <see cref="Vertex0"/>
+        ///     2. The <see cref="UnitVectors.XUnitVector"/>.
+        ///     This Angle is measured in radians
         /// </remarks>
         public double StartAngle
         {
@@ -186,8 +259,8 @@ namespace Dxflib.Geometry
             set
             {
                 _startAngle = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("StartAngle"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("StartAngle"));
+                StartAngleOnPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -195,10 +268,10 @@ namespace Dxflib.Geometry
         ///     The Ending Angle of the arc (Radians)
         /// </summary>
         /// <remarks>
-        ///     On Changing this property <see cref="Vertex1" />
-        ///     will change and the <see cref="GeoBase.GeometryChanged" /> with the
-        ///     given new angle
-        ///     event will fire.
+        ///     Starting Angle is defined as the angle between two vectors:
+        ///     1. Vector that starts at <see cref="CenterVertex"/> and ends at <see cref="Vertex1"/>
+        ///     2. The <see cref="UnitVectors.XUnitVector"/>.
+        ///     This Angle is measured in radians
         /// </remarks>
         public double EndAngle
         {
@@ -206,62 +279,50 @@ namespace Dxflib.Geometry
             set
             {
                 _endAngle = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("EndAngle"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("EndAngle"));
+                EndAngleOnPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
         /// <summary>
         ///     The First Vertex
         /// </summary>
-        /// <remarks>
-        ///     On changing the property the GeoArc will update and the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
-        /// </remarks>
         public Vertex Vertex0
         {
             get => _vertex0;
             set
             {
                 _vertex0 = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Vertex0"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
+                Vertex0OnPropertyChanged(this, new PropertyChangedEventArgs(string.Empty));
+                OnPropertyChanged();
             }
         }
 
         /// <summary>
         ///     The Second Vertex
         /// </summary>
-        /// <remarks>
-        ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
-        /// </remarks>
         public Vertex Vertex1
         {
             get => _vertex1;
             set
             {
                 _vertex1 = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("Vertex1"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Build3V"));
+                Vertex1OnPropertyChanged(this, new PropertyChangedEventArgs(string.Empty));
+                OnPropertyChanged();
             }
         }
 
         /// <summary>
         ///     The Circular center point of the arc
         /// </summary>
-        /// <remarks>
-        ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
-        /// </remarks>
         public Vertex CenterVertex
         {
             get => _centerVertex;
             set
             {
                 _centerVertex = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("CenterVertex"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildCAAR"));
+                CenterVertexOnPropertyChanged(this, new PropertyChangedEventArgs(string.Empty));
+                OnPropertyChanged();
             }
         }
 
@@ -270,36 +331,28 @@ namespace Dxflib.Geometry
         ///     and the Ending Vertex (<see cref="Vertex1" />) that lies on the path
         ///     of the arc.
         /// </summary>
-        /// <remarks>
-        ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
-        /// </remarks>
         public Vertex MiddleVertex
         {
             get => _arcMiddleVertex;
             set
             {
                 _arcMiddleVertex = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("MiddleVertex"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("MiddleVertex"));
+                MiddleVertexOnPropertyChanged(this, new PropertyChangedEventArgs(string.Empty));
+                OnPropertyChanged();
             }
         }
 
         /// <summary>
         ///     The bulge value for this object (Is similar to the curvature of an arc)
         /// </summary>
-        /// <remarks>
-        ///     On changing this property the GeoArc will update and the
-        ///     <see cref="GeoBase.GeometryChanged" /> event will fire.
-        /// </remarks>
         public double BulgeValue
         {
             get => _bulge;
             set
             {
                 _bulge = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs("BulgeValue"));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("BuildVVB"));
+                BulgeValueOnPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
@@ -321,7 +374,7 @@ namespace Dxflib.Geometry
         ///      // Should create a Vertex == (1, 1.25)
         ///  </code>
         /// <returns>A <see cref="Vertex" /> object</returns>
-        public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertex1, double bulge)
+        private static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertex1, double bulge)
         {
             // Vector between V0 and V1
             var vector0 = new Vector(vertex0, vertex1);
@@ -355,7 +408,7 @@ namespace Dxflib.Geometry
         /// <param name="vertexOnArc">Any Vertex that the arc will pass through</param>
         /// <param name="vertex1">The Ending Vertex</param>
         /// <returns>The center vertex of the arc</returns>
-        public static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertexOnArc, Vertex vertex1)
+        private static Vertex CalcCenterVertex(Vertex vertex0, Vertex vertexOnArc, Vertex vertex1)
         {
             var centerVertex = new Vertex(0, 0);
 
@@ -394,7 +447,7 @@ namespace Dxflib.Geometry
         /// <param name="angle">The angle at which the vertex is located</param>
         /// <param name="radius">The radius of the circle/arc</param>
         /// <returns>A vertex that lies on the edge of a circle or arc</returns>
-        public static Vertex CalcPointOnArc(Vertex centerVertex, double angle, double radius)
+        private static Vertex CalcPointOnArc(Vertex centerVertex, double angle, double radius)
         {
             var vector = new Vector(UnitVectors.XUnitVector);
             vector.Rotate(angle);
@@ -409,6 +462,16 @@ namespace Dxflib.Geometry
 
         #region Methods
 
+        /// <inheritdoc />
+        /// <summary>
+        ///     The property Changed Function
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected override void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            base.OnPropertyChanged(propertyName);
+        }
+
         /// <summary>
         ///     Converts this object to a <see cref="Vector" />.
         ///     Where the <see cref="Vector.HeadVertex" /> and
@@ -420,10 +483,22 @@ namespace Dxflib.Geometry
         public Vector ToVector() { return new Vector(_vertex0, _vertex1); }
 
         /// <summary>
+        ///     Calculate the Length of the Arc
+        /// </summary>
+        /// <returns>Arc length of the GeoArc</returns>
+        private double CalcLength() { return GeoMath.Distance(Vertex0, Vertex1, BulgeValue); }
+
+        /// <summary>
+        ///     Calculate the Area
+        /// </summary>
+        /// <returns></returns>
+        private double CalcArea() { return GeoMath.ChordArea(this); }
+
+        /// <summary>
         ///     Method that calculates the middle point on the arc
         /// </summary>
         /// <returns>A Vertex that is the middle point on the arc</returns>
-        private Vertex GetMiddlePoint()
+        private Vertex CalcMiddlePoint()
         {
             var minAngle = Math.Min(StartAngle, EndAngle);
             var maxAngle = Math.Max(StartAngle, EndAngle);
@@ -431,163 +506,118 @@ namespace Dxflib.Geometry
             return CalcPointOnArc(CenterVertex, middlePointAngle, Radius);
         }
 
-        private void OnVertexPropertyChanged(object sender, GeometryChangedHandlerArgs args)
-        {
-            if ( sender == _vertex0 )
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Vertex0"));
-            else if ( sender == _vertex1 )
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("Vertex1"));
-            else if ( sender == _centerVertex )
-                UpdateGeometry(this, new GeometryChangedHandlerArgs("CenterVertex"));
-        }
-
-        /// <inheritdoc />
         /// <summary>
-        ///     Update the Geometry of the GeoArc
         /// </summary>
-        /// <param name="sender">Usually this</param>
-        /// <param name="args">Arguments</param>
-        // ReSharper disable once InconsistentNaming
-        protected sealed override void UpdateGeometry(
-            object sender, GeometryChangedHandlerArgs args)
+        /// <param name="command"></param>
+        protected override void UpdateGeometry(string command = "")
         {
-            switch ( args.Name )
-            {
-                case "BuildVVB":
-                {
-                    _angle = Bulge.Angle(_bulge);
-                    _radius = Bulge.Radius(_vertex0, _vertex1, Angle);
-
-                    _centerVertex = CalcCenterVertex(_vertex0, _vertex1, _bulge);
-                    _centerVertex.GeometryChanged += OnVertexPropertyChanged;
-
-                    _startAngle = Vector.AngleBetweenVectors(
-                        new Vector(_centerVertex, _vertex0), UnitVectors.XUnitVector);
-                    _endAngle = Vector.AngleBetweenVectors(
-                        new Vector(_centerVertex, _vertex1), UnitVectors.XUnitVector);
-
-                    // The Middle Vertex
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    // Get Only Properties
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-
-                case "BuildCAAR":
-                {
-                    _angle = _endAngle - _startAngle;
-                    _bulge = Math.Tan(_angle / 4);
-
-                    _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
-                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
-
-                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
-                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
-
-                    // Middle Vertex
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    // Get only properties
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-
-                case "Build3V":
-                {
-                    _centerVertex = CalcCenterVertex(_vertex0, _arcMiddleVertex, _vertex1);
-
-                    _startAngle = Vector.AngleBetweenVectors(
-                        new Vector(_centerVertex, _vertex0).ToUnitVector(),
-                        UnitVectors.XUnitVector);
-
-                    _endAngle = Vector.AngleBetweenVectors(
-                        new Vector(_centerVertex, _vertex1).ToUnitVector(),
-                        UnitVectors.XUnitVector);
-
-                    _angle = _endAngle - _startAngle;
-                    _bulge = Bulge.CalcBulge(_angle);
-                    _radius = new GeoLine(_centerVertex, _arcMiddleVertex).Length;
-
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-
-                case "Angle":
-                {
-                    // Update properties
-                    _endAngle = _startAngle + _angle;
-                    _bulge = Bulge.CalcBulge(_angle);
-
-                    // Move the end vertex over by the change in angle
-                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
-                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
-
-                    // middle vertex
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-                case "Radius":
-                {
-                    _bulge = Math.Tan(_angle / 4);
-
-                    // Recalculate the starting vertex
-                    _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
-                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
-
-                    // Recalculate the ending vertex
-                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
-                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
-
-                    // middle vertex
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    // Get only properties
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-                case "StartAngle":
-                {
-                    _angle = _endAngle - _startAngle;
-
-                    // Move the starting vertex over
-                    _vertex0 = CalcPointOnArc(_centerVertex, _startAngle, _radius);
-                    _vertex0.GeometryChanged += OnVertexPropertyChanged;
-
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    // Get only properties
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-                case "EndAngle":
-                {
-                    _angle = _endAngle - _startAngle;
-
-                    _vertex1 = CalcPointOnArc(_centerVertex, _endAngle, _radius);
-                    _vertex1.GeometryChanged += OnVertexPropertyChanged;
-
-                    _arcMiddleVertex = GetMiddlePoint();
-
-                    // Get only properties
-                    Length = GeoMath.Distance(_vertex0, _vertex1, _bulge);
-                    Area = GeoMath.ChordArea(this);
-                }
-                    break;
-                // ReSharper disable once RedundantEmptySwitchSection
-                default:
-                    break;
-            }
+            Length = CalcLength();
+            Area = CalcArea();
         }
 
+        #endregion
+
+        #region OnPropertyChangedMethods
+
+        private void RadiusOnPropertyChanged()
+        {
+            // Vertex0
+            _vertex0 = CalcPointOnArc(CenterVertex, StartAngle, Radius);
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+            // Vertex1
+            _vertex1 = CalcPointOnArc(CenterVertex, EndAngle, Radius);
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+            // Middle Vertex
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+            UpdateGeometry();
+        }
+
+        private void StartAngleOnPropertyChanged()
+        {
+            _vertex0 = CalcPointOnArc(CenterVertex, StartAngle, Radius);
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+            UpdateGeometry();
+        }
+
+        private void EndAngleOnPropertyChanged()
+        {
+            _vertex1 = CalcPointOnArc(CenterVertex, EndAngle, Radius);
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+            UpdateGeometry();
+        }
+
+        private void Vertex0OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            _centerVertex = CalcCenterVertex(Vertex0, MiddleVertex, Vertex1);
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+
+            _radius = GeoMath.Distance(CenterVertex, Vertex0);
+            _startAngle = Vector.AngleBetweenVectors(new Vector(CenterVertex, Vertex0), UnitVectors.XUnitVector);
+            Angle = EndAngle - StartAngle;
+            _bulge = Bulge.CalcBulge(Angle);
+            UpdateGeometry();
+        }
+
+        private void Vertex1OnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            _centerVertex = CalcCenterVertex(Vertex0, MiddleVertex, Vertex1);
+            _radius = GeoMath.Distance(CenterVertex, Vertex0);
+            _endAngle = Vector.AngleBetweenVectors(new Vector(CenterVertex, Vertex1), UnitVectors.XUnitVector);
+            Angle = EndAngle - StartAngle;
+            _bulge = Bulge.CalcBulge(Angle);
+            UpdateGeometry();
+        }
+
+        private void CenterVertexOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            _vertex0 = CalcPointOnArc(CenterVertex, StartAngle, Radius);
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+
+            _vertex1 = CalcPointOnArc(CenterVertex, EndAngle, Radius);
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
+
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+        }
+
+        private void MiddleVertexOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            _centerVertex = CalcCenterVertex(Vertex0, MiddleVertex, Vertex1);
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+
+            _radius = GeoMath.Distance(CenterVertex, Vertex0);
+            _startAngle = Vector.AngleBetweenVectors(new Vector(CenterVertex, Vertex0), UnitVectors.XUnitVector);
+            _endAngle = Vector.AngleBetweenVectors(new Vector(CenterVertex, Vertex1), UnitVectors.XUnitVector);
+            Angle = EndAngle - StartAngle;
+            _bulge = Bulge.CalcBulge(Angle);
+
+            UpdateGeometry();
+        }
+
+        private void BulgeValueOnPropertyChanged()
+        {
+            Angle = Bulge.Angle(BulgeValue);
+            _radius = Bulge.Radius(Vertex0, Vertex1, Angle);
+
+            _centerVertex = CalcCenterVertex(Vertex0, Vertex1, BulgeValue);
+            CenterVertex.PropertyChanged += CenterVertexOnPropertyChanged;
+
+            _startAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, Vertex0), UnitVectors.XUnitVector
+            );
+            _endAngle = Vector.AngleBetweenVectors(
+                new Vector(CenterVertex, Vertex1), UnitVectors.XUnitVector
+            );
+            _arcMiddleVertex = CalcMiddlePoint();
+            MiddleVertex.PropertyChanged += MiddleVertexOnPropertyChanged;
+
+            UpdateGeometry();
+        }
         #endregion
     }
 }

@@ -4,18 +4,18 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-09-01-1:09 PM
+// Last Updated: 2018-09-01-3:29 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
-using System.Runtime.InteropServices.ComTypes;
+using System.ComponentModel;
 using Dxflib.LinAlg;
 
 namespace Dxflib.Geometry
 {
     /// <inheritdoc cref="GeoBase" />
-    /// <inheritdoc cref="IGeoLinear"/>
+    /// <inheritdoc cref="IGeoLinear" />
     /// <summary>
     ///     A Geometric line. This line is different than a line that is
     ///     inheriting the entity class. This line should only be used for geometric
@@ -41,8 +41,8 @@ namespace Dxflib.Geometry
             _vertex1 = v1;
 
             // Subscribe to events
-            _vertex0.GeometryChanged += UpdateGeometry;
-            _vertex1.GeometryChanged += UpdateGeometry;
+            Vertex0.PropertyChanged += Vertex0OnPropertyChanged;
+            Vertex1.PropertyChanged += Vertex1OnPropertyChanged;
 
             // Calculate geometry
             Length = CalcLength();
@@ -60,8 +60,7 @@ namespace Dxflib.Geometry
             set
             {
                 _vertex0 = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs(0));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs(0));
+                OnPropertyChanged();
             }
         }
 
@@ -74,8 +73,7 @@ namespace Dxflib.Geometry
             set
             {
                 _vertex1 = value;
-                OnGeometryChanged(new GeometryChangedHandlerArgs(1));
-                UpdateGeometry(this, new GeometryChangedHandlerArgs(1));
+                OnPropertyChanged();
             }
         }
 
@@ -91,6 +89,37 @@ namespace Dxflib.Geometry
         /// </summary>
         public double Area { get; private set; }
 
+        /// <inheritdoc />
+        /// <summary>
+        ///     Convert this Geoline to a Vector
+        /// </summary>
+        /// <returns>A new Vector</returns>
+        public Vector ToVector() { return new Vector(this); }
+
+        private void Vertex1OnPropertyChanged(object sender, PropertyChangedEventArgs e) { UpdateGeometry(string.Empty); }
+
+        private void Vertex0OnPropertyChanged(object sender, PropertyChangedEventArgs e) { UpdateGeometry(string.Empty); }
+
+        /// <summary>
+        ///     Update the Geometry After Property Change
+        /// </summary>
+        protected override void UpdateGeometry(string command)
+        {
+            Length = CalcLength();
+            Area = CalcArea();
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        ///     Update the Geometry Before the change
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected override void OnPropertyChanged(string propertyName = null)
+        {
+            UpdateGeometry(string.Empty);
+            base.OnPropertyChanged(propertyName);
+        }
+
         /// <summary>
         ///     CalcLength Function
         /// </summary>
@@ -102,27 +131,5 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <returns>The Area of the line and the x axis</returns>
         private double CalcArea() { return GeoMath.TrapzArea(this); }
-
-        /// <inheritdoc />
-        /// <summary>
-        ///     Updates the Geometry for this class
-        /// </summary>
-        /// <param name="sender">The sending object</param>
-        /// <param name="args"></param>
-        protected override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
-        {
-            Length = CalcLength();
-            Area = CalcArea();
-        }
-
-        /// <inheritdoc />
-        /// <summary>
-        ///     Convert this Geoline to a Vector
-        /// </summary>
-        /// <returns>A new Vector</returns>
-        public Vector ToVector()
-        {
-            return new Vector(this);
-        }
     }
 }

@@ -9,8 +9,13 @@
 // 
 // ============================================================
 
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Dxflib.Annotations;
+
 namespace Dxflib.Geometry
 {
+    /// <inheritdoc />
     /// <summary>
     ///     An abstract class that serves two purposes:
     ///     1. To unify all geometric properties
@@ -18,34 +23,36 @@ namespace Dxflib.Geometry
     ///     Occurs when there is a geometry change to alert parent classes
     ///     that they might need to update their geometry
     /// </summary>
-    public abstract class GeoBase
+    public abstract class GeoBase : INotifyPropertyChanged
     {
         /// <summary>
         ///     The entity type
         /// </summary>
         public GeometryEntityTypes GeometryEntityType { get; protected set; }
 
+        /// <inheritdoc />
         /// <summary>
-        ///     The Geometry changed event that alerts subscribers that they might need
-        ///     to update their geometry.
+        /// Property Changed Event Handler
         /// </summary>
-        public event GeometryChangedHandler GeometryChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        ///     Base class Invocation of the Geometry changed event
+        /// Virtual Function that will update the geometry of a geometric object
         /// </summary>
-        /// <param name="args">Arguments for the event</param>
-        protected virtual void OnGeometryChanged(GeometryChangedHandlerArgs args)
+        /// <param name="command">An optional Command</param>
+        protected virtual void UpdateGeometry(string command = "")
         {
-            GeometryChanged?.Invoke(this, args);
+
         }
 
         /// <summary>
-        ///     Protected Virtual void function that should define how the geometry entity
-        ///     deals with geometry update
+        /// 
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        protected virtual void UpdateGeometry(object sender, GeometryChangedHandlerArgs args) { }
+        /// <param name="propertyName"></param>
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
