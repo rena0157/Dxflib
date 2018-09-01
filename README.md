@@ -67,5 +67,4 @@ lines[0].Vertex = new Vertex(0, 1); // GeometryChanged Event will be called at t
 Future development includes adding these other entities (in order of importance):
 - TEXT
 - MTEXT
-- ARC
 - POLYLINE
