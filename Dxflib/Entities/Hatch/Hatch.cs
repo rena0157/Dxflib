@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using Dxflib.AcadEntities.Pointer;
 using Dxflib.Geometry;
 
 namespace Dxflib.Entities.Hatch
@@ -113,9 +114,19 @@ namespace Dxflib.Entities.Hatch
         {
             var geoPolyline = new GeoPolyline();
             foreach ( var entityPointer in ReferencedEntities )
-                if ( entityPointer.RefEntity is Line line )
-                    geoPolyline.Add(line.GLine);
-
+            {
+                switch ( entityPointer.RefEntity )
+                {
+                    case Line line:
+                        geoPolyline.Add(line.GLine);
+                        continue;
+                    case CircularArc arc:
+                        geoPolyline.Add(arc.GeometricArc);
+                        continue;
+                    default:
+                        throw new EntityPointerException("Pointer Type Not Recognized");
+                }
+            }
             return geoPolyline;
         }
     }

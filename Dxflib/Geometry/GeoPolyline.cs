@@ -162,9 +162,9 @@ namespace Dxflib.Geometry
         /// <param name="args">The Arguments</param>
         protected sealed override void UpdateGeometry(object sender, GeometryChangedHandlerArgs args)
         {
+            IsCounterClockWise = IsCounterClockWiseCalc();
             Length = CalcLength();
             Area = CalcArea();
-            IsCounterClockWise = IsCounterClockWiseCalc();
         }
 
         /// <inheritdoc />
