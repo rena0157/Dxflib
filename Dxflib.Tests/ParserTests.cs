@@ -12,6 +12,7 @@
 // Purpose:
 
 using System.Diagnostics;
+using System.Linq;
 using Dxflib.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -41,7 +42,7 @@ namespace Dxflib.Tests
                 new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
 
             Assert.IsTrue(testFile.Entities.Count == 2);
-            Assert.IsTrue(((Line) testFile.Entities[0]).EntityType == EntityTypes.Line);
+            Assert.IsTrue(((Line) testFile.Entities.ElementAt(0).Value).EntityType == EntityTypes.Line);
         }
 
         [TestMethod]
@@ -50,7 +51,7 @@ namespace Dxflib.Tests
             var testFile =
                 new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
             var linesSum = 0;
-            foreach (var entity in testFile.Entities)
+            foreach (var entity in testFile.Entities.Values)
             {
                 if (entity.EntityType == EntityTypes.Line)
                     ++linesSum;

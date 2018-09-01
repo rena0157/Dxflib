@@ -48,14 +48,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcadEntitiesTests\EntityPointerTests.cs" />
     <Compile Include="DxfFileTests.cs" />
     <Compile Include="Entities\GeneralEntitiesTests.cs" />
+    <Compile Include="Entities\HatchTests.cs" />
+    <Compile Include="Entities\Hatch_BoundaryTests.cs" />
+    <Compile Include="Entities\CircularArcTests.cs" />
     <Compile Include="Geometry\GeoLineTests.cs" />
     <Compile Include="Entities\LineTests.cs" />
     <Compile Include="Entities\LwPolyLineTests.cs" />
     <Compile Include="Entities\VertexTests.cs" />
     <Compile Include="Geometry\GeoArcTests.cs" />
+    <Compile Include="Geometry\GeoPolylineTests.cs" />
+    <Compile Include="Geometry\VertexTests.cs" />
     <Compile Include="IO\TaggedDataTests.cs" />
+    <Compile Include="IO\IOSpeedTests.cs" />
     <Compile Include="LinAlg\VectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DxfReaderTests.cs" />

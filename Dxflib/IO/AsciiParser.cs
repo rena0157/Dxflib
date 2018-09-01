@@ -3,14 +3,15 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-21
-// Last Updated: 2018-08-23-8:28 PM
+// Created: 2018-08-26
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
 using System.IO;
 using Dxflib.AcadEntities;
+using Dxflib.AcadEntities.Pointer;
 
 #pragma warning disable 414 // There was annoying error that was ignored here
 
@@ -44,7 +45,7 @@ namespace Dxflib.IO
         public void ParseFile()
         {
             // Throw an exception if the file is empty
-            if (_dxfFile.DxfFileData.Length == 0)
+            if ( _dxfFile.DxfFileData.Length == 0 )
                 throw new FileLoadException("The File is not a valid Dxf file or is empty");
 
             // Iterate through the tagged data list
@@ -99,6 +100,24 @@ namespace Dxflib.IO
         /// <summary>
         ///     The Entities Build Private Function
         /// </summary>
-        private void BuildEntities() { _dxfFile.Entities = _entitiesSectionArgs.Entities; }
+        private void BuildEntities()
+        {
+            _dxfFile.Entities = new EntityCollection(_entitiesSectionArgs.Entities);
+
+            // Link all referenced Entities
+            foreach ( var entity in _dxfFile.Entities.Values )
+            {
+                if ( !entity.HasReferencedEntities )
+                    continue;
+
+                foreach ( var entityPointer in entity.ReferencedEntities )
+                    if ( _dxfFile.Entities.ContainsKey(entityPointer.Handle) )
+                        entityPointer.RefEntity = _dxfFile.Entities[entityPointer.Handle];
+                    else
+                        throw new EntityPointerException("Pointer Handle was not found");
+
+                entity.UpdateReferencedEntities();
+            }
+        }
     }
 }

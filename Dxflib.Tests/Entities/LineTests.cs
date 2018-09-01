@@ -10,6 +10,7 @@
 // ============================================================
 
 using System;
+using System.Linq;
 using Dxflib.Entities;
 using Dxflib.Geometry;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -28,7 +29,7 @@ namespace Dxflib.Tests.Entities
             var testFile = new DxfFile(PathToFile);
 
             // Cast the element to a line
-            var line = (Line) testFile.Entities[0];
+            var line = (Line) testFile.Entities.ElementAt(0).Value;
 
             // Assert
             Assert.IsTrue(line.EntityType == EntityTypes.Line);
@@ -41,7 +42,7 @@ namespace Dxflib.Tests.Entities
             var testFile = new DxfFile(PathToFile);
 
             // The test line
-            var line = (Line) testFile.Entities[0];
+            var line = (Line) testFile.Entities.ElementAt(0).Value;
 
             // Assert
             Assert.IsTrue(line.LayerName == "TestLayer0",
@@ -55,7 +56,7 @@ namespace Dxflib.Tests.Entities
             var testFile = new DxfFile(PathToFile);
 
             // The line that will be tested
-            var testLine = (Line) testFile.Entities[0];
+            var testLine = (Line) testFile.Entities.ElementAt(0).Value;
 
             // Check to make sure that the initial length is 4
             Assert.IsTrue(Math.Abs(testLine.Length - 5) < GeoMath.Tolerance);
@@ -70,7 +71,7 @@ namespace Dxflib.Tests.Entities
         public void ThicknessTest_ThicknessShouldBe0()
         {
             var testFile = new DxfFile(PathToFile);
-            var testLine = (Line) testFile.Entities[0];
+            var testLine = (Line) testFile.Entities.ElementAt(0).Value;
             Assert.IsTrue(Math.Abs(testLine.Thickness) < GeoMath.Tolerance);
         }
     }

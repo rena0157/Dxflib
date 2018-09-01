@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-21
-// Last Updated: 2018-08-21-8:54 PM
+// Created: 2018-08-26
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -14,9 +14,9 @@ using System.Collections.Generic;
 namespace Dxflib.IO
 {
     /// <summary>
-    /// The Tagged Data List class. A class that is a
-    /// wrapper for a <see cref="List{T}"/> where T
-    /// is <see cref="TaggedData"/>.
+    ///     The Tagged Data List class. A class that is a
+    ///     wrapper for a <see cref="List{T}" /> where T
+    ///     is <see cref="TaggedData" />.
     /// </summary>
     public class TaggedDataList
     {

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-05
-// Last Updated: 2018-08-12-2:26 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -15,25 +15,18 @@ namespace Dxflib.Entities
 {
     /// <inheritdoc />
     /// <summary>
-    ///     The LwPolyLine Entity 
+    ///     The LwPolyLine Entity
     /// </summary>
     public class LwPolyLine : Entity
     {
-
-
         #region Constructors
 
         /// <summary>
         ///     The extraction constructor for the lwpolyline class
         /// </summary>
         /// <param name="lwPolyLineBuffer">A <see cref="LwPolyLineBuffer" /></param>
-        public LwPolyLine(LwPolyLineBuffer lwPolyLineBuffer)
+        public LwPolyLine(LwPolyLineBuffer lwPolyLineBuffer) : base(lwPolyLineBuffer)
         {
-            // Entity Base
-            EntityType = EntityTypes.Lwpolyline;
-            LayerNameBf = lwPolyLineBuffer.LayerName;
-            Handle = lwPolyLineBuffer.Handle;
-
             // LwPolyLine Specific
             NumberOfVertices = lwPolyLineBuffer.NumberOfVertices;
             PolyLineFlag = lwPolyLineBuffer.PolyLineFlag;
@@ -77,7 +70,7 @@ namespace Dxflib.Entities
         public double Thickness { get; }
 
         /// <summary>
-        /// The GeoPolyline Property
+        ///     The GeoPolyline Property
         /// </summary>
         public GeoPolyline GPolyline { get; }
 

@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-21
-// Last Updated: 2018-08-23-8:32 PM
+// Created: 2018-08-26
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -41,85 +41,85 @@ namespace Dxflib.IO
             // Use ranges which is only compatible with C# 7+ I believe.
             switch ( gc )
             {
-                case int n when gc >= 0 && gc <= 9:
+                case int _ when gc >= 0 && gc <= 9:
                     return typeof(string);
 
-                case int n when gc >= 10 && gc <= 59:
+                case int _ when gc >= 10 && gc <= 59:
                     return typeof(double);
 
-                case int n when gc >= 60 && gc <= 79:
+                case int _ when gc >= 60 && gc <= 79:
                     return typeof(short);
 
-                case int n when gc >= 60 && gc <= 99:
+                case int _ when gc >= 60 && gc <= 99:
                     return typeof(int);
 
-                case int n when gc == 100 || gc == 102 || gc == 105:
+                case int _ when gc == 100 || gc == 102 || gc == 105:
                     return typeof(string);
 
-                case int n when gc >= 110 && gc <= 149:
+                case int _ when gc >= 110 && gc <= 149:
                     return typeof(double);
 
-                case int n when gc >= 160 && gc <= 169:
+                case int _ when gc >= 160 && gc <= 169:
                     return typeof(long);
 
-                case int n when gc >= 170 && gc <= 179:
+                case int _ when gc >= 170 && gc <= 179:
                     return typeof(short);
 
-                case int n when gc >= 210 && gc <= 239:
+                case int _ when gc >= 210 && gc <= 239:
                     return typeof(double);
 
-                case int n when gc >= 270 && gc <= 289:
+                case int _ when gc >= 270 && gc <= 289:
                     return typeof(short);
 
-                case int n when gc >= 290 && gc <= 299:
+                case int _ when gc >= 290 && gc <= 299:
                     return typeof(bool);
 
-                case int n when gc >= 300 && gc <= 369:
+                case int _ when gc >= 300 && gc <= 369:
                     return typeof(string);
 
-                case int n when gc >= 370 && gc <= 389:
+                case int _ when gc >= 370 && gc <= 389:
                     return typeof(short);
 
-                case int n when gc >= 390 && gc <= 399:
+                case int _ when gc >= 390 && gc <= 399:
                     return typeof(string);
 
-                case int n when gc >= 400 && gc <= 409:
+                case int _ when gc >= 400 && gc <= 409:
                     return typeof(short);
 
-                case int n when gc >= 410 && gc <= 419:
+                case int _ when gc >= 410 && gc <= 419:
                     return typeof(string);
 
-                case int n when gc >= 420 && gc <= 429:
+                case int _ when gc >= 420 && gc <= 429:
                     return typeof(int);
 
-                case int n when gc >= 430 && gc <= 439:
+                case int _ when gc >= 430 && gc <= 439:
                     return typeof(string);
 
-                case int n when gc >= 440 && gc <= 449:
+                case int _ when gc >= 440 && gc <= 449:
                     return typeof(int);
 
-                case int n when gc >= 450 && gc <= 459:
+                case int _ when gc >= 450 && gc <= 459:
                     return typeof(long);
 
-                case int n when gc >= 460 && gc <= 469:
+                case int _ when gc >= 460 && gc <= 469:
                     return typeof(double);
 
-                case int n when gc >= 470 && gc <= 481:
+                case int _ when gc >= 470 && gc <= 481:
                     return typeof(string);
 
-                case int n when gc == 999:
+                case int _ when gc == 999:
                     return typeof(string);
 
-                case int n when gc >= 1000 && gc <= 1009:
+                case int _ when gc >= 1000 && gc <= 1009:
                     return typeof(string);
 
-                case int n when gc >= 1010 && gc <= 1059:
+                case int _ when gc >= 1010 && gc <= 1059:
                     return typeof(double);
 
-                case int n when gc >= 1060 && gc <= 1070:
+                case int _ when gc >= 1060 && gc <= 1070:
                     return typeof(short);
 
-                case int n when gc == 1071:
+                case int _ when gc == 1071:
                     return typeof(int);
 
                 // If the Group Code is not recognized then throw an exception

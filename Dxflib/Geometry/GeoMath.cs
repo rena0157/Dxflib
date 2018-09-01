@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-07-6:49 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -49,7 +49,7 @@ namespace Dxflib.Geometry
         {
             return Math.Sqrt(Math.Pow(v1.X - v0.X, 2) +
                              Math.Pow(v1.Y - v0.Y, 2) +
-                   Math.Pow(v0.Z - v1.Z, 2));
+                             Math.Pow(v0.Z - v1.Z, 2));
         }
 
         /// <summary>

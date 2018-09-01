@@ -20,7 +20,7 @@ namespace Dxflib.Tests.Entities
             // dxf file will be able to be casted back to a Line without loosing any
             // information.
             double sum = 0;
-            foreach (var entity in testFile.Entities)
+            foreach (var entity in testFile.Entities.Values)
             {
                 // Only cast the entity if the entity type is a line
                 // to prevent errors

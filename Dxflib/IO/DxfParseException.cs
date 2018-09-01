@@ -1,9 +1,9 @@
 ﻿// Dxflib
-// DxfStreamException.cs
+// DxfParseException.cs
 // 
 // ============================================================
 // 
-// Created: 2018-08-03
+// Created: 2018-08-27
 // Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
@@ -11,30 +11,31 @@
 
 using System;
 
-namespace Dxflib.DxfStream
+namespace Dxflib.IO
 {
     /// <inheritdoc />
     /// <summary>
-    ///     DxfStream Exception class
+    ///     This Exception should be used if there is an unexpected situation in
+    ///     the parsing of a dxf file
     /// </summary>
-    public class DxfStreamException : Exception
+    public class DxfParseException : Exception
     {
         /// <inheritdoc />
         /// <summary>
-        ///     Blank Constructor
+        ///     A Blank Constructor
         /// </summary>
-        public DxfStreamException() { }
+        public DxfParseException() { }
 
         /// <inheritdoc />
         /// <summary>
-        ///     Constructor with message
+        ///     Constructor with a message
         /// </summary>
-        /// <param name="message">The Message</param>
-        public DxfStreamException(string message) { Message = message; }
+        /// <param name="message"></param>
+        public DxfParseException(string message) { Message = message; }
 
         /// <inheritdoc />
         /// <summary>
-        ///     The Message
+        ///     Message to the Developer or user
         /// </summary>
         public override string Message { get; }
     }

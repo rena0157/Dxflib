@@ -4,14 +4,12 @@
 // ============================================================
 // 
 // Created: 2018-08-03
-// Last Updated: 2018-08-23-8:28 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
 
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Entities;
@@ -44,15 +42,12 @@ namespace Dxflib
             FileName = Path.GetFileName(PathToFile);
             DxfFileData = new TaggedDataList(fileReader.ReadFile());
 
-            // Read and parse the file
-            Entities = new List<Entity>();
-
             // The Main Parsing Calling Function
             var asciiParser = new AsciiParser(this);
             asciiParser.ParseFile();
 
             // Update the layer dictionary now that the Entities are all built
-            Layers.UpdateDictionary(Entities);
+            Layers.UpdateDictionary(Entities.Values);
         }
 
         #endregion
@@ -74,7 +69,7 @@ namespace Dxflib
         ///     The Entities property is a list of all the entities that were read from the file. The
         ///     <see cref="Entity" /> types can be changed into any other type of derived class.
         /// </summary>
-        public List<Entity> Entities { get; set; }
+        public EntityCollection Entities { get; set; }
 
         #endregion
 
@@ -83,28 +78,12 @@ namespace Dxflib
         /// <summary>
         ///     The absolute path to the file that is read.
         /// </summary>
-        public string PathToFile { get; set; }
+        public string PathToFile { get; }
 
         /// <summary>
         ///     The filename and the extension of the file that was read.
         /// </summary>
         public string FileName { get; }
-
-        /// <summary>
-        ///     Get Entities by Entity Type returns a list of entities
-        ///     by the type that was selected. See <see cref="Entity" />.
-        /// </summary>
-        /// <param name="entityType">The <see cref="EntityTypes" /> that will be placed into the list</param>
-        /// <returns>A list of entities all members of the type <see cref="EntityTypes" /></returns>
-        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
-        {
-            var returnList = new List<Entity>();
-            foreach ( var entity in Entities )
-                if ( entity.EntityType == entityType )
-                    returnList.Add(entity);
-
-            return returnList.Cast<T>().ToList();
-        }
 
         #endregion
 

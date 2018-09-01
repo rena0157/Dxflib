@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-07-10:40 AM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -25,11 +25,13 @@ namespace Dxflib.Geometry
         /// </summary>
         /// <param name="bulgeValue">The bulge value</param>
         /// <returns>The Total Angle between the two arms to the arc in Radians</returns>
-        public static double Angle(double bulgeValue)
-        {
-            return 4 * Math.Atan(Math.Abs(bulgeValue));
-        }
+        public static double Angle(double bulgeValue) { return 4 * Math.Atan(Math.Abs(bulgeValue)); }
 
+        /// <summary>
+        ///     Calculate the bulge of an arc from its angle
+        /// </summary>
+        /// <param name="value">The Angle</param>
+        /// <returns>A double that is the bulge of the arc</returns>
         public static double CalcBulge(double value) { return Math.Tan(value / 4); }
 
         /// <summary>
@@ -50,10 +52,7 @@ namespace Dxflib.Geometry
         /// <param name="radius">The Radius of the bulge</param>
         /// <param name="angle">The Angle of the bulge in radians</param>
         /// <returns></returns>
-        public static double Length(double radius, double angle)
-        {
-            return radius * angle;
-        }
+        public static double Length(double radius, double angle) { return radius * angle; }
 
         public static double AngleFromRadius(Vertex vertex0, Vertex vertex1, double radius) { return 0; }
     }

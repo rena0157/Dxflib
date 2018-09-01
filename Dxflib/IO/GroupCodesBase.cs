@@ -3,8 +3,8 @@
 // 
 // ============================================================
 // 
-// Created: 2018-08-21
-// Last Updated: 2018-08-23-9:18 PM
+// Created: 2018-08-26
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -215,5 +215,128 @@ namespace Dxflib.IO
         ///     Bulge (multiple entries; one entry for each vertex) (optional; default = 0)
         /// </summary>
         public const string Bulge = " 42";
+    }
+
+    /// <inheritdoc />
+    /// <summary>
+    ///     The HatchGroupCodes. <see cref="Dxflib.Entities.Hatch" />
+    /// </summary>
+    public class HatchCodes : GroupCodesBase
+    {
+        /// <summary>
+        ///     The Start Marker of the Hatch Entity
+        /// </summary>
+        public const string StartMarker = "HATCH";
+
+        /// <summary>
+        ///     Hatch pattern name
+        /// </summary>
+        public const string HatchPatternName = "  2";
+
+        /// <summary>
+        ///     Solid fill flag (0 = pattern fill; 1 = solid fill);
+        ///     for MPolygon, the version of MPolygon
+        /// </summary>
+        public const string SolidFillFlag = " 70";
+
+        /// <summary>
+        ///     Associativity flag (0 = non-associative; 1 = associative);
+        ///     for MPolygon, solid-fill flag (0 = lacks solid fill; 1 = has solid fill)
+        /// </summary>
+        public const string AssociativityFlag = " 71";
+
+        /// <summary>
+        ///     Number of boundary paths (loops)
+        /// </summary>
+        public const string NumberOfBoundaryLoops = " 91";
+
+        /// <summary>
+        ///     Hatch style:
+        ///     0 = Hatch “odd parity” area (Normal style)
+        ///     1 = Hatch outermost area only (Outer style)
+        ///     2 = Hatch through entire area (Ignore style)
+        /// </summary>
+        public const string HatchStyle = " 75";
+
+        /// <summary>
+        ///     Hatch Pattern type
+        ///     0 = User defined
+        ///     1 = Predefined
+        ///     2 = Custom
+        /// </summary>
+        public const string HatchPatternType = " 76";
+
+        /// <summary>
+        ///     Hatch Pattern Angle (pattern fill only)
+        /// </summary>
+        public const string HatchPatternAngle = " 52";
+
+        /// <summary>
+        ///     Hatch Pattern Scale or spacing (pattern fill only)
+        /// </summary>
+        public const string HatchPatternScale = " 41";
+
+        /// <summary>
+        ///     Number of Pattern Definition Lines
+        /// </summary>
+        public const string NumberOfPatternDefLines = " 78";
+
+        // Boundary Data -----------------------------
+
+        /// <summary>
+        ///     Number of edges in this boundary path (only if boundary is not a polyline)
+        /// </summary>
+        public const string NumberOfEdgesInBoundary = " 93";
+
+        /// <summary>
+        ///     Edge Type (Only if boundary is not a polyline)
+        ///     1 = Line
+        ///     2 = Circular Arc
+        ///     3 = Elliptical Arc
+        ///     4 = Spline
+        /// </summary>
+        public const string EdgeType = " 72";
+
+        /// <summary>
+        ///     Number of source objects, <see cref="GroupCodesBase.SoftPointer" />
+        /// </summary>
+        public const string SourceObjectsCount = " 97";
+    }
+
+    /// <inheritdoc />
+    /// <summary>
+    ///     Circular Arc Group Codes.
+    /// </summary>
+    public class CircularArcCodes : GroupCodesBase
+    {
+        /// <summary>
+        ///     The Start Marker of the Arc Entity
+        /// </summary>
+        public const string StartMarker = "ARC";
+
+        /// <summary>
+        ///     Thickness (optional; default = 0)
+        /// </summary>
+        public const string Thickness = " 39";
+
+        /// <summary>
+        ///     The Radius of the Arc
+        /// </summary>
+        public const string Radius = " 40";
+
+        /// <summary>
+        ///     The Starting Angle of the Arc (Degrees)
+        /// </summary>
+        public const string StartAngle = " 50";
+
+        /// <summary>
+        ///     The Ending Angle of the Arc (Degrees)
+        /// </summary>
+        public const string EndAngle = " 51";
+
+        /// <summary>
+        ///     True if the arc is counter clock wise
+        /// </summary>
+        public const string IsCounterClockWise = " 73";
     }
 }

@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-07
-// Last Updated: 2018-08-12-2:24 PM
+// Last Updated: 2018-09-01-1:09 PM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -96,10 +96,10 @@ namespace Dxflib.Entities
             {
                 var currentData = list.GetPair(currentIndex);
 
-                if (currentData.GroupCode == GroupCodesBase.EntityType)
+                if ( currentData.GroupCode == GroupCodesBase.EntityType )
                     break;
 
-                if (base.Parse(list, currentIndex))
+                if ( base.Parse(list, currentIndex) )
                     continue;
 
                 switch ( currentData.GroupCode )
@@ -107,7 +107,7 @@ namespace Dxflib.Entities
                     // Number of Vertices
                     case LwPolylineCodes.NumberOfVertices:
                         NumberOfVertices = int.Parse(currentData.Value);
-                        continue;  
+                        continue;
 
                     // Lwpolyline Flag
                     case LwPolylineCodes.PolylineFlag:
@@ -123,7 +123,7 @@ namespace Dxflib.Entities
                     case LwPolylineCodes.Elevation:
                         Elevation = double.Parse(currentData.Value);
                         continue;
-                    
+
                     // Thickness
                     case LwPolylineCodes.Thickness:
                         Thickness = double.Parse(currentData.Value);
@@ -149,6 +149,7 @@ namespace Dxflib.Entities
                         continue;
                 }
             }
+
             return true;
         }
     }
