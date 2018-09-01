@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-04
-// Last Updated: 2018-08-30-8:43 PM
+// Last Updated: 2018-09-01-10:07 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -27,14 +27,14 @@ namespace Dxflib.Entities
     public abstract class Entity
     {
         /// <summary>
+        ///     The layer name private backing field
+        /// </summary>
+        private string _layerNameBf;
+
+        /// <summary>
         ///     The entity type of this entity
         /// </summary>
         public EntityTypes EntityType;
-
-        /// <summary>
-        ///     The layer name private backing field
-        /// </summary>
-        protected string LayerNameBf;
 
         /// <summary>
         /// </summary>
@@ -42,7 +42,7 @@ namespace Dxflib.Entities
         protected Entity(EntityBuffer eb)
         {
             EntityType = eb.EntityType;
-            LayerNameBf = eb.LayerName;
+            _layerNameBf = eb.LayerName;
             Handle = eb.Handle;
 
             ReferencedEntities = BuildReferenceEntities(eb.EntityReferenceList);
@@ -51,7 +51,7 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The entity's Handle
         /// </summary>
-        public string Handle { get; protected set; }
+        public string Handle { get; }
 
         /// <summary>
         ///     A list of Entity Pointers to referenced entities
@@ -77,11 +77,11 @@ namespace Dxflib.Entities
         /// </remarks>
         public string LayerName
         {
-            get => LayerNameBf;
+            get => _layerNameBf;
             set
             {
-                OnLayerChanged(new LayerChangedHandlerArgs(LayerNameBf, value));
-                LayerNameBf = value;
+                OnLayerChanged(new LayerChangedHandlerArgs(_layerNameBf, value));
+                _layerNameBf = value;
             }
         }
 

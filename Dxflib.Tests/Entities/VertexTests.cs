@@ -8,7 +8,7 @@ namespace Dxflib.Tests.Entities
     [TestClass]
     public class VertexTests
     {
-        private static bool _eventworked = false;
+        private static bool _eventWorked;
         [TestMethod]
         public void TestingDefaultValueForZ()
         {
@@ -22,13 +22,13 @@ namespace Dxflib.Tests.Entities
             var testVertex = new Vertex(1, 2, 3);
             testVertex.GeometryChanged += TestVertexOnGeometryChanged;
             testVertex.X = 2;
-            Assert.IsTrue(_eventworked);
+            Assert.IsTrue(_eventWorked);
         }
 
         private static void TestVertexOnGeometryChanged(object sender, GeometryChangedHandlerArgs args)
         {
             Debug.WriteLine(args.Name);
-            _eventworked = true;
+            _eventWorked = true;
         }
     }
 }

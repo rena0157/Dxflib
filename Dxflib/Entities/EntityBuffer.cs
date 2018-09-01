@@ -47,7 +47,7 @@ namespace Dxflib.Entities
 
         /// <summary>
         /// </summary>
-        public List<string> EntityReferenceList { get; set; }
+        public List<string> EntityReferenceList { get; protected set; }
 
         /// <summary>
         ///     The Parse Virtual Function that is to be overriden by

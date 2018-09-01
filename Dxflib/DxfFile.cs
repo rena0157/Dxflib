@@ -4,14 +4,12 @@
 // ============================================================
 // 
 // Created: 2018-08-03
-// Last Updated: 2018-08-30-8:49 PM
+// Last Updated: 2018-09-01-10:06 AM
 // By: Adam Renaud
 // 
 // ============================================================
 
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Dxflib.AcadEntities;
 using Dxflib.DxfStream;
 using Dxflib.Entities;
@@ -80,7 +78,7 @@ namespace Dxflib
         /// <summary>
         ///     The absolute path to the file that is read.
         /// </summary>
-        public string PathToFile { get; set; }
+        public string PathToFile { get; }
 
         /// <summary>
         ///     The filename and the extension of the file that was read.
