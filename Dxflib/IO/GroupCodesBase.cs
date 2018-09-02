@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-09-01-1:09 PM
+// Last Updated: 2018-09-02-10:36 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -19,7 +19,7 @@ namespace Dxflib.IO
     ///     are as referenced in the "Dxf Group Codes in Numerical Order"
     ///     Section of the 2019 Dxf reference.
     /// </remarks>
-    public class GroupCodesBase
+    public abstract class GroupCodesBase
     {
         /// <summary>
         ///     Text string indicating the entity type (fixed)
@@ -117,7 +117,7 @@ namespace Dxflib.IO
     ///     name of the variable. This was done to reduce the amount
     ///     of duplication in group codes
     /// </summary>
-    public class FileVariableCodes : GroupCodesBase
+    public abstract class FileVariableCodes : GroupCodesBase
     {
         /// <summary>
         ///     The Variable Name Identifier
@@ -144,7 +144,7 @@ namespace Dxflib.IO
     /// <summary>
     ///     The <see cref="T:Dxflib.Entities.Line" /> entity group codes
     /// </summary>
-    public class LineGroupCodes : GroupCodesBase
+    public abstract class LineGroupCodes : GroupCodesBase
     {
         /// <summary>
         ///     The starting marker of the line
@@ -161,7 +161,7 @@ namespace Dxflib.IO
     /// <summary>
     ///     The <see cref="T:Dxflib.Entities.LwPolyLine" /> entity group codes
     /// </summary>
-    public class LwPolylineCodes : GroupCodesBase
+    public abstract class LwPolylineCodes : GroupCodesBase
     {
         /// <summary>
         ///     The Starting marker of the entity
@@ -221,7 +221,7 @@ namespace Dxflib.IO
     /// <summary>
     ///     The HatchGroupCodes. <see cref="Dxflib.Entities.Hatch" />
     /// </summary>
-    public class HatchCodes : GroupCodesBase
+    public abstract class HatchCodes : GroupCodesBase
     {
         /// <summary>
         ///     The Start Marker of the Hatch Entity
@@ -307,7 +307,7 @@ namespace Dxflib.IO
     /// <summary>
     ///     Circular Arc Group Codes.
     /// </summary>
-    public class CircularArcCodes : GroupCodesBase
+    public abstract class CircularArcCodes : GroupCodesBase
     {
         /// <summary>
         ///     The Start Marker of the Arc Entity
