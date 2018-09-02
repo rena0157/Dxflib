@@ -1,22 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿// Dxflib
+// TextBuffer.cs
+// 
+// ============================================================
+// 
+// Created: 2018-09-01
+// Last Updated: 2018-09-02-10:40 AM
+// By: Adam Renaud
+// 
+// ============================================================
+
 using Dxflib.Geometry;
 using Dxflib.IO;
+using Dxflib.IO.GroupCodes;
 
 namespace Dxflib.Entities.Text
 {
     /// <inheritdoc cref="EntityBuffer" />
-    /// <inheritdoc cref="IText"/>
+    /// <inheritdoc cref="IText" />
     /// <summary>
-    /// The Text Buffer, used to build <see cref="T:Dxflib.Entities.Text.Text" /> Entities
+    ///     The Text Buffer, used to build <see cref="T:Dxflib.Entities.Text.Text" /> Entities
     /// </summary>
     public class TextBuffer : EntityBuffer, IText
     {
-
         /// <inheritdoc />
         /// <summary>
-        /// Defaulting Constructor
+        ///     Defaulting Constructor
         /// </summary>
         public TextBuffer()
         {
@@ -28,7 +36,7 @@ namespace Dxflib.Entities.Text
             Rotation = 0;
             WidthFactor = 1.0;
             Obliquing = 0;
-            PositionVertex = new Vertex(0,0);
+            PositionVertex = new Vertex(0, 0);
         }
 
         /// <inheritdoc />
@@ -76,9 +84,19 @@ namespace Dxflib.Entities.Text
         /// </summary>
         public Vertex PositionVertex { get; set; }
 
+        /// <summary>
+        /// true if text is backwards
+        /// </summary>
+        public bool IsBackwards { get; set; }
+
+        /// <summary>
+        /// True if text is upside down
+        /// </summary>
+        public bool IsUpsideDown { get; set; }
+
         /// <inheritdoc />
         /// <summary>
-        /// The <see cref="T:Dxflib.Entities.Text.TextBuffer" /> Parse Function
+        ///     The <see cref="T:Dxflib.Entities.Text.TextBuffer" /> Parse Function
         /// </summary>
         /// <param name="list"><see cref="T:Dxflib.IO.TaggedDataList" /> list</param>
         /// <param name="index">The current index of extraction</param>
@@ -92,7 +110,7 @@ namespace Dxflib.Entities.Text
                 if ( currentData.GroupCode == GroupCodesBase.EntityType )
                     break;
 
-                if (base.Parse(list, currentIndex))
+                if ( base.Parse(list, currentIndex) )
                     continue;
 
                 switch ( currentData.GroupCode )
