@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Dxflib.Entities.Text
 {
-    class TextBase
+    public class Style
     {
+
     }
 }
