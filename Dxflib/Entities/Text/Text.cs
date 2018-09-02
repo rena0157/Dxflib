@@ -20,7 +20,7 @@ namespace Dxflib.Entities.Text
     /// <inheritdoc cref="IText" />
     /// <summary>
     /// </summary>
-    public sealed class Text : Entity, IText
+    public class Text : Entity, IText
     {
         private Vertex _positionVertex;
 

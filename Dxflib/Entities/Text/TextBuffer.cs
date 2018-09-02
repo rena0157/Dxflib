@@ -24,7 +24,7 @@ namespace Dxflib.Entities.Text
     /// <summary>
     ///     The Text Buffer, used to build <see cref="T:Dxflib.Entities.Text.Text" /> Entities
     /// </summary>
-    public sealed class TextBuffer : EntityBuffer, IText
+    public class TextBuffer : EntityBuffer, IText
     {
         private int _horizontalJustify;
         private int _verticalJustify;

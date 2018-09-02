@@ -107,6 +107,12 @@ namespace Dxflib.IO
                         Entities.Add(new Text(textBuffer));
                         continue;
 
+                    case MTextCodes.StartMarker:
+                        var mTextBuffer = new MTextBuffer();
+                        mTextBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new MText(mTextBuffer));
+                        continue;
+
                     default:
                         continue;
                 }
