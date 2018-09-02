@@ -149,6 +149,7 @@ namespace Dxflib.AcadEntities
 
         /// <inheritdoc />
         /// <summary>
+        /// 
         /// </summary>
         public ICollection<string> Keys => _dictionary.Keys;
 
