@@ -11,6 +11,12 @@ namespace Dxflib.IO.GroupCodes
     /// </summary>
     public abstract class MTextCodes : TextCodes
     {
+
+        /// <summary>
+        /// Start Marker for <see cref="Dxflib.Entities.Text.MText"/>
+        /// </summary>
+        public new const string StartMarker = "MTEXT";
+
         /// <summary>
         /// Reference Rectangle Width
         /// </summary>

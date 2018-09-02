@@ -12,7 +12,7 @@
 // Purpose:
 
 using System.Diagnostics;
-using Dxflib.DxfStream;
+using Dxflib.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests

@@ -11,7 +11,6 @@
 
 using System.IO;
 using Dxflib.AcadEntities;
-using Dxflib.DxfStream;
 using Dxflib.Entities;
 using Dxflib.IO;
 
