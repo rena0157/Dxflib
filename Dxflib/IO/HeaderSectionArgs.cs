@@ -10,6 +10,7 @@
 // ============================================================
 
 using System.ComponentModel;
+using Dxflib.IO.GroupCodes;
 
 namespace Dxflib.IO
 {

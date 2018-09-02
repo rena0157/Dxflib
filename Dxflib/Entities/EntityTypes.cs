@@ -39,6 +39,11 @@ namespace Dxflib.Entities
         [Description("ARC")] CircularArc,
 
         /// <summary>
+        /// <see cref="Dxflib.Entities.Text.Text"/>
+        /// </summary>
+        [Description("TEXT")] Text,
+
+        /// <summary>
         ///     No specific Entity
         /// </summary>
         [Description("Not Set")] None

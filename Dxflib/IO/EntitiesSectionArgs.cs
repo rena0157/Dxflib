@@ -12,6 +12,8 @@
 using System.Collections.Generic;
 using Dxflib.Entities;
 using Dxflib.Entities.Hatch;
+using Dxflib.Entities.Text;
+using Dxflib.IO.GroupCodes;
 
 namespace Dxflib.IO
 {
@@ -97,6 +99,12 @@ namespace Dxflib.IO
                         var arcBuffer = new CircularArcBuffer();
                         arcBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new CircularArc(arcBuffer));
+                        continue;
+
+                    case TextCodes.StartMarker:
+                        var textBuffer = new TextBuffer();
+                        textBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Text(textBuffer));
                         continue;
 
                     default:
