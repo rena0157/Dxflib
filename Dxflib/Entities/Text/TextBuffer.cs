@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using System;
 using Dxflib.Geometry;
 using Dxflib.IO;
 using Dxflib.IO.GroupCodes;
@@ -22,12 +23,18 @@ namespace Dxflib.Entities.Text
     /// </summary>
     public class TextBuffer : EntityBuffer, IText
     {
+        private int _horizontalJustify;
+        private int _verticalJustify;
+
         /// <inheritdoc />
         /// <summary>
         ///     Defaulting Constructor
         /// </summary>
         public TextBuffer()
         {
+            _horizontalJustify = 0;
+            _verticalJustify = 0;
+
             EntityType = EntityTypes.Text;
             Contents = string.Empty;
             IsAnnotative = false;
@@ -37,6 +44,9 @@ namespace Dxflib.Entities.Text
             WidthFactor = 1.0;
             Obliquing = 0;
             PositionVertex = new Vertex(0, 0);
+            TextStyle = new Style();
+            IsUpsideDown = false;
+            IsBackwards = false;
         }
 
         /// <inheritdoc />
@@ -115,12 +125,132 @@ namespace Dxflib.Entities.Text
 
                 switch ( currentData.GroupCode )
                 {
+                    case GroupCodesBase.XPoint:
+                        PositionVertex.X = double.Parse(currentData.Value);
+                        continue;
+
+                    case GroupCodesBase.YPoint:
+                        PositionVertex.Y = double.Parse(currentData.Value);
+                        continue;
+
+                    case GroupCodesBase.ZPoint:
+                        PositionVertex.Z = double.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.TextHeight:
+                        Height = double.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.TextString:
+                        Contents = currentData.Value;
+                        continue;
+
+                    case TextCodes.TextRotation:
+                        Rotation = double.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.RelativeXScale:
+                        WidthFactor = double.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.ObliqueAngle:
+                        Obliquing = double.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.TextStyleName:
+                        TextStyle.Name = currentData.Value;
+                        continue;
+
+                    case TextCodes.HorizontalJustification:
+                        _horizontalJustify = int.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.VerticalJustification:
+                        _verticalJustify = int.Parse(currentData.Value);
+                        continue;
+
+                    case TextCodes.TextGenerationFlag:
+                        var value = int.Parse(currentData.Value);
+                        switch ( value )
+                        {
+                            case 2:
+                                IsBackwards = true;
+                                break;
+                            case 4:
+                                IsUpsideDown = true;
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
+                        }
+                        continue;
+
                     default:
                         continue;
                 }
             }
 
+            Justify = GetJustification(_horizontalJustify, _verticalJustify);
             return true;
+        }
+
+        /// <summary>
+        /// Get the <see cref="JustifyOptions"/> from horizontal justify and vertical justify
+        /// </summary>
+        /// <param name="horizontalJustify">The horizontal Justification</param>
+        /// <param name="verticalJustify">The Vertical Justification</param>
+        /// <returns>A <see cref="JustifyOptions"/> that matches horizontal and vertical Justify</returns>
+        private static JustifyOptions GetJustification(int horizontalJustify, int verticalJustify)
+        {
+            switch ( verticalJustify )
+            {
+                case 0 when horizontalJustify == 0:
+                    return JustifyOptions.Left;
+
+                case 0 when horizontalJustify == 1:
+                    return JustifyOptions.Center;
+                
+                case 0 when horizontalJustify == 2:
+                    return JustifyOptions.Right;
+                
+                case 0 when horizontalJustify == 3:
+                    return JustifyOptions.Aligned;
+                
+                case 0 when horizontalJustify == 4:
+                    return JustifyOptions.Middle;
+                
+                case 0 when horizontalJustify == 5:
+                    return JustifyOptions.Fit;
+                
+                case 1 when horizontalJustify == 0:
+                    return JustifyOptions.BottomLeft;
+                
+                case 1 when horizontalJustify == 1:
+                    return JustifyOptions.BottomCenter;
+                
+                case 1 when horizontalJustify == 2:
+                    return JustifyOptions.BottomRight;
+                
+                case 2 when horizontalJustify == 0:
+                    return JustifyOptions.MiddleLeft;
+                
+                case 2 when horizontalJustify == 1:
+                    return JustifyOptions.MiddleCenter;
+                
+                case 2 when horizontalJustify == 2:
+                    return JustifyOptions.MiddleRight;
+                
+                case 3 when horizontalJustify == 0:
+                    return JustifyOptions.TopLeft;
+
+                case 3 when horizontalJustify == 1:
+                    return JustifyOptions.TopCenter;
+
+                case 3 when horizontalJustify == 2:
+                    return JustifyOptions.TopRight;
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
     }
 }

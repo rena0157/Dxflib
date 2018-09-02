@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using Dxflib.Geometry;
 
 namespace Dxflib.Entities.Text
 {
+    /// <inheritdoc />
     /// <summary>
     /// Public interface for Text Entities
     /// </summary>
-    public interface IText
+    public interface IText : INotifyPropertyChanged
     {
         /// <summary>
         /// The String Contents
