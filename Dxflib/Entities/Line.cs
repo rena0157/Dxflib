@@ -31,6 +31,7 @@ namespace Dxflib.Entities
         /// </param>
         public Line(LineBuffer lineBuffer) : base(lineBuffer)
         {
+            EntityType = lineBuffer.EntityType;
             Thickness = lineBuffer.Thickness;
             // Setting the GeoLine
             GLine = new GeoLine(new Vertex(lineBuffer.X0, lineBuffer.Y0),

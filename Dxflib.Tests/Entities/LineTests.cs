@@ -32,7 +32,7 @@ namespace Dxflib.Tests.Entities
             var line = (Line) testFile.Entities.ElementAt(0).Value;
 
             // Assert
-            Assert.IsTrue(line.EntityType == EntityTypes.Line);
+            Assert.IsTrue(line.EntityType == typeof(Line));
         }
 
         [TestMethod]

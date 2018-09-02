@@ -25,7 +25,7 @@ namespace Dxflib.Tests.Entities
                 // Only cast the entity if the entity type is a line
                 // to prevent errors
                 Line testLine = null;
-                if (entity.EntityType == EntityTypes.Line)
+                if (entity.EntityType == typeof(Line))
                     testLine = (Line)entity;
                 if (testLine != null)
                     sum += testLine.Length;

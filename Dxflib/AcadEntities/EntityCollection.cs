@@ -162,11 +162,11 @@ namespace Dxflib.AcadEntities
         ///     Returns a list of entities that match the type given
         /// </summary>
         /// <typeparam name="T">The return type of the entities</typeparam>
-        /// <param name="entityType">The entity type</param>
         /// <returns>A list of entities</returns>
-        public List<T> GetEntitiesByType<T>(EntityTypes entityType)
+        public List<T> GetEntitiesByType<T>()
         {
-            var returnList = _dictionary.Values.Where(entity => entity.EntityType == entityType).ToList();
+
+            var returnList = _dictionary.Values.Where(entity => entity.EntityType == typeof(T)).ToList();
 
             return returnList.Cast<T>().ToList();
         }
