@@ -10,6 +10,9 @@
 // ============================================================
 
 using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Dxflib.Annotations;
 using Dxflib.Geometry;
 using Dxflib.IO;
 using Dxflib.IO.GroupCodes;
@@ -21,7 +24,7 @@ namespace Dxflib.Entities.Text
     /// <summary>
     ///     The Text Buffer, used to build <see cref="T:Dxflib.Entities.Text.Text" /> Entities
     /// </summary>
-    public class TextBuffer : EntityBuffer, IText
+    public sealed class TextBuffer : EntityBuffer, IText
     {
         private int _horizontalJustify;
         private int _verticalJustify;
@@ -44,7 +47,7 @@ namespace Dxflib.Entities.Text
             WidthFactor = 1.0;
             Obliquing = 0;
             PositionVertex = new Vertex(0, 0);
-            TextStyle = new Style();
+            TextStyle = new Style() {Name = "STANDARD"};
             IsUpsideDown = false;
             IsBackwards = false;
         }
@@ -251,6 +254,21 @@ namespace Dxflib.Entities.Text
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        /// <inheritdoc />
+        /// <summary>
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        [NotifyPropertyChangedInvocator]
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
