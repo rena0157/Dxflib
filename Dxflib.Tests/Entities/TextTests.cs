@@ -1,4 +1,15 @@
-﻿using System;
+﻿// Dxflib.Tests
+// TextTests.cs
+// 
+// ============================================================
+// 
+// Created: 2018-09-02
+// Last Updated: 2018-09-02-1:12 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+using System;
 using Dxflib.Entities;
 using Dxflib.Entities.Text;
 using Dxflib.Geometry;
