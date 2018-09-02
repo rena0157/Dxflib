@@ -54,6 +54,11 @@ namespace Dxflib.IO
         /// </summary>
         public const string SubclassMarker = "100";
 
+        /// <summary>
+        /// The Thickness of the Entity
+        /// </summary>
+        public const string Thickness = " 39";
+
 
         /// <summary>
         ///     DXF: X value of the primary point (followed by Y and Z value codes 20 and 30)
@@ -338,5 +343,14 @@ namespace Dxflib.IO
         ///     True if the arc is counter clock wise
         /// </summary>
         public const string IsCounterClockWise = " 73";
+    }
+
+    /// <inheritdoc />
+    /// <summary>
+    /// Group Codes for the <see cref="T:Dxflib.Entities.Text.Text" /> Entity
+    /// </summary>
+    public abstract class TextCodes : GroupCodesBase
+    {
+
     }
 }
