@@ -42,20 +42,15 @@ namespace Dxflib.Tests
                 new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
 
             Assert.IsTrue(testFile.Entities.Count == 2);
-            Assert.IsTrue(((Line) testFile.Entities.ElementAt(0).Value).EntityType == EntityTypes.Line);
+            Assert.IsTrue(((Line) testFile.Entities.ElementAt(0).Value).EntityType == typeof(Line));
         }
 
         [TestMethod]
-        public void EntityTypeTest_Shouldbe2Lines()
+        public void EntityTypeTest_ShouldBe2Lines()
         {
             var testFile =
                 new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\LineParseTest.dxf");
-            var linesSum = 0;
-            foreach (var entity in testFile.Entities.Values)
-            {
-                if (entity.EntityType == EntityTypes.Line)
-                    ++linesSum;
-            }
+            var linesSum = testFile.Entities.Values.Count(entity => entity.EntityType == typeof(Line));
             Assert.IsTrue(linesSum == 2);
         }
     }

@@ -16,7 +16,7 @@ namespace Dxflib.Tests.AcadEntitiesTests
             {
                 Handle = "2f8",
                 LayerName = "TestLayer",
-                EntityType = EntityTypes.Line,
+                EntityType = typeof(Line),
                 Thickness = 0.0,
                 X0 = 0.0,
                 X1 = 3.0,

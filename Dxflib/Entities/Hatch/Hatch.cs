@@ -26,6 +26,8 @@ namespace Dxflib.Entities.Hatch
         /// <param name="hb"></param>
         public Hatch(HatchBuffer hb) : base(hb)
         {
+            EntityType = hb.EntityType;
+
             // Hatch Entity
             PatternName = hb.HatchPatternName;
             IsSolid = hb.SolidFillFlag;

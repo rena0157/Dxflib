@@ -27,7 +27,7 @@ namespace Dxflib.Tests.Entities
 
             var dxfFile = new DxfFile(path);
 
-            var textList = dxfFile.Entities.GetEntitiesByType<Text>(EntityTypes.Text);
+            var textList = dxfFile.Entities.GetEntitiesByType<Text>();
             Assert.IsTrue(textList.Count == 1);
 
             var text = textList[0];

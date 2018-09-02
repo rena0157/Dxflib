@@ -14,7 +14,7 @@ namespace Dxflib.Tests.Entities
             var pathToFile = @"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\CircularArcTests.dxf";
             var dxfFile = new DxfFile(pathToFile);
 
-            var arcs = dxfFile.Entities.GetEntitiesByType<CircularArc>(EntityTypes.CircularArc);
+            var arcs = dxfFile.Entities.GetEntitiesByType<CircularArc>();
 
             // The Number of Arcs should be 1
             Assert.IsTrue(arcs.Count == 1);

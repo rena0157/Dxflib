@@ -29,7 +29,7 @@ namespace Dxflib.Entities
         /// <param name="ab">The <see cref="T:Dxflib.Entities.CircularArcBuffer" /></param>
         public CircularArc(CircularArcBuffer ab) : base(ab)
         {
-            EntityType = EntityTypes.CircularArc;
+            EntityType = ab.EntityType;
             GeometricArc = new GeoArc(
                 new Vertex(ab.CenterPointX, ab.CenterPointY, ab.CenterPointZ),
                 GeoMath.DegToRad(ab.StartAngle),

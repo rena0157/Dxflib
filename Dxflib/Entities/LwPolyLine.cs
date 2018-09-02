@@ -27,6 +27,8 @@ namespace Dxflib.Entities
         /// <param name="lwPolyLineBuffer">A <see cref="LwPolyLineBuffer" /></param>
         public LwPolyLine(LwPolyLineBuffer lwPolyLineBuffer) : base(lwPolyLineBuffer)
         {
+            EntityType = lwPolyLineBuffer.EntityType;
+
             // LwPolyLine Specific
             NumberOfVertices = lwPolyLineBuffer.NumberOfVertices;
             PolyLineFlag = lwPolyLineBuffer.PolyLineFlag;

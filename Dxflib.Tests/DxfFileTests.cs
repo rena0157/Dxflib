@@ -55,7 +55,7 @@ namespace Dxflib.Tests
 
             var test = testFile.Layers.GetLayer("TestLayer0").GetAllEntities();
 
-            Assert.IsTrue(test[0].EntityType == EntityTypes.Line);
+            Assert.IsTrue(test[0].EntityType == typeof(Line));
         }
 
         [TestMethod]
