@@ -10,6 +10,7 @@
 // ============================================================
 
 using Dxflib.IO;
+using Dxflib.IO.GroupCodes;
 
 namespace Dxflib.Entities
 {

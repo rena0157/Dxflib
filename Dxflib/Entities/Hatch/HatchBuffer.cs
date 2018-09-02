@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using Dxflib.Geometry;
 using Dxflib.IO;
+using Dxflib.IO.GroupCodes;
 
 namespace Dxflib.Entities.Hatch
 {

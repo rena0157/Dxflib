@@ -9,6 +9,8 @@
 // 
 // ============================================================
 
+using Dxflib.IO.GroupCodes;
+
 namespace Dxflib.IO
 {
     /// <summary>
