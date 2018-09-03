@@ -39,7 +39,7 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     <see cref="CircularArcCodes.Thickness" />
+        ///     <see cref="GroupCodesBase.Thickness"/>
         /// </summary>
         public double Thickness { get; private set; }
 
