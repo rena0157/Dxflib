@@ -12,11 +12,6 @@
         public const string StartMarker = "ARC";
 
         /// <summary>
-        ///     Thickness (optional; default = 0)
-        /// </summary>
-        public const string Thickness = " 39";
-
-        /// <summary>
         ///     The Radius of the Arc
         /// </summary>
         public const string Radius = " 40";
