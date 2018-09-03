@@ -12,6 +12,7 @@
 using System.Diagnostics;
 using Dxflib.Entities;
 using Dxflib.IO;
+using Dxflib.IO.Header;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests

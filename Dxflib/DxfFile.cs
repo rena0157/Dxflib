@@ -13,6 +13,7 @@ using System.IO;
 using Dxflib.AcadEntities;
 using Dxflib.Entities;
 using Dxflib.IO;
+using Dxflib.IO.Header;
 
 namespace Dxflib
 {
