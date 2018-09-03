@@ -62,6 +62,7 @@ namespace Dxflib.Entities
         public virtual bool Parse(TaggedDataList list, int index)
         {
             var currentData = list.GetPair(index);
+
             switch ( currentData.GroupCode )
             {
                 case GroupCodesBase.Handle:
