@@ -11,7 +11,7 @@ namespace Dxflib.Tests.Entities
         [TestMethod]
         public void PointPropertiesTests()
         {
-            var path = @"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PointTests.dxf";
+            const string path = @"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PointTests.dxf";
             var dxfFile = new DxfFile(path);
             var points = dxfFile.Entities.GetEntitiesByType<Point>();
 
