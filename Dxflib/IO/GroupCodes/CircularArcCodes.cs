@@ -18,9 +18,14 @@ namespace Dxflib.IO.GroupCodes
     public abstract class CircularArcCodes : GroupCodesBase
     {
         /// <summary>
-        ///     The Start Marker of the Arc Entity
+        ///     The <see cref="Dxflib.Entities.CircularArc"/> Entity Start Marker
         /// </summary>
-        public const string StartMarker = "ARC";
+        public const string ArcStartMarker = "ARC";
+
+        /// <summary>
+        /// The <see cref="Dxflib.Entities.Circle"/> Entity Start Marker
+        /// </summary>
+        public const string CircleStartMarker = "CIRCLE";
 
         /// <summary>
         ///     The Radius of the Arc

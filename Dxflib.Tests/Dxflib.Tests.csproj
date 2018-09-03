@@ -56,6 +56,7 @@
     <Compile Include="Entities\CircularArcTests.cs" />
     <Compile Include="Entities\TextTests.cs" />
     <Compile Include="Entities\PointTests.cs" />
+    <Compile Include="Entities\CircleTests.cs" />
     <Compile Include="Geometry\GeoLineTests.cs" />
     <Compile Include="Entities\LineTests.cs" />
     <Compile Include="Entities\LwPolyLineTests.cs" />
