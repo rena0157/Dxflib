@@ -1,4 +1,6 @@
-﻿namespace Dxflib.IO.GroupCodes
+﻿using Dxflib.IO.GroupCodes;
+
+namespace Dxflib.IO.Header
 {
     /// <inheritdoc />
     /// <summary>
