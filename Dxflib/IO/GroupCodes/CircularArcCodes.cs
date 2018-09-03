@@ -1,4 +1,15 @@
-﻿namespace Dxflib.IO.GroupCodes
+﻿// Dxflib
+// CircularArcCodes.cs
+// 
+// ============================================================
+// 
+// Created: 2018-09-02
+// Last Updated: 2018-09-03-12:08 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+namespace Dxflib.IO.GroupCodes
 {
     /// <inheritdoc />
     /// <summary>
