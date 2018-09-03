@@ -11,6 +11,7 @@ releases of the software. The list will be a decending list from newest to oldes
 - Added the `Text` Entity
 - Added the `MText` Entity
 - Added the `Point` Entity
+- Added the `Circle` Entity
 
 ## Version 0.3.0 [2018-09-01]
 - Added the Hatch Entity and associated buffer classes
