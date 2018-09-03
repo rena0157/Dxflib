@@ -100,7 +100,7 @@ namespace Dxflib.IO
                         continue;
 
                     // ARC
-                    case CircularArcCodes.StartMarker:
+                    case CircularArcCodes.ArcStartMarker:
                         var arcBuffer = new CircularArcBuffer();
                         arcBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new CircularArc(arcBuffer));
@@ -126,6 +126,13 @@ namespace Dxflib.IO
                         pointBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Point(pointBuffer));
                         continue;
+
+                    // CIRCLE
+                    case CircularArcCodes.CircleStartMarker:
+                        var circleBuffer = new CircularArcBuffer();
+                        circleBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Circle(circleBuffer));
+                        break;
 
                     // DEFAULT
                     default:

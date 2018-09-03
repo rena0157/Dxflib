@@ -1,4 +1,15 @@
-﻿namespace Dxflib.IO.GroupCodes
+﻿// Dxflib
+// CircularArcCodes.cs
+// 
+// ============================================================
+// 
+// Created: 2018-09-02
+// Last Updated: 2018-09-03-12:08 PM
+// By: Adam Renaud
+// 
+// ============================================================
+
+namespace Dxflib.IO.GroupCodes
 {
     /// <inheritdoc />
     /// <summary>
@@ -7,14 +18,14 @@
     public abstract class CircularArcCodes : GroupCodesBase
     {
         /// <summary>
-        ///     The Start Marker of the Arc Entity
+        ///     The <see cref="Dxflib.Entities.CircularArc"/> Entity Start Marker
         /// </summary>
-        public const string StartMarker = "ARC";
+        public const string ArcStartMarker = "ARC";
 
         /// <summary>
-        ///     Thickness (optional; default = 0)
+        /// The <see cref="Dxflib.Entities.Circle"/> Entity Start Marker
         /// </summary>
-        public const string Thickness = " 39";
+        public const string CircleStartMarker = "CIRCLE";
 
         /// <summary>
         ///     The Radius of the Arc
