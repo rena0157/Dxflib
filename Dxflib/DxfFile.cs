@@ -113,11 +113,5 @@ namespace Dxflib
         public string LastSavedBy { get; set; }
 
         #endregion
-
-        #region Methods
-
-        
-
-        #endregion
     }
 }
