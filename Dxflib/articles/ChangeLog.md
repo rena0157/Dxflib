@@ -3,7 +3,7 @@
 This is the change log file that will contain all of the information regarding
 releases of the software. The list will be a decending list from newest to oldest releases.
 
-## Version 0.4.0 [2018-09-XX]
+## Version 0.4.0 [2018-09-05]
 - Renamed `GeometricEntityBase` to `GeoBase` to shorten the name
 - Inheriting the `INotifyPropertyChanged` Interface from the `GeoBase` class
   - Changed most of the underlying structure for how `PropertyChanged` events are handled in the GeoBase class
@@ -12,6 +12,7 @@ releases of the software. The list will be a decending list from newest to oldes
 - Added the `MText` Entity
 - Added the `Point` Entity
 - Added the `Circle` Entity
+- Added the `GetLastSavedTime` Function to the DxfFile
 
 ## Version 0.3.0 [2018-09-01]
 - Added the Hatch Entity and associated buffer classes
