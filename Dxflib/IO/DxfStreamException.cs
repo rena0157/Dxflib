@@ -11,7 +11,7 @@
 
 using System;
 
-namespace Dxflib.DxfStream
+namespace Dxflib.IO
 {
     /// <inheritdoc />
     /// <summary>

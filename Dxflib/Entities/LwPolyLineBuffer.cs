@@ -29,6 +29,7 @@ namespace Dxflib.Entities
         /// </summary>
         public LwPolyLineBuffer()
         {
+            EntityType = typeof(LwPolyLine);
             LayerName = "";
             Handle = "";
             NumberOfVertices = 0;
@@ -90,7 +91,6 @@ namespace Dxflib.Entities
         /// <returns>True or false if the parse was successful</returns>
         public override bool Parse(TaggedDataList list, int index)
         {
-            EntityType = EntityTypes.Lwpolyline;
             for ( var currentIndex = index + 1;
                 currentIndex < list.Length;
                 ++currentIndex )

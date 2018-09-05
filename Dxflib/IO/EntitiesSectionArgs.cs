@@ -4,7 +4,7 @@
 // ============================================================
 // 
 // Created: 2018-08-26
-// Last Updated: 2018-09-01-1:09 PM
+// Last Updated: 2018-09-03-11:21 AM
 // By: Adam Renaud
 // 
 // ============================================================
@@ -77,36 +77,64 @@ namespace Dxflib.IO
                      *    index of the entity.
                      * 3. Add the entity to the entity list
                      */
+
+                    // LINE
                     case LineGroupCodes.StartMarker:
                         var lineBuffer = new LineBuffer();
                         lineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Line(lineBuffer));
                         continue;
 
+                    // LWPOLYLINE
                     case LwPolylineCodes.StartMarker:
                         var lwPolyLineBuffer = new LwPolyLineBuffer();
                         lwPolyLineBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new LwPolyLine(lwPolyLineBuffer));
                         continue;
 
+                    // HATCH
                     case HatchCodes.StartMarker:
                         var hatchBuffer = new HatchBuffer();
                         hatchBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Hatch(hatchBuffer));
                         continue;
 
-                    case CircularArcCodes.StartMarker:
+                    // ARC
+                    case CircularArcCodes.ArcStartMarker:
                         var arcBuffer = new CircularArcBuffer();
                         arcBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new CircularArc(arcBuffer));
                         continue;
 
+                    // TEXT
                     case TextCodes.StartMarker:
                         var textBuffer = new TextBuffer();
                         textBuffer.Parse(DataList, currentIndex);
                         Entities.Add(new Text(textBuffer));
                         continue;
 
+                    // MTEXT
+                    case MTextCodes.StartMarker:
+                        var mTextBuffer = new MTextBuffer();
+                        mTextBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new MText(mTextBuffer));
+                        continue;
+
+                    // POINT
+                    case PointCodes.StartMarker:
+                        var pointBuffer = new PointBuffer();
+                        pointBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Point(pointBuffer));
+                        continue;
+
+                    // CIRCLE
+                    case CircularArcCodes.CircleStartMarker:
+                        var circleBuffer = new CircularArcBuffer();
+                        circleBuffer.Parse(DataList, currentIndex);
+                        Entities.Add(new Circle(circleBuffer));
+                        break;
+
+                    // DEFAULT
                     default:
                         continue;
                 }

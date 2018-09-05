@@ -12,7 +12,7 @@
 using System;
 using System.IO;
 
-namespace Dxflib.DxfStream
+namespace Dxflib.IO
 {
     /// <summary>
     ///     The DxfReader class that reads a Dxf file and returns a string list

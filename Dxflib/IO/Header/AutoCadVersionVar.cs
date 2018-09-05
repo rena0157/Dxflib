@@ -11,59 +11,8 @@
 
 using Dxflib.IO.GroupCodes;
 
-namespace Dxflib.IO
+namespace Dxflib.IO.Header
 {
-    /// <summary>
-    ///     A generic class that is used to act as a base for
-    ///     other file variable classes to specialize and inherit from
-    /// </summary>
-    /// <typeparam name="T">The Typename of the file variable</typeparam>
-    public class FileVariable<T>
-    {
-        /// <summary>
-        ///     The main constructor for the FileVariable Class.
-        ///     This Constructor will set the variable name.
-        /// </summary>
-        /// <param name="variableName"></param>
-        protected FileVariable(string variableName) { VariableName = variableName; }
-
-        /// <summary>
-        ///     The Variable Name
-        /// </summary>
-        // ReSharper disable once MemberCanBePrivate.Global
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public string VariableName { get; }
-
-        /// <summary>
-        ///     The Variables Value
-        /// </summary>
-        public virtual T Value { get; set; }
-    }
-
-    /// <inheritdoc />
-    /// <summary>
-    ///     The String Variable Class for AutoCAD File Variables.
-    ///     This class is a specialization of the <see cref="T:Dxflib.IO.FileVariable`1" />
-    ///     class where T is a <see cref="T:System.String" />.
-    /// </summary>
-    public sealed class StringVar : FileVariable<string>
-    {
-        /// <inheritdoc />
-        /// <summary>
-        ///     The main constructor for a string variable
-        /// </summary>
-        /// <param name="variableName">
-        ///     The file variable name eg. "$LASTSAVEDBY"
-        ///     The last saved by file variable
-        /// </param>
-        /// <param name="value">The value of the variable</param>
-        public StringVar(string variableName, string value) : base(variableName)
-        {
-            // Set the value
-            Value = value;
-        }
-    }
-
     /// <inheritdoc />
     /// <summary>
     ///     The AutoCADVersion Variable class. This class is a

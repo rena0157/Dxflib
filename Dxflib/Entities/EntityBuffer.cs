@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using System;
 using System.Collections.Generic;
 using Dxflib.IO;
 using Dxflib.IO.GroupCodes;
@@ -23,7 +24,7 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The Entity Type
         /// </summary>
-        public EntityTypes EntityType;
+        public Type EntityType;
 
         /// <summary>
         ///     Main Constructor that resets all values
@@ -32,7 +33,7 @@ namespace Dxflib.Entities
         {
             Handle = "";
             LayerName = "";
-            EntityType = EntityTypes.None;
+            EntityType = typeof(Entity);
             EntityReferenceList = new List<string>();
         }
 
@@ -61,6 +62,7 @@ namespace Dxflib.Entities
         public virtual bool Parse(TaggedDataList list, int index)
         {
             var currentData = list.GetPair(index);
+
             switch ( currentData.GroupCode )
             {
                 case GroupCodesBase.Handle:

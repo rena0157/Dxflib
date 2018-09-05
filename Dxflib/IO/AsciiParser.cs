@@ -12,6 +12,7 @@
 using System.IO;
 using Dxflib.AcadEntities;
 using Dxflib.AcadEntities.Pointer;
+using Dxflib.IO.Header;
 
 #pragma warning disable 414 // There was annoying error that was ignored here
 

@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using System;
 using System.Collections.Generic;
 using Dxflib.AcadEntities.Pointer;
 
@@ -34,7 +35,7 @@ namespace Dxflib.Entities
         /// <summary>
         ///     The entity type of this entity
         /// </summary>
-        public EntityTypes EntityType;
+        public Type EntityType;
 
         /// <summary>
         /// </summary>

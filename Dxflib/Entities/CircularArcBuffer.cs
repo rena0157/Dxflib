@@ -28,6 +28,7 @@ namespace Dxflib.Entities
         /// </summary>
         public CircularArcBuffer()
         {
+            EntityType = typeof(CircularArc);
             Thickness = 0.0;
             CenterPointX = 0.0;
             CenterPointY = 0.0;
@@ -38,7 +39,7 @@ namespace Dxflib.Entities
         }
 
         /// <summary>
-        ///     <see cref="CircularArcCodes.Thickness" />
+        ///     <see cref="GroupCodesBase.Thickness"/>
         /// </summary>
         public double Thickness { get; private set; }
 
@@ -81,8 +82,6 @@ namespace Dxflib.Entities
         /// <returns>Always True</returns>
         public override bool Parse(TaggedDataList list, int index)
         {
-            EntityType = EntityTypes.Hatch;
-
             for ( var currentIndex = index + 1; currentIndex < list.Length; ++currentIndex )
             {
                 var currentData = list.GetPair(currentIndex);

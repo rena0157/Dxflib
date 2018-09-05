@@ -8,6 +8,10 @@ releases of the software. The list will be a decending list from newest to oldes
 - Inheriting the `INotifyPropertyChanged` Interface from the `GeoBase` class
   - Changed most of the underlying structure for how `PropertyChanged` events are handled in the GeoBase class
 - Removed a lot of classes that were made obsolete due to the change to the `INotifyPropertyChanged` event system
+- Added the `Text` Entity
+- Added the `MText` Entity
+- Added the `Point` Entity
+- Added the `Circle` Entity
 
 ## Version 0.3.0 [2018-09-01]
 - Added the Hatch Entity and associated buffer classes

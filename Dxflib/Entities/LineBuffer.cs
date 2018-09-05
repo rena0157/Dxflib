@@ -26,6 +26,7 @@ namespace Dxflib.Entities
         /// </summary>
         public LineBuffer()
         {
+            EntityType = typeof(Line);
             Thickness = 0;
             X0 = 0;
             X1 = 0;
@@ -74,9 +75,6 @@ namespace Dxflib.Entities
         /// <returns>True if parse was successful</returns>
         public override bool Parse(TaggedDataList list, int index)
         {
-            // Setting the current entity
-            EntityType = EntityTypes.Line;
-
             // Iterate through the file and extract data until the current line 
             // is an entity end marker
             for ( var currentIndex = index + 1;

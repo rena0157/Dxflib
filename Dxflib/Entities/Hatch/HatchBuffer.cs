@@ -29,6 +29,7 @@ namespace Dxflib.Entities.Hatch
         /// </summary>
         public HatchBuffer()
         {
+            EntityType = typeof(Hatch);
             HatchPatternName = string.Empty;
             SolidFillFlag = false;
             AssociativityFlag = false;
@@ -111,7 +112,6 @@ namespace Dxflib.Entities.Hatch
         /// <returns></returns>
         public override bool Parse(TaggedDataList list, int index)
         {
-            EntityType = EntityTypes.Hatch;
             for ( var currentIndex = index + 1;
                 currentIndex < list.Length;
                 ++currentIndex )

@@ -43,16 +43,6 @@ namespace Dxflib.Entities.Text
         double Rotation { get; set; }
 
         /// <summary>
-        /// The Width Factor of the text
-        /// </summary>
-        double WidthFactor { get; set; }
-
-        /// <summary>
-        /// The Obliquing Factor of the text
-        /// </summary>
-        double Obliquing { get; set; }
-
-        /// <summary>
         /// The Position Vertex of the text
         /// </summary>
         Vertex PositionVertex { get; set; }

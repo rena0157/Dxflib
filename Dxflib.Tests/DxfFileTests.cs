@@ -12,6 +12,7 @@
 using System.Diagnostics;
 using Dxflib.Entities;
 using Dxflib.IO;
+using Dxflib.IO.Header;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Dxflib.Tests
@@ -55,7 +56,7 @@ namespace Dxflib.Tests
 
             var test = testFile.Layers.GetLayer("TestLayer0").GetAllEntities();
 
-            Assert.IsTrue(test[0].EntityType == EntityTypes.Line);
+            Assert.IsTrue(test[0].EntityType == typeof(Line));
         }
 
         [TestMethod]
@@ -73,5 +74,15 @@ namespace Dxflib.Tests
 
             Assert.IsTrue(testFile.LastSavedBy == "adamf");
         }
+
+        [TestMethod]
+        public void LastWriteTimeTest()
+        {
+            var testFile = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
+
+            Debug.WriteLine(testFile.LastWriteTime);
+        }
+
+
     }
 }

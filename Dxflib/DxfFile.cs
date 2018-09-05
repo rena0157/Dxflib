@@ -9,11 +9,12 @@
 // 
 // ============================================================
 
+using System;
 using System.IO;
 using Dxflib.AcadEntities;
-using Dxflib.DxfStream;
 using Dxflib.Entities;
 using Dxflib.IO;
+using Dxflib.IO.Header;
 
 namespace Dxflib
 {
@@ -84,6 +85,11 @@ namespace Dxflib
         ///     The filename and the extension of the file that was read.
         /// </summary>
         public string FileName { get; }
+
+        /// <summary>
+        /// Gets the Last Write Time of the <see cref="PathToFile"/>
+        /// </summary>
+        public DateTime LastWriteTime => File.GetLastWriteTime(PathToFile);
 
         #endregion
 
