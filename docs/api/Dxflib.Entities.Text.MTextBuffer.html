@@ -1,0 +1,632 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MTextBuffer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MTextBuffer
+   ">
+    <meta name="generator" content="docfx 2.39.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dxflib.Entities.Text.MTextBuffer">
+  
+  
+  <h1 id="Dxflib_Entities_Text_MTextBuffer" data-uid="Dxflib.Entities.Text.MTextBuffer" class="text-break">Class MTextBuffer
+  </h1>
+  <div class="markdown level0 summary"><p>The <a class="xref" href="Dxflib.Entities.Text.MText.html">MText</a> Buffer Class</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Dxflib.Entities.EntityBuffer.html">EntityBuffer</a></div>
+    <div class="level2"><span class="xref">MTextBuffer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Dxflib.Entities.Text.IText.html">IText</a></div>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_EntityType">EntityBuffer.EntityType</a>
+    </div>
+    <div>
+      <a class="xref" href="Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_Handle">EntityBuffer.Handle</a>
+    </div>
+    <div>
+      <a class="xref" href="Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_LayerName">EntityBuffer.LayerName</a>
+    </div>
+    <div>
+      <a class="xref" href="Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_EntityReferenceList">EntityBuffer.EntityReferenceList</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dxflib.Entities.Text.html">Dxflib.Entities.Text</a></h6>
+  <h6><strong>Assembly</strong>: Dxflib.dll</h6>
+  <h5 id="Dxflib_Entities_Text_MTextBuffer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MTextBuffer : EntityBuffer, IText, INotifyPropertyChanged</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer__ctor.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L32">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer__ctor_" data-uid="Dxflib.Entities.Text.MTextBuffer.#ctor*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer__ctor" data-uid="Dxflib.Entities.Text.MTextBuffer.#ctor">MTextBuffer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MTextBuffer()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_BackgroundFillSetting.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.BackgroundFillSetting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L52">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_BackgroundFillSetting_" data-uid="Dxflib.Entities.Text.MTextBuffer.BackgroundFillSetting*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_BackgroundFillSetting" data-uid="Dxflib.Entities.Text.MTextBuffer.BackgroundFillSetting">BackgroundFillSetting</h4>
+  <div class="markdown level1 summary"><p>The Background fill setting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackgroundFillSettings BackgroundFillSetting { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Entities.Text.BackgroundFillSettings.html">BackgroundFillSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_Contents.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.Contents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L69">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_Contents_" data-uid="Dxflib.Entities.Text.MTextBuffer.Contents*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_Contents" data-uid="Dxflib.Entities.Text.MTextBuffer.Contents">Contents</h4>
+  <div class="markdown level1 summary"><p>The Contents of the text</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Contents { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_DrawDirection.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.DrawDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L47">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_DrawDirection_" data-uid="Dxflib.Entities.Text.MTextBuffer.DrawDirection*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_DrawDirection" data-uid="Dxflib.Entities.Text.MTextBuffer.DrawDirection">DrawDirection</h4>
+  <div class="markdown level1 summary"><p><a class="xref" href="Dxflib.Entities.Text.DrawDirections.html">DrawDirections</a> setting</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawDirections DrawDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Entities.Text.DrawDirections.html">DrawDirections</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_Height.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.Height%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L93">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_Height_" data-uid="Dxflib.Entities.Text.MTextBuffer.Height*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_Height" data-uid="Dxflib.Entities.Text.MTextBuffer.Height">Height</h4>
+  <div class="markdown level1 summary"><p>The Height of the MText</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Height { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_IsAnnotative.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.IsAnnotative%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L81">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_IsAnnotative_" data-uid="Dxflib.Entities.Text.MTextBuffer.IsAnnotative*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_IsAnnotative" data-uid="Dxflib.Entities.Text.MTextBuffer.IsAnnotative">IsAnnotative</h4>
+  <div class="markdown level1 summary"><p>Returns True if the text is annotative</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsAnnotative { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_Justify.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.Justify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L87">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_Justify_" data-uid="Dxflib.Entities.Text.MTextBuffer.Justify*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_Justify" data-uid="Dxflib.Entities.Text.MTextBuffer.Justify">Justify</h4>
+  <div class="markdown level1 summary"><p>Also known as the attachment point</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public JustifyOptions Justify { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Entities.Text.JustifyOptions.html">JustifyOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_PositionVertex.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.PositionVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L105">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_PositionVertex_" data-uid="Dxflib.Entities.Text.MTextBuffer.PositionVertex*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_PositionVertex" data-uid="Dxflib.Entities.Text.MTextBuffer.PositionVertex">PositionVertex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vertex PositionVertex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Geometry.Vertex.html">Vertex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_ReferenceRecWidth.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.ReferenceRecWidth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L57">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_ReferenceRecWidth_" data-uid="Dxflib.Entities.Text.MTextBuffer.ReferenceRecWidth*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_ReferenceRecWidth" data-uid="Dxflib.Entities.Text.MTextBuffer.ReferenceRecWidth">ReferenceRecWidth</h4>
+  <div class="markdown level1 summary"><p>The Width of the reference rectangle</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ReferenceRecWidth { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_Rotation.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.Rotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L99">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_Rotation_" data-uid="Dxflib.Entities.Text.MTextBuffer.Rotation*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_Rotation" data-uid="Dxflib.Entities.Text.MTextBuffer.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"><p>Rotation in Radians</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Rotation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_TextStyle.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.TextStyle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L75">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_TextStyle_" data-uid="Dxflib.Entities.Text.MTextBuffer.TextStyle*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_TextStyle" data-uid="Dxflib.Entities.Text.MTextBuffer.TextStyle">TextStyle</h4>
+  <div class="markdown level1 summary"><p>The Text Style</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Style TextStyle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.Entities.Text.Style.html">Style</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_OnPropertyChanged_System_String_.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.OnPropertyChanged(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L195">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_OnPropertyChanged_" data-uid="Dxflib.Entities.Text.MTextBuffer.OnPropertyChanged*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_OnPropertyChanged_System_String_" data-uid="Dxflib.Entities.Text.MTextBuffer.OnPropertyChanged(System.String)">OnPropertyChanged(String)</h4>
+  <div class="markdown level1 summary"><p>Property Changed Invocation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NotifyPropertyChangedInvocator]
+protected virtual void OnPropertyChanged(string propertyName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">propertyName</span></td>
+        <td><p>The Property Name</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_Parse_Dxflib_IO_TaggedDataList_System_Int32_.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.Parse(Dxflib.IO.TaggedDataList%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L114">View Source</a>
+  </span>
+  <a id="Dxflib_Entities_Text_MTextBuffer_Parse_" data-uid="Dxflib.Entities.Text.MTextBuffer.Parse*"></a>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_Parse_Dxflib_IO_TaggedDataList_System_Int32_" data-uid="Dxflib.Entities.Text.MTextBuffer.Parse(Dxflib.IO.TaggedDataList,System.Int32)">Parse(TaggedDataList, Int32)</h4>
+  <div class="markdown level1 summary"><p>The Parsing function of the MText Object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Parse(TaggedDataList list, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dxflib.IO.TaggedDataList.html">TaggedDataList</a></td>
+        <td><span class="parametername">list</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Dxflib.Entities.EntityBuffer.html#Dxflib_Entities_EntityBuffer_Parse_Dxflib_IO_TaggedDataList_System_Int32_">EntityBuffer.Parse(TaggedDataList, Int32)</a></div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer_PropertyChanged.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer.PropertyChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L63">View Source</a>
+  </span>
+  <h4 id="Dxflib_Entities_Text_MTextBuffer_PropertyChanged" data-uid="Dxflib.Entities.Text.MTextBuffer.PropertyChanged">PropertyChanged</h4>
+  <div class="markdown level1 summary"><p>The Property Changed Event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler PropertyChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ComponentModel.PropertyChangedEventHandler</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Dxflib.Entities.Text.IText.html">IText</a>
+  </div>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Entities_Text_MTextBuffer.md&amp;value=---%0Auid%3A%20Dxflib.Entities.Text.MTextBuffer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Entities/Text/MTextBuffer.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

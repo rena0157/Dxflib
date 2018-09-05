@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Dxflib.IO
    ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 2.39.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,18 +83,15 @@ This class is used to extract data from a ASCII dxf file. The main constructor
 requires a <a class="xref" href="Dxflib.DxfFile.html">DxfFile</a> and when <a class="xref" href="Dxflib.IO.AsciiParser.html#Dxflib_IO_AsciiParser_ParseFile">ParseFile()</a> is called
 will populate all of the fields in the <a class="xref" href="Dxflib.DxfFile.html">DxfFile</a>.</p>
 </section>
-      <h4><a class="xref" href="Dxflib.IO.AutoCadVersionVar.html">AutoCadVersionVar</a></h4>
-      <section><p>The AutoCADVersion Variable class. This class is a
-specialization of the <a class="xref" href="Dxflib.IO.FileVariable-1.html">FileVariable&lt;T&gt;</a> class
-where T is an <a class="xref" href="Dxflib.IO.AutoCadVersions.html">AutoCadVersions</a>. This class is used
-for the AutoCAD Version in the dxf file.</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.CircularArcCodes.html">CircularArcCodes</a></h4>
-      <section><p>Circular Arc Group Codes.</p>
-</section>
       <h4><a class="xref" href="Dxflib.IO.DxfParseException.html">DxfParseException</a></h4>
       <section><p>This Exception should be used if there is an unexpected situation in
 the parsing of a dxf file</p>
+</section>
+      <h4><a class="xref" href="Dxflib.IO.DxfReader.html">DxfReader</a></h4>
+      <section><p>The DxfReader class that reads a Dxf file and returns a string list</p>
+</section>
+      <h4><a class="xref" href="Dxflib.IO.DxfStreamException.html">DxfStreamException</a></h4>
+      <section><p>DxfStream Exception class</p>
 </section>
       <h4><a class="xref" href="Dxflib.IO.DxfTypeConverter.html">DxfTypeConverter</a></h4>
       <section><p>This public static class has only one purpose, which is to return hold the
@@ -112,35 +109,6 @@ of the data from the entities section of the dxf file.</p>
 These starting markers will signify the starting location of a new section in the
 dxf file.</p>
 </section>
-      <h4><a class="xref" href="Dxflib.IO.FileVariable-1.html">FileVariable&lt;T&gt;</a></h4>
-      <section><p>A generic class that is used to act as a base for
-other file variable classes to specialize and inherit from</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.FileVariableCodes.html">FileVariableCodes</a></h4>
-      <section><p>A class that contains all of the file variable codes
-Note that these are not really the group codes but the
-name of the variable. This was done to reduce the amount
-of duplication in group codes</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.GroupCodesBase.html">GroupCodesBase</a></h4>
-      <section><p>The base class for group codes.</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.HatchCodes.html">HatchCodes</a></h4>
-      <section><p>The HatchGroupCodes. <a class="xref" href="Dxflib.Entities.Hatch.html">Dxflib.Entities.Hatch</a></p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.HeaderSectionArgs.html">HeaderSectionArgs</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Dxflib.IO.LineGroupCodes.html">LineGroupCodes</a></h4>
-      <section><p>The <a class="xref" href="Dxflib.Entities.Line.html">Line</a> entity group codes</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.LwPolylineCodes.html">LwPolylineCodes</a></h4>
-      <section><p>The <a class="xref" href="Dxflib.Entities.LwPolyLine.html">LwPolyLine</a> entity group codes</p>
-</section>
-      <h4><a class="xref" href="Dxflib.IO.StringVar.html">StringVar</a></h4>
-      <section><p>The String Variable Class for AutoCAD File Variables.
-This class is a specialization of the <a class="xref" href="Dxflib.IO.FileVariable-1.html">FileVariable&lt;T&gt;</a>
-class where T is a <span class="xref">System.String</span>.</p>
-</section>
       <h4><a class="xref" href="Dxflib.IO.TaggedData.html">TaggedData</a></h4>
       <section><p>TaggedData is a class that is designed to replicate the tagged data of a dxf file</p>
 </section>
@@ -151,9 +119,6 @@ is <a class="xref" href="Dxflib.IO.TaggedData.html">TaggedData</a>.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
-      <h4><a class="xref" href="Dxflib.IO.AutoCadVersions.html">AutoCadVersions</a></h4>
-      <section><p>AutoCAD Versions up to 2013</p>
-</section>
       <h4><a class="xref" href="Dxflib.IO.FileSections.html">FileSections</a></h4>
       <section><p>The File Section Enumeration that holds Enumerations for
 the different section of a dxf file</p>

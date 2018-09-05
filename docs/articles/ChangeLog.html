@@ -8,7 +8,7 @@
     <title>Change Log </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Change Log ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 2.39.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -71,6 +71,21 @@
 
 <p>This is the change log file that will contain all of the information regarding
 releases of the software. The list will be a decending list from newest to oldest releases.</p>
+<h2 id="version-040-2018-09-05">Version 0.4.0 [2018-09-05]</h2>
+<ul>
+<li>Renamed <code>GeometricEntityBase</code> to <code>GeoBase</code> to shorten the name</li>
+<li>Inheriting the <code>INotifyPropertyChanged</code> Interface from the <code>GeoBase</code> class
+<ul>
+<li>Changed most of the underlying structure for how <code>PropertyChanged</code> events are handled in the GeoBase class</li>
+</ul>
+</li>
+<li>Removed a lot of classes that were made obsolete due to the change to the <code>INotifyPropertyChanged</code> event system</li>
+<li>Added the <code>Text</code> Entity</li>
+<li>Added the <code>MText</code> Entity</li>
+<li>Added the <code>Point</code> Entity</li>
+<li>Added the <code>Circle</code> Entity</li>
+<li>Added the <code>GetLastSavedTime</code> Function to the DxfFile</li>
+</ul>
 <h2 id="version-030-2018-09-01">Version 0.3.0 [2018-09-01]</h2>
 <ul>
 <li>Added the Hatch Entity and associated buffer classes

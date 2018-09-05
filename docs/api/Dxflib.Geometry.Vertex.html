@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Vertex
    ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 2.39.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,25 +79,26 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html">GeometricEntityBase</a></div>
+    <div class="level1"><a class="xref" href="Dxflib.Geometry.GeoBase.html">GeoBase</a></div>
     <div class="level2"><span class="xref">Vertex</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryEntityType">GeometricEntityBase.GeometryEntityType</a>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_GeometryEntityType">GeoBase.GeometryEntityType</a>
     </div>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_GeometryChanged">GeometricEntityBase.GeometryChanged</a>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_PropertyChanged">GeoBase.PropertyChanged</a>
     </div>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_OnGeometryChanged_Dxflib_Geometry_GeometryChangedHandlerArgs_">GeometricEntityBase.OnGeometryChanged(GeometryChangedHandlerArgs)</a>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_UpdateGeometry_System_String_">GeoBase.UpdateGeometry(String)</a>
     </div>
     <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_UpdateGeometry_System_Object_Dxflib_Geometry_GeometryChangedHandlerArgs_">GeometricEntityBase.UpdateGeometry(Object, GeometryChangedHandlerArgs)</a>
-    </div>
-    <div>
-      <a class="xref" href="Dxflib.Geometry.GeometricEntityBase.html#Dxflib_Geometry_GeometricEntityBase_CalcLength">GeometricEntityBase.CalcLength()</a>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_OnPropertyChanged_System_String_">GeoBase.OnPropertyChanged(String)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -119,7 +120,7 @@
   <h6><strong>Assembly</strong>: Dxflib.dll</h6>
   <h5 id="Dxflib_Geometry_Vertex_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Vertex : GeometricEntityBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class Vertex : GeoBase, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -128,7 +129,7 @@
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex__ctor_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.%23ctor(System.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L32">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L35">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex__ctor_" data-uid="Dxflib.Geometry.Vertex.#ctor*"></a>
   <h4 id="Dxflib_Geometry_Vertex__ctor_System_Double_System_Double_System_Double_" data-uid="Dxflib.Geometry.Vertex.#ctor(System.Double,System.Double,System.Double)">Vertex(Double, Double, Double)</h4>
@@ -176,12 +177,11 @@
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_X.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L43">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L45">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_X_" data-uid="Dxflib.Geometry.Vertex.X*"></a>
   <h4 id="Dxflib_Geometry_Vertex_X" data-uid="Dxflib.Geometry.Vertex.X">X</h4>
-  <div class="markdown level1 summary"><p>x coordinate, note that when setting this value
-the <a class="xref" href="Dxflib.Geometry.GeometryChangedHandler.html">GeometryChangedHandler</a> Event will broadcast</p>
+  <div class="markdown level1 summary"><p>X Coordinate of the Vertex</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -208,12 +208,11 @@ the <a class="xref" href="Dxflib.Geometry.GeometryChangedHandler.html">GeometryC
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_Y.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L57">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L58">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_Y_" data-uid="Dxflib.Geometry.Vertex.Y*"></a>
   <h4 id="Dxflib_Geometry_Vertex_Y" data-uid="Dxflib.Geometry.Vertex.Y">Y</h4>
-  <div class="markdown level1 summary"><p>y coodinate, note that when setting to a new value
-a geometry event will be raised</p>
+  <div class="markdown level1 summary"><p>Y Coordinate of the Vertex</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -240,7 +239,7 @@ a geometry event will be raised</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_Z.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.Z%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L71">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L72">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_Z_" data-uid="Dxflib.Geometry.Vertex.Z*"></a>
   <h4 id="Dxflib_Geometry_Vertex_Z" data-uid="Dxflib.Geometry.Vertex.Z">Z</h4>
@@ -274,7 +273,7 @@ a geometry event will be raised</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_Equals_Dxflib_Geometry_Vertex_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.Equals(Dxflib.Geometry.Vertex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L118">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L119">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_Equals_" data-uid="Dxflib.Geometry.Vertex.Equals*"></a>
   <h4 id="Dxflib_Geometry_Vertex_Equals_Dxflib_Geometry_Vertex_" data-uid="Dxflib.Geometry.Vertex.Equals(Dxflib.Geometry.Vertex)">Equals(Vertex)</h4>
@@ -326,7 +325,7 @@ within the <a class="xref" href="Dxflib.Geometry.GeoMath.html#Dxflib_Geometry_Ge
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L87">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L88">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_Equals_" data-uid="Dxflib.Geometry.Vertex.Equals*"></a>
   <h4 id="Dxflib_Geometry_Vertex_Equals_System_Object_" data-uid="Dxflib.Geometry.Vertex.Equals(System.Object)">Equals(Object)</h4>
@@ -379,7 +378,7 @@ the points are the same.</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex_GetHashCode.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L100">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L101">View Source</a>
   </span>
   <a id="Dxflib_Geometry_Vertex_GetHashCode_" data-uid="Dxflib.Geometry.Vertex.GetHashCode*"></a>
   <h4 id="Dxflib_Geometry_Vertex_GetHashCode" data-uid="Dxflib.Geometry.Vertex.GetHashCode">GetHashCode()</h4>
@@ -407,6 +406,10 @@ the points are the same.</p>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.Object.GetHashCode()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
 </article>
           </div>
           
@@ -418,7 +421,7 @@ the points are the same.</p>
                     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_Geometry_Vertex.md&amp;value=---%0Auid%3A%20Dxflib.Geometry.Vertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/Geometry/Vertex.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -35,7 +35,7 @@
         /// <summary>
         ///     Thickness (optional; default = 0)
         /// </summary>
-        public const string Thickness = " 39";
+        public new const string Thickness = " 39";
 
         /// <summary>
         ///     The Vertex Identifier

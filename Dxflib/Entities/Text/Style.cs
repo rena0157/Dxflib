@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Dxflib.Entities.Text
 {
+    /// <summary>
+    /// Class for the Text Style 
+    /// </summary>
     public class Style
     {
         /// <summary>

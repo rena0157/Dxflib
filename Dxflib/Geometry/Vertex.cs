@@ -40,8 +40,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        ///     x coordinate, note that when setting this value
-        ///     the <see cref="GeometryChangedHandler" /> Event will broadcast
+        ///     X Coordinate of the Vertex
         /// </summary>
         public double X
         {
@@ -54,8 +53,7 @@ namespace Dxflib.Geometry
         }
 
         /// <summary>
-        ///     y coodinate, note that when setting to a new value
-        ///     a geometry event will be raised
+        ///     Y Coordinate of the Vertex
         /// </summary>
         public double Y
         {

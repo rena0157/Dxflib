@@ -14,6 +14,6 @@
         /// <summary>
         ///     The thickness of the line
         /// </summary>
-        public const string Thickness = " 39";
+        public new const string Thickness = " 39";
     }
 }

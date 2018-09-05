@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Vector
    ">
-    <meta name="generator" content="docfx 2.38.1.0">
+    <meta name="generator" content="docfx 2.39.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,10 +80,24 @@ for the dxf library</p>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Vector</span></div>
+    <div class="level1"><a class="xref" href="Dxflib.Geometry.GeoBase.html">GeoBase</a></div>
+    <div class="level2"><span class="xref">Vector</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.INotifyPropertyChanged</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_GeometryEntityType">GeoBase.GeometryEntityType</a>
+    </div>
+    <div>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_PropertyChanged">GeoBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_OnPropertyChanged_System_String_">GeoBase.OnPropertyChanged(String)</a>
+    </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
@@ -110,7 +124,7 @@ for the dxf library</p>
   <h6><strong>Assembly</strong>: Dxflib.dll</h6>
   <h5 id="Dxflib_LinAlg_Vector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Vector</code></pre>
+    <pre><code class="lang-csharp hljs">public class Vector : GeoBase, INotifyPropertyChanged</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -119,7 +133,7 @@ for the dxf library</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector__ctor.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L29">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L31">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector__ctor_" data-uid="Dxflib.LinAlg.Vector.#ctor*"></a>
   <h4 id="Dxflib_LinAlg_Vector__ctor" data-uid="Dxflib.LinAlg.Vector.#ctor">Vector()</h4>
@@ -135,11 +149,12 @@ for the dxf library</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector__ctor_Dxflib_Geometry_GeoLine_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.%23ctor(Dxflib.Geometry.GeoLine)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L80">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L79">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector__ctor_" data-uid="Dxflib.LinAlg.Vector.#ctor*"></a>
   <h4 id="Dxflib_LinAlg_Vector__ctor_Dxflib_Geometry_GeoLine_" data-uid="Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.GeoLine)">Vector(GeoLine)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructor from a line</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -167,7 +182,7 @@ for the dxf library</p>
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector__ctor_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.%23ctor(Dxflib.Geometry.Vertex%2CDxflib.Geometry.Vertex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L55">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L52">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector__ctor_" data-uid="Dxflib.LinAlg.Vector.#ctor*"></a>
   <h4 id="Dxflib_LinAlg_Vector__ctor_Dxflib_Geometry_Vertex_Dxflib_Geometry_Vertex_" data-uid="Dxflib.LinAlg.Vector.#ctor(Dxflib.Geometry.Vertex,Dxflib.Geometry.Vertex)">Vector(Vertex, Vertex)</h4>
@@ -208,7 +223,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector__ctor_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.%23ctor(Dxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L41">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L44">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector__ctor_" data-uid="Dxflib.LinAlg.Vector.#ctor*"></a>
   <h4 id="Dxflib_LinAlg_Vector__ctor_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.#ctor(Dxflib.LinAlg.Vector)">Vector(Vector)</h4>
@@ -241,7 +256,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector__ctor_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.%23ctor(System.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L69">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L66">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector__ctor_" data-uid="Dxflib.LinAlg.Vector.#ctor*"></a>
   <h4 id="Dxflib_LinAlg_Vector__ctor_System_Double_System_Double_System_Double_" data-uid="Dxflib.LinAlg.Vector.#ctor(System.Double,System.Double,System.Double)">Vector(Double, Double, Double)</h4>
@@ -289,7 +304,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_HeadVertex.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.HeadVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L112">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L104">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_HeadVertex_" data-uid="Dxflib.LinAlg.Vector.HeadVertex*"></a>
   <h4 id="Dxflib_LinAlg_Vector_HeadVertex" data-uid="Dxflib.LinAlg.Vector.HeadVertex">HeadVertex</h4>
@@ -320,11 +335,11 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Length.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L107">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L99">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Length_" data-uid="Dxflib.LinAlg.Vector.Length*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Length" data-uid="Dxflib.LinAlg.Vector.Length">Length</h4>
-  <div class="markdown level1 summary"><p>The vector's lenght or magnitude</p>
+  <div class="markdown level1 summary"><p>The vector's length or magnitude</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -351,7 +366,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Slope.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Slope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L140">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L132">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Slope_" data-uid="Dxflib.LinAlg.Vector.Slope*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Slope" data-uid="Dxflib.LinAlg.Vector.Slope">Slope</h4>
@@ -382,7 +397,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_TailVertex.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.TailVertex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L126">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L118">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_TailVertex_" data-uid="Dxflib.LinAlg.Vector.TailVertex*"></a>
   <h4 id="Dxflib_LinAlg_Vector_TailVertex" data-uid="Dxflib.LinAlg.Vector.TailVertex">TailVertex</h4>
@@ -413,7 +428,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_X.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.X%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L92">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L84">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_X_" data-uid="Dxflib.LinAlg.Vector.X*"></a>
   <h4 id="Dxflib_LinAlg_Vector_X" data-uid="Dxflib.LinAlg.Vector.X">X</h4>
@@ -444,7 +459,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Y.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Y%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L97">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L89">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Y_" data-uid="Dxflib.LinAlg.Vector.Y*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Y" data-uid="Dxflib.LinAlg.Vector.Y">Y</h4>
@@ -475,7 +490,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Z.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Z%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L102">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L94">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Z_" data-uid="Dxflib.LinAlg.Vector.Z*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Z" data-uid="Dxflib.LinAlg.Vector.Z">Z</h4>
@@ -508,7 +523,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_AngleBetweenVectors_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector%2CDxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L257">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L239">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_AngleBetweenVectors_" data-uid="Dxflib.LinAlg.Vector.AngleBetweenVectors*"></a>
   <h4 id="Dxflib_LinAlg_Vector_AngleBetweenVectors_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.AngleBetweenVectors(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)">AngleBetweenVectors(Vector, Vector)</h4>
@@ -564,7 +579,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_CrossProduct_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L269">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L251">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_CrossProduct_" data-uid="Dxflib.LinAlg.Vector.CrossProduct*"></a>
   <h4 id="Dxflib_LinAlg_Vector_CrossProduct_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.CrossProduct(Dxflib.LinAlg.Vector)">CrossProduct(Vector)</h4>
@@ -614,7 +629,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_DotProduct_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L249">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L231">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_DotProduct_" data-uid="Dxflib.LinAlg.Vector.DotProduct*"></a>
   <h4 id="Dxflib_LinAlg_Vector_DotProduct_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.DotProduct(Dxflib.LinAlg.Vector)">DotProduct(Vector)</h4>
@@ -664,7 +679,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Rotate_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Rotate(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L171">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L163">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Rotate_" data-uid="Dxflib.LinAlg.Vector.Rotate*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Rotate_System_Double_" data-uid="Dxflib.LinAlg.Vector.Rotate(System.Double)">Rotate(Double)</h4>
@@ -698,7 +713,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Scale_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Scale(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L159">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L151">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Scale_" data-uid="Dxflib.LinAlg.Vector.Scale*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Scale_System_Double_" data-uid="Dxflib.LinAlg.Vector.Scale(System.Double)">Scale(Double)</h4>
@@ -730,7 +745,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_ToUnitVector.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.ToUnitVector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L237">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L219">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_ToUnitVector_" data-uid="Dxflib.LinAlg.Vector.ToUnitVector*"></a>
   <h4 id="Dxflib_LinAlg_Vector_ToUnitVector" data-uid="Dxflib.LinAlg.Vector.ToUnitVector">ToUnitVector()</h4>
@@ -762,7 +777,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Transform_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector%2CDxflib.LinAlg.Vector%2CDxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L183">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L175">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Transform_" data-uid="Dxflib.LinAlg.Vector.Transform*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Transform_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.Transform(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)">Transform(Vector, Vector, Vector)</h4>
@@ -808,7 +823,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_Translate_Dxflib_Geometry_Vertex_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L146">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L138">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_Translate_" data-uid="Dxflib.LinAlg.Vector.Translate*"></a>
   <h4 id="Dxflib_LinAlg_Vector_Translate_Dxflib_Geometry_Vertex_" data-uid="Dxflib.LinAlg.Vector.Translate(Dxflib.Geometry.Vertex)">Translate(Vertex)</h4>
@@ -837,38 +852,41 @@ at the origin and it's head at where the components are on the cartesian 3D spac
       </tr>
     </tbody>
   </table>
-  <h3 id="events">Events
-  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_GeometryChanged.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.GeometryChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_UpdateGeometry_System_String_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.UpdateGeometry(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L203">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L196">View Source</a>
   </span>
-  <h4 id="Dxflib_LinAlg_Vector_GeometryChanged" data-uid="Dxflib.LinAlg.Vector.GeometryChanged">GeometryChanged</h4>
-  <div class="markdown level1 summary"><p>The event when ever one of the vertexes change or if one of the components change</p>
+  <a id="Dxflib_LinAlg_Vector_UpdateGeometry_" data-uid="Dxflib.LinAlg.Vector.UpdateGeometry*"></a>
+  <h4 id="Dxflib_LinAlg_Vector_UpdateGeometry_System_String_" data-uid="Dxflib.LinAlg.Vector.UpdateGeometry(System.String)">UpdateGeometry(String)</h4>
+  <div class="markdown level1 summary"><p>Update the Geometry of the Vector</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event EventHandler GeometryChanged</code></pre>
+    <pre><code class="lang-csharp hljs">protected override sealed void UpdateGeometry(string command = &quot;&quot;)</code></pre>
   </div>
-  <h5 class="eventType">Event Type</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.EventHandler</span></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">command</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Dxflib.Geometry.GeoBase.html#Dxflib_Geometry_GeoBase_UpdateGeometry_System_String_">GeoBase.UpdateGeometry(String)</a></div>
   <h3 id="operators">Operators
   </h3>
   <span class="small pull-right mobile-hide">
@@ -876,7 +894,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_op_Addition_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.op_Addition(Dxflib.LinAlg.Vector%2CDxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L283">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L265">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_op_Addition_" data-uid="Dxflib.LinAlg.Vector.op_Addition*"></a>
   <h4 id="Dxflib_LinAlg_Vector_op_Addition_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.op_Addition(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)">Addition(Vector, Vector)</h4>
@@ -929,7 +947,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_op_Division_Dxflib_LinAlg_Vector_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.op_Division(Dxflib.LinAlg.Vector%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L322">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L304">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_op_Division_" data-uid="Dxflib.LinAlg.Vector.op_Division*"></a>
   <h4 id="Dxflib_LinAlg_Vector_op_Division_Dxflib_LinAlg_Vector_System_Double_" data-uid="Dxflib.LinAlg.Vector.op_Division(Dxflib.LinAlg.Vector,System.Double)">Division(Vector, Double)</h4>
@@ -981,7 +999,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_op_Multiply_Dxflib_LinAlg_Vector_System_Double_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.op_Multiply(Dxflib.LinAlg.Vector%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L305">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L287">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_op_Multiply_" data-uid="Dxflib.LinAlg.Vector.op_Multiply*"></a>
   <h4 id="Dxflib_LinAlg_Vector_op_Multiply_Dxflib_LinAlg_Vector_System_Double_" data-uid="Dxflib.LinAlg.Vector.op_Multiply(Dxflib.LinAlg.Vector,System.Double)">Multiply(Vector, Double)</h4>
@@ -1035,7 +1053,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_op_Multiply_System_Double_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.op_Multiply(System.Double%2CDxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L315">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L297">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_op_Multiply_" data-uid="Dxflib.LinAlg.Vector.op_Multiply*"></a>
   <h4 id="Dxflib_LinAlg_Vector_op_Multiply_System_Double_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.op_Multiply(System.Double,Dxflib.LinAlg.Vector)">Multiply(Double, Vector)</h4>
@@ -1087,7 +1105,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector_op_Subtraction_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector.op_Subtraction(Dxflib.LinAlg.Vector%2CDxflib.LinAlg.Vector)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L294">View Source</a>
+    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L276">View Source</a>
   </span>
   <a id="Dxflib_LinAlg_Vector_op_Subtraction_" data-uid="Dxflib.LinAlg.Vector.op_Subtraction*"></a>
   <h4 id="Dxflib_LinAlg_Vector_op_Subtraction_Dxflib_LinAlg_Vector_Dxflib_LinAlg_Vector_" data-uid="Dxflib.LinAlg.Vector.op_Subtraction(Dxflib.LinAlg.Vector,Dxflib.LinAlg.Vector)">Subtraction(Vector, Vector)</h4>
@@ -1136,6 +1154,10 @@ at the origin and it's head at where the components are on the cartesian 3D spac
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.INotifyPropertyChanged</span>
+  </div>
 </article>
           </div>
           
@@ -1147,7 +1169,7 @@ at the origin and it's head at where the components are on the cartesian 3D spac
                     <a href="https://github.com/rena0157/Dxflib/new/master/apiSpec/new?filename=Dxflib_LinAlg_Vector.md&amp;value=---%0Auid%3A%20Dxflib.LinAlg.Vector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/rena0157/Dxflib/blob/master/Dxflib/LinAlg/Vector.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
