@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using System;
 using System.IO;
 using Dxflib.AcadEntities;
 using Dxflib.Entities;
@@ -85,6 +86,11 @@ namespace Dxflib
         /// </summary>
         public string FileName { get; }
 
+        /// <summary>
+        /// Gets the Last Write Time of the <see cref="PathToFile"/>
+        /// </summary>
+        public DateTime LastWriteTime => File.GetLastWriteTime(PathToFile);
+
         #endregion
 
         #region HeaderProperties
@@ -105,6 +111,12 @@ namespace Dxflib
         ///     The username of the person who the file was last saved by
         /// </summary>
         public string LastSavedBy { get; set; }
+
+        #endregion
+
+        #region Methods
+
+        
 
         #endregion
     }

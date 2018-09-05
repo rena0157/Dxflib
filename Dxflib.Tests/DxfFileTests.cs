@@ -74,5 +74,13 @@ namespace Dxflib.Tests
 
             Assert.IsTrue(testFile.LastSavedBy == "adamf");
         }
+
+        [TestMethod]
+        public void LastWriteTimeTest()
+        {
+            var testFile = new DxfFile(@"C:\Dev\Dxflib\Dxflib.Tests\DxfTestFiles\PrintFileContents.dxf");
+
+            Debug.WriteLine(testFile.LastWriteTime);
+        }
     }
 }
