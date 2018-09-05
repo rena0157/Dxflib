@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>0.3.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.4.0</Version>
     <Authors>Adam Renaud</Authors>
     <Description>A C# Dxf Library</Description>
     <Copyright>Adam Renaud</Copyright>

@@ -468,7 +468,7 @@
           "hash": "MtPilCV6hAnmasr8b+0/5A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -540,7 +540,7 @@
           "hash": "fHbUjYjXQQ/mrlNKWw7SLQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -588,7 +588,7 @@
           "hash": "SpPUYltQYl8yAhm2n7f+fA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1200,7 +1200,7 @@
           "hash": "UWkqoylLU5N4VxYJy4SNgg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1212,7 +1212,7 @@
           "hash": "f/xswwrckaSWegifV0O6Lw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1296,7 +1296,7 @@
           "hash": "UOd3W8jv+z9U4Q0ZH1WLHQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1308,7 +1308,7 @@
           "hash": "tOx9yaea0+ZoKVjBHRnxeQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1332,7 +1332,7 @@
           "hash": "bmeCqnO8YKbWtVaDKHVHLQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1368,7 +1368,7 @@
           "hash": "kJOwn9cXrtA2z+PCYZdgfA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1449,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoLine.html",
-          "hash": "3amh5/nTpF7GtJEyh/wqDw=="
+          "hash": "tt6ruHw5pVF9OuIjwBy/Sw=="
         }
       },
       "is_incremental": false,
@@ -1473,7 +1473,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.Geometry.GeoPolyline.html",
-          "hash": "MoCrFwRMGgesibTBKl2TAA=="
+          "hash": "1zQX/HlJr4ZZ9nx98uhatg=="
         }
       },
       "is_incremental": false,
@@ -1536,7 +1536,7 @@
           "hash": "n6dJ0LS7Ajpbe8v573jVbQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1560,7 +1560,7 @@
           "hash": "Gcs1YTAqO6wva1jrYiif9w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1584,7 +1584,7 @@
           "hash": "xYxUe249Y9+ompTVp1vCig=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1620,7 +1620,7 @@
           "hash": "zAovF3tNxEHiTJEyL1XiTQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1632,7 +1632,7 @@
           "hash": "nfJBpHlTJQYysHSyWJr5wA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1641,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.CircularArcCodes.html",
-          "hash": "eV1lXrgnSjj9BzwOgxb5QQ=="
+          "hash": "WcpfbtNX5P55ifO5c0BHVw=="
         }
       },
       "is_incremental": false,
@@ -1665,7 +1665,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.HatchCodes.html",
-          "hash": "e7tqRfEbAvQLBpJAOA0Dsg=="
+          "hash": "Pr9URlpVadtwYdVkYPSHgA=="
         }
       },
       "is_incremental": false,
@@ -1677,7 +1677,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.LineGroupCodes.html",
-          "hash": "29/O+8Az4yjM3zXLwKWsig=="
+          "hash": "xXHTmCza08+Iq381hanfuQ=="
         }
       },
       "is_incremental": false,
@@ -1689,7 +1689,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.LwPolylineCodes.html",
-          "hash": "syyIpzn2y2vg2N0oHKrtEg=="
+          "hash": "G6+ZqEVOElHa+5uP6bwJCg=="
         }
       },
       "is_incremental": false,
@@ -1701,7 +1701,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.MTextCodes.html",
-          "hash": "K5QOjD9bgBqMhGdqvkbArQ=="
+          "hash": "bmqSP8RibnlWZ1zVU9prvQ=="
         }
       },
       "is_incremental": false,
@@ -1713,7 +1713,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.PointCodes.html",
-          "hash": "HJeh6CDJ9hiIDLaYreMOJw=="
+          "hash": "S1A46vnLrNcPtKBThRFZng=="
         }
       },
       "is_incremental": false,
@@ -1725,7 +1725,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.GroupCodes.TextCodes.html",
-          "hash": "1fSM/sFG79ayE0SZ6AT0Rw=="
+          "hash": "LtSUdIohd3WMaSUsJyru+A=="
         }
       },
       "is_incremental": false,
@@ -1764,7 +1764,7 @@
           "hash": "TiEIvSAku8BrAQOooOWM1Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1785,7 +1785,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dxflib.IO.Header.FileVariableCodes.html",
-          "hash": "9FPxZ8hJe76cW/v69zZkBQ=="
+          "hash": "bFxSWQ+HDrNmWj0pam7p5w=="
         }
       },
       "is_incremental": false,
@@ -1836,7 +1836,7 @@
           "hash": "0GxBMIoC4yLpLx2y0s+PJw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1848,7 +1848,7 @@
           "hash": "OW2DN2fIR7zwcNniaSQKpQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1908,7 +1908,7 @@
           "hash": "SMhCM0b3OyPIvCMoP8UP5Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1920,7 +1920,7 @@
           "hash": "KtV9Xf1J7KA+dvGUXu7Oyw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1944,7 +1944,7 @@
           "hash": "lOupXfJvfD320Fp++Qaw1Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1968,7 +1968,7 @@
           "hash": "6HyfV1XRhTgIF8zxKbh6Bw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1980,7 +1980,7 @@
           "hash": "KBsM8TNS1ILebBdKw/71Og=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2004,7 +2004,7 @@
           "hash": "0enmuJy0iKaUqRMgGOb/7A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2016,7 +2016,7 @@
           "hash": "Ztw1Z6E793GHZifyuwpt5w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2062,7 +2062,7 @@
           "hash": "yGl6JpIqv/GDzn7dHvpD/g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -2081,27 +2081,26 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because docfx version changed from 2.38.1.0 to 2.39.1.0.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
