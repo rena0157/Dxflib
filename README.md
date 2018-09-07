@@ -4,12 +4,12 @@
 
 ### Introduction
 This is one of many DXF librarys that is avalible here on Github. It can be used currently to extract and read information from 
-a dxf file. One of the main focuses however besides being able to read and write a file is to be able to calculate all of the geometry
-of the entities in the file. Also, this library is designed to be flexible, in other words if a property is changed in an entity all the
-geometry will be updated along will the geometry of all entities that are linking to the object. 
+a dxf file. One of the main focuses however besides being able to read (and maybe one day write) a file is to be able to calculate all of the geometry
+of the entities in the file. Also, this library is designed to be flexible in other words if a property is changed in any entity all the
+geometry will be updated along will the geometry of all entities that are linking to that Entity. 
 
 #### Goals of this Library
-- read and write all of the entities in the Dxf format
+- read (one day write) all of the entities in the Dxf format
 - flexible geometry based entities that can be updated real time without writing and re reading the file.
 - Speed, this library should be really fast.
 
@@ -59,12 +59,14 @@ lines[0].Vertex = new Vertex(0, 1); // GeometryChanged Event will be called at t
 
 ### Currently Supported Entities
 - LINE
-- LWPOLYLINE
+- LWPOLYLINE (Light weight Polyline)
 - HATCH
 - ARC
+- CIRCLE
+- POINT
+- TEXT
+- MTEXT
 
 ### Future Development
 Future development includes adding these other entities (in order of importance):
-- TEXT
-- MTEXT
 - POLYLINE
