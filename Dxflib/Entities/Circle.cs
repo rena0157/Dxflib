@@ -9,6 +9,7 @@
 // 
 // ============================================================
 
+using System;
 using Dxflib.Geometry;
 
 namespace Dxflib.Entities
@@ -44,5 +45,10 @@ namespace Dxflib.Entities
         ///     The Radius of the Circle
         /// </summary>
         public double Radius { get; set; }
+
+        /// <summary>
+        /// The Area of the circle (Pi*Radius^2)
+        /// </summary>
+        public double Area => Math.PI * Math.Pow(Radius, 2);
     }
 }
