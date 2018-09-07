@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Version>0.4.0</Version>
     <Authors>Adam Renaud</Authors>
     <Description>A C# Dxf Library</Description>
@@ -19,13 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Parser\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.39.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
 </Project>
